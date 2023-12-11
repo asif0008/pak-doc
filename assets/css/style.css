@@ -1,0 +1,90 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&family=Urbanist:wght@300;400;600;700;800&display=swap");
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+.font-40 {
+  color: #333;
+  font-family: "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.2px;
+}
+
+.font-24 {
+  color: #ffffff;
+  font-family: "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 0.12px;
+}
+
+.font-14 {
+  color: #333;
+  font-family: Open Sans;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.global-btn {
+  color: #F4F9FF;
+  text-align: center;
+  font-family: "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  border-radius: 12px;
+  background: #F2C246;
+}
+
+header {
+  background: #F4F9FF;
+  padding: 16px 0;
+}
+header .dropdown-toggle::after {
+  display: none !important;
+}
+header .PakDoc-dropdown {
+  gap: 32px;
+}
+header .responsive_header {
+  height: 100vh;
+  background-color: #ffffff;
+  min-width: 350px;
+  max-width: 350px;
+  top: 0;
+  right: -350px;
+  position: fixed;
+  z-index: 103;
+  padding: 44px 16px 24px 16px;
+  transition: 0.5s;
+  overflow: scroll;
+  border-radius: 5px 0 0 5px;
+}
+header .responsive_header.active {
+  right: 0px;
+}
+
+.hero-banner {
+  padding: 89px 15px 42px !important;
+  background: url("/assets/images/left-right-vector.png") no-repeat, url(/assets/images/center-bubble.png) top right no-repeat, linear-gradient(100deg, rgba(0, 129, 89, 0.5) 2.59%, rgba(2, 188, 230, 0.5) 111.36%);
+}
+
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1440px !important;
+  }
+}/*# sourceMappingURL=style.css.map */
