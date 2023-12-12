@@ -255,6 +255,7 @@ header .responsive_header.active {
 }
 .common-disease-sec .accordion .accordion-item {
   flex: 1;
+  width: 100%;
   background-color: transparent !important;
   border: unset !important;
 }
@@ -270,6 +271,11 @@ header .responsive_header.active {
 .common-disease-sec .accordion .accordion-item .accordion-button:not(.collapsed) {
   box-shadow: unset !important;
   color: #333;
+}
+
+footer {
+  padding: 42px 15px;
+  background: rgba(42, 42, 42, 0.9);
 }
 
 @media (min-width: 1400px) {
