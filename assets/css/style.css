@@ -29,9 +29,29 @@ a {
   letter-spacing: 0.12px;
 }
 
+.font-20 {
+  color: #21384D;
+  font-family: "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.1px;
+}
+
+.font-16 {
+  text-align: center;
+  font-family: "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.08px;
+}
+
 .font-14 {
   color: #333;
-  font-family: Open Sans;
+  font-family: "Open Sans", "Helvetica Neue", sans-serif;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
@@ -48,6 +68,7 @@ a {
   line-height: normal;
   border-radius: 12px;
   background: #F2C246;
+  border: none;
 }
 
 header {
@@ -82,9 +103,34 @@ header .responsive_header.active {
   padding: 89px 15px 42px !important;
   background: url("/assets/images/left-right-vector.png") no-repeat, url(/assets/images/center-bubble.png) top right no-repeat, linear-gradient(100deg, rgba(0, 129, 89, 0.5) 2.59%, rgba(2, 188, 230, 0.5) 111.36%);
 }
+.hero-banner .book-appointment {
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.6);
+  padding: 24px 140px;
+}
+.hero-banner .input-div {
+  padding: 12px 32px;
+  border-radius: 12px;
+  background: #FFF;
+  flex: 1;
+}
+.hero-banner .form-control {
+  padding: 0 !important;
+  color: #333 !important;
+  background-color: transparent !important;
+  border: none !important;
+}
+.hero-banner .form-control:focus {
+  box-shadow: none !important;
+}
 
 @media (min-width: 1400px) {
   .container {
     max-width: 1440px !important;
+  }
+}
+@media screen and (max-width: 768px) {
+  .hero-banner .book-appointment {
+    padding: 15px;
   }
 }/*# sourceMappingURL=style.css.map */
