@@ -75,7 +75,6 @@ a {
     letter-spacing: 0.1px;
 }
 .font-16 {
-    text-align: center;
     font-family: $openSans;
     font-size: 16px;
     font-style: normal;
@@ -133,7 +132,7 @@ header {
 // Hero banner
 .hero-banner {
     padding: 89px 15px 42px !important;
-    background: url("/assets/images/left-right-vector.png") no-repeat, url(/assets/images/center-bubble.png) top right no-repeat, linear-gradient(100deg, rgba(0, 129, 89, 0.50) 2.59%, rgba(2, 188, 230, 0.50) 111.36%);
+    background: url("/assets/images/left-right-vector.png") no-repeat, url("/assets/images/center-bubble.png") top right no-repeat, linear-gradient(100deg, rgba(0, 129, 89, 0.50) 2.59%, rgba(2, 188, 230, 0.50) 111.36%);
     .book-appointment {
         border-radius: 16px;
         background: rgba(255, 255, 255, 0.60);  
@@ -155,10 +154,14 @@ header {
         box-shadow: none !important;
     }
 }
-.top-search {
+.left-right-vector-bg {
     background: url("/assets/images/left-vector.png") top left no-repeat, url("/assets/images/right-vector.png") bottom right no-repeat, $bgColor;
+}
+// Top search
+.top-search {
     padding: 80px 15px 120px;
 }
+// Qualified doctors
 .qualified-doctors {
     background: linear-gradient(100deg, rgba(0, 129, 89, 0.25) 2.59%, rgba(2, 188, 230, 0.25) 111.36%);
     position: relative;
@@ -189,6 +192,9 @@ header {
         top: 20%;
         right: 3%;
       }
+      .swiper-scrollbar-horizontal {
+        bottom: 5% !important;
+      }
       .swiper-scrollbar-drag {
         background: rgba(2, 188, 230, 0.90) !important;
       }
@@ -212,7 +218,29 @@ header {
         }
       }
 }
-
+// Testimonials
+.testimonials {
+    padding: 80px 15px 120px;
+    .review-section {
+        border-radius: 16px;
+        border: 1px solid rgba(112, 133, 131, 0.20);
+        background: $white;
+        padding: 20px;
+        position: relative;
+        img {
+            margin-top: -4rem;
+        }
+    }
+}
+// Why we section
+.why-we-sec {
+    padding: 69px 15px 54px;
+    background: url("/assets/images/left-right-vector.png") no-repeat, url("/assets/images/center-bubble-full.png") 90% 72% no-repeat, linear-gradient(100deg, rgba(0, 129, 89, 0.50) 2.59%, rgba(2, 188, 230, 0.50) 111.36%);
+}
+.join-doctor {
+    padding: 55px 15px 70px;
+    background: url("/assets/images/left-right-vector.png") no-repeat, url("/assets/images/become-a-doctor-vector-bubble.png") 90% 72% no-repeat, linear-gradient(100deg, rgba(0, 129, 89, 0.50) 2.59%, rgba(2, 188, 230, 0.50) 111.36%);
+}
 @media (min-width: 1400px) {
     .container {
         max-width: 1440px !important;
