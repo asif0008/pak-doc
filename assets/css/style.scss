@@ -237,9 +237,38 @@ header {
     padding: 69px 15px 54px;
     background: url("/assets/images/left-right-vector.png") no-repeat, url("/assets/images/center-bubble-full.png") 90% 72% no-repeat, linear-gradient(100deg, rgba(0, 129, 89, 0.50) 2.59%, rgba(2, 188, 230, 0.50) 111.36%);
 }
+// Join a doctor section
 .join-doctor {
     padding: 55px 15px 70px;
     background: url("/assets/images/left-right-vector.png") no-repeat, url("/assets/images/become-a-doctor-vector-bubble.png") 90% 72% no-repeat, linear-gradient(100deg, rgba(0, 129, 89, 0.50) 2.59%, rgba(2, 188, 230, 0.50) 111.36%);
+}
+// Common disease section
+.common-disease-sec {
+    padding: 32px 15px 58px;
+    background: url("/assets/images/left-right-vector.png") no-repeat, url("/assets/images/common-disease-bubble-full.png") 80% 70% no-repeat, linear-gradient(100deg, rgba(0, 129, 89, 0.50) 2.59%, rgba(2, 188, 230, 0.50) 111.36%);
+    .accordion {
+        margin-top: 32px;
+        background-color: transparent !important;
+        .accordion-item {
+            flex: 1;
+            background-color: transparent !important;
+            border: unset !important;
+            .accordion-button {
+                background-color: transparent !important;
+            }
+            .accordion-button:focus {
+                box-shadow: unset !important;
+            }
+            .accordion-collapse.show {
+                border-top: 1px solid rgba(112, 133, 131, 0.20);
+            }
+            .accordion-button:not(.collapsed) {
+                box-shadow: unset !important;
+                color: $lightBlack;
+            }
+        }
+    }
+    
 }
 @media (min-width: 1400px) {
     .container {

@@ -245,6 +245,33 @@ header .responsive_header.active {
   background: url("/assets/images/left-right-vector.png") no-repeat, url("/assets/images/become-a-doctor-vector-bubble.png") 90% 72% no-repeat, linear-gradient(100deg, rgba(0, 129, 89, 0.5) 2.59%, rgba(2, 188, 230, 0.5) 111.36%);
 }
 
+.common-disease-sec {
+  padding: 32px 15px 58px;
+  background: url("/assets/images/left-right-vector.png") no-repeat, url("/assets/images/common-disease-bubble-full.png") 80% 70% no-repeat, linear-gradient(100deg, rgba(0, 129, 89, 0.5) 2.59%, rgba(2, 188, 230, 0.5) 111.36%);
+}
+.common-disease-sec .accordion {
+  margin-top: 32px;
+  background-color: transparent !important;
+}
+.common-disease-sec .accordion .accordion-item {
+  flex: 1;
+  background-color: transparent !important;
+  border: unset !important;
+}
+.common-disease-sec .accordion .accordion-item .accordion-button {
+  background-color: transparent !important;
+}
+.common-disease-sec .accordion .accordion-item .accordion-button:focus {
+  box-shadow: unset !important;
+}
+.common-disease-sec .accordion .accordion-item .accordion-collapse.show {
+  border-top: 1px solid rgba(112, 133, 131, 0.2);
+}
+.common-disease-sec .accordion .accordion-item .accordion-button:not(.collapsed) {
+  box-shadow: unset !important;
+  color: #333;
+}
+
 @media (min-width: 1400px) {
   .container {
     max-width: 1440px !important;
