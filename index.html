@@ -10,6 +10,9 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <!-- Swiper cdn -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </head>
 
 <body>
@@ -214,9 +217,9 @@
                     <img src="assets/images/video_consultation.png" alt="image" class="img-fluid">
                 </div>
                 <div class="col-12 col-lg-6 text-center">
-                    <h2 class="font-24">For your <span style="color:#F2C246;">Future</span> Health</h2>
-                    <h1 class="font-40 mt-3 mb-2" style="color:#fff">Find Best <span id="typed-output" style="color:#F2C246;"></span></h1>
-                    <p class="font-16 text-white pb-4">Providing exceptional medical care to our patients and their families. Our professional team of medical Professionals, Cutting-edge technology and compassionate approach make us a leader in Healthcare Industry.</p>
+                    <h2 class="font-24 white-text">For your <span class="accent-text">Future</span> Health</h2>
+                    <h1 class="font-40 mt-3 mb-2 white-text">Find Best <span id="typed-output" style="color:#F2C246;"></span></h1>
+                    <p class="font-16 white-text pb-4">Providing exceptional medical care to our patients and their families. Our professional team of medical Professionals, Cutting-edge technology and compassionate approach make us a leader in Healthcare Industry.</p>
                     <a href="#" class="global-btn" style="padding:12px 69px;">Book Appointment</a>
                 </div>
                 <div class="col-12 col-lg-3">
@@ -226,8 +229,8 @@
             <div class="row mt-4">
                 <div class="col-12">
                     <div class="book-appointment">
-                        <h2 class="font-24 mb-1" style="color:#21384D;">Book Appointment</h2>
-                        <p class="font-20 mb-3">Search by your disease, doctor and department</p>
+                        <h2 class="font-weight-600 font-24 mb-1 dark-blue-text">Book Appointment</h2>
+                        <p class="font-20 mb-3 dark-blue-text">Search by your disease, doctor and department</p>
                         <div class="d-flex flex-column flex-md-row align-items-center gap-3">
                             <div class="input-div d-flex align-items-center justify-content-between gap-4">
                                 <div class="d-flex flex-fill align-items-center justify-content-between gap-2">
@@ -257,6 +260,213 @@
                 </div>
             </div>
         </section>
+    </section>
+    <!-- Top-searched specialties section -->
+    <section class="container-fluid top-search">
+        <section class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h2 class="font-40 light-black">Top-searched specialties</h2>
+                    <p class="font-24 light-black-70 font-urbanist">Our patients search these all diseases and we provide solutions of it</p>
+                    <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between gap-4" style="margin-top:32px;">
+                        <div>
+                            <img src="assets/images/top-search-Img.png" alt="top search image" class="img-fluid">
+                            <h5 class="font-16 fw-bold mt-2">Gynecologists</h5>
+                        </div>
+                        <div>
+                            <img src="assets/images/top-search-img-1.png" alt="top search image" class="img-fluid">
+                            <h5 class="font-16 fw-bold mt-2">Skin Specialist</h5>
+                        </div>
+                        <div>
+                            <img src="assets/images/top-search-Img-2.png" alt="top search image" class="img-fluid">
+                            <h5 class="font-16 fw-bold mt-2">Orthopedic Surgeon</h5>
+                        </div>
+                        <div>
+                            <img src="assets/images/top-search-Img-3.png" alt="top search image" class="img-fluid">
+                            <h5 class="font-16 fw-bold mt-2">ENT Specialist</h5>
+                        </div>
+                        <div>
+                            <img src="assets/images/top-search-Img-4.png" alt="top search image" class="img-fluid">
+                            <h5 class="font-16 fw-bold mt-2">Eye Specialist</h5>
+                        </div>
+                        <div>
+                            <img src="assets/images/top-search-Img-5.png" alt="top search image" class="img-fluid">
+                            <h5 class="font-16 fw-bold mt-2">Neurologist</h5>
+                        </div>
+                        <div>
+                            <img src="assets/images/top-search-img-7.png" alt="top search image" class="img-fluid">
+                            <h5 class="font-16 fw-bold mt-2">Dentist</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+    <!-- Qualified Doctors section -->
+    <section class="container-fluid qualified-doctors py-4 pe-0">
+        <section class="container py-2">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h2 class="font-40 light-black">Qualified Doctors</h2>
+                    <p class="font-24 font-urbanist light-black-70">Our professional doctor working for your medical health</p>
+                </div>
+            </div>
+        </section>
+        <!-- Swiper -->
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+            <div class="swiper-slide d-flex flex-column gap-3">
+                <div class="d-flex align-items-center gap-3 profile-data">
+                    <img src="assets/images/qualified doctors/doctors-proile-pic.png" alt="profile image">
+                    <div class="d-flex flex-column align-items-start">
+                        <h4 class="font-24 light-black font-weight-600 mb-0">Rachel Lee</h4>
+                        <p class="font-16 light-black-90 my-1">Dermatologist</p>
+                        <p class="font-16 light-black-90 mb-0">Experience: 37 years</p>
+                    </div>
+                </div>
+                <p class="font-16 light-black-80 text-start">“Amazing doctor. Listened to all my symptoms and very attentive. Totally recommend you to please check this..</p>
+                <div class="d-flex align-items-center justify-content-end gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M10.8586 4.71248C11.2178 3.60691 12.7819 3.60691 13.1412 4.71248L14.4246 8.66264C14.5853 9.15706 15.046 9.49182 15.5659 9.49182H19.7193C20.8818 9.49182 21.3651 10.9794 20.4247 11.6626L17.0645 14.104C16.6439 14.4095 16.4679 14.9512 16.6286 15.4456L17.912 19.3958C18.2713 20.5013 17.0059 21.4207 16.0654 20.7374L12.7052 18.2961C12.2846 17.9905 11.7151 17.9905 11.2945 18.2961L7.93434 20.7374C6.99388 21.4207 5.72851 20.5013 6.08773 19.3958L7.37121 15.4456C7.53186 14.9512 7.35587 14.4095 6.93529 14.104L3.57508 11.6626C2.63463 10.9794 3.11796 9.49182 4.28043 9.49182H8.43387C8.95374 9.49182 9.41448 9.15706 9.57513 8.66264L10.8586 4.71248Z" fill="#F2C246"/>
+                      </svg>
+                      <p class="font-16 light-black mb-0">4.9 (28 reviews) </p>
+                </div>
+            </div>
+            <div class="swiper-slide d-flex flex-column gap-3">
+                <div class="d-flex align-items-center gap-3 profile-data">
+                    <img src="assets/images/qualified doctors/doctors-proile-pic-3.png" alt="profile image">
+                    <div class="d-flex flex-column align-items-start">
+                        <h4 class="font-24 light-black font-weight-600 mb-0">Emily Patel</h4>
+                        <p class="font-16 light-black-90 my-1">Dentist</p>
+                        <p class="font-16 light-black-90 mb-0">Experience: 10 years</p>
+                    </div>
+                </div>
+                <p class="font-16 light-black-80 text-start">“Amazing doctor. Listened to all my symptoms and very attentive. Totally recommend you to please check this..</p>
+                <div class="d-flex align-items-center justify-content-end gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M10.8586 4.71248C11.2178 3.60691 12.7819 3.60691 13.1412 4.71248L14.4246 8.66264C14.5853 9.15706 15.046 9.49182 15.5659 9.49182H19.7193C20.8818 9.49182 21.3651 10.9794 20.4247 11.6626L17.0645 14.104C16.6439 14.4095 16.4679 14.9512 16.6286 15.4456L17.912 19.3958C18.2713 20.5013 17.0059 21.4207 16.0654 20.7374L12.7052 18.2961C12.2846 17.9905 11.7151 17.9905 11.2945 18.2961L7.93434 20.7374C6.99388 21.4207 5.72851 20.5013 6.08773 19.3958L7.37121 15.4456C7.53186 14.9512 7.35587 14.4095 6.93529 14.104L3.57508 11.6626C2.63463 10.9794 3.11796 9.49182 4.28043 9.49182H8.43387C8.95374 9.49182 9.41448 9.15706 9.57513 8.66264L10.8586 4.71248Z" fill="#F2C246"/>
+                      </svg>
+                      <p class="font-16 light-black mb-0">4.9 (28 reviews) </p>
+                </div>
+            </div>
+            <div class="swiper-slide d-flex flex-column gap-3">
+                <div class="d-flex align-items-center gap-3 profile-data">
+                    <img src="assets/images/qualified doctors/doctors-proile-pic-1.png" alt="profile image">
+                    <div class="d-flex flex-column align-items-start">
+                        <h4 class="font-24 light-black font-weight-600 mb-0">Sofia Khan</h4>
+                        <p class="font-16 light-black-90 my-1">Dermatologist</p>
+                        <p class="font-16 light-black-90 mb-0">Experience: 37 years</p>
+                    </div>
+                </div>
+                <p class="font-16 light-black-80 text-start">“Amazing doctor. Listened to all my symptoms and very attentive. Totally recommend you to please check this..</p>
+                <div class="d-flex align-items-center justify-content-end gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M10.8586 4.71248C11.2178 3.60691 12.7819 3.60691 13.1412 4.71248L14.4246 8.66264C14.5853 9.15706 15.046 9.49182 15.5659 9.49182H19.7193C20.8818 9.49182 21.3651 10.9794 20.4247 11.6626L17.0645 14.104C16.6439 14.4095 16.4679 14.9512 16.6286 15.4456L17.912 19.3958C18.2713 20.5013 17.0059 21.4207 16.0654 20.7374L12.7052 18.2961C12.2846 17.9905 11.7151 17.9905 11.2945 18.2961L7.93434 20.7374C6.99388 21.4207 5.72851 20.5013 6.08773 19.3958L7.37121 15.4456C7.53186 14.9512 7.35587 14.4095 6.93529 14.104L3.57508 11.6626C2.63463 10.9794 3.11796 9.49182 4.28043 9.49182H8.43387C8.95374 9.49182 9.41448 9.15706 9.57513 8.66264L10.8586 4.71248Z" fill="#F2C246"/>
+                      </svg>
+                      <p class="font-16 light-black mb-0">4.9 (28 reviews) </p>
+                </div>
+            </div>
+            <div class="swiper-slide d-flex flex-column gap-3">
+                <div class="d-flex align-items-center gap-3 profile-data">
+                    <img src="assets/images/qualified doctors/doctors-proile-pic-2.png" alt="profile image">
+                    <div class="d-flex flex-column align-items-start">
+                        <h4 class="font-24 light-black font-weight-600 mb-0">Sofia Khan</h4>
+                        <p class="font-16 light-black-90 my-1">Gynecologist</p>
+                        <p class="font-16 light-black-90 mb-0">Experience: 10 years</p>
+                    </div>
+                </div>
+                <p class="font-16 light-black-80 text-start">“Amazing doctor. Listened to all my symptoms and very attentive. Totally recommend you to please check this..</p>
+                <div class="d-flex align-items-center justify-content-end gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M10.8586 4.71248C11.2178 3.60691 12.7819 3.60691 13.1412 4.71248L14.4246 8.66264C14.5853 9.15706 15.046 9.49182 15.5659 9.49182H19.7193C20.8818 9.49182 21.3651 10.9794 20.4247 11.6626L17.0645 14.104C16.6439 14.4095 16.4679 14.9512 16.6286 15.4456L17.912 19.3958C18.2713 20.5013 17.0059 21.4207 16.0654 20.7374L12.7052 18.2961C12.2846 17.9905 11.7151 17.9905 11.2945 18.2961L7.93434 20.7374C6.99388 21.4207 5.72851 20.5013 6.08773 19.3958L7.37121 15.4456C7.53186 14.9512 7.35587 14.4095 6.93529 14.104L3.57508 11.6626C2.63463 10.9794 3.11796 9.49182 4.28043 9.49182H8.43387C8.95374 9.49182 9.41448 9.15706 9.57513 8.66264L10.8586 4.71248Z" fill="#F2C246"/>
+                      </svg>
+                      <p class="font-16 light-black mb-0">4.9 (28 reviews) </p>
+                </div>
+            </div>
+            <div class="swiper-slide d-flex flex-column gap-3">
+                <div class="d-flex align-items-center gap-3 profile-data">
+                    <img src="assets/images/qualified doctors/doctors-proile-pic.png" alt="profile image">
+                    <div class="d-flex flex-column align-items-start">
+                        <h4 class="font-24 light-black font-weight-600 mb-0">Rachel Lee</h4>
+                        <p class="font-16 light-black-90 my-1">Dermatologist</p>
+                        <p class="font-16 light-black-90 mb-0">Experience: 37 years</p>
+                    </div>
+                </div>
+                <p class="font-16 light-black-80 text-start">“Amazing doctor. Listened to all my symptoms and very attentive. Totally recommend you to please check this..</p>
+                <div class="d-flex align-items-center justify-content-end gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M10.8586 4.71248C11.2178 3.60691 12.7819 3.60691 13.1412 4.71248L14.4246 8.66264C14.5853 9.15706 15.046 9.49182 15.5659 9.49182H19.7193C20.8818 9.49182 21.3651 10.9794 20.4247 11.6626L17.0645 14.104C16.6439 14.4095 16.4679 14.9512 16.6286 15.4456L17.912 19.3958C18.2713 20.5013 17.0059 21.4207 16.0654 20.7374L12.7052 18.2961C12.2846 17.9905 11.7151 17.9905 11.2945 18.2961L7.93434 20.7374C6.99388 21.4207 5.72851 20.5013 6.08773 19.3958L7.37121 15.4456C7.53186 14.9512 7.35587 14.4095 6.93529 14.104L3.57508 11.6626C2.63463 10.9794 3.11796 9.49182 4.28043 9.49182H8.43387C8.95374 9.49182 9.41448 9.15706 9.57513 8.66264L10.8586 4.71248Z" fill="#F2C246"/>
+                      </svg>
+                      <p class="font-16 light-black mb-0">4.9 (28 reviews) </p>
+                </div>
+            </div>
+            <div class="swiper-slide d-flex flex-column gap-3">
+                <div class="d-flex align-items-center gap-3 profile-data">
+                    <img src="assets/images/qualified doctors/doctors-proile-pic.png" alt="profile image">
+                    <div class="d-flex flex-column align-items-start">
+                        <h4 class="font-24 light-black font-weight-600 mb-0">Rachel Lee</h4>
+                        <p class="font-16 light-black-90 my-1">Dermatologist</p>
+                        <p class="font-16 light-black-90 mb-0">Experience: 37 years</p>
+                    </div>
+                </div>
+                <p class="font-16 light-black-80 text-start">“Amazing doctor. Listened to all my symptoms and very attentive. Totally recommend you to please check this..</p>
+                <div class="d-flex align-items-center justify-content-end gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M10.8586 4.71248C11.2178 3.60691 12.7819 3.60691 13.1412 4.71248L14.4246 8.66264C14.5853 9.15706 15.046 9.49182 15.5659 9.49182H19.7193C20.8818 9.49182 21.3651 10.9794 20.4247 11.6626L17.0645 14.104C16.6439 14.4095 16.4679 14.9512 16.6286 15.4456L17.912 19.3958C18.2713 20.5013 17.0059 21.4207 16.0654 20.7374L12.7052 18.2961C12.2846 17.9905 11.7151 17.9905 11.2945 18.2961L7.93434 20.7374C6.99388 21.4207 5.72851 20.5013 6.08773 19.3958L7.37121 15.4456C7.53186 14.9512 7.35587 14.4095 6.93529 14.104L3.57508 11.6626C2.63463 10.9794 3.11796 9.49182 4.28043 9.49182H8.43387C8.95374 9.49182 9.41448 9.15706 9.57513 8.66264L10.8586 4.71248Z" fill="#F2C246"/>
+                      </svg>
+                      <p class="font-16 light-black mb-0">4.9 (28 reviews) </p>
+                </div>
+            </div>
+            <div class="swiper-slide d-flex flex-column gap-3">
+                <div class="d-flex align-items-center gap-3 profile-data">
+                    <img src="assets/images/qualified doctors/doctors-proile-pic.png" alt="profile image">
+                    <div class="d-flex flex-column align-items-start">
+                        <h4 class="font-24 light-black font-weight-600 mb-0">Rachel Lee</h4>
+                        <p class="font-16 light-black-90 my-1">Dermatologist</p>
+                        <p class="font-16 light-black-90 mb-0">Experience: 37 years</p>
+                    </div>
+                </div>
+                <p class="font-16 light-black-80 text-start">“Amazing doctor. Listened to all my symptoms and very attentive. Totally recommend you to please check this..</p>
+                <div class="d-flex align-items-center justify-content-end gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M10.8586 4.71248C11.2178 3.60691 12.7819 3.60691 13.1412 4.71248L14.4246 8.66264C14.5853 9.15706 15.046 9.49182 15.5659 9.49182H19.7193C20.8818 9.49182 21.3651 10.9794 20.4247 11.6626L17.0645 14.104C16.6439 14.4095 16.4679 14.9512 16.6286 15.4456L17.912 19.3958C18.2713 20.5013 17.0059 21.4207 16.0654 20.7374L12.7052 18.2961C12.2846 17.9905 11.7151 17.9905 11.2945 18.2961L7.93434 20.7374C6.99388 21.4207 5.72851 20.5013 6.08773 19.3958L7.37121 15.4456C7.53186 14.9512 7.35587 14.4095 6.93529 14.104L3.57508 11.6626C2.63463 10.9794 3.11796 9.49182 4.28043 9.49182H8.43387C8.95374 9.49182 9.41448 9.15706 9.57513 8.66264L10.8586 4.71248Z" fill="#F2C246"/>
+                      </svg>
+                      <p class="font-16 light-black mb-0">4.9 (28 reviews) </p>
+                </div>
+            </div>
+            <div class="swiper-slide d-flex flex-column gap-3">
+                <div class="d-flex align-items-center gap-3 profile-data">
+                    <img src="assets/images/qualified doctors/doctors-proile-pic.png" alt="profile image">
+                    <div class="d-flex flex-column align-items-start">
+                        <h4 class="font-24 light-black font-weight-600 mb-0">Rachel Lee</h4>
+                        <p class="font-16 light-black-90 my-1">Dermatologist</p>
+                        <p class="font-16 light-black-90 mb-0">Experience: 37 years</p>
+                    </div>
+                </div>
+                <p class="font-16 light-black-80 text-start">“Amazing doctor. Listened to all my symptoms and very attentive. Totally recommend you to please check this..</p>
+                <div class="d-flex align-items-center justify-content-end gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M10.8586 4.71248C11.2178 3.60691 12.7819 3.60691 13.1412 4.71248L14.4246 8.66264C14.5853 9.15706 15.046 9.49182 15.5659 9.49182H19.7193C20.8818 9.49182 21.3651 10.9794 20.4247 11.6626L17.0645 14.104C16.6439 14.4095 16.4679 14.9512 16.6286 15.4456L17.912 19.3958C18.2713 20.5013 17.0059 21.4207 16.0654 20.7374L12.7052 18.2961C12.2846 17.9905 11.7151 17.9905 11.2945 18.2961L7.93434 20.7374C6.99388 21.4207 5.72851 20.5013 6.08773 19.3958L7.37121 15.4456C7.53186 14.9512 7.35587 14.4095 6.93529 14.104L3.57508 11.6626C2.63463 10.9794 3.11796 9.49182 4.28043 9.49182H8.43387C8.95374 9.49182 9.41448 9.15706 9.57513 8.66264L10.8586 4.71248Z" fill="#F2C246"/>
+                      </svg>
+                      <p class="font-16 light-black mb-0">4.9 (28 reviews) </p>
+                </div>
+            </div>
+            
+            </div>
+            <div class="swiper-buttons d-flex align-items-center gap-4">
+                <div class="swiper-button-prev">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M10 19L3 12M3 12L10 5M3 12L21 12" stroke="#008159" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <div class="swiper-button-next">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M14 5L21 12M21 12L14 19M21 12L3 12" stroke="#008159" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+            </div>
+            <div class="swiper-scrollbar mt-4"></div>
+        </div>
     </section>
 
     <!-- scripts -->

@@ -3,14 +3,50 @@ body {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  position: relative;
 }
 
 a {
   text-decoration: none !important;
 }
 
-.font-40 {
+.white-text {
+  color: #ffffff;
+}
+
+.accent-text {
+  color: #F2C246;
+}
+
+.dark-blue-text {
+  color: #21384D;
+}
+
+.light-black {
   color: #333;
+}
+
+.light-black-70 {
+  color: rgba(42, 42, 42, 0.7);
+}
+
+.light-black-80 {
+  color: rgba(42, 42, 42, 0.8);
+}
+
+.light-black-90 {
+  color: rgba(42, 42, 42, 0.9);
+}
+
+.font-urbanist {
+  font-family: "Urbanist", "Helvetica Neue", sans-serif !important;
+}
+
+.font-weight-600 {
+  font-weight: 600 !important;
+}
+
+.font-40 {
   font-family: "Open Sans", "Helvetica Neue", sans-serif;
   font-size: 40px;
   font-style: normal;
@@ -20,17 +56,15 @@ a {
 }
 
 .font-24 {
-  color: #ffffff;
   font-family: "Open Sans", "Helvetica Neue", sans-serif;
   font-size: 24px;
   font-style: normal;
-  font-weight: 600;
+  font-weight: 400;
   line-height: normal;
   letter-spacing: 0.12px;
 }
 
 .font-20 {
-  color: #21384D;
   font-family: "Open Sans", "Helvetica Neue", sans-serif;
   font-size: 20px;
   font-style: normal;
@@ -50,7 +84,6 @@ a {
 }
 
 .font-14 {
-  color: #333;
   font-family: "Open Sans", "Helvetica Neue", sans-serif;
   font-size: 14px;
   font-style: normal;
@@ -122,6 +155,65 @@ header .responsive_header.active {
 }
 .hero-banner .form-control:focus {
   box-shadow: none !important;
+}
+
+.top-search {
+  background: url("/assets/images/left-vector.png") top left no-repeat, url("/assets/images/right-vector.png") bottom right no-repeat, #F4F9FF;
+  padding: 80px 15px 120px;
+}
+
+.qualified-doctors {
+  background: linear-gradient(100deg, rgba(0, 129, 89, 0.25) 2.59%, rgba(2, 188, 230, 0.25) 111.36%);
+  position: relative;
+}
+.qualified-doctors .swiper {
+  width: 100%;
+  height: 100%;
+  position: unset !important;
+}
+.qualified-doctors .swiper-button-next:after, .qualified-doctors .swiper-button-prev:after {
+  content: unset !important;
+}
+.qualified-doctors .swiper-button-next, .qualified-doctors .swiper-button-prev {
+  position: unset !important;
+  width: 44px;
+  height: 44px;
+  background: #F4F9FF;
+  border-radius: 50%;
+  padding: 8px;
+}
+.qualified-doctors .prev-btn, .qualified-doctors .next-btn {
+  width: 44px;
+  height: 44px;
+  background: #F4F9FF;
+  border-radius: 50%;
+}
+.qualified-doctors .swiper-buttons {
+  position: absolute;
+  top: 20%;
+  right: 3%;
+}
+.qualified-doctors .swiper-scrollbar-drag {
+  background: rgba(2, 188, 230, 0.9) !important;
+}
+.qualified-doctors .swiper-scrollbar {
+  height: 12px !important;
+}
+.qualified-doctors .swiper-wrapper {
+  gap: 16px;
+  margin-bottom: 2.5rem;
+}
+.qualified-doctors .swiper-slide {
+  border-radius: 16px !important;
+  background: var(--white-white, #FFF) !important;
+  box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.08) !important;
+  padding: 16px;
+}
+.qualified-doctors .swiper-slide .profile-data {
+  border-radius: 12px;
+  background: var(--primary-color-10, rgba(2, 188, 230, 0.1));
+  padding: 6px;
+  box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.08);
 }
 
 @media (min-width: 1400px) {
