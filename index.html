@@ -246,27 +246,24 @@
                     <div class="book-appointment">
                         <h2 class="font-weight-600 font-24 mb-1 dark-blue-text">Book Appointment</h2>
                         <p class="font-20 mb-3 dark-blue-text">Search by your disease, doctor and department</p>
-                        <div class="d-flex flex-column flex-lg-row align-items-center gap-3">
-                            <div class="input-div d-flex align-items-center justify-content-between gap-4">
-                                <div class="d-flex flex-fill align-items-center justify-content-between gap-2">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
-                                        <g clip-path="url(#clip0_3966_35776)">
-                                          <path d="M10 6.66667C8.15837 6.66667 6.66671 8.15833 6.66671 10C6.66671 11.8417 8.15837 13.3333 10 13.3333C11.8417 13.3333 13.3334 11.8417 13.3334 10C13.3334 8.15833 11.8417 6.66667 10 6.66667ZM17.45 9.16667C17.0667 5.69167 14.3084 2.93333 10.8334 2.55V0.833332H9.16671V2.55C5.69171 2.93333 2.93337 5.69167 2.55004 9.16667H0.833374V10.8333H2.55004C2.93337 14.3083 5.69171 17.0667 9.16671 17.45V19.1667H10.8334V17.45C14.3084 17.0667 17.0667 14.3083 17.45 10.8333H19.1667V9.16667H17.45ZM10 15.8333C6.77921 15.8333 4.16671 13.2208 4.16671 10C4.16671 6.77917 6.77921 4.16667 10 4.16667C13.2209 4.16667 15.8334 6.77917 15.8334 10C15.8334 13.2208 13.2209 15.8333 10 15.8333Z" fill="#2A2A2A" fill-opacity="0.5"/>
-                                        </g>
-                                        <defs>
-                                          <clipPath id="clip0_3966_35776">
-                                            <rect width="20" height="20" fill="white"/>
-                                          </clipPath>
-                                        </defs>
-                                      </svg>
-                                      <input type="text" class="form-control" placeholder="City, state or zip code" id="searchInput">
-                                </div>
-                                <span style="background: rgba(33, 56, 77, 0.30);width:1px;height:24px;"></span>
+                        <div class="d-flex flex-column flex-lg-row align-items-lg-center gap-3">
+                            <div class="input-div d-flex flex-column flex-md-row align-items-md-center justify-content-between gap-3 gap-md-5">
                                 <div class="d-flex flex-fill align-items-center justify-content-between gap-2">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                    <path d="M20.5605 18.4395L16.7528 14.6318C17.5395 13.446 18 12.0262 18 10.5C18 6.3645 14.6355 3 10.5 3C6.3645 3 3 6.3645 3 10.5C3 14.6355 6.3645 18 10.5 18C12.0262 18 13.446 17.5395 14.6318 16.7528L18.4395 20.5605C19.0245 21.1462 19.9755 21.1462 20.5605 20.5605C21.1462 19.9748 21.1462 19.0252 20.5605 18.4395ZM5.25 10.5C5.25 7.605 7.605 5.25 10.5 5.25C13.395 5.25 15.75 7.605 15.75 10.5C15.75 13.395 13.395 15.75 10.5 15.75C7.605 15.75 5.25 13.395 5.25 10.5Z" fill="#2A2A2A" fill-opacity="0.5"/>
+                                    <path d="M20.5605 18.4395L16.7528 14.6318C17.5395 13.446 18 12.0262 18 10.5C18 6.3645 14.6355 3 10.5 3C6.3645 3 3 6.3645 3 10.5C3 14.6355 6.3645 18 10.5 18C12.0262 18 13.446 17.5395 14.6318 16.7528L18.4395 20.5605C19.0245 21.1462 19.9755 21.1462 20.5605 20.5605C21.1462 19.9748 21.1462 19.0252 20.5605 18.4395ZM5.25 10.5C5.25 7.605 7.605 5.25 10.5 5.25C13.395 5.25 15.75 7.605 15.75 10.5C15.75 13.395 13.395 15.75 10.5 15.75C7.605 15.75 5.25 13.395 5.25 10.5Z" fill="#2A2A2A" fill-opacity="0.5"></path>
                                     </svg>
                                     <input type="search" class="form-control" placeholder="Search for doctors, condition, procedure ..." id="search">
+                                </div>
+                                <span style="background: rgba(33, 56, 77, 0.30);width:1px;height:24px;" class="d-none d-md-block"></span>
+                                <span style="background: rgba(33, 56, 77, 0.30);width:100%;height:1px;" class="d-block d-md-none"></span><div class="d-flex align-items-center justify-content-between gap-2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                        <path d="M14.7141 13.8807C13.9865 14.6083 12.519 16.0758 11.4135 17.1813C10.6324 17.9624 9.36763 17.9623 8.58658 17.1813C7.50097 16.0957 6.0605 14.6552 5.286 13.8807C2.6825 11.2772 2.6825 7.05612 5.286 4.45262C7.88949 1.84913 12.1106 1.84913 14.7141 4.45262C17.3176 7.05612 17.3176 11.2772 14.7141 13.8807Z" stroke="#2A2A2A" stroke-opacity="0.5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        <path d="M12.5 9.16667C12.5 10.5474 11.3808 11.6667 10 11.6667C8.61933 11.6667 7.50004 10.5474 7.50004 9.16667C7.50004 7.78595 8.61933 6.66667 10 6.66667C11.3808 6.66667 12.5 7.78595 12.5 9.16667Z" stroke="#2A2A2A" stroke-opacity="0.5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                      </svg>
+                                      <input type="text" class="form-control" placeholder="Lahore" id="searcLocation">
+                                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                        <path d="M15.8333 7.5L9.99996 13.3333L4.16663 7.5" stroke="#2A2A2A" stroke-opacity="0.5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                      </svg>
                                 </div>
                             </div>
                             <button class="global-btn" style="padding:13px 69px;">Search</button>
@@ -277,7 +274,7 @@
         </section>
     </section>
     <!-- Top-searched specialties section -->
-    <section class="container-fluid top-search left-right-vector-bg">
+    <section class="container-fluid top-search left-right-vector-bg d-none d-md-block">
         <section class="container">
             <div class="row">
                 <div class="col-12 text-center">
@@ -317,8 +314,68 @@
             </div>
         </section>
     </section>
+    <!-- Top-searched specialties mobile section -->
+    <section class="container-fluid top-search left-right-vector-bg d-block d-md-none">
+        <section class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h2 class="font-40 light-black">Top-searched specialties</h2>
+                    <p class="font-24 light-black-70 font-urbanist">Our patients search these all diseases and we provide solutions of it</p>
+                </div>
+            </div>
+        </section>
+        <div class="swiper-container ps-3">
+            <div class="swiper topSearchedSwiper swiper-initialized swiper-horizontal swiper-backface-hidden">
+                <div class="swiper-wrapper" id="swiper-wrapper-580f76aae010d6d66" aria-live="polite">
+                <div class="swiper-slide d-flex flex-column gap-3 swiper-slide-active" role="group" aria-label="1 / 8" style="width: 308.333px;">
+                    <div>
+                        <img src="assets/images/top-search-Img.png" alt="top search image" class="img-fluid">
+                        <h5 class="font-16 fw-bold mt-2">Gynecologists</h5>
+                    </div>
+                </div>
+                <div class="swiper-slide d-flex flex-column gap-3 swiper-slide-active" role="group" aria-label="1 / 8" style="width: 308.333px;">
+                    <div>
+                        <img src="assets/images/top-search-img-1.png" alt="top search image" class="img-fluid">
+                        <h5 class="font-16 fw-bold mt-2">Skin Specialist</h5>
+                    </div>
+                </div>
+                <div class="swiper-slide d-flex flex-column gap-3 swiper-slide-active" role="group" aria-label="1 / 8" style="width: 308.333px;">
+                    <div>
+                        <img src="assets/images/top-search-Img-2.png" alt="top search image" class="img-fluid">
+                        <h5 class="font-16 fw-bold mt-2">Orthopedic Surgeon</h5>
+                    </div>
+                </div>
+                <div class="swiper-slide d-flex flex-column gap-3 swiper-slide-active" role="group" aria-label="1 / 8" style="width: 308.333px;">
+                    <div>
+                        <img src="assets/images/top-search-Img-3.png" alt="top search image" class="img-fluid">
+                        <h5 class="font-16 fw-bold mt-2">ENT Specialist</h5>
+                    </div>
+                </div>
+                <div class="swiper-slide d-flex flex-column gap-3 swiper-slide-active" role="group" aria-label="1 / 8" style="width: 308.333px;">
+                    <div>
+                        <img src="assets/images/top-search-Img-4.png" alt="top search image" class="img-fluid">
+                        <h5 class="font-16 fw-bold mt-2">Eye Specialist</h5>
+                    </div>
+                </div>
+                <div class="swiper-slide d-flex flex-column gap-3 swiper-slide-active" role="group" aria-label="1 / 8" style="width: 308.333px;">
+                    <div>
+                        <img src="assets/images/top-search-Img-5.png" alt="top search image" class="img-fluid">
+                        <h5 class="font-16 fw-bold mt-2">Neurologist</h5>
+                    </div>
+                </div>
+                <div class="swiper-slide d-flex flex-column gap-3 swiper-slide-active" role="group" aria-label="1 / 8" style="width: 308.333px;">
+                    <div>
+                        <img src="assets/images/top-search-img-7.png" alt="top search image" class="img-fluid">
+                        <h5 class="font-16 fw-bold mt-2">Dentist</h5>
+                    </div>
+                </div>
+                </div>
+            <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+          </div>
+        </div>
+    </section>
     <!-- Qualified Doctors section -->
-    <section class="container-fluid qualified-doctors py-4 pe-0">
+    <section class="container-fluid qualified-doctors py-4 pe-0">   
         <section class="container py-2">
             <div class="row">
                 <div class="col-12 text-center">
@@ -328,163 +385,166 @@
             </div>
         </section>
         <!-- Swiper -->
-        <div class="swiper mySwiper">
-            <div class="swiper-wrapper">
-            <div class="swiper-slide d-flex flex-column gap-3">
-                <div class="d-flex align-items-center gap-3 flex-wrap profile-data">
-                    <img src="assets/images/qualified doctors/doctors-proile-pic.png" alt="profile image">
-                    <div class="d-flex flex-column align-items-start">
-                        <h4 class="font-24 light-black font-weight-600 mb-0">Rachel Lee</h4>
-                        <p class="font-16 light-black-90 my-1">Dermatologist</p>
-                        <p class="font-16 light-black-90 mb-0">Experience: 37 years</p>
+        <div class="swiper-container ps-3">
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                <div class="swiper-slide d-flex flex-column gap-3">
+                    <div class="d-flex align-items-center gap-3 flex-wrap profile-data">
+                        <img src="assets/images/qualified doctors/doctors-proile-pic.png" alt="profile image">
+                        <div class="d-flex flex-column align-items-start">
+                            <h4 class="font-24 light-black font-weight-600 mb-0">Rachel Lee</h4>
+                            <p class="font-16 light-black-90 my-1">Dermatologist</p>
+                            <p class="font-16 light-black-90 mb-0">Experience: 37 years</p>
+                        </div>
+                    </div>
+                    <p class="font-16 light-black-80 text-start">“Amazing doctor. Listened to all my symptoms and very attentive. Totally recommend you to please check this..</p>
+                    <div class="d-flex align-items-center justify-content-end gap-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M10.8586 4.71248C11.2178 3.60691 12.7819 3.60691 13.1412 4.71248L14.4246 8.66264C14.5853 9.15706 15.046 9.49182 15.5659 9.49182H19.7193C20.8818 9.49182 21.3651 10.9794 20.4247 11.6626L17.0645 14.104C16.6439 14.4095 16.4679 14.9512 16.6286 15.4456L17.912 19.3958C18.2713 20.5013 17.0059 21.4207 16.0654 20.7374L12.7052 18.2961C12.2846 17.9905 11.7151 17.9905 11.2945 18.2961L7.93434 20.7374C6.99388 21.4207 5.72851 20.5013 6.08773 19.3958L7.37121 15.4456C7.53186 14.9512 7.35587 14.4095 6.93529 14.104L3.57508 11.6626C2.63463 10.9794 3.11796 9.49182 4.28043 9.49182H8.43387C8.95374 9.49182 9.41448 9.15706 9.57513 8.66264L10.8586 4.71248Z" fill="#F2C246"/>
+                          </svg>
+                          <p class="font-16 light-black mb-0">4.9 (28 reviews) </p>
                     </div>
                 </div>
-                <p class="font-16 light-black-80 text-start">“Amazing doctor. Listened to all my symptoms and very attentive. Totally recommend you to please check this..</p>
-                <div class="d-flex align-items-center justify-content-end gap-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                        <path d="M10.8586 4.71248C11.2178 3.60691 12.7819 3.60691 13.1412 4.71248L14.4246 8.66264C14.5853 9.15706 15.046 9.49182 15.5659 9.49182H19.7193C20.8818 9.49182 21.3651 10.9794 20.4247 11.6626L17.0645 14.104C16.6439 14.4095 16.4679 14.9512 16.6286 15.4456L17.912 19.3958C18.2713 20.5013 17.0059 21.4207 16.0654 20.7374L12.7052 18.2961C12.2846 17.9905 11.7151 17.9905 11.2945 18.2961L7.93434 20.7374C6.99388 21.4207 5.72851 20.5013 6.08773 19.3958L7.37121 15.4456C7.53186 14.9512 7.35587 14.4095 6.93529 14.104L3.57508 11.6626C2.63463 10.9794 3.11796 9.49182 4.28043 9.49182H8.43387C8.95374 9.49182 9.41448 9.15706 9.57513 8.66264L10.8586 4.71248Z" fill="#F2C246"/>
-                      </svg>
-                      <p class="font-16 light-black mb-0">4.9 (28 reviews) </p>
-                </div>
-            </div>
-            <div class="swiper-slide d-flex flex-column gap-3">
-                <div class="d-flex align-items-center gap-3 flex-wrap profile-data">
-                    <img src="assets/images/qualified doctors/doctors-proile-pic-3.png" alt="profile image">
-                    <div class="d-flex flex-column align-items-start">
-                        <h4 class="font-24 light-black font-weight-600 mb-0">Emily Patel</h4>
-                        <p class="font-16 light-black-90 my-1">Dentist</p>
-                        <p class="font-16 light-black-90 mb-0">Experience: 10 years</p>
+                <div class="swiper-slide d-flex flex-column gap-3">
+                    <div class="d-flex align-items-center gap-3 flex-wrap profile-data">
+                        <img src="assets/images/qualified doctors/doctors-proile-pic-3.png" alt="profile image">
+                        <div class="d-flex flex-column align-items-start">
+                            <h4 class="font-24 light-black font-weight-600 mb-0">Emily Patel</h4>
+                            <p class="font-16 light-black-90 my-1">Dentist</p>
+                            <p class="font-16 light-black-90 mb-0">Experience: 10 years</p>
+                        </div>
+                    </div>
+                    <p class="font-16 light-black-80 text-start">“Amazing doctor. Listened to all my symptoms and very attentive. Totally recommend you to please check this..</p>
+                    <div class="d-flex align-items-center justify-content-end gap-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M10.8586 4.71248C11.2178 3.60691 12.7819 3.60691 13.1412 4.71248L14.4246 8.66264C14.5853 9.15706 15.046 9.49182 15.5659 9.49182H19.7193C20.8818 9.49182 21.3651 10.9794 20.4247 11.6626L17.0645 14.104C16.6439 14.4095 16.4679 14.9512 16.6286 15.4456L17.912 19.3958C18.2713 20.5013 17.0059 21.4207 16.0654 20.7374L12.7052 18.2961C12.2846 17.9905 11.7151 17.9905 11.2945 18.2961L7.93434 20.7374C6.99388 21.4207 5.72851 20.5013 6.08773 19.3958L7.37121 15.4456C7.53186 14.9512 7.35587 14.4095 6.93529 14.104L3.57508 11.6626C2.63463 10.9794 3.11796 9.49182 4.28043 9.49182H8.43387C8.95374 9.49182 9.41448 9.15706 9.57513 8.66264L10.8586 4.71248Z" fill="#F2C246"/>
+                          </svg>
+                          <p class="font-16 light-black mb-0">4.9 (28 reviews) </p>
                     </div>
                 </div>
-                <p class="font-16 light-black-80 text-start">“Amazing doctor. Listened to all my symptoms and very attentive. Totally recommend you to please check this..</p>
-                <div class="d-flex align-items-center justify-content-end gap-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                        <path d="M10.8586 4.71248C11.2178 3.60691 12.7819 3.60691 13.1412 4.71248L14.4246 8.66264C14.5853 9.15706 15.046 9.49182 15.5659 9.49182H19.7193C20.8818 9.49182 21.3651 10.9794 20.4247 11.6626L17.0645 14.104C16.6439 14.4095 16.4679 14.9512 16.6286 15.4456L17.912 19.3958C18.2713 20.5013 17.0059 21.4207 16.0654 20.7374L12.7052 18.2961C12.2846 17.9905 11.7151 17.9905 11.2945 18.2961L7.93434 20.7374C6.99388 21.4207 5.72851 20.5013 6.08773 19.3958L7.37121 15.4456C7.53186 14.9512 7.35587 14.4095 6.93529 14.104L3.57508 11.6626C2.63463 10.9794 3.11796 9.49182 4.28043 9.49182H8.43387C8.95374 9.49182 9.41448 9.15706 9.57513 8.66264L10.8586 4.71248Z" fill="#F2C246"/>
-                      </svg>
-                      <p class="font-16 light-black mb-0">4.9 (28 reviews) </p>
-                </div>
-            </div>
-            <div class="swiper-slide d-flex flex-column gap-3">
-                <div class="d-flex align-items-center gap-3 flex-wrap profile-data">
-                    <img src="assets/images/qualified doctors/doctors-proile-pic-1.png" alt="profile image">
-                    <div class="d-flex flex-column align-items-start">
-                        <h4 class="font-24 light-black font-weight-600 mb-0">Sofia Khan</h4>
-                        <p class="font-16 light-black-90 my-1">Dermatologist</p>
-                        <p class="font-16 light-black-90 mb-0">Experience: 37 years</p>
+                <div class="swiper-slide d-flex flex-column gap-3">
+                    <div class="d-flex align-items-center gap-3 flex-wrap profile-data">
+                        <img src="assets/images/qualified doctors/doctors-proile-pic-1.png" alt="profile image">
+                        <div class="d-flex flex-column align-items-start">
+                            <h4 class="font-24 light-black font-weight-600 mb-0">Sofia Khan</h4>
+                            <p class="font-16 light-black-90 my-1">Dermatologist</p>
+                            <p class="font-16 light-black-90 mb-0">Experience: 37 years</p>
+                        </div>
+                    </div>
+                    <p class="font-16 light-black-80 text-start">“Amazing doctor. Listened to all my symptoms and very attentive. Totally recommend you to please check this..</p>
+                    <div class="d-flex align-items-center justify-content-end gap-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M10.8586 4.71248C11.2178 3.60691 12.7819 3.60691 13.1412 4.71248L14.4246 8.66264C14.5853 9.15706 15.046 9.49182 15.5659 9.49182H19.7193C20.8818 9.49182 21.3651 10.9794 20.4247 11.6626L17.0645 14.104C16.6439 14.4095 16.4679 14.9512 16.6286 15.4456L17.912 19.3958C18.2713 20.5013 17.0059 21.4207 16.0654 20.7374L12.7052 18.2961C12.2846 17.9905 11.7151 17.9905 11.2945 18.2961L7.93434 20.7374C6.99388 21.4207 5.72851 20.5013 6.08773 19.3958L7.37121 15.4456C7.53186 14.9512 7.35587 14.4095 6.93529 14.104L3.57508 11.6626C2.63463 10.9794 3.11796 9.49182 4.28043 9.49182H8.43387C8.95374 9.49182 9.41448 9.15706 9.57513 8.66264L10.8586 4.71248Z" fill="#F2C246"/>
+                          </svg>
+                          <p class="font-16 light-black mb-0">4.9 (28 reviews) </p>
                     </div>
                 </div>
-                <p class="font-16 light-black-80 text-start">“Amazing doctor. Listened to all my symptoms and very attentive. Totally recommend you to please check this..</p>
-                <div class="d-flex align-items-center justify-content-end gap-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                        <path d="M10.8586 4.71248C11.2178 3.60691 12.7819 3.60691 13.1412 4.71248L14.4246 8.66264C14.5853 9.15706 15.046 9.49182 15.5659 9.49182H19.7193C20.8818 9.49182 21.3651 10.9794 20.4247 11.6626L17.0645 14.104C16.6439 14.4095 16.4679 14.9512 16.6286 15.4456L17.912 19.3958C18.2713 20.5013 17.0059 21.4207 16.0654 20.7374L12.7052 18.2961C12.2846 17.9905 11.7151 17.9905 11.2945 18.2961L7.93434 20.7374C6.99388 21.4207 5.72851 20.5013 6.08773 19.3958L7.37121 15.4456C7.53186 14.9512 7.35587 14.4095 6.93529 14.104L3.57508 11.6626C2.63463 10.9794 3.11796 9.49182 4.28043 9.49182H8.43387C8.95374 9.49182 9.41448 9.15706 9.57513 8.66264L10.8586 4.71248Z" fill="#F2C246"/>
-                      </svg>
-                      <p class="font-16 light-black mb-0">4.9 (28 reviews) </p>
-                </div>
-            </div>
-            <div class="swiper-slide d-flex flex-column gap-3">
-                <div class="d-flex align-items-center gap-3 flex-wrap profile-data">
-                    <img src="assets/images/qualified doctors/doctors-proile-pic-2.png" alt="profile image">
-                    <div class="d-flex flex-column align-items-start">
-                        <h4 class="font-24 light-black font-weight-600 mb-0">Sofia Khan</h4>
-                        <p class="font-16 light-black-90 my-1">Gynecologist</p>
-                        <p class="font-16 light-black-90 mb-0">Experience: 10 years</p>
+                <div class="swiper-slide d-flex flex-column gap-3">
+                    <div class="d-flex align-items-center gap-3 flex-wrap profile-data">
+                        <img src="assets/images/qualified doctors/doctors-proile-pic-2.png" alt="profile image">
+                        <div class="d-flex flex-column align-items-start">
+                            <h4 class="font-24 light-black font-weight-600 mb-0">Sofia Khan</h4>
+                            <p class="font-16 light-black-90 my-1">Gynecologist</p>
+                            <p class="font-16 light-black-90 mb-0">Experience: 10 years</p>
+                        </div>
+                    </div>
+                    <p class="font-16 light-black-80 text-start">“Amazing doctor. Listened to all my symptoms and very attentive. Totally recommend you to please check this..</p>
+                    <div class="d-flex align-items-center justify-content-end gap-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M10.8586 4.71248C11.2178 3.60691 12.7819 3.60691 13.1412 4.71248L14.4246 8.66264C14.5853 9.15706 15.046 9.49182 15.5659 9.49182H19.7193C20.8818 9.49182 21.3651 10.9794 20.4247 11.6626L17.0645 14.104C16.6439 14.4095 16.4679 14.9512 16.6286 15.4456L17.912 19.3958C18.2713 20.5013 17.0059 21.4207 16.0654 20.7374L12.7052 18.2961C12.2846 17.9905 11.7151 17.9905 11.2945 18.2961L7.93434 20.7374C6.99388 21.4207 5.72851 20.5013 6.08773 19.3958L7.37121 15.4456C7.53186 14.9512 7.35587 14.4095 6.93529 14.104L3.57508 11.6626C2.63463 10.9794 3.11796 9.49182 4.28043 9.49182H8.43387C8.95374 9.49182 9.41448 9.15706 9.57513 8.66264L10.8586 4.71248Z" fill="#F2C246"/>
+                          </svg>
+                          <p class="font-16 light-black mb-0">4.9 (28 reviews) </p>
                     </div>
                 </div>
-                <p class="font-16 light-black-80 text-start">“Amazing doctor. Listened to all my symptoms and very attentive. Totally recommend you to please check this..</p>
-                <div class="d-flex align-items-center justify-content-end gap-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                        <path d="M10.8586 4.71248C11.2178 3.60691 12.7819 3.60691 13.1412 4.71248L14.4246 8.66264C14.5853 9.15706 15.046 9.49182 15.5659 9.49182H19.7193C20.8818 9.49182 21.3651 10.9794 20.4247 11.6626L17.0645 14.104C16.6439 14.4095 16.4679 14.9512 16.6286 15.4456L17.912 19.3958C18.2713 20.5013 17.0059 21.4207 16.0654 20.7374L12.7052 18.2961C12.2846 17.9905 11.7151 17.9905 11.2945 18.2961L7.93434 20.7374C6.99388 21.4207 5.72851 20.5013 6.08773 19.3958L7.37121 15.4456C7.53186 14.9512 7.35587 14.4095 6.93529 14.104L3.57508 11.6626C2.63463 10.9794 3.11796 9.49182 4.28043 9.49182H8.43387C8.95374 9.49182 9.41448 9.15706 9.57513 8.66264L10.8586 4.71248Z" fill="#F2C246"/>
-                      </svg>
-                      <p class="font-16 light-black mb-0">4.9 (28 reviews) </p>
-                </div>
-            </div>
-            <div class="swiper-slide d-flex flex-column gap-3">
-                <div class="d-flex align-items-center gap-3 flex-wrap profile-data">
-                    <img src="assets/images/qualified doctors/doctors-proile-pic.png" alt="profile image">
-                    <div class="d-flex flex-column align-items-start">
-                        <h4 class="font-24 light-black font-weight-600 mb-0">Rachel Lee</h4>
-                        <p class="font-16 light-black-90 my-1">Dermatologist</p>
-                        <p class="font-16 light-black-90 mb-0">Experience: 37 years</p>
+                <div class="swiper-slide d-flex flex-column gap-3">
+                    <div class="d-flex align-items-center gap-3 flex-wrap profile-data">
+                        <img src="assets/images/qualified doctors/doctors-proile-pic.png" alt="profile image">
+                        <div class="d-flex flex-column align-items-start">
+                            <h4 class="font-24 light-black font-weight-600 mb-0">Rachel Lee</h4>
+                            <p class="font-16 light-black-90 my-1">Dermatologist</p>
+                            <p class="font-16 light-black-90 mb-0">Experience: 37 years</p>
+                        </div>
+                    </div>
+                    <p class="font-16 light-black-80 text-start">“Amazing doctor. Listened to all my symptoms and very attentive. Totally recommend you to please check this..</p>
+                    <div class="d-flex align-items-center justify-content-end gap-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M10.8586 4.71248C11.2178 3.60691 12.7819 3.60691 13.1412 4.71248L14.4246 8.66264C14.5853 9.15706 15.046 9.49182 15.5659 9.49182H19.7193C20.8818 9.49182 21.3651 10.9794 20.4247 11.6626L17.0645 14.104C16.6439 14.4095 16.4679 14.9512 16.6286 15.4456L17.912 19.3958C18.2713 20.5013 17.0059 21.4207 16.0654 20.7374L12.7052 18.2961C12.2846 17.9905 11.7151 17.9905 11.2945 18.2961L7.93434 20.7374C6.99388 21.4207 5.72851 20.5013 6.08773 19.3958L7.37121 15.4456C7.53186 14.9512 7.35587 14.4095 6.93529 14.104L3.57508 11.6626C2.63463 10.9794 3.11796 9.49182 4.28043 9.49182H8.43387C8.95374 9.49182 9.41448 9.15706 9.57513 8.66264L10.8586 4.71248Z" fill="#F2C246"/>
+                          </svg>
+                          <p class="font-16 light-black mb-0">4.9 (28 reviews) </p>
                     </div>
                 </div>
-                <p class="font-16 light-black-80 text-start">“Amazing doctor. Listened to all my symptoms and very attentive. Totally recommend you to please check this..</p>
-                <div class="d-flex align-items-center justify-content-end gap-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                        <path d="M10.8586 4.71248C11.2178 3.60691 12.7819 3.60691 13.1412 4.71248L14.4246 8.66264C14.5853 9.15706 15.046 9.49182 15.5659 9.49182H19.7193C20.8818 9.49182 21.3651 10.9794 20.4247 11.6626L17.0645 14.104C16.6439 14.4095 16.4679 14.9512 16.6286 15.4456L17.912 19.3958C18.2713 20.5013 17.0059 21.4207 16.0654 20.7374L12.7052 18.2961C12.2846 17.9905 11.7151 17.9905 11.2945 18.2961L7.93434 20.7374C6.99388 21.4207 5.72851 20.5013 6.08773 19.3958L7.37121 15.4456C7.53186 14.9512 7.35587 14.4095 6.93529 14.104L3.57508 11.6626C2.63463 10.9794 3.11796 9.49182 4.28043 9.49182H8.43387C8.95374 9.49182 9.41448 9.15706 9.57513 8.66264L10.8586 4.71248Z" fill="#F2C246"/>
-                      </svg>
-                      <p class="font-16 light-black mb-0">4.9 (28 reviews) </p>
-                </div>
-            </div>
-            <div class="swiper-slide d-flex flex-column gap-3">
-                <div class="d-flex align-items-center gap-3 flex-wrap profile-data">
-                    <img src="assets/images/qualified doctors/doctors-proile-pic.png" alt="profile image">
-                    <div class="d-flex flex-column align-items-start">
-                        <h4 class="font-24 light-black font-weight-600 mb-0">Rachel Lee</h4>
-                        <p class="font-16 light-black-90 my-1">Dermatologist</p>
-                        <p class="font-16 light-black-90 mb-0">Experience: 37 years</p>
+                <div class="swiper-slide d-flex flex-column gap-3">
+                    <div class="d-flex align-items-center gap-3 flex-wrap profile-data">
+                        <img src="assets/images/qualified doctors/doctors-proile-pic.png" alt="profile image">
+                        <div class="d-flex flex-column align-items-start">
+                            <h4 class="font-24 light-black font-weight-600 mb-0">Rachel Lee</h4>
+                            <p class="font-16 light-black-90 my-1">Dermatologist</p>
+                            <p class="font-16 light-black-90 mb-0">Experience: 37 years</p>
+                        </div>
+                    </div>
+                    <p class="font-16 light-black-80 text-start">“Amazing doctor. Listened to all my symptoms and very attentive. Totally recommend you to please check this..</p>
+                    <div class="d-flex align-items-center justify-content-end gap-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M10.8586 4.71248C11.2178 3.60691 12.7819 3.60691 13.1412 4.71248L14.4246 8.66264C14.5853 9.15706 15.046 9.49182 15.5659 9.49182H19.7193C20.8818 9.49182 21.3651 10.9794 20.4247 11.6626L17.0645 14.104C16.6439 14.4095 16.4679 14.9512 16.6286 15.4456L17.912 19.3958C18.2713 20.5013 17.0059 21.4207 16.0654 20.7374L12.7052 18.2961C12.2846 17.9905 11.7151 17.9905 11.2945 18.2961L7.93434 20.7374C6.99388 21.4207 5.72851 20.5013 6.08773 19.3958L7.37121 15.4456C7.53186 14.9512 7.35587 14.4095 6.93529 14.104L3.57508 11.6626C2.63463 10.9794 3.11796 9.49182 4.28043 9.49182H8.43387C8.95374 9.49182 9.41448 9.15706 9.57513 8.66264L10.8586 4.71248Z" fill="#F2C246"/>
+                          </svg>
+                          <p class="font-16 light-black mb-0">4.9 (28 reviews) </p>
                     </div>
                 </div>
-                <p class="font-16 light-black-80 text-start">“Amazing doctor. Listened to all my symptoms and very attentive. Totally recommend you to please check this..</p>
-                <div class="d-flex align-items-center justify-content-end gap-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                        <path d="M10.8586 4.71248C11.2178 3.60691 12.7819 3.60691 13.1412 4.71248L14.4246 8.66264C14.5853 9.15706 15.046 9.49182 15.5659 9.49182H19.7193C20.8818 9.49182 21.3651 10.9794 20.4247 11.6626L17.0645 14.104C16.6439 14.4095 16.4679 14.9512 16.6286 15.4456L17.912 19.3958C18.2713 20.5013 17.0059 21.4207 16.0654 20.7374L12.7052 18.2961C12.2846 17.9905 11.7151 17.9905 11.2945 18.2961L7.93434 20.7374C6.99388 21.4207 5.72851 20.5013 6.08773 19.3958L7.37121 15.4456C7.53186 14.9512 7.35587 14.4095 6.93529 14.104L3.57508 11.6626C2.63463 10.9794 3.11796 9.49182 4.28043 9.49182H8.43387C8.95374 9.49182 9.41448 9.15706 9.57513 8.66264L10.8586 4.71248Z" fill="#F2C246"/>
-                      </svg>
-                      <p class="font-16 light-black mb-0">4.9 (28 reviews) </p>
-                </div>
-            </div>
-            <div class="swiper-slide d-flex flex-column gap-3">
-                <div class="d-flex align-items-center gap-3 flex-wrap profile-data">
-                    <img src="assets/images/qualified doctors/doctors-proile-pic.png" alt="profile image">
-                    <div class="d-flex flex-column align-items-start">
-                        <h4 class="font-24 light-black font-weight-600 mb-0">Rachel Lee</h4>
-                        <p class="font-16 light-black-90 my-1">Dermatologist</p>
-                        <p class="font-16 light-black-90 mb-0">Experience: 37 years</p>
+                <div class="swiper-slide d-flex flex-column gap-3">
+                    <div class="d-flex align-items-center gap-3 flex-wrap profile-data">
+                        <img src="assets/images/qualified doctors/doctors-proile-pic.png" alt="profile image">
+                        <div class="d-flex flex-column align-items-start">
+                            <h4 class="font-24 light-black font-weight-600 mb-0">Rachel Lee</h4>
+                            <p class="font-16 light-black-90 my-1">Dermatologist</p>
+                            <p class="font-16 light-black-90 mb-0">Experience: 37 years</p>
+                        </div>
+                    </div>
+                    <p class="font-16 light-black-80 text-start">“Amazing doctor. Listened to all my symptoms and very attentive. Totally recommend you to please check this..</p>
+                    <div class="d-flex align-items-center justify-content-end gap-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M10.8586 4.71248C11.2178 3.60691 12.7819 3.60691 13.1412 4.71248L14.4246 8.66264C14.5853 9.15706 15.046 9.49182 15.5659 9.49182H19.7193C20.8818 9.49182 21.3651 10.9794 20.4247 11.6626L17.0645 14.104C16.6439 14.4095 16.4679 14.9512 16.6286 15.4456L17.912 19.3958C18.2713 20.5013 17.0059 21.4207 16.0654 20.7374L12.7052 18.2961C12.2846 17.9905 11.7151 17.9905 11.2945 18.2961L7.93434 20.7374C6.99388 21.4207 5.72851 20.5013 6.08773 19.3958L7.37121 15.4456C7.53186 14.9512 7.35587 14.4095 6.93529 14.104L3.57508 11.6626C2.63463 10.9794 3.11796 9.49182 4.28043 9.49182H8.43387C8.95374 9.49182 9.41448 9.15706 9.57513 8.66264L10.8586 4.71248Z" fill="#F2C246"/>
+                          </svg>
+                          <p class="font-16 light-black mb-0">4.9 (28 reviews) </p>
                     </div>
                 </div>
-                <p class="font-16 light-black-80 text-start">“Amazing doctor. Listened to all my symptoms and very attentive. Totally recommend you to please check this..</p>
-                <div class="d-flex align-items-center justify-content-end gap-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                        <path d="M10.8586 4.71248C11.2178 3.60691 12.7819 3.60691 13.1412 4.71248L14.4246 8.66264C14.5853 9.15706 15.046 9.49182 15.5659 9.49182H19.7193C20.8818 9.49182 21.3651 10.9794 20.4247 11.6626L17.0645 14.104C16.6439 14.4095 16.4679 14.9512 16.6286 15.4456L17.912 19.3958C18.2713 20.5013 17.0059 21.4207 16.0654 20.7374L12.7052 18.2961C12.2846 17.9905 11.7151 17.9905 11.2945 18.2961L7.93434 20.7374C6.99388 21.4207 5.72851 20.5013 6.08773 19.3958L7.37121 15.4456C7.53186 14.9512 7.35587 14.4095 6.93529 14.104L3.57508 11.6626C2.63463 10.9794 3.11796 9.49182 4.28043 9.49182H8.43387C8.95374 9.49182 9.41448 9.15706 9.57513 8.66264L10.8586 4.71248Z" fill="#F2C246"/>
-                      </svg>
-                      <p class="font-16 light-black mb-0">4.9 (28 reviews) </p>
-                </div>
-            </div>
-            <div class="swiper-slide d-flex flex-column gap-3">
-                <div class="d-flex align-items-center gap-3 flex-wrap profile-data">
-                    <img src="assets/images/qualified doctors/doctors-proile-pic.png" alt="profile image">
-                    <div class="d-flex flex-column align-items-start">
-                        <h4 class="font-24 light-black font-weight-600 mb-0">Rachel Lee</h4>
-                        <p class="font-16 light-black-90 my-1">Dermatologist</p>
-                        <p class="font-16 light-black-90 mb-0">Experience: 37 years</p>
+                <div class="swiper-slide d-flex flex-column gap-3">
+                    <div class="d-flex align-items-center gap-3 flex-wrap profile-data">
+                        <img src="assets/images/qualified doctors/doctors-proile-pic.png" alt="profile image">
+                        <div class="d-flex flex-column align-items-start">
+                            <h4 class="font-24 light-black font-weight-600 mb-0">Rachel Lee</h4>
+                            <p class="font-16 light-black-90 my-1">Dermatologist</p>
+                            <p class="font-16 light-black-90 mb-0">Experience: 37 years</p>
+                        </div>
+                    </div>
+                    <p class="font-16 light-black-80 text-start">“Amazing doctor. Listened to all my symptoms and very attentive. Totally recommend you to please check this..</p>
+                    <div class="d-flex align-items-center justify-content-end gap-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M10.8586 4.71248C11.2178 3.60691 12.7819 3.60691 13.1412 4.71248L14.4246 8.66264C14.5853 9.15706 15.046 9.49182 15.5659 9.49182H19.7193C20.8818 9.49182 21.3651 10.9794 20.4247 11.6626L17.0645 14.104C16.6439 14.4095 16.4679 14.9512 16.6286 15.4456L17.912 19.3958C18.2713 20.5013 17.0059 21.4207 16.0654 20.7374L12.7052 18.2961C12.2846 17.9905 11.7151 17.9905 11.2945 18.2961L7.93434 20.7374C6.99388 21.4207 5.72851 20.5013 6.08773 19.3958L7.37121 15.4456C7.53186 14.9512 7.35587 14.4095 6.93529 14.104L3.57508 11.6626C2.63463 10.9794 3.11796 9.49182 4.28043 9.49182H8.43387C8.95374 9.49182 9.41448 9.15706 9.57513 8.66264L10.8586 4.71248Z" fill="#F2C246"/>
+                          </svg>
+                          <p class="font-16 light-black mb-0">4.9 (28 reviews) </p>
                     </div>
                 </div>
-                <p class="font-16 light-black-80 text-start">“Amazing doctor. Listened to all my symptoms and very attentive. Totally recommend you to please check this..</p>
-                <div class="d-flex align-items-center justify-content-end gap-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                        <path d="M10.8586 4.71248C11.2178 3.60691 12.7819 3.60691 13.1412 4.71248L14.4246 8.66264C14.5853 9.15706 15.046 9.49182 15.5659 9.49182H19.7193C20.8818 9.49182 21.3651 10.9794 20.4247 11.6626L17.0645 14.104C16.6439 14.4095 16.4679 14.9512 16.6286 15.4456L17.912 19.3958C18.2713 20.5013 17.0059 21.4207 16.0654 20.7374L12.7052 18.2961C12.2846 17.9905 11.7151 17.9905 11.2945 18.2961L7.93434 20.7374C6.99388 21.4207 5.72851 20.5013 6.08773 19.3958L7.37121 15.4456C7.53186 14.9512 7.35587 14.4095 6.93529 14.104L3.57508 11.6626C2.63463 10.9794 3.11796 9.49182 4.28043 9.49182H8.43387C8.95374 9.49182 9.41448 9.15706 9.57513 8.66264L10.8586 4.71248Z" fill="#F2C246"/>
-                      </svg>
-                      <p class="font-16 light-black mb-0">4.9 (28 reviews) </p>
+                
                 </div>
-            </div>
-            
-            </div>
-            <div class="swiper-buttons d-flex align-items-center gap-4 d-none d-lg-flex">
-                <div class="swiper-button-prev">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                        <path d="M10 19L3 12M3 12L10 5M3 12L21 12" stroke="#008159" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
+                <div class="swiper-buttons d-flex align-items-center gap-4 d-none d-lg-flex">
+                    <div class="swiper-button-prev">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M10 19L3 12M3 12L10 5M3 12L21 12" stroke="#008159" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <div class="swiper-button-next">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M14 5L21 12M21 12L14 19M21 12L3 12" stroke="#008159" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
                 </div>
-                <div class="swiper-button-next">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                        <path d="M14 5L21 12M21 12L14 19M21 12L3 12" stroke="#008159" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                </div>
+                <div class="swiper-scrollbar mt-4 d-none d-md-block"></div>
+                <div class="swiper-pagination"></div>
             </div>
-            <div class="swiper-scrollbar mt-4"></div>
         </div>
     </section>
     <!-- Testimonials -->
-    <section class="container-fluid left-right-vector-bg testimonials">
+    <section class="container-fluid left-right-vector-bg testimonials d-none d-md-block">
         <section class="container">
             <div class="row">
                 <div class="col-12 text-center">
@@ -495,7 +555,7 @@
                             <div class="d-flex align-items-center gap-3">
                                 <img src="assets/images/review-image.png" alt="review image" class="img-fluid">
                                 <div class="d-flex flex-column">
-                                    <h4 class="font-24 light-black mb-0">Emme Julie</h4>
+                                    <h4 class="font-24 font-weight-600 light-black mb-0">Emme Julie</h4>
                                     <p class="font-20 light-black-70 mb-0">New York</p>
                                 </div>
                             </div>
@@ -531,9 +591,9 @@
                                         </defs>
                                       </svg>
                                 </div>
-                                <h6 class="font-16 light-black">(284 reviews)</h6>
+                                <h6 class="font-16 light-black mb-0">(284 reviews)</h6>
                             </div>
-                            <p class="font-16 light-black mt-2 mb-4">The long wait was incredibly frustrating. My appointment was at 12:30 and I didn’t see a provider until after 2.</p>
+                            <p class="font-16 light-black mt-2 mb-4 text-start">The long wait was incredibly frustrating. My appointment was at 12:30 and I didn’t see a provider until after 2.</p>
                             <div class="d-flex align-items-center justify-content-between">
                                 <span class="font-16 light-black">July 13, 2021</span>
                                 <span class="font-16 light-black">Verified patient</span>
@@ -543,7 +603,7 @@
                             <div class="d-flex align-items-center gap-3">
                                 <img src="assets/images/review-image-1.png" alt="review image" class="img-fluid">
                                 <div class="d-flex flex-column">
-                                    <h4 class="font-24 light-black mb-0">Andrew Sans</h4>
+                                    <h4 class="font-24 font-weight-600 light-black mb-0">Andrew Sans</h4>
                                     <p class="font-20 light-black-70 mb-0">United kingdom</p>
                                 </div>
                             </div>
@@ -579,9 +639,9 @@
                                         </defs>
                                       </svg>
                                 </div>
-                                <h6 class="font-16 light-black">(284 reviews)</h6>
+                                <h6 class="font-16 light-black mb-0">(284 reviews)</h6>
                             </div>
-                            <p class="font-16 light-black mt-2 mb-4">The long wait was incredibly frustrating. My appointment was at 12:30 and I didn’t see a provider until after 2.</p>
+                            <p class="font-16 light-black mt-2 mb-4 text-start">The long wait was incredibly frustrating. My appointment was at 12:30 and I didn’t see a provider until after 2.</p>
                             <div class="d-flex align-items-center justify-content-between">
                                 <span class="font-16 light-black">July 13, 2021</span>
                                 <span class="font-16 light-black">Verified patient</span>
@@ -591,7 +651,7 @@
                             <div class="d-flex align-items-center gap-3">
                                 <img src="assets/images/review-image-2.png" alt="review image" class="img-fluid">
                                 <div class="d-flex flex-column">
-                                    <h4 class="font-24 light-black mb-0">Ramington Luis</h4>
+                                    <h4 class="font-24 font-weight-600 light-black mb-0">Ramington Luis</h4>
                                     <p class="font-20 light-black-70 mb-0">Pakistan</p>
                                 </div>
                             </div>
@@ -627,9 +687,9 @@
                                         </defs>
                                       </svg>
                                 </div>
-                                <h6 class="font-16 light-black">(284 reviews)</h6>
+                                <h6 class="font-16 light-black mb-0">(284 reviews)</h6>
                             </div>
-                            <p class="font-16 light-black mt-2 mb-4">The long wait was incredibly frustrating. My appointment was at 12:30 and I didn’t see a provider until after 2.</p>
+                            <p class="font-16 light-black mt-2 mb-4 text-start">The long wait was incredibly frustrating. My appointment was at 12:30 and I didn’t see a provider until after 2.</p>
                             <div class="d-flex align-items-center justify-content-between">
                                 <span class="font-16 light-black">July 13, 2021</span>
                                 <span class="font-16 light-black">Verified patient</span>
@@ -640,16 +700,183 @@
             </div>
         </section>
     </section>
+    <!-- Testimonials mobile -->
+    <section class="container-fluid left-right-vector-bg testimonials d-block d-md-none">
+        <section class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h2 class="font-40 light-black">Testimonials</h2>
+                    <p class="font-24 font-urbanist light-black-70">What Our Valuable Client Say About Us</p>
+                </div>
+            </div>
+        </section>
+        <div class="swiper-container ps-3">
+            <div class="swiper testimonialsSwiper swiper-initialized swiper-horizontal swiper-backface-hidden">
+                <div class="swiper-wrapper" id="swiper-wrapper-580f76aae010d6d66" aria-live="polite">
+                <div class="swiper-slide d-flex flex-column gap-3 swiper-slide-active" role="group" aria-label="1 / 8">
+                    <div class="review-section">
+                        <div class="d-flex align-items-center gap-3">
+                            <img src="assets/images/review-image.png" alt="review image" class="img-fluid">
+                            <div class="d-flex flex-column">
+                                <h4 class="font-24 font-weight-600 light-black mb-0">Emme Julie</h4>
+                                <p class="font-20 light-black-70 mb-0">New York</p>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center gap-2 mt-3">
+                            <div class="d-flex align-items-center gap-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17" fill="none">
+                                    <path d="M7.6916 3.33795C7.94605 2.55483 9.05395 2.55483 9.3084 3.33795L10.2175 6.13597C10.3313 6.48619 10.6577 6.72331 11.0259 6.72331H13.9679C14.7914 6.72331 15.1337 7.77698 14.4676 8.26097L12.0874 9.99025C11.7895 10.2067 11.6648 10.5904 11.7786 10.9406L12.6878 13.7386C12.9422 14.5217 12.0459 15.1729 11.3798 14.6889L8.99962 12.9597C8.7017 12.7432 8.2983 12.7432 8.00038 12.9597L5.62024 14.6889C4.95408 15.1729 4.05777 14.5217 4.31222 13.7386L5.22136 10.9406C5.33515 10.5904 5.21049 10.2067 4.91258 9.99025L2.53243 8.26097C1.86628 7.77698 2.20863 6.72331 3.03205 6.72331H5.97407C6.34231 6.72331 6.66867 6.48619 6.78247 6.13597L7.6916 3.33795Z" fill="#F2C246"/>
+                                  </svg>
+                                  <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17" fill="none">
+                                    <path d="M7.6916 3.33795C7.94605 2.55483 9.05395 2.55483 9.3084 3.33795L10.2175 6.13597C10.3313 6.48619 10.6577 6.72331 11.0259 6.72331H13.9679C14.7914 6.72331 15.1337 7.77698 14.4676 8.26097L12.0874 9.99025C11.7895 10.2067 11.6648 10.5904 11.7786 10.9406L12.6878 13.7386C12.9422 14.5217 12.0459 15.1729 11.3798 14.6889L8.99962 12.9597C8.7017 12.7432 8.2983 12.7432 8.00038 12.9597L5.62024 14.6889C4.95408 15.1729 4.05777 14.5217 4.31222 13.7386L5.22136 10.9406C5.33515 10.5904 5.21049 10.2067 4.91258 9.99025L2.53243 8.26097C1.86628 7.77698 2.20863 6.72331 3.03205 6.72331H5.97407C6.34231 6.72331 6.66867 6.48619 6.78247 6.13597L7.6916 3.33795Z" fill="#F2C246"/>
+                                  </svg>
+                                  <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17" fill="none">
+                                    <path d="M7.6916 3.33795C7.94605 2.55483 9.05395 2.55483 9.3084 3.33795L10.2175 6.13597C10.3313 6.48619 10.6577 6.72331 11.0259 6.72331H13.9679C14.7914 6.72331 15.1337 7.77698 14.4676 8.26097L12.0874 9.99025C11.7895 10.2067 11.6648 10.5904 11.7786 10.9406L12.6878 13.7386C12.9422 14.5217 12.0459 15.1729 11.3798 14.6889L8.99962 12.9597C8.7017 12.7432 8.2983 12.7432 8.00038 12.9597L5.62024 14.6889C4.95408 15.1729 4.05777 14.5217 4.31222 13.7386L5.22136 10.9406C5.33515 10.5904 5.21049 10.2067 4.91258 9.99025L2.53243 8.26097C1.86628 7.77698 2.20863 6.72331 3.03205 6.72331H5.97407C6.34231 6.72331 6.66867 6.48619 6.78247 6.13597L7.6916 3.33795Z" fill="#F2C246"/>
+                                  </svg>
+                                  <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17" fill="none">
+                                    <g clip-path="url(#clip0_3966_36229)">
+                                      <path d="M7.69921 2.46413C7.95129 1.68842 9.04871 1.68842 9.30079 2.46413L10.2195 5.29124C10.3322 5.63814 10.6555 5.87301 11.0202 5.87302L13.9929 5.87314C14.8085 5.87317 15.1476 6.91688 14.4878 7.39632L12.0829 9.14369C11.7879 9.3581 11.6644 9.73812 11.7771 10.085L12.6956 12.9122C12.9476 13.6879 12.0598 14.333 11.3999 13.8536L8.99489 12.1064C8.69979 11.892 8.30021 11.892 8.00511 12.1064L5.60012 13.8536C4.94024 14.333 4.05241 13.6879 4.30443 12.9122L5.22291 10.085C5.33562 9.73812 5.21214 9.3581 4.91705 9.14369L2.5122 7.39632C1.85236 6.91688 2.19148 5.87317 3.00712 5.87314L5.97976 5.87302C6.34451 5.87301 6.66778 5.63814 6.78051 5.29124L7.69921 2.46413Z" stroke="#F2C246" stroke-width="1.4"/>
+                                    </g>
+                                    <defs>
+                                      <clipPath id="clip0_3966_36229">
+                                        <rect width="17" height="17" fill="white"/>
+                                      </clipPath>
+                                    </defs>
+                                  </svg>
+                                  <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17" fill="none">
+                                    <g clip-path="url(#clip0_3966_36229)">
+                                      <path d="M7.69921 2.46413C7.95129 1.68842 9.04871 1.68842 9.30079 2.46413L10.2195 5.29124C10.3322 5.63814 10.6555 5.87301 11.0202 5.87302L13.9929 5.87314C14.8085 5.87317 15.1476 6.91688 14.4878 7.39632L12.0829 9.14369C11.7879 9.3581 11.6644 9.73812 11.7771 10.085L12.6956 12.9122C12.9476 13.6879 12.0598 14.333 11.3999 13.8536L8.99489 12.1064C8.69979 11.892 8.30021 11.892 8.00511 12.1064L5.60012 13.8536C4.94024 14.333 4.05241 13.6879 4.30443 12.9122L5.22291 10.085C5.33562 9.73812 5.21214 9.3581 4.91705 9.14369L2.5122 7.39632C1.85236 6.91688 2.19148 5.87317 3.00712 5.87314L5.97976 5.87302C6.34451 5.87301 6.66778 5.63814 6.78051 5.29124L7.69921 2.46413Z" stroke="#F2C246" stroke-width="1.4"/>
+                                    </g>
+                                    <defs>
+                                      <clipPath id="clip0_3966_36229">
+                                        <rect width="17" height="17" fill="white"/>
+                                      </clipPath>
+                                    </defs>
+                                  </svg>
+                            </div>
+                            <h6 class="font-16 light-black mb-0">(284 reviews)</h6>
+                        </div>
+                        <p class="font-16 light-black mt-2 mb-4 text-start">The long wait was incredibly frustrating. My appointment was at 12:30 and I didn’t see a provider until after 2.</p>
+                        <div class="d-flex align-items-center justify-content-between">
+                            <span class="font-16 light-black">July 13, 2021</span>
+                            <span class="font-16 light-black">Verified patient</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide d-flex flex-column gap-3 swiper-slide-active" role="group" aria-label="1 / 8">
+                    <div class="review-section">
+                        <div class="d-flex align-items-center gap-3">
+                            <img src="assets/images/review-image-1.png" alt="review image" class="img-fluid">
+                            <div class="d-flex flex-column">
+                                <h4 class="font-24 font-weight-600 light-black mb-0">Andrew Sans</h4>
+                                <p class="font-20 light-black-70 mb-0">United kingdom</p>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center gap-2 mt-3">
+                            <div class="d-flex align-items-center gap-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17" fill="none">
+                                    <path d="M7.6916 3.33795C7.94605 2.55483 9.05395 2.55483 9.3084 3.33795L10.2175 6.13597C10.3313 6.48619 10.6577 6.72331 11.0259 6.72331H13.9679C14.7914 6.72331 15.1337 7.77698 14.4676 8.26097L12.0874 9.99025C11.7895 10.2067 11.6648 10.5904 11.7786 10.9406L12.6878 13.7386C12.9422 14.5217 12.0459 15.1729 11.3798 14.6889L8.99962 12.9597C8.7017 12.7432 8.2983 12.7432 8.00038 12.9597L5.62024 14.6889C4.95408 15.1729 4.05777 14.5217 4.31222 13.7386L5.22136 10.9406C5.33515 10.5904 5.21049 10.2067 4.91258 9.99025L2.53243 8.26097C1.86628 7.77698 2.20863 6.72331 3.03205 6.72331H5.97407C6.34231 6.72331 6.66867 6.48619 6.78247 6.13597L7.6916 3.33795Z" fill="#F2C246"/>
+                                  </svg>
+                                  <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17" fill="none">
+                                    <path d="M7.6916 3.33795C7.94605 2.55483 9.05395 2.55483 9.3084 3.33795L10.2175 6.13597C10.3313 6.48619 10.6577 6.72331 11.0259 6.72331H13.9679C14.7914 6.72331 15.1337 7.77698 14.4676 8.26097L12.0874 9.99025C11.7895 10.2067 11.6648 10.5904 11.7786 10.9406L12.6878 13.7386C12.9422 14.5217 12.0459 15.1729 11.3798 14.6889L8.99962 12.9597C8.7017 12.7432 8.2983 12.7432 8.00038 12.9597L5.62024 14.6889C4.95408 15.1729 4.05777 14.5217 4.31222 13.7386L5.22136 10.9406C5.33515 10.5904 5.21049 10.2067 4.91258 9.99025L2.53243 8.26097C1.86628 7.77698 2.20863 6.72331 3.03205 6.72331H5.97407C6.34231 6.72331 6.66867 6.48619 6.78247 6.13597L7.6916 3.33795Z" fill="#F2C246"/>
+                                  </svg>
+                                  <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17" fill="none">
+                                    <path d="M7.6916 3.33795C7.94605 2.55483 9.05395 2.55483 9.3084 3.33795L10.2175 6.13597C10.3313 6.48619 10.6577 6.72331 11.0259 6.72331H13.9679C14.7914 6.72331 15.1337 7.77698 14.4676 8.26097L12.0874 9.99025C11.7895 10.2067 11.6648 10.5904 11.7786 10.9406L12.6878 13.7386C12.9422 14.5217 12.0459 15.1729 11.3798 14.6889L8.99962 12.9597C8.7017 12.7432 8.2983 12.7432 8.00038 12.9597L5.62024 14.6889C4.95408 15.1729 4.05777 14.5217 4.31222 13.7386L5.22136 10.9406C5.33515 10.5904 5.21049 10.2067 4.91258 9.99025L2.53243 8.26097C1.86628 7.77698 2.20863 6.72331 3.03205 6.72331H5.97407C6.34231 6.72331 6.66867 6.48619 6.78247 6.13597L7.6916 3.33795Z" fill="#F2C246"/>
+                                  </svg>
+                                  <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17" fill="none">
+                                    <g clip-path="url(#clip0_3966_36229)">
+                                      <path d="M7.69921 2.46413C7.95129 1.68842 9.04871 1.68842 9.30079 2.46413L10.2195 5.29124C10.3322 5.63814 10.6555 5.87301 11.0202 5.87302L13.9929 5.87314C14.8085 5.87317 15.1476 6.91688 14.4878 7.39632L12.0829 9.14369C11.7879 9.3581 11.6644 9.73812 11.7771 10.085L12.6956 12.9122C12.9476 13.6879 12.0598 14.333 11.3999 13.8536L8.99489 12.1064C8.69979 11.892 8.30021 11.892 8.00511 12.1064L5.60012 13.8536C4.94024 14.333 4.05241 13.6879 4.30443 12.9122L5.22291 10.085C5.33562 9.73812 5.21214 9.3581 4.91705 9.14369L2.5122 7.39632C1.85236 6.91688 2.19148 5.87317 3.00712 5.87314L5.97976 5.87302C6.34451 5.87301 6.66778 5.63814 6.78051 5.29124L7.69921 2.46413Z" stroke="#F2C246" stroke-width="1.4"/>
+                                    </g>
+                                    <defs>
+                                      <clipPath id="clip0_3966_36229">
+                                        <rect width="17" height="17" fill="white"/>
+                                      </clipPath>
+                                    </defs>
+                                  </svg>
+                                  <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17" fill="none">
+                                    <g clip-path="url(#clip0_3966_36229)">
+                                      <path d="M7.69921 2.46413C7.95129 1.68842 9.04871 1.68842 9.30079 2.46413L10.2195 5.29124C10.3322 5.63814 10.6555 5.87301 11.0202 5.87302L13.9929 5.87314C14.8085 5.87317 15.1476 6.91688 14.4878 7.39632L12.0829 9.14369C11.7879 9.3581 11.6644 9.73812 11.7771 10.085L12.6956 12.9122C12.9476 13.6879 12.0598 14.333 11.3999 13.8536L8.99489 12.1064C8.69979 11.892 8.30021 11.892 8.00511 12.1064L5.60012 13.8536C4.94024 14.333 4.05241 13.6879 4.30443 12.9122L5.22291 10.085C5.33562 9.73812 5.21214 9.3581 4.91705 9.14369L2.5122 7.39632C1.85236 6.91688 2.19148 5.87317 3.00712 5.87314L5.97976 5.87302C6.34451 5.87301 6.66778 5.63814 6.78051 5.29124L7.69921 2.46413Z" stroke="#F2C246" stroke-width="1.4"/>
+                                    </g>
+                                    <defs>
+                                      <clipPath id="clip0_3966_36229">
+                                        <rect width="17" height="17" fill="white"/>
+                                      </clipPath>
+                                    </defs>
+                                  </svg>
+                            </div>
+                            <h6 class="font-16 light-black mb-0">(284 reviews)</h6>
+                        </div>
+                        <p class="font-16 light-black mt-2 mb-4 text-start">The long wait was incredibly frustrating. My appointment was at 12:30 and I didn’t see a provider until after 2.</p>
+                        <div class="d-flex align-items-center justify-content-between">
+                            <span class="font-16 light-black">July 13, 2021</span>
+                            <span class="font-16 light-black">Verified patient</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide d-flex flex-column gap-3 swiper-slide-active" role="group" aria-label="1 / 8">
+                    <div class="review-section">
+                        <div class="d-flex align-items-center gap-3">
+                            <img src="assets/images/review-image-2.png" alt="review image" class="img-fluid">
+                            <div class="d-flex flex-column">
+                                <h4 class="font-24 font-weight-600 light-black mb-0">Ramington Luis</h4>
+                                <p class="font-20 light-black-70 mb-0">Pakistan</p>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center gap-2 mt-3">
+                            <div class="d-flex align-items-center gap-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17" fill="none">
+                                    <path d="M7.6916 3.33795C7.94605 2.55483 9.05395 2.55483 9.3084 3.33795L10.2175 6.13597C10.3313 6.48619 10.6577 6.72331 11.0259 6.72331H13.9679C14.7914 6.72331 15.1337 7.77698 14.4676 8.26097L12.0874 9.99025C11.7895 10.2067 11.6648 10.5904 11.7786 10.9406L12.6878 13.7386C12.9422 14.5217 12.0459 15.1729 11.3798 14.6889L8.99962 12.9597C8.7017 12.7432 8.2983 12.7432 8.00038 12.9597L5.62024 14.6889C4.95408 15.1729 4.05777 14.5217 4.31222 13.7386L5.22136 10.9406C5.33515 10.5904 5.21049 10.2067 4.91258 9.99025L2.53243 8.26097C1.86628 7.77698 2.20863 6.72331 3.03205 6.72331H5.97407C6.34231 6.72331 6.66867 6.48619 6.78247 6.13597L7.6916 3.33795Z" fill="#F2C246"/>
+                                  </svg>
+                                  <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17" fill="none">
+                                    <path d="M7.6916 3.33795C7.94605 2.55483 9.05395 2.55483 9.3084 3.33795L10.2175 6.13597C10.3313 6.48619 10.6577 6.72331 11.0259 6.72331H13.9679C14.7914 6.72331 15.1337 7.77698 14.4676 8.26097L12.0874 9.99025C11.7895 10.2067 11.6648 10.5904 11.7786 10.9406L12.6878 13.7386C12.9422 14.5217 12.0459 15.1729 11.3798 14.6889L8.99962 12.9597C8.7017 12.7432 8.2983 12.7432 8.00038 12.9597L5.62024 14.6889C4.95408 15.1729 4.05777 14.5217 4.31222 13.7386L5.22136 10.9406C5.33515 10.5904 5.21049 10.2067 4.91258 9.99025L2.53243 8.26097C1.86628 7.77698 2.20863 6.72331 3.03205 6.72331H5.97407C6.34231 6.72331 6.66867 6.48619 6.78247 6.13597L7.6916 3.33795Z" fill="#F2C246"/>
+                                  </svg>
+                                  <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17" fill="none">
+                                    <path d="M7.6916 3.33795C7.94605 2.55483 9.05395 2.55483 9.3084 3.33795L10.2175 6.13597C10.3313 6.48619 10.6577 6.72331 11.0259 6.72331H13.9679C14.7914 6.72331 15.1337 7.77698 14.4676 8.26097L12.0874 9.99025C11.7895 10.2067 11.6648 10.5904 11.7786 10.9406L12.6878 13.7386C12.9422 14.5217 12.0459 15.1729 11.3798 14.6889L8.99962 12.9597C8.7017 12.7432 8.2983 12.7432 8.00038 12.9597L5.62024 14.6889C4.95408 15.1729 4.05777 14.5217 4.31222 13.7386L5.22136 10.9406C5.33515 10.5904 5.21049 10.2067 4.91258 9.99025L2.53243 8.26097C1.86628 7.77698 2.20863 6.72331 3.03205 6.72331H5.97407C6.34231 6.72331 6.66867 6.48619 6.78247 6.13597L7.6916 3.33795Z" fill="#F2C246"/>
+                                  </svg>
+                                  <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17" fill="none">
+                                    <g clip-path="url(#clip0_3966_36229)">
+                                      <path d="M7.69921 2.46413C7.95129 1.68842 9.04871 1.68842 9.30079 2.46413L10.2195 5.29124C10.3322 5.63814 10.6555 5.87301 11.0202 5.87302L13.9929 5.87314C14.8085 5.87317 15.1476 6.91688 14.4878 7.39632L12.0829 9.14369C11.7879 9.3581 11.6644 9.73812 11.7771 10.085L12.6956 12.9122C12.9476 13.6879 12.0598 14.333 11.3999 13.8536L8.99489 12.1064C8.69979 11.892 8.30021 11.892 8.00511 12.1064L5.60012 13.8536C4.94024 14.333 4.05241 13.6879 4.30443 12.9122L5.22291 10.085C5.33562 9.73812 5.21214 9.3581 4.91705 9.14369L2.5122 7.39632C1.85236 6.91688 2.19148 5.87317 3.00712 5.87314L5.97976 5.87302C6.34451 5.87301 6.66778 5.63814 6.78051 5.29124L7.69921 2.46413Z" stroke="#F2C246" stroke-width="1.4"/>
+                                    </g>
+                                    <defs>
+                                      <clipPath id="clip0_3966_36229">
+                                        <rect width="17" height="17" fill="white"/>
+                                      </clipPath>
+                                    </defs>
+                                  </svg>
+                                  <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17" fill="none">
+                                    <g clip-path="url(#clip0_3966_36229)">
+                                      <path d="M7.69921 2.46413C7.95129 1.68842 9.04871 1.68842 9.30079 2.46413L10.2195 5.29124C10.3322 5.63814 10.6555 5.87301 11.0202 5.87302L13.9929 5.87314C14.8085 5.87317 15.1476 6.91688 14.4878 7.39632L12.0829 9.14369C11.7879 9.3581 11.6644 9.73812 11.7771 10.085L12.6956 12.9122C12.9476 13.6879 12.0598 14.333 11.3999 13.8536L8.99489 12.1064C8.69979 11.892 8.30021 11.892 8.00511 12.1064L5.60012 13.8536C4.94024 14.333 4.05241 13.6879 4.30443 12.9122L5.22291 10.085C5.33562 9.73812 5.21214 9.3581 4.91705 9.14369L2.5122 7.39632C1.85236 6.91688 2.19148 5.87317 3.00712 5.87314L5.97976 5.87302C6.34451 5.87301 6.66778 5.63814 6.78051 5.29124L7.69921 2.46413Z" stroke="#F2C246" stroke-width="1.4"/>
+                                    </g>
+                                    <defs>
+                                      <clipPath id="clip0_3966_36229">
+                                        <rect width="17" height="17" fill="white"/>
+                                      </clipPath>
+                                    </defs>
+                                  </svg>
+                            </div>
+                            <h6 class="font-16 light-black mb-0">(284 reviews)</h6>
+                        </div>
+                        <p class="font-16 light-black mt-2 mb-4 text-start">The long wait was incredibly frustrating. My appointment was at 12:30 and I didn’t see a provider until after 2.</p>
+                        <div class="d-flex align-items-center justify-content-between">
+                            <span class="font-16 light-black">July 13, 2021</span>
+                            <span class="font-16 light-black">Verified patient</span>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <!-- Why We are section  -->
     <section class="container-fluid why-we-sec">
         <section class="container">
-            <div class="row g-5">
-                <div class="col-12 col-lg-6">
+            <div class="row">
+                <div class="col-12 col-lg-6 order-2 order-lg-1 mt-5 mt-lg-0">
                     <img src="assets/images/why-we-sec-img.png" alt="image" class="img-fluid">
                 </div>
-                <div class="col-12 col-lg-6 my-auto">
-                    <h4 class="font-24 light-black mb-0">Why we are</h4>
-                    <h2 class="font-40 light-black font-weight-600 my-2">How do we <span class="accent-text"> work</span>?</h2>
+                <div class="col-12 col-lg-6 my-auto order-1 order-lg-2">
+                    <h4 class="font-24 light-black mb-0 text-center text-lg-start">Why we are</h4>
+                    <h2 class="font-40 light-black font-weight-600 my-2 text-center text-lg-start">How do we <span class="accent-text"> work</span>?</h2>
                     <p class="font-16 light-black-80">From your first phone call to your final visit, we want you to feel as if you are in the company of good friends.</p>
                     <div class="d-flex flex-column" style="margin:32px 0;gap: 12px;">
                         <div class="d-flex align-items-center gap-3">
@@ -674,19 +901,19 @@
                             <p class="font-16 light-black-80 mb-0">Treatment under the supervision of expert doctors so that you get the guaranteed results.</p>
                         </div>
                     </div>
-                    <a href="#" class="global-btn" style="padding:16px 32px;">Listed Your Appointment</a>
+                    <a href="#" class="global-btn d-block d-md-inline" style="padding:16px 32px;">Listed Your Appointment</a>
                 </div>
             </div>
         </section>
     </section>
     <!-- Top Symptoms section -->
-    <section class="container-fluid top-search left-right-vector-bg">
+    <section class="container-fluid top-symptoms left-right-vector-bg">
         <section class="container">
             <div class="row">
                 <div class="col-12 text-center">
                     <h2 class="font-40 light-black">Top-Symptoms we treated</h2>
                     <p class="font-24 light-black-70 font-urbanist">Our patients search these all symptoms and we provide solutions of it</p>
-                    <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between gap-4" style="margin-top:32px;">
+                    <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between gap-4 d-none d-md-flex" style="margin-top:32px;">
                         <div>
                             <img src="assets/images/top-symptoms.png" alt="top search image" class="img-fluid">
                             <h5 class="font-16 fw-bold mt-2">Heart Attack</h5>
@@ -719,17 +946,67 @@
                 </div>
             </div>
         </section>
+        <!-- mobile responsive section -->
+        <div class="swiper-container ps-3 d-block d-md-none">
+            <div class="swiper topSearchedSwiper swiper-initialized swiper-horizontal swiper-backface-hidden">
+                <div class="swiper-wrapper" id="swiper-wrapper-580f76aae010d6d66" aria-live="polite">
+                <div class="swiper-slide d-flex flex-column gap-3 swiper-slide-active" role="group" aria-label="1 / 8" style="width: 308.333px;">
+                    <div>
+                        <img src="assets/images/top-symptoms.png" alt="top search image" class="img-fluid">
+                        <h5 class="font-16 fw-bold mt-2">Heart Attack</h5>
+                    </div>
+                </div>
+                <div class="swiper-slide d-flex flex-column gap-3 swiper-slide-active" role="group" aria-label="1 / 8" style="width: 308.333px;">
+                    <div class="d-flex flex-column align-items-center">
+                        <img src="assets/images/top-symptoms-1.png" alt="top search image" class="img-fluid">
+                        <h5 class="font-16 fw-bold mt-2">Pregnancy</h5>
+                    </div>
+                </div>
+                <div class="swiper-slide d-flex flex-column gap-3 swiper-slide-active" role="group" aria-label="1 / 8" style="width: 308.333px;">
+                    <div class="d-flex flex-column align-items-center">
+                        <img src="assets/images/top-symptoms-2.png" alt="top search image" class="img-fluid">
+                        <h5 class="font-16 fw-bold mt-2">Fever</h5>
+                    </div>
+                </div>
+                <div class="swiper-slide d-flex flex-column gap-3 swiper-slide-active" role="group" aria-label="1 / 8" style="width: 308.333px;">
+                    <div class="d-flex flex-column align-items-center">
+                        <img src="assets/images/top-symptoms-3.png" alt="top search image" class="img-fluid">
+                        <h5 class="font-16 fw-bold mt-2">Blood Pressure</h5>
+                    </div>
+                </div>
+                <div class="swiper-slide d-flex flex-column gap-3 swiper-slide-active" role="group" aria-label="1 / 8" style="width: 308.333px;">
+                    <div class="d-flex flex-column align-items-center">
+                        <img src="assets/images/top-symptoms-4.png" alt="top search image" class="img-fluid">
+                        <h5 class="font-16 fw-bold mt-2">Diarrhea</h5>
+                    </div>
+                </div>
+                <div class="swiper-slide d-flex flex-column gap-3 swiper-slide-active" role="group" aria-label="1 / 8" style="width: 308.333px;">
+                    <div class="d-flex flex-column align-items-center">
+                        <img src="assets/images/top-symptoms-5.png" alt="top search image" class="img-fluid">
+                        <h5 class="font-16 fw-bold mt-2">Migraine</h5>
+                    </div>
+                </div>
+                <div class="swiper-slide d-flex flex-column gap-3 swiper-slide-active" role="group" aria-label="1 / 8" style="width: 308.333px;">
+                    <div class="d-flex flex-column align-items-center">
+                        <img src="assets/images/top-symptoms-6.png" alt="top search image" class="img-fluid">
+                        <h5 class="font-16 fw-bold mt-2">TB</h5>
+                    </div>
+                </div>
+                </div>
+            <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+          </div>
+        </div>
     </section>
     <!-- Join a Doctor section  -->
     <section class="container-fluid join-doctor">
         <section class="container">
-            <div class="row g-5">
-                <div class="col-12 col-lg-6 text-center">
+            <div class="row">
+                <div class="col-12 col-lg-6 text-center order-2 order-lg-1 mt-5 mt-lg-0">
                     <img src="assets/images/join-a-doctor.png" alt="image" class="img-fluid">
                 </div>
-                <div class="col-12 col-lg-6 my-auto">
-                    <h4 class="font-24 light-black mb-0">Join as a Doctor ?</h4>
-                    <h2 class="font-40 light-black font-weight-600 my-2">Let start with<span class="accent-text"> PakDoc</span>!</h2>
+                <div class="col-12 col-lg-6 my-auto order-1 order-lg-1">
+                    <h4 class="font-24 light-black mb-0 text-center text-lg-start">Join as a Doctor ?</h4>
+                    <h2 class="font-40 light-black font-weight-600 my-2 text-center text-lg-start">Let start with<span class="accent-text"> PakDoc</span>!</h2>
                     <p class="font-16 light-black-80">Sign-up to reach millions of patients with PakDoc and server your services as a professional doctor</p>
                     <div class="d-flex flex-column" style="margin:32px 0;gap: 12px;">
                         <div class="d-flex align-items-center gap-3">
@@ -754,13 +1031,13 @@
                             <p class="font-16 light-black-80 mb-0">Manage your daily schedule online by using PakDoc</p>
                         </div>
                     </div>
-                    <a href="#" class="global-btn" style="padding:16px 32px;">Sign Up as a doctor</a>
+                    <a href="#" class="global-btn d-block d-md-inline" style="padding:16px 32px;">Sign Up as a doctor</a>
                 </div>
             </div>
         </section>
     </section>
     <!-- Trusted Companies -->
-    <section class="container-fluid top-search left-right-vector-bg">
+    <section class="container-fluid trusted-companies left-right-vector-bg">
         <section class="container">
             <div class="row">
                 <div class="col-12 text-center">
@@ -1074,10 +1351,42 @@
         <section class="container">
             <div class="row g-3">
                 <div class="col-12 col-lg-3">
-                    <img src="assets/images/footer-logo.png" alt="footer logo" class="img-fluid">
-                    <p class="font-16 mt-2 white-text">Book appointments with the best Doctors and Specialists such as Gynecologists, Skin Specialists, Child Specialists, Surgeons, etc. Avail test services such as MRI, CT scan, Ultrasound, X-Ray, etc. and Online Doctor Video Consultations all across country conveniently.</p>
+                    <div class="d-flex align-items-start justify-content-between gap-5">
+                        <div>
+                            <img src="assets/images/footer-logo.png" alt="footer logo" class="img-fluid">
+                            <p class="font-16 mt-2 white-text">Book appointments with the best Doctors and Specialists such as Gynecologists, Skin Specialists, Child Specialists, Surgeons, etc. Avail test services such as MRI, CT scan, Ultrasound, X-Ray, etc. and Online Doctor Video Consultations all across country conveniently.</p>
+                        </div>
+                        <div class="d-flex flex-column align-items-center justify-content-end gap-2 d-lg-none">
+                            <a href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+                                    <path d="M27 0H5C2.23858 0 0 2.23858 0 5V27C0 29.7614 2.23858 32 5 32H27C29.7614 32 32 29.7614 32 27V5C32 2.23858 29.7614 0 27 0Z" fill="#1877F2"/>
+                                    <path d="M24 16C24 11.6 20.4 8 16 8C11.6 8 8 11.6 8 16C8 20 10.9 23.3 14.7 23.9V18.3H12.7V16H14.7V14.2C14.7 12.2 15.9 11.1 17.7 11.1C18.6 11.1 19.5 11.3 19.5 11.3V13.3H18.5C17.5 13.3 17.2 13.9 17.2 14.5V16H19.4L19 18.3H17.1V24C21.1 23.4 24 20 24 16Z" fill="white"/>
+                                  </svg>
+                            </a>
+                            <a href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+                                    <path d="M27 0H5C2.23858 0 0 2.23858 0 5V27C0 29.7614 2.23858 32 5 32H27C29.7614 32 32 29.7614 32 27V5C32 2.23858 29.7614 0 27 0Z" fill="#F00073"/>
+                                    <path d="M16 9.2002C18.2 9.2002 18.5 9.2002 19.4 9.2002C20.2 9.2002 20.6 9.4002 20.9 9.5002C21.3 9.7002 21.6 9.8002 21.9 10.1002C22.2 10.4002 22.4 10.7002 22.5 11.1002C22.6 11.4002 22.7 11.8002 22.8 12.6002C22.8 13.5002 22.8 13.7002 22.8 16.0002C22.8 18.3002 22.8 18.5002 22.8 19.4002C22.8 20.2002 22.6 20.6002 22.5 20.9002C22.3 21.3002 22.2 21.6002 21.9 21.9002C21.6 22.2002 21.3 22.4002 20.9 22.5002C20.6 22.6002 20.2 22.7002 19.4 22.8002C18.5 22.8002 18.3 22.8002 16 22.8002C13.7 22.8002 13.5 22.8002 12.6 22.8002C11.8 22.8002 11.4 22.6002 11.1 22.5002C10.7 22.3002 10.4 22.2002 10.1 21.9002C9.79995 21.6002 9.59995 21.3002 9.49995 20.9002C9.39995 20.6002 9.29995 20.2002 9.19995 19.4002C9.19995 18.5002 9.19995 18.3002 9.19995 16.0002C9.19995 13.7002 9.19995 13.5002 9.19995 12.6002C9.19995 11.8002 9.39995 11.4002 9.49995 11.1002C9.69995 10.7002 9.79995 10.4002 10.1 10.1002C10.4 9.8002 10.7 9.6002 11.1 9.5002C11.4 9.4002 11.8 9.3002 12.6 9.2002C13.5 9.2002 13.8 9.2002 16 9.2002ZM16 7.7002C13.7 7.7002 13.5 7.7002 12.6 7.7002C11.7 7.7002 11.1 7.9002 10.6 8.1002C10.1 8.3002 9.59995 8.6002 9.09995 9.1002C8.59995 9.6002 8.39995 10.0002 8.09995 10.6002C7.89995 11.1002 7.79995 11.7002 7.69995 12.6002C7.69995 13.5002 7.69995 13.8002 7.69995 16.0002C7.69995 18.3002 7.69995 18.5002 7.69995 19.4002C7.69995 20.3002 7.89995 20.9002 8.09995 21.4002C8.29995 21.9002 8.59995 22.4002 9.09995 22.9002C9.59995 23.4002 9.99995 23.6002 10.6 23.9002C11.1 24.1002 11.7 24.2002 12.6 24.3002C13.5 24.3002 13.8 24.3002 16 24.3002C18.2 24.3002 18.5 24.3002 19.4 24.3002C20.3 24.3002 20.9 24.1002 21.4 23.9002C21.9 23.7002 22.4 23.4002 22.9 22.9002C23.4 22.4002 23.6 22.0002 23.9 21.4002C24.1 20.9002 24.1999 20.3002 24.2999 19.4002C24.2999 18.5002 24.2999 18.2002 24.2999 16.0002C24.2999 13.8002 24.2999 13.5002 24.2999 12.6002C24.2999 11.7002 24.1 11.1002 23.9 10.6002C23.7 10.1002 23.4 9.6002 22.9 9.1002C22.4 8.6002 22 8.4002 21.4 8.1002C20.9 7.9002 20.3 7.8002 19.4 7.7002C18.5 7.7002 18.3 7.7002 16 7.7002Z" fill="white"/>
+                                    <path d="M16 11.7002C13.6 11.7002 11.7 13.6002 11.7 16.0002C11.7 18.4002 13.6 20.3002 16 20.3002C18.4 20.3002 20.3 18.4002 20.3 16.0002C20.3 13.6002 18.4 11.7002 16 11.7002ZM16 18.8002C14.5 18.8002 13.2 17.6002 13.2 16.0002C13.2 14.5002 14.4 13.2002 16 13.2002C17.5 13.2002 18.8 14.4002 18.8 16.0002C18.8 17.5002 17.5 18.8002 16 18.8002Z" fill="white"/>
+                                    <path d="M20.4 12.6002C20.9522 12.6002 21.4 12.1525 21.4 11.6002C21.4 11.0479 20.9522 10.6002 20.4 10.6002C19.8477 10.6002 19.4 11.0479 19.4 11.6002C19.4 12.1525 19.8477 12.6002 20.4 12.6002Z" fill="white"/>
+                                  </svg>
+                            </a>
+                            <a href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+                                    <path d="M27 0H5C2.23858 0 0 2.23858 0 5V27C0 29.7614 2.23858 32 5 32H27C29.7614 32 32 29.7614 32 27V5C32 2.23858 29.7614 0 27 0Z" fill="#1DA1F2"/>
+                                    <path d="M24 11C23.4 11.3 22.8 11.4 22.1 11.5C22.8 11.1 23.3 10.5 23.5 9.7C22.9 10.1 22.2 10.3 21.4 10.5C20.8 9.9 19.9 9.5 19 9.5C16.9 9.5 15.3 11.5 15.8 13.5C13.1 13.4 10.7 12.1 9 10.1C8.1 11.6 8.6 13.5 10 14.5C9.5 14.5 9 14.3 8.5 14.1C8.5 15.6 9.6 17 11.1 17.4C10.6 17.5 10.1 17.6 9.6 17.5C10 18.8 11.2 19.8 12.7 19.8C11.5 20.7 9.7 21.2 8 21C9.5 21.9 11.2 22.5 13 22.5C19.1 22.5 22.5 17.4 22.3 12.7C23 12.3 23.6 11.7 24 11Z" fill="white"/>
+                                  </svg>
+                            </a>
+                            <a href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+                                    <path d="M27 0H5C2.23858 0 0 2.23858 0 5V27C0 29.7614 2.23858 32 5 32H27C29.7614 32 32 29.7614 32 27V5C32 2.23858 29.7614 0 27 0Z" fill="#2867B2"/>
+                                    <path d="M11.6 24H8.2V13.3H11.6V24ZM9.9 11.8C8.8 11.8 8 11 8 9.9C8 8.8 8.9 8 9.9 8C11 8 11.8 8.8 11.8 9.9C11.8 11 11 11.8 9.9 11.8ZM24 24H20.6V18.2C20.6 16.5 19.9 16 18.9 16C17.9 16 16.9 16.8 16.9 18.3V24H13.5V13.3H16.7V14.8C17 14.1 18.2 13 19.9 13C21.8 13 23.8 14.1 23.8 17.4V24H24Z" fill="white"/>
+                                  </svg>
+                            </a>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-12 col-lg-3 px-2 ps-lg-5">
+                <div class="col-6 col-lg-3 px-2 ps-lg-5">
                     <h4 class="font-20 fw-bold accent-text my-3">PakDoc</h4>
                     <div class="d-flex flex-column gap-2">
                         <a href="#" class="font-16 white-text">Home</a>
@@ -1087,7 +1396,7 @@
                         <a href="#" class="font-16 white-text">How search works</a>
                     </div>
                 </div>
-                <div class="col-12 col-lg-3 px-2 ps-lg-3">
+                <div class="col-6 col-lg-3 px-2 ps-lg-3">
                     <h4 class="font-20 fw-bold accent-text my-3">Additional Resources</h4>
                     <div class="d-flex flex-column gap-2">
                         <a href="#" class="font-16 white-text">How search works</a>
@@ -1110,19 +1419,19 @@
                     </div>
                 </div>
             </div>
-            <div class="row mt-5 pt-0 pt-md-5 g-4">
+            <div class="row mt-2 mt-lg-5 pt-0 pt-md-5 g-4">
                 <div class="col-12 col-lg-7">
-                    <div class="d-flex flex-wrap gap-3 gap-md-5">
+                    <div class="d-flex flex-wrap gap-3">
                         <p class="font-16 white-text mb-0">© 2023 Aesthetic, Inc.</p>
-                        <a href="#" class="font-16 white-text">Privacy</a>
-                        <a href="#" class="font-16 white-text">Terms of Use</a>
+                        <a href="#" class="font-16 white-text d-none d-lg-block">Privacy</a>
+                        <a href="#" class="font-16 white-text d-none d-lg-block">Terms of Use</a>
                         <div class="d-flex gap-2 align-items-center">
                             <img src="assets/images/privacy-choise.png" style="width: 38px;" alt="image" class="img-fluid">
                             <p class="font-16 white-text mb-0">Your Privacy and choice</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-lg-5">
+                <div class="col-12 col-lg-5 d-none d-lg-block">
                     <div class="d-flex align-items-center justify-content-end gap-3">
                         <a href="#">
                             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">

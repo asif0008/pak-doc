@@ -49,3 +49,38 @@ var swiper = new Swiper(".mySwiper", {
       clickable: true,
     },
   });
+
+//   Swiper js Top research
+var swiper = new Swiper(".topSearchedSwiper", {
+    slidesPerView: 3.7,
+    centeredSlides: false,
+    slidesPerGroupSkip: 1,
+    grabCursor: true,
+    keyboard: {
+      enabled: true,
+    },
+    scrollbar: {
+      el: ".swiper-scrollbar",
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+  });
+//   Swiper js TEstimonials
+var swiper = new Swiper(".testimonialsSwiper", {
+    slidesPerView: 1.2,
+    centeredSlides: false,
+    slidesPerGroupSkip: 0,
+    grabCursor: true,
+    keyboard: {
+      enabled: true,
+    },
+    scrollbar: {
+      el: ".swiper-scrollbar",
+    },
+  });

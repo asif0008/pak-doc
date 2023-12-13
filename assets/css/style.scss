@@ -131,27 +131,40 @@ header {
 }
 // Hero banner
 .hero-banner {
-    padding: 89px 15px 42px !important;
+    padding: 89px 0 42px !important;
     background: url("/assets/images/left-right-vector.png") no-repeat, url("/assets/images/center-bubble.png") top right no-repeat, linear-gradient(100deg, rgba(0, 129, 89, 0.50) 2.59%, rgba(2, 188, 230, 0.50) 111.36%);
     .book-appointment {
         border-radius: 16px;
         background: rgba(255, 255, 255, 0.60);  
-        padding: 24px 140px;
-    }
-    .input-div {
-        padding: 12px 32px;
-        border-radius: 12px;
-        background: #FFF;
-        flex: 1;
-    }
-    .form-control {
-        padding: 0 !important;
-        color: $lightBlack !important;
-        background-color: transparent !important;
-        border: none !important;
-    }
-    .form-control:focus {
-        box-shadow: none !important;
+        padding: 24px 180px;
+        .input-div {
+            padding: 12px 32px;
+            border-radius: 12px;
+            background: #FFF;
+            flex: 1;
+            width: 100%;
+        }
+        .form-control {
+            padding: 0 !important;
+            color: $lightBlack !important;
+            background-color: transparent !important;
+            border: none !important;
+        }
+        .form-control::placeholder {
+            color: rgba(42, 42, 42, 0.50);
+            font-family: $openSans;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            letter-spacing: 0.08px;
+        }
+        .form-control:focus {
+            box-shadow: none !important;
+        }
+        #searcLocation {
+            width: 70px;
+        }
     }
     .carousel-item {
         border-radius: 8px;
@@ -164,9 +177,14 @@ header {
 }
 // Top search
 .top-search {
-    padding: 80px 15px 120px;
+    padding: 80px 0 120px;
     .top-search-items div {
         width: 165px;
+    }
+    .topSearchedSwiper {
+        .swiper-slide {
+            margin-right: 12px;
+        }
     }
 }
 // Qualified doctors
@@ -177,6 +195,9 @@ header {
         width: 100%;
         height: 100%;
         position: unset !important;
+      }
+      .swiper-pagination {
+        display: none;
       }
       .swiper-button-next:after, .swiper-button-prev:after {
         content: unset !important;
@@ -197,14 +218,15 @@ header {
       }
       .swiper-buttons {
         position: absolute;
-        top: 20%;
-        right: 3%;
+        top: -12%;
+        right: 2%;
       }
       .swiper-scrollbar-horizontal {
-        bottom: 5% !important;
+        bottom: 0% !important;
       }
       .swiper-scrollbar-drag {
         background: rgba(2, 188, 230, 0.90) !important;
+        left: 0% !important;
       }
       .swiper-scrollbar {
         height: 12px !important;
@@ -228,7 +250,7 @@ header {
 }
 // Testimonials
 .testimonials {
-    padding: 80px 15px 120px;
+    padding: 80px 0 120px !important;
     .review-section {
         border-radius: 16px;
         border: 1px solid rgba(112, 133, 131, 0.20);
@@ -239,20 +261,31 @@ header {
             margin-top: -4rem;
         }
     }
+    .review-section:nth-child(2) {
+        filter: drop-shadow(0px 8px 20px rgba(0, 0, 0, 0.08));
+    }
 }
 // Why we section
 .why-we-sec {
-    padding: 69px 15px 54px;
+    padding: 69px 0 54px;
     background: url("/assets/images/left-right-vector.png") no-repeat, url("/assets/images/center-bubble-full.png") 90% 72% no-repeat, linear-gradient(100deg, rgba(0, 129, 89, 0.50) 2.59%, rgba(2, 188, 230, 0.50) 111.36%);
+}
+// Top Symptoms
+.top-symptoms {
+    padding: 80px 0 204px;
 }
 // Join a doctor section
 .join-doctor {
-    padding: 55px 15px 70px;
+    padding: 55px 0 70px;
     background: url("/assets/images/left-right-vector.png") no-repeat, url("/assets/images/become-a-doctor-vector-bubble.png") 90% 72% no-repeat, linear-gradient(100deg, rgba(0, 129, 89, 0.50) 2.59%, rgba(2, 188, 230, 0.50) 111.36%);
+}
+// Trusted companies
+.trusted-companies {
+    padding: 80px 0 200px;
 }
 // Common disease section
 .common-disease-sec {
-    padding: 32px 15px 58px;
+    padding: 32px 0 58px;
     background: url("/assets/images/left-right-vector.png") no-repeat, url("/assets/images/common-disease-bubble-full.png") 80% 70% no-repeat, linear-gradient(100deg, rgba(0, 129, 89, 0.50) 2.59%, rgba(2, 188, 230, 0.50) 111.36%);
     .accordion {
         margin-top: 32px;
@@ -288,6 +321,19 @@ footer {
     .container {
         max-width: 1440px !important;
     }
+    .swiper-container {
+        max-width: 1440px !important;
+        margin: auto;
+        margin-right: 0;
+        position: relative;
+    }
+}
+@media screen and (max-width:1220px) {
+    .hero-banner {
+        .book-appointment {
+            padding: 30px;
+        }
+    }
 }
 @media screen and (max-width:991px) {
     .hero-banner {
@@ -300,49 +346,123 @@ footer {
             margin-top: 1.5rem;
         }
     }
+    .common-disease-sec {
+        padding: 19px 0 24px !important;
+        .accordion-button {
+            border-radius: 8px !important;
+            border: 0.5px solid rgba(33, 56, 77, 0.30) !important;
+        }
+    }
 }
 @media screen and (max-width:768px) {
     .hero-banner {
         .book-appointment {
-            padding: 15px;
+            padding: 24px 16px;
+            .input-div {
+                padding: 12px;
+            }
+            #searcLocation {
+                width: 100%;
+            }
+            .form-control::placeholder {
+                font-size: 12px;
+                font-weight: 600;
+            }
         }
+    }
+    .top-search {
+        padding: 24px 0 !important;
+    }
+    .qualified-doctors {
+        padding: 20px 0 !important; 
+        .swiper-wrapper {
+            margin-bottom: 1.5rem;
+        }
+        .swiper-pagination {
+            display: block;
+        }
+        .swiper-pagination-bullet-active {
+            width: 62px !important;
+            height: 8px !important;
+            border-radius: 50px !important;
+            background: $primaryColor !important;
+        }
+    }
+    .testimonials {
+        padding: 24px 0 !important;
+        .testimonialsSwiper {
+            padding-top: 23px;
+            .swiper-slide {
+                width: 312px !important;
+                margin-right: 16px;
+                .review-section {
+                    height: 220px;
+                    max-height: 100%;
+                    img {
+                        width: 97px;
+                    }
+                    h4 {
+                        font-size: 20px;
+                        font-weight: 700 !important;
+                    }
+                }
+            }
+        }
+    }
+    .top-symptoms {
+        padding: 24px 0 35px !important;
+        .swiper-slide {
+            margin-right: 1rem;
+        }
+    }
+    .why-we-sec {
+        padding: 22px 0 16px !important;
+        h2 {
+            font-weight: 700 !important;
+        }
+    }
+    .join-doctor {
+        padding: 22px 0 36px !important;
+        h2 {
+            font-weight: 700 !important;
+        }
+    }
+    .trusted-companies {
+        padding: 24px 0 32px !important;
     }
 }
 @media screen and (max-width:576px) {
-    .hero-banner {
-        .book-appointment {
-            .input-div {
-                padding: 10px;
-            }
-      }
-    }
     .font-40 {
         font-size: 28px;
     }
     .font-24 {
-        font-size: 20px;
-    }
-    .font-20 {
-        font-size: 18px;
-    }
-    .font-16 {
         font-size: 14px;
     }
-    .qualified-doctors {
-        .swiper-scrollbar {
-            height: 8px !important;
-        }
-        .swiper-wrapper {
-            margin-bottom: 1.5rem;
-        }
+    .font-20 {
+        font-size: 12px;
+    }
+    .font-16 {
+        font-size: 12px;
+    }
+    .left-right-vector-bg {
+        background: $bgColor !important;
+    }
+    .global-btn {
+        font-size: 12px;
     }
 }
 @media screen and (max-width:425px) {
-    .hero-banner {
-        .book-appointment {
-            .form-control {
-                font-size: 10px !important;
-            }
-      }
+    .trusted-companies {
+        img {
+            width: 88px;
+        }
+    }
+    .testimonials {
+        .review-section {
+            
+        }
+    }
+    .font-40 {
+        font-size: 20px;
     }
 }
