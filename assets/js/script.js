@@ -10,21 +10,9 @@ closeside_nav.addEventListener('click', () => {
     responsive_header.classList.remove('active');
 });
 
-// Auto type js
-document.addEventListener('DOMContentLoaded', function(){
-    var options = {
-      strings: ["Gyne", "Derma", "Pharma"],
-      typeSpeed: 150,
-      backSpeed: 125,
-      loop: true
-    };
-
-    var typed = new Typed('#typed-output', options);
-  });
-
 //   Swiper js
 var swiper = new Swiper(".mySwiper", {
-    slidesPerView: 1,
+    slidesPerView: 1.2,
     centeredSlides: false,
     slidesPerGroupSkip: 1,
     grabCursor: true,
@@ -32,8 +20,20 @@ var swiper = new Swiper(".mySwiper", {
       enabled: true,
     },
     breakpoints: {
-      769: {
+      1024: {
         slidesPerView: 4.2,
+        slidesPerGroup: 4.2,
+      },
+      991: {
+        slidesPerView: 3.7,
+        slidesPerGroup: 4.2,
+      },
+      769: {
+        slidesPerView: 3.2,
+        slidesPerGroup: 4.2,
+      },
+      576: {
+        slidesPerView: 2.2,
         slidesPerGroup: 4.2,
       },
     },

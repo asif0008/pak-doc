@@ -155,6 +155,11 @@ header .responsive_header.active {
 .hero-banner .form-control:focus {
   box-shadow: none !important;
 }
+.hero-banner .carousel-item {
+  border-radius: 8px;
+  border: 1px solid #008159;
+  padding: 10px;
+}
 
 .left-right-vector-bg {
   background: url("/assets/images/left-vector.png") top left no-repeat, url("/assets/images/right-vector.png") bottom right no-repeat, #F4F9FF;
@@ -162,6 +167,9 @@ header .responsive_header.active {
 
 .top-search {
   padding: 80px 15px 120px;
+}
+.top-search .top-search-items div {
+  width: 165px;
 }
 
 .qualified-doctors {
@@ -283,8 +291,44 @@ footer {
     max-width: 1440px !important;
   }
 }
+@media screen and (max-width: 991px) {
+  .hero-banner .book-appointment {
+    padding: 24px;
+  }
+  .testimonials .review-section {
+    margin-top: 1.5rem;
+  }
+}
 @media screen and (max-width: 768px) {
   .hero-banner .book-appointment {
     padding: 15px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .hero-banner .book-appointment .input-div {
+    padding: 10px;
+  }
+  .font-40 {
+    font-size: 28px;
+  }
+  .font-24 {
+    font-size: 20px;
+  }
+  .font-20 {
+    font-size: 18px;
+  }
+  .font-16 {
+    font-size: 14px;
+  }
+  .qualified-doctors .swiper-scrollbar {
+    height: 8px !important;
+  }
+  .qualified-doctors .swiper-wrapper {
+    margin-bottom: 1.5rem;
+  }
+}
+@media screen and (max-width: 425px) {
+  .hero-banner .book-appointment .form-control {
+    font-size: 10px !important;
   }
 }/*# sourceMappingURL=style.css.map */
