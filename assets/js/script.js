@@ -16,7 +16,8 @@ closeside_nav.addEventListener('click', () => {
 var swiper = new Swiper(".mySwiper", {
     slidesPerView: 1.2,
     centeredSlides: false,
-    slidesPerGroupSkip: 0,
+    slidesPerGroupSkip: 1,
+    spaceBetween: 2,
     grabCursor: true,
     keyboard: {
       enabled: true,
@@ -25,21 +26,21 @@ var swiper = new Swiper(".mySwiper", {
       1024: {
         slidesPerView: 4.2,
         slidesPerGroup: 4.2,
-        slidesPerGroupSkip: 0,
+        slidesPerGroupSkip: 2,
       },
       991: {
         slidesPerView: 3.7,
         slidesPerGroup: 4.2,
-        slidesPerGroupSkip: 0,
+        slidesPerGroupSkip: 2,
       },
       769: {
         slidesPerView: 3.2,
         slidesPerGroup: 4.2,
-        slidesPerGroupSkip: 0,
+        slidesPerGroupSkip: 2,
       },
       576: {
-        slidesPerView: 2.2,
-        slidesPerGroup: 4.2,
+        slidesPerView: 1.8,
+        slidesPerGroup: 1,
         slidesPerGroupSkip: 0,
       },
     },
@@ -63,6 +64,7 @@ var swiper = new Swiper(".topSearchedSwiper", {
     centeredSlides: false,
     slidesPerGroupSkip: 0,
     grabCursor: true,
+    spaceBetween: 10,
     keyboard: {
       enabled: true,
     },
@@ -80,14 +82,14 @@ var swiper = new Swiper(".topSearchedSwiper", {
   });
 //   Swiper js TEstimonials
 var swiper = new Swiper(".testimonialsSwiper", {
-    slidesPerView: 1.2,
-    centeredSlides: false,
-    slidesPerGroupSkip: 0,
-    grabCursor: true,
-    keyboard: {
-      enabled: true,
-    },
-    scrollbar: {
-      el: ".swiper-scrollbar",
-    },
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+   }, 
+slidesPerView: 'auto',
+freeMode: false,
+slidesPerGroup: 1,
+centerInsufficientSlides:true,
+loop: false,
+grabCursor: true,
   });

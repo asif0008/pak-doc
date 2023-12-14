@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PakDoc Website</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- bootstrap5 cdn -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <!-- Swiper cdn -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+</head>
+
+<body>
+    <!-- Header section -->
+    <header class="container-fluid">
+        <section class="container">
+            <div class="PakDoc list-unstyled d-flex flex-row justify-content-between align-items-center">
+                <div><a href="#"><img src="assets/images/header_logo.png" alt="PakDoc-log" class="header-logo"></a>
+                </div>
+                <div class="nav-item dropdown PakDoc-dropdown d-lg-flex d-none justify-content-between" style="gap:32px;">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Doctors
+                        <img src="assets/images/Icon/drop-down-icon.png" alt="icon image" height="18px" width="19px">
+
+                    </a>
+                    <ul class="dropdown-menu PakDoc-dropdown-bottom px-3 py-4">
+                        <li><a class="glavios-links" href="#">Page</a></li>
+                        <li><a class="glavios-links" href="#">Page</a></li>
+                        <li><a class="glavios-links" href="#">Page</a></li>
+                        <li><a class="glavios-links" href="#">Page</a></li>
+                    </ul>
+                    </li>
+                    <div class="nav-item dropdown PakDoc-dropdown d-lg-flex d-none">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Hospitals
+                            <img src="assets/images/Icon/drop-down-icon.png" alt="icon image" height="18px"
+                                width="19px">
+
+                        </a>
+                        <ul class="dropdown-menu PakDoc-dropdown-bottom px-3 py-4">
+                            <li><a class="glavios-links" href="#">Page</a></li>
+                            <li><a class="glavios-links" href="#">Page</a></li>
+                            <li><a class="glavios-links" href="#">Page</a></li>
+                            <li><a class="glavios-links" href="#">Page</a></li>
+                        </ul>
+                    </div>
+                    <!-- if user login -- give class d-flex when you want to show this item -->
+                    <div class="nav-item dropdown PakDoc-dropdown d-none">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Appointments
+                            <img src="assets/images/Icon/drop-down-icon.png" alt="icon image" height="18px"
+                                width="19px">
+
+                        </a>
+                        <ul class="dropdown-menu PakDoc-dropdown-bottom px-3 py-4">
+                            <li><a class="glavios-links" href="#">Page</a></li>
+                            <li><a class="glavios-links" href="#">Page</a></li>
+                            <li><a class="glavios-links" href="#">Page</a></li>
+                            <li><a class="glavios-links" href="#">Page</a></li>
+                        </ul>
+                    </div>
+                    <!-- if user login -- give d-flex class when you want to show this -->
+                    <div class="nav-item dropdown PakDoc-dropdown gap-2 ms-4 d-none">
+                        <div class="nav-link dropdown-toggle notification" href="#" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="20" viewBox="0 0 18 20"
+                                fill="none">
+                                <path d="M12 15H17L15.5951 13.5951C15.2141 13.2141 15 12.6973 15 12.1585V9C15 6.38757 13.3304 4.16509 11 
+                         3.34142V3C11 1.89543 10.1046 1 9 1C7.89543 1 7 1.89543 7 3V3.34142C4.66962 4.16509 3 6.38757 3 9L3 12.1585C3 
+                         12.6973 2.78595 13.2141 2.40493 13.5951L1 15H6M12 15V16C12 17.6569 10.6569 19 9 19C7.34315 19 6 17.6569 6 
+                         16V15M12 15H6" stroke="#21384D" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                        <div class="dropdown-menu pakdoc-notification-menu d-none" data-popper-placement="bottom-start"> 
+                            <h5 class="font-20 fw-bold ps-3">Notifications</h5>
+                            <div class="notification-list d-flex flex-column">
+                                <div class="d-flex align-items-center gap-3 flex-wrap notification-data p-3">
+                                    <img style="width:56px;" src="assets/images/qualified doctors/doctors-proile-pic.png" alt="profile image">
+                                    <div class="d-flex flex-column align-items-start flex-fill">
+                                        <h4 class="font-16 light-black font-weight-600 mb-0">Congratulations !!!</h4>
+                                        <p class="font-14 light-black my-1">You are successfully Sign up</p>
+                                        <p class="font-14 light-black mb-0">1 hour ago</p>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-center gap-3 flex-row notification-data p-3">
+                                    <img style="width:56px;" src="assets/images/qualified doctors/doctors-proile-pic.png" alt="profile image">
+                                    <div class="d-flex flex-column align-items-start flex-fill">
+                                        <p class="font-16 light-black mb-1 font-weight-600">Dr Rachal Lee <span class="font-14">is approved your appointment on Monday 09 2023 09:00am</span>
+                                        </p>
+                                        <p class="font-14 light-black mb-0">1 hour ago</p>
+                                    </div>
+                                    <div style="width:12px; height:12px; background-color:#F2C246; border-radius:50%;"></div>
+                                </div>
+                                <div class="d-flex align-items-center gap-3 flex-wrap notification-data p-3">
+                                    <img style="width:56px;" src="assets/images/qualified doctors/doctors-proile-pic.png" alt="profile image">
+                                    <div class="d-flex flex-column align-items-start flex-fill">
+                                        <h4 class="font-16 light-black font-weight-600 mb-0">Congratulations !!!</h4>
+                                        <p class="font-14 light-black my-1">You are successfully Sign up</p>
+                                        <p class="font-14 light-black mb-0">1 hour ago</p>
+                                    </div>
+                                    <span style="width:12px; height:12px; background-color:#F2C246; border-radius:50%;"></span>
+                                </div>
+                                <div class="d-flex align-items-center gap-3 flex-wrap notification-data p-3">
+                                    <img style="width:56px;" src="assets/images/qualified doctors/doctors-proile-pic.png" alt="profile image">
+                                    <div class="d-flex flex-column align-items-start flex-fill">
+                                        <h4 class="font-16 light-black font-weight-600 mb-0">Congratulations !!!</h4>
+                                        <p class="font-14 light-black my-1">You are successfully Sign up</p>
+                                        <p class="font-14 light-black mb-0">1 hour ago</p>
+                                    </div>
+                                    <span style="width:12px; height:12px; background-color:#F2C246; border-radius:50%;"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="profile d-flex align-items-center gap-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            fill="none">
+                            <path d="M16 7C16 9.20914 14.2091 11 12 11C9.79086 11 8 9.20914 8 7C8 4.79086 9.79086 3 12 3C14.2091 3 16 
+                        4.79086 16 7Z" stroke="#21384D" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path d="M12 14C8.13401 14 5 17.134 5 21H19C19 17.134 15.866 14 12 14Z" stroke="#21384D"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                        <div class="nav-item dropdown PakDoc-dropdown d-lg-flex d-none">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Login/Sign up
+                                <img src="assets/images/Icon/drop-down-icon.png" alt="icon image" height="18px"
+                                    width="19px">
+
+                            </a>
+                            <div class="dropdown-menu pakdoc-login-dropdown text-center"> 
+                                <img src="assets/images/header_logo.png" alt="logo" class="img-fluid">
+                                <h5 class="mt-3 mb-2 font-16">Login</h5>
+                                <div class="d-flex align-items-center gap-2 justify-content-center">
+                                    <a href="#" class="font-14 global-btn" style="padding: 12px 25px;">Sign In</a>                                
+                                    <a href="#" class="font-14 global-btn" style="padding: 12px 25px;">Sign Up</a>                                
+                                </div>
+                                <h5 class="font-16 my-2">Or</h5>
+                                <a href="#" class="blue-btn d-block" style="padding: 12px 20px;">Join as a doctor</a>
+                            </div>
+                        </div>
+                    </div>
+                   <!-- if user login -- give class d-flex to show item -->
+                    <div class="profile d-flex align-items-center gap-2 d-none">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            fill="none">
+                            <path d="M16 7C16 9.20914 14.2091 11 12 11C9.79086 11 8 9.20914 8 7C8 4.79086 9.79086 3 12 3C14.2091 3 16 
+                        4.79086 16 7Z" stroke="#21384D" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path d="M12 14C8.13401 14 5 17.134 5 21H19C19 17.134 15.866 14 12 14Z" stroke="#21384D"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                        <div class="nav-item dropdown PakDoc-dropdown d-lg-flex d-none">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Florida Amy
+                                <img src="assets/images/Icon/drop-down-icon.png" alt="icon image" height="18px"
+                                    width="19px">
+
+                            </a>
+                            <div class="dropdown-menu pakdoc-profile-dropdown text-center"> 
+                                <img src="assets/images/header_logo.png" alt="logo" class="img-fluid">
+                                <div class="d-flex align-items-center gap-2 flex-row mt-4">
+                                    <img src="assets/images/nav-profile-img.png" alt="profile image" class="img-fluid" style="width: 80px;">
+                                    <div class="d-flex flex-column align-items-start">
+                                        <h4 class="font-24 light-black fw-bold mb-0" style="font-size: 20px;">Rachel Lee</h4>
+                                        <p class="font-16 light-black-90 my-1">jenny@gmail.com</p>
+                                        <p class="font-16 light-black-90 mb-0">+91 123412349</p>
+                                    </div>
+                                </div>
+                                <div class="mt-4 mb-3" style="width: 100%;height: 1px;background: rgba(112, 133, 131, 0.30);"></div>
+                                <div class="d-flex flex-column gap-3">
+                                    <a class="nav-link d-flex align-items-center gap-2" href="#" role="button" aria-expanded="false">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+                                            <path d="M15.5 17H20.5L19.0951 15.5951C18.7141 15.2141 18.5 14.6973 18.5 14.1585V11C18.5 8.38757 16.8304 6.16509 14.5 5.34142V5C14.5 3.89543 13.6046 3 12.5 3C11.3954 3 10.5 3.89543 10.5 5V5.34142C8.16962 6.16509 6.5 8.38757 6.5 11V14.1585C6.5 14.6973 6.28595 15.2141 5.90493 15.5951L4.5 17H9.5M15.5 17V18C15.5 19.6569 14.1569 21 12.5 21C10.8431 21 9.5 19.6569 9.5 18V17M15.5 17H9.5" stroke="#2A2A2A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                        Notifications
+                                    </a>
+                                    <a class="nav-link d-flex align-items-center gap-2" href="#" role="button" aria-expanded="false">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">
+                                            <path d="M12.5694 7.63892C9.86103 7.63892 7.70825 9.79169 7.70825 12.5C7.70825 15.2084 9.86103 17.3611 12.5694 17.3611C15.2777 17.3611 17.4305 15.2084 17.4305 12.5C17.4305 9.79169 15.2777 7.63892 12.5694 7.63892ZM12.5694 15.9722C10.6249 15.9722 9.09714 14.4445 9.09714 12.5C9.09714 10.5556 10.6249 9.0278 12.5694 9.0278C14.5138 9.0278 16.0416 10.5556 16.0416 12.5C16.0416 14.4445 14.5138 15.9722 12.5694 15.9722Z" fill="#2A2A2A"></path>
+                                            <path d="M22.7778 10.2084L20.8334 9.58336L20.4167 8.54169L21.3889 6.73614C21.5972 6.31947 21.5278 5.76392 21.1806 5.41669L19.5139 3.75003C19.1667 3.4028 18.6111 3.33336 18.1945 3.54169L16.3889 4.51392L15.3472 4.09725L14.7222 2.1528C14.5834 1.73614 14.1667 1.38892 13.6806 1.38892H11.3195C10.8334 1.38892 10.4167 1.73614 10.3472 2.22225L9.72225 4.16669C9.30558 4.23614 8.95836 4.37503 8.61114 4.58336L6.80558 3.61114C6.38892 3.4028 5.83336 3.47225 5.48614 3.81947L3.81947 5.48614C3.47225 5.83336 3.4028 6.38892 3.61114 6.80558L4.51392 8.54169C4.37503 8.88892 4.23614 9.30558 4.09725 9.6528L2.1528 10.2778C1.73614 10.4167 1.38892 10.8334 1.38892 11.3195V13.6806C1.38892 14.1667 1.73614 14.5834 2.22225 14.7222L4.16669 15.3472L4.58336 16.3889L3.61114 18.1945C3.4028 18.6111 3.47225 19.1667 3.81947 19.5139L5.48614 21.1806C5.83336 21.5278 6.38892 21.5972 6.80558 21.3889L8.61114 20.4167L9.6528 20.8334L10.2778 22.8472C10.4167 23.2639 10.8334 23.6111 11.3195 23.6111H13.6806C14.1667 23.6111 14.5834 23.2639 14.7222 22.8472L15.3472 20.8334L16.3889 20.4167L18.1945 21.3889C18.6111 21.5972 19.1667 21.5278 19.5139 21.1806L21.1806 19.5139C21.5278 19.1667 21.5972 18.6111 21.3889 18.1945L20.4167 16.3889L20.8334 15.3472L22.8472 14.7222C23.2639 14.5834 23.6111 14.1667 23.6111 13.6806V11.3195C23.6111 10.8334 23.2639 10.3472 22.7778 10.2084ZM22.2222 13.4722L19.7222 14.2361L19.6528 14.5834L19.0278 16.0417L18.8195 16.3889L20.0695 18.6806L18.6806 20.0695L16.3889 18.8195L16.0417 19.0278C15.5556 19.3056 15.0695 19.5139 14.5834 19.6528L14.2361 19.7222L13.4722 22.2222H11.5278L10.7639 19.7222L10.4167 19.6528L8.95836 19.0278L8.61114 18.8195L6.31947 20.0695L4.93058 18.6806L6.18058 16.3889L5.97225 16.0417C5.69447 15.5556 5.48614 15.0695 5.34725 14.5834L5.2778 14.2361L2.7778 13.4722V11.5278L5.13892 10.8334L5.2778 10.4861C5.41669 9.93058 5.62503 9.44447 5.9028 8.95836L6.11114 8.61114L4.93058 6.31947L6.31947 4.93058L8.54169 6.18058L8.88892 5.97225C9.37503 5.69447 9.86114 5.48614 10.4167 5.34725L10.7639 5.20836L11.5278 2.7778H13.4722L14.2361 5.20836L14.5834 5.34725C15.0695 5.48614 15.5556 5.69447 16.0417 5.97225L16.3889 6.18058L18.6806 4.93058L20.0695 6.31947L18.8195 8.61114L19.0278 8.95836C19.3056 9.44447 19.5139 9.93058 19.6528 10.4167L19.7222 10.7639L22.2222 11.5278V13.4722Z" fill="#2A2A2A"></path>
+                                        </svg>
+                                        Settings
+                                    </a>
+                                    <a class="nav-link d-flex align-items-center gap-2" href="#" role="button" aria-expanded="false">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+                                            <path d="M17.5 16L21.5 12M21.5 12L17.5 8M21.5 12L7.5 12M13.5 16V17C13.5 18.6569 12.1569 20 10.5 20H6.5C4.84315 20 3.5 18.6569 3.5 17V7C3.5 5.34315 4.84315 4 6.5 4H10.5C12.1569 4 13.5 5.34315 13.5 7V8" stroke="#2A2A2A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                        Logout
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-lg-none d-flex">
+                    <svg id="hamburger_menu" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                        viewBox="0 0 24 24" fill="none">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M20.4 5.9998C20.4 5.33706 19.8628 4.7998 19.2 
+                    4.7998H4.80002C4.13728 4.7998 3.60003 5.33706 3.60003 5.9998C3.60003 6.66255 4.13728 7.1998 4.80002 
+                    7.1998H19.2C19.8628 7.1998 20.4 6.66255 20.4 5.9998Z" fill="#2A2A2A" />
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M20.4 11.9998C20.4 11.3371 19.8628 10.7998 19.2 
+                    10.7998H12C11.3373 10.7998 10.8 11.3371 10.8 11.9998C10.8 12.6625 11.3373 13.1998 12 13.1998H19.2C19.8628 
+                    13.1998 20.4 12.6625 20.4 11.9998Z" fill="#2A2A2A" />
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M20.4 17.9998C20.4 17.3371 19.8628 16.7998 19.2 
+                    16.7998H4.80002C4.13728 16.7998 3.60003 17.3371 3.60003 17.9998C3.60003 18.6625 4.13728 19.1998 4.80002 
+                    19.1998H19.2C19.8628 19.1998 20.4 18.6625 20.4 17.9998Z" fill="#2A2A2A" />
+                    </svg>
+                </div>
+            </div>
+            <!-- mobile-header -->
+            <div class="responsive_header slide-left " id="side-nav">
+                <div class="d-flex flex-column gap-2 pb-4">
+                    <span id="close-side-nav">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M5.15152 5.15152C5.62015 4.68289 6.37995 4.68289 6.84858 
+                             5.15152L12 10.303L17.1515 5.15152C17.6201 4.68289 18.3799 4.68289 18.8486 5.15152C19.3172 5.62015 19.3172 6.37995 18.8486 6.84858L13.6971 12L18.8486 17.1515C19.3172 17.6201 19.3172 18.3799 18.8486 18.8486C18.3799 19.3172 17.6201 19.3172 
+17.1515 18.8486L12 13.6971L6.84858 18.8486C6.37995 19.3172 5.62015 19.3172 5.15152 18.8486C4.68289 18.3799 4.68289 
+17.6201 5.15152 17.1515L10.303 12L5.15152 6.84858C4.68289 6.37995 4.68289 5.62015 5.15152 5.15152Z"
+                                fill="#2A2A2A" />
+                        </svg>
+                    </span>
+                    <div class="text-center"><img src="assets/images/header_logo.png" class="img-fluid"></div>
+                </div>
+                <!-- if login -->
+                <div class="d-flex align-items-center gap-2 flex-wrap d-none">
+                    <img src="assets/images/nav-profile-img.png" alt="profile image" class="img-fluid" style="width: 80px;">
+                    <div class="d-flex flex-column align-items-start">
+                        <h4 class="font-24 light-black fw-bold mb-0" style="font-size: 20px;">Rachel Lee</h4>
+                        <p class="font-16 light-black-90 my-1">jenny@gmail.com</p>
+                        <p class="font-16 light-black-90 mb-0">+91 123412349</p>
+                    </div>
+                </div>
+                <!-- if login -->
+                <!-- if not login -->
+                <div class="d-flex flex-column align-items-center">
+                    <h5 class="mt-3 mb-2 font-24">Login</h5>
+                    <div class="d-flex align-items-center gap-3 justify-content-center w-100">
+                        <a href="#" class="font-14 global-btn w-100" style="padding: 12px 25px;">Sign In</a>                                
+                        <a href="#" class="font-14 global-btn w-100" style="padding: 12px 25px;">Sign Up</a>                                
+                    </div>
+                    <h5 class="font-24 my-2">Or</h5>
+                    <a href="#" class="blue-btn w-100 text-center" style="padding: 12px 20px;">Join as a doctor</a>
+                </div>
+                <!-- if not login -->
+                <div class="nav-item d-flex flex-column gap-4 mt-5">
+                    <a class="nav-link d-flex align-items-center gap-2" href="#" role="button"
+                        aria-expanded="false">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">
+                            <path d="M22.9329 10.5688L13.2362 1.64788C12.921 1.35787 12.5059 1.20092 12.0776 1.20983C11.6494 1.21875 11.2412 1.39285 10.9383 1.69573L2.02017 10.6139L1.5625 11.0715V24.2187H10.1562V16.0156H14.8438V24.2187H23.4375V11.0331L22.9329 10.5688ZM12.1112 2.772C12.125 2.772 12.1165 2.77498 12.1106 2.78079C12.1045 2.77498 12.0975 2.772 12.1112 2.772ZM21.875 22.6562H16.4062V16.0156C16.4062 15.6012 16.2416 15.2038 15.9486 14.9108C15.6556 14.6177 15.2582 14.4531 14.8438 14.4531H10.1562C9.74185 14.4531 9.34442 14.6177 9.0514 14.9108C8.75837 15.2038 8.59375 15.6012 8.59375 16.0156V22.6562H3.125V11.7187L12.1112 2.80057C12.1119 2.79998 12.1119 2.79944 12.1124 2.79886L21.875 11.7187V22.6562Z" fill="#2A2A2A"/>
+                        </svg>
+                        Home
+                    </a>
+                    <a class="nav-link d-flex align-items-center gap-2" href="#" role="button"
+                        aria-expanded="false">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">
+                            <path d="M12.4999 2.08337C6.74679 2.08337 2.08325 6.74692 2.08325 12.5C2.08325 18.2532 6.74679 22.9167 12.4999 22.9167C18.253 22.9167 22.9166 18.2532 22.9166 12.5C22.9166 6.74692 18.253 2.08337 12.4999 2.08337Z" stroke="#2A2A2A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M4.44897 19.1105C4.44897 19.1105 6.77085 16.1459 12.5 16.1459C18.2292 16.1459 20.5521 19.1105 20.5521 19.1105" stroke="#2A2A2A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M12.5 12.5C13.3288 12.5 14.1237 12.1708 14.7097 11.5847C15.2958 10.9987 15.625 10.2038 15.625 9.375C15.625 8.5462 15.2958 7.75134 14.7097 7.16529C14.1237 6.57924 13.3288 6.25 12.5 6.25C11.6712 6.25 10.8763 6.57924 10.2903 7.16529C9.70424 7.75134 9.375 8.5462 9.375 9.375C9.375 10.2038 9.70424 10.9987 10.2903 11.5847C10.8763 12.1708 11.6712 12.5 12.5 12.5V12.5Z" stroke="#2A2A2A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        Doctors
+                    </a>
+                    <a class="nav-link d-flex align-items-center gap-2" href="#" role="button"
+                        aria-expanded="false">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">
+                            <path d="M12.4793 8.22911C13.0162 8.22911 13.4515 7.79383 13.4515 7.25689C13.4515 6.71995 13.0162 6.28467 12.4793 6.28467C11.9424 6.28467 11.5071 6.71995 11.5071 7.25689C11.5071 7.79383 11.9424 8.22911 12.4793 8.22911Z" fill="#2A2A2A"/>
+                            <path d="M14.5833 17.3611H13.1944V9.79163H11.1111C10.9269 9.79163 10.7502 9.86479 10.62 9.99502C10.4898 10.1253 10.4166 10.3019 10.4166 10.4861C10.4166 10.6702 10.4898 10.8469 10.62 10.9771C10.7502 11.1074 10.9269 11.1805 11.1111 11.1805H11.8055V17.3611H10.4166C10.2324 17.3611 10.0558 17.4342 9.92557 17.5645C9.79533 17.6947 9.72217 17.8713 9.72217 18.0555C9.72217 18.2397 9.79533 18.4163 9.92557 18.5466C10.0558 18.6768 10.2324 18.75 10.4166 18.75H14.5833C14.7675 18.75 14.9441 18.6768 15.0743 18.5466C15.2046 18.4163 15.2777 18.2397 15.2777 18.0555C15.2777 17.8713 15.2046 17.6947 15.0743 17.5645C14.9441 17.4342 14.7675 17.3611 14.5833 17.3611Z" fill="#2A2A2A"/>
+                            <path d="M12.5 23.6111C10.3025 23.6111 8.15424 22.9595 6.32703 21.7386C4.49982 20.5177 3.07568 18.7824 2.2347 16.7521C1.39373 14.7218 1.17369 12.4877 1.60242 10.3324C2.03114 8.17702 3.08937 6.19721 4.64329 4.64329C6.19721 3.08937 8.17702 2.03114 10.3324 1.60242C12.4877 1.17369 14.7218 1.39373 16.7521 2.2347C18.7824 3.07568 20.5177 4.49982 21.7386 6.32703C22.9595 8.15424 23.6111 10.3025 23.6111 12.5C23.6111 15.4469 22.4405 18.273 20.3568 20.3568C18.273 22.4405 15.4469 23.6111 12.5 23.6111ZM12.5 2.77781C10.5772 2.77781 8.69747 3.34801 7.09865 4.4163C5.49984 5.48459 4.25372 7.003 3.51787 8.7795C2.78202 10.556 2.58949 12.5108 2.96462 14.3967C3.33975 16.2827 4.26571 18.015 5.62538 19.3747C6.98506 20.7344 8.71739 21.6603 10.6033 22.0354C12.4892 22.4106 14.4441 22.218 16.2206 21.4822C17.9971 20.7463 19.5155 19.5002 20.5838 17.9014C21.6521 16.3026 22.2223 14.4229 22.2223 12.5C22.2223 9.92154 21.198 7.44865 19.3747 5.62538C17.5514 3.80211 15.0785 2.77781 12.5 2.77781Z" fill="#2A2A2A"/>
+                        </svg>
+                        Hospitals
+                    </a>
+                    <!-- if login -->
+                    <a class="nav-link d-flex align-items-center gap-2 d-none" href="#" role="button"
+                        aria-expanded="false">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">
+                            <path d="M12.5036 2.23218C18.1742 2.23218 22.7715 6.8295 22.7715 12.5C22.7715 18.1706 18.1742 22.7679 12.5036 22.7679C10.7884 22.7679 9.13309 22.3465 7.65541 21.5536L3.63398 22.7616C3.44093 22.8195 3.23581 22.824 3.04041 22.7747C2.84501 22.7253 2.66661 22.624 2.52415 22.4815C2.38169 22.3389 2.28048 22.1605 2.23128 21.965C2.18208 21.7696 2.18671 21.5645 2.24469 21.3715L3.45273 17.3509C2.65176 15.8596 2.23359 14.1928 2.23577 12.5C2.23577 6.8295 6.83309 2.23218 12.5036 2.23218ZM12.5036 3.57146C7.57237 3.57146 3.57505 7.56879 3.57505 12.5C3.57505 14.0804 3.98577 15.6 4.75541 16.9402L4.89827 17.1902L3.64559 21.3599L7.81702 20.1072L8.06702 20.25C9.4063 21.0179 10.9242 21.4286 12.5036 21.4286C17.4349 21.4286 21.4322 17.4313 21.4322 12.5C21.4322 7.56879 17.4349 3.57146 12.5036 3.57146ZM9.15541 13.8393H13.1715C13.3411 13.8394 13.5045 13.9038 13.6284 14.0197C13.7524 14.1355 13.8278 14.2941 13.8394 14.4633C13.8509 14.6326 13.7978 14.7999 13.6907 14.9316C13.5837 15.0632 13.4306 15.1492 13.2626 15.1724L13.1715 15.1786H9.15541C8.98574 15.1786 8.82243 15.1141 8.69845 14.9983C8.57448 14.8824 8.49909 14.7239 8.48753 14.5546C8.47596 14.3853 8.52908 14.218 8.63615 14.0864C8.74322 13.9548 8.89626 13.8687 9.06434 13.8456L9.15541 13.8393H13.1715H9.15541ZM9.15541 9.82146H15.8554C16.0251 9.82152 16.1884 9.88597 16.3124 10.0018C16.4363 10.1176 16.5117 10.2762 16.5233 10.4455C16.5349 10.6147 16.4817 10.7821 16.3747 10.9137C16.2676 11.0453 16.1146 11.1314 15.9465 11.1545L15.8554 11.1607H9.15541C8.98574 11.1607 8.82243 11.0962 8.69845 10.9804C8.57448 10.8646 8.49909 10.706 8.48753 10.5367C8.47596 10.3675 8.52908 10.2001 8.63615 10.0685C8.74322 9.9369 8.89626 9.85084 9.06434 9.82771L9.15541 9.82146H15.8554H9.15541Z" fill="#2A2A2A"/>
+                        </svg>
+                        Appointment
+                    </a>
+                    <h4 class="font-24 light-black">Profile</h4>
+                    <a class="nav-link d-flex align-items-center gap-2" href="#" role="button"
+                        aria-expanded="false">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">
+                            <path d="M12.5694 7.63892C9.86103 7.63892 7.70825 9.79169 7.70825 12.5C7.70825 15.2084 9.86103 17.3611 12.5694 17.3611C15.2777 17.3611 17.4305 15.2084 17.4305 12.5C17.4305 9.79169 15.2777 7.63892 12.5694 7.63892ZM12.5694 15.9722C10.6249 15.9722 9.09714 14.4445 9.09714 12.5C9.09714 10.5556 10.6249 9.0278 12.5694 9.0278C14.5138 9.0278 16.0416 10.5556 16.0416 12.5C16.0416 14.4445 14.5138 15.9722 12.5694 15.9722Z" fill="#2A2A2A"/>
+                            <path d="M22.7778 10.2084L20.8334 9.58336L20.4167 8.54169L21.3889 6.73614C21.5972 6.31947 21.5278 5.76392 21.1806 5.41669L19.5139 3.75003C19.1667 3.4028 18.6111 3.33336 18.1945 3.54169L16.3889 4.51392L15.3472 4.09725L14.7222 2.1528C14.5834 1.73614 14.1667 1.38892 13.6806 1.38892H11.3195C10.8334 1.38892 10.4167 1.73614 10.3472 2.22225L9.72225 4.16669C9.30558 4.23614 8.95836 4.37503 8.61114 4.58336L6.80558 3.61114C6.38892 3.4028 5.83336 3.47225 5.48614 3.81947L3.81947 5.48614C3.47225 5.83336 3.4028 6.38892 3.61114 6.80558L4.51392 8.54169C4.37503 8.88892 4.23614 9.30558 4.09725 9.6528L2.1528 10.2778C1.73614 10.4167 1.38892 10.8334 1.38892 11.3195V13.6806C1.38892 14.1667 1.73614 14.5834 2.22225 14.7222L4.16669 15.3472L4.58336 16.3889L3.61114 18.1945C3.4028 18.6111 3.47225 19.1667 3.81947 19.5139L5.48614 21.1806C5.83336 21.5278 6.38892 21.5972 6.80558 21.3889L8.61114 20.4167L9.6528 20.8334L10.2778 22.8472C10.4167 23.2639 10.8334 23.6111 11.3195 23.6111H13.6806C14.1667 23.6111 14.5834 23.2639 14.7222 22.8472L15.3472 20.8334L16.3889 20.4167L18.1945 21.3889C18.6111 21.5972 19.1667 21.5278 19.5139 21.1806L21.1806 19.5139C21.5278 19.1667 21.5972 18.6111 21.3889 18.1945L20.4167 16.3889L20.8334 15.3472L22.8472 14.7222C23.2639 14.5834 23.6111 14.1667 23.6111 13.6806V11.3195C23.6111 10.8334 23.2639 10.3472 22.7778 10.2084ZM22.2222 13.4722L19.7222 14.2361L19.6528 14.5834L19.0278 16.0417L18.8195 16.3889L20.0695 18.6806L18.6806 20.0695L16.3889 18.8195L16.0417 19.0278C15.5556 19.3056 15.0695 19.5139 14.5834 19.6528L14.2361 19.7222L13.4722 22.2222H11.5278L10.7639 19.7222L10.4167 19.6528L8.95836 19.0278L8.61114 18.8195L6.31947 20.0695L4.93058 18.6806L6.18058 16.3889L5.97225 16.0417C5.69447 15.5556 5.48614 15.0695 5.34725 14.5834L5.2778 14.2361L2.7778 13.4722V11.5278L5.13892 10.8334L5.2778 10.4861C5.41669 9.93058 5.62503 9.44447 5.9028 8.95836L6.11114 8.61114L4.93058 6.31947L6.31947 4.93058L8.54169 6.18058L8.88892 5.97225C9.37503 5.69447 9.86114 5.48614 10.4167 5.34725L10.7639 5.20836L11.5278 2.7778H13.4722L14.2361 5.20836L14.5834 5.34725C15.0695 5.48614 15.5556 5.69447 16.0417 5.97225L16.3889 6.18058L18.6806 4.93058L20.0695 6.31947L18.8195 8.61114L19.0278 8.95836C19.3056 9.44447 19.5139 9.93058 19.6528 10.4167L19.7222 10.7639L22.2222 11.5278V13.4722Z" fill="#2A2A2A"/>
+                        </svg>
+                        Settings
+                    </a>
+                    <!-- if login -->
+                    <a class="nav-link d-flex align-items-center gap-2 d-none" href="#" role="button"
+                        aria-expanded="false">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M15.75 18.1111H22L20.2438 16.394C19.7676 15.9283 19.5 15.2967 19.5 14.6381V10.7778C19.5 7.5848 17.413 4.86844 14.5 3.86173V3.44444C14.5 2.09442 13.3807 1 12 1C10.6193 1 9.5 2.09441 9.5 3.44444V3.86173C6.58702 4.86844 4.5 7.5848 4.5 10.7778V14.6381C4.5 15.2967 4.23244 15.9283 3.75617 16.394L2 18.1111H8.25M15.75 18.1111V19.3333C15.75 21.3584 14.0711 23 12 23C9.92893 23 8.25 21.3584 8.25 19.3333V18.1111M15.75 18.1111H8.25" stroke="#2A2A2A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        Notifications
+                    </a>
+                    <a class="nav-link d-flex align-items-center gap-2" href="#" role="button"
+                        aria-expanded="false">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 27 27" fill="none">
+                            <path d="M24.8701 14.3475L14.6851 4.1625C14.5495 4.02934 14.3889 3.92434 14.2126 3.85355C14.0362 3.78275 13.8476 3.74756 13.6576 3.75H12.0901L23.8126 15.3375L15.9151 23.3025C16.0495 23.437 16.2091 23.5436 16.3848 23.6164C16.5604 23.6892 16.7487 23.7267 16.9388 23.7267C17.129 23.7267 17.3173 23.6892 17.4929 23.6164C17.6686 23.5436 17.8282 23.437 17.9626 23.3025L24.8701 16.395C25.0046 16.2606 25.1112 16.101 25.184 15.9253C25.2568 15.7497 25.2943 15.5614 25.2943 15.3712C25.2943 15.1811 25.2568 14.9928 25.184 14.8172C25.1112 14.6415 25.0046 14.4819 24.8701 14.3475Z" fill="#2A2A2A"/>
+                            <path d="M5.85761 9.35254C6.40851 9.35254 6.85511 8.90595 6.85511 8.35504C6.85511 7.80414 6.40851 7.35754 5.85761 7.35754C5.3067 7.35754 4.86011 7.80414 4.86011 8.35504C4.86011 8.90595 5.3067 9.35254 5.85761 9.35254Z" fill="#2A2A2A"/>
+                            <path d="M20.835 14.3775L10.65 4.185C10.5163 4.04778 10.3565 3.93863 10.1801 3.86394C10.0037 3.78924 9.8141 3.75051 9.62251 3.75H2.70751C2.32361 3.75 1.95543 3.9025 1.68397 4.17396C1.41251 4.44542 1.26001 4.8136 1.26001 5.1975V12.1125C1.26053 12.3023 1.29857 12.4901 1.37193 12.6652C1.4453 12.8402 1.55255 12.999 1.68751 13.1325L11.88 23.325C12.0144 23.4595 12.174 23.5662 12.3497 23.6389C12.5253 23.7117 12.7136 23.7492 12.9038 23.7492C13.0939 23.7492 13.2822 23.7117 13.4578 23.6389C13.6335 23.5662 13.7931 23.4595 13.9275 23.325L20.835 16.4175C21.1043 16.1463 21.2554 15.7797 21.2554 15.3975C21.2554 15.0153 21.1043 14.6487 20.835 14.3775ZM12.945 22.2675L2.76751 12.1125V5.25H9.59251L19.7775 15.36L12.945 22.2675Z" fill="#2A2A2A"/>
+                        </svg>
+                        Logout
+                    </a>
+                </div>
+            </div>
+        </section>
+    </header>
+    <!-- Search section -->
+    <div class="container-fluid px-0 search-section">
+        <div class="map-section">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7058331.617240072!2d63.70590540354574!3d30.252729021529433!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38db52d2f8fd751f%3A0x46b7a1f7e614925c!2sPakistan!5e0!3m2!1sen!2s!4v1702557128033!5m2!1sen!2s" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+
+    <!-- footer section -->
+    <footer class="container-fluid">
+        <section class="container">
+            <div class="row g-3">
+                <div class="col-12 col-lg-3">
+                    <div class="d-flex align-items-start justify-content-between gap-5">
+                        <div>
+                            <img src="assets/images/footer-logo.png" alt="footer logo" class="img-fluid">
+                            <p class="font-16 mt-2 white-text">Book appointments with the best Doctors and Specialists such as Gynecologists, Skin Specialists, Child Specialists, Surgeons, etc. Avail test services such as MRI, CT scan, Ultrasound, X-Ray, etc. and Online Doctor Video Consultations all across country conveniently.</p>
+                        </div>
+                        <div class="d-flex flex-column align-items-center justify-content-end gap-2 d-lg-none">
+                            <a href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+                                    <path d="M27 0H5C2.23858 0 0 2.23858 0 5V27C0 29.7614 2.23858 32 5 32H27C29.7614 32 32 29.7614 32 27V5C32 2.23858 29.7614 0 27 0Z" fill="#1877F2"/>
+                                    <path d="M24 16C24 11.6 20.4 8 16 8C11.6 8 8 11.6 8 16C8 20 10.9 23.3 14.7 23.9V18.3H12.7V16H14.7V14.2C14.7 12.2 15.9 11.1 17.7 11.1C18.6 11.1 19.5 11.3 19.5 11.3V13.3H18.5C17.5 13.3 17.2 13.9 17.2 14.5V16H19.4L19 18.3H17.1V24C21.1 23.4 24 20 24 16Z" fill="white"/>
+                                  </svg>
+                            </a>
+                            <a href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+                                    <path d="M27 0H5C2.23858 0 0 2.23858 0 5V27C0 29.7614 2.23858 32 5 32H27C29.7614 32 32 29.7614 32 27V5C32 2.23858 29.7614 0 27 0Z" fill="#F00073"/>
+                                    <path d="M16 9.2002C18.2 9.2002 18.5 9.2002 19.4 9.2002C20.2 9.2002 20.6 9.4002 20.9 9.5002C21.3 9.7002 21.6 9.8002 21.9 10.1002C22.2 10.4002 22.4 10.7002 22.5 11.1002C22.6 11.4002 22.7 11.8002 22.8 12.6002C22.8 13.5002 22.8 13.7002 22.8 16.0002C22.8 18.3002 22.8 18.5002 22.8 19.4002C22.8 20.2002 22.6 20.6002 22.5 20.9002C22.3 21.3002 22.2 21.6002 21.9 21.9002C21.6 22.2002 21.3 22.4002 20.9 22.5002C20.6 22.6002 20.2 22.7002 19.4 22.8002C18.5 22.8002 18.3 22.8002 16 22.8002C13.7 22.8002 13.5 22.8002 12.6 22.8002C11.8 22.8002 11.4 22.6002 11.1 22.5002C10.7 22.3002 10.4 22.2002 10.1 21.9002C9.79995 21.6002 9.59995 21.3002 9.49995 20.9002C9.39995 20.6002 9.29995 20.2002 9.19995 19.4002C9.19995 18.5002 9.19995 18.3002 9.19995 16.0002C9.19995 13.7002 9.19995 13.5002 9.19995 12.6002C9.19995 11.8002 9.39995 11.4002 9.49995 11.1002C9.69995 10.7002 9.79995 10.4002 10.1 10.1002C10.4 9.8002 10.7 9.6002 11.1 9.5002C11.4 9.4002 11.8 9.3002 12.6 9.2002C13.5 9.2002 13.8 9.2002 16 9.2002ZM16 7.7002C13.7 7.7002 13.5 7.7002 12.6 7.7002C11.7 7.7002 11.1 7.9002 10.6 8.1002C10.1 8.3002 9.59995 8.6002 9.09995 9.1002C8.59995 9.6002 8.39995 10.0002 8.09995 10.6002C7.89995 11.1002 7.79995 11.7002 7.69995 12.6002C7.69995 13.5002 7.69995 13.8002 7.69995 16.0002C7.69995 18.3002 7.69995 18.5002 7.69995 19.4002C7.69995 20.3002 7.89995 20.9002 8.09995 21.4002C8.29995 21.9002 8.59995 22.4002 9.09995 22.9002C9.59995 23.4002 9.99995 23.6002 10.6 23.9002C11.1 24.1002 11.7 24.2002 12.6 24.3002C13.5 24.3002 13.8 24.3002 16 24.3002C18.2 24.3002 18.5 24.3002 19.4 24.3002C20.3 24.3002 20.9 24.1002 21.4 23.9002C21.9 23.7002 22.4 23.4002 22.9 22.9002C23.4 22.4002 23.6 22.0002 23.9 21.4002C24.1 20.9002 24.1999 20.3002 24.2999 19.4002C24.2999 18.5002 24.2999 18.2002 24.2999 16.0002C24.2999 13.8002 24.2999 13.5002 24.2999 12.6002C24.2999 11.7002 24.1 11.1002 23.9 10.6002C23.7 10.1002 23.4 9.6002 22.9 9.1002C22.4 8.6002 22 8.4002 21.4 8.1002C20.9 7.9002 20.3 7.8002 19.4 7.7002C18.5 7.7002 18.3 7.7002 16 7.7002Z" fill="white"/>
+                                    <path d="M16 11.7002C13.6 11.7002 11.7 13.6002 11.7 16.0002C11.7 18.4002 13.6 20.3002 16 20.3002C18.4 20.3002 20.3 18.4002 20.3 16.0002C20.3 13.6002 18.4 11.7002 16 11.7002ZM16 18.8002C14.5 18.8002 13.2 17.6002 13.2 16.0002C13.2 14.5002 14.4 13.2002 16 13.2002C17.5 13.2002 18.8 14.4002 18.8 16.0002C18.8 17.5002 17.5 18.8002 16 18.8002Z" fill="white"/>
+                                    <path d="M20.4 12.6002C20.9522 12.6002 21.4 12.1525 21.4 11.6002C21.4 11.0479 20.9522 10.6002 20.4 10.6002C19.8477 10.6002 19.4 11.0479 19.4 11.6002C19.4 12.1525 19.8477 12.6002 20.4 12.6002Z" fill="white"/>
+                                  </svg>
+                            </a>
+                            <a href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+                                    <path d="M27 0H5C2.23858 0 0 2.23858 0 5V27C0 29.7614 2.23858 32 5 32H27C29.7614 32 32 29.7614 32 27V5C32 2.23858 29.7614 0 27 0Z" fill="#1DA1F2"/>
+                                    <path d="M24 11C23.4 11.3 22.8 11.4 22.1 11.5C22.8 11.1 23.3 10.5 23.5 9.7C22.9 10.1 22.2 10.3 21.4 10.5C20.8 9.9 19.9 9.5 19 9.5C16.9 9.5 15.3 11.5 15.8 13.5C13.1 13.4 10.7 12.1 9 10.1C8.1 11.6 8.6 13.5 10 14.5C9.5 14.5 9 14.3 8.5 14.1C8.5 15.6 9.6 17 11.1 17.4C10.6 17.5 10.1 17.6 9.6 17.5C10 18.8 11.2 19.8 12.7 19.8C11.5 20.7 9.7 21.2 8 21C9.5 21.9 11.2 22.5 13 22.5C19.1 22.5 22.5 17.4 22.3 12.7C23 12.3 23.6 11.7 24 11Z" fill="white"/>
+                                  </svg>
+                            </a>
+                            <a href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+                                    <path d="M27 0H5C2.23858 0 0 2.23858 0 5V27C0 29.7614 2.23858 32 5 32H27C29.7614 32 32 29.7614 32 27V5C32 2.23858 29.7614 0 27 0Z" fill="#2867B2"/>
+                                    <path d="M11.6 24H8.2V13.3H11.6V24ZM9.9 11.8C8.8 11.8 8 11 8 9.9C8 8.8 8.9 8 9.9 8C11 8 11.8 8.8 11.8 9.9C11.8 11 11 11.8 9.9 11.8ZM24 24H20.6V18.2C20.6 16.5 19.9 16 18.9 16C17.9 16 16.9 16.8 16.9 18.3V24H13.5V13.3H16.7V14.8C17 14.1 18.2 13 19.9 13C21.8 13 23.8 14.1 23.8 17.4V24H24Z" fill="white"/>
+                                  </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-3 px-2 ps-lg-5">
+                    <h4 class="font-20 fw-bold accent-text my-3">PakDoc</h4>
+                    <div class="d-flex flex-column gap-2">
+                        <a href="#" class="font-16 white-text">Home</a>
+                        <a href="#" class="font-16 white-text">About</a>
+                        <a href="#" class="font-16 white-text">Contact</a>
+                        <a href="#" class="font-16 white-text">Help</a>
+                        <a href="#" class="font-16 white-text">How search works</a>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-3 px-2 ps-lg-3">
+                    <h4 class="font-20 fw-bold accent-text my-3">Additional Resources</h4>
+                    <div class="d-flex flex-column gap-2">
+                        <a href="#" class="font-16 white-text">How search works</a>
+                        <a href="#" class="font-16 white-text">Verified Reviews</a>
+                        <a href="#" class="font-16 white-text">Data & Privacy</a>
+                        <a href="#" class="font-16 white-text">Location</a>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-3">
+                    <h4 class="font-20 fw-bold accent-text my-3">Specialties</h4>
+                    <div class="d-flex flex-column gap-2">
+                        <a href="#" class="font-16 white-text">Anti Wrinkles Treatment</a>
+                        <a href="#" class="font-16 white-text">Dermal Fillers</a>
+                        <a href="#" class="font-16 white-text">Dermatologists</a>
+                        <a href="#" class="font-16 white-text">Laser Hair Removal</a>
+                        <a href="#" class="font-16 white-text">PDO Threads</a>
+                        <a href="#" class="font-16 white-text">Skin Boosters</a>
+                        <a href="#" class="font-16 white-text">Microneedling Skinpen</a>
+                        <a href="#" class="font-16 white-text">View All</a>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-2 mt-lg-5 pt-0 pt-md-5 g-4">
+                <div class="col-12 col-lg-7">
+                    <div class="d-flex flex-wrap gap-3">
+                        <p class="font-16 white-text mb-0">© 2023 Aesthetic, Inc.</p>
+                        <a href="#" class="font-16 white-text d-none d-lg-block">Privacy</a>
+                        <a href="#" class="font-16 white-text d-none d-lg-block">Terms of Use</a>
+                        <div class="d-flex gap-2 align-items-center">
+                            <img src="assets/images/privacy-choise.png" style="width: 38px;" alt="image" class="img-fluid">
+                            <p class="font-16 white-text mb-0">Your Privacy and choice</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-5 d-none d-lg-block">
+                    <div class="d-flex align-items-center justify-content-end gap-3">
+                        <a href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+                                <path d="M27 0H5C2.23858 0 0 2.23858 0 5V27C0 29.7614 2.23858 32 5 32H27C29.7614 32 32 29.7614 32 27V5C32 2.23858 29.7614 0 27 0Z" fill="#1877F2"/>
+                                <path d="M24 16C24 11.6 20.4 8 16 8C11.6 8 8 11.6 8 16C8 20 10.9 23.3 14.7 23.9V18.3H12.7V16H14.7V14.2C14.7 12.2 15.9 11.1 17.7 11.1C18.6 11.1 19.5 11.3 19.5 11.3V13.3H18.5C17.5 13.3 17.2 13.9 17.2 14.5V16H19.4L19 18.3H17.1V24C21.1 23.4 24 20 24 16Z" fill="white"/>
+                              </svg>
+                        </a>
+                        <a href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+                                <path d="M27 0H5C2.23858 0 0 2.23858 0 5V27C0 29.7614 2.23858 32 5 32H27C29.7614 32 32 29.7614 32 27V5C32 2.23858 29.7614 0 27 0Z" fill="#F00073"/>
+                                <path d="M16 9.2002C18.2 9.2002 18.5 9.2002 19.4 9.2002C20.2 9.2002 20.6 9.4002 20.9 9.5002C21.3 9.7002 21.6 9.8002 21.9 10.1002C22.2 10.4002 22.4 10.7002 22.5 11.1002C22.6 11.4002 22.7 11.8002 22.8 12.6002C22.8 13.5002 22.8 13.7002 22.8 16.0002C22.8 18.3002 22.8 18.5002 22.8 19.4002C22.8 20.2002 22.6 20.6002 22.5 20.9002C22.3 21.3002 22.2 21.6002 21.9 21.9002C21.6 22.2002 21.3 22.4002 20.9 22.5002C20.6 22.6002 20.2 22.7002 19.4 22.8002C18.5 22.8002 18.3 22.8002 16 22.8002C13.7 22.8002 13.5 22.8002 12.6 22.8002C11.8 22.8002 11.4 22.6002 11.1 22.5002C10.7 22.3002 10.4 22.2002 10.1 21.9002C9.79995 21.6002 9.59995 21.3002 9.49995 20.9002C9.39995 20.6002 9.29995 20.2002 9.19995 19.4002C9.19995 18.5002 9.19995 18.3002 9.19995 16.0002C9.19995 13.7002 9.19995 13.5002 9.19995 12.6002C9.19995 11.8002 9.39995 11.4002 9.49995 11.1002C9.69995 10.7002 9.79995 10.4002 10.1 10.1002C10.4 9.8002 10.7 9.6002 11.1 9.5002C11.4 9.4002 11.8 9.3002 12.6 9.2002C13.5 9.2002 13.8 9.2002 16 9.2002ZM16 7.7002C13.7 7.7002 13.5 7.7002 12.6 7.7002C11.7 7.7002 11.1 7.9002 10.6 8.1002C10.1 8.3002 9.59995 8.6002 9.09995 9.1002C8.59995 9.6002 8.39995 10.0002 8.09995 10.6002C7.89995 11.1002 7.79995 11.7002 7.69995 12.6002C7.69995 13.5002 7.69995 13.8002 7.69995 16.0002C7.69995 18.3002 7.69995 18.5002 7.69995 19.4002C7.69995 20.3002 7.89995 20.9002 8.09995 21.4002C8.29995 21.9002 8.59995 22.4002 9.09995 22.9002C9.59995 23.4002 9.99995 23.6002 10.6 23.9002C11.1 24.1002 11.7 24.2002 12.6 24.3002C13.5 24.3002 13.8 24.3002 16 24.3002C18.2 24.3002 18.5 24.3002 19.4 24.3002C20.3 24.3002 20.9 24.1002 21.4 23.9002C21.9 23.7002 22.4 23.4002 22.9 22.9002C23.4 22.4002 23.6 22.0002 23.9 21.4002C24.1 20.9002 24.1999 20.3002 24.2999 19.4002C24.2999 18.5002 24.2999 18.2002 24.2999 16.0002C24.2999 13.8002 24.2999 13.5002 24.2999 12.6002C24.2999 11.7002 24.1 11.1002 23.9 10.6002C23.7 10.1002 23.4 9.6002 22.9 9.1002C22.4 8.6002 22 8.4002 21.4 8.1002C20.9 7.9002 20.3 7.8002 19.4 7.7002C18.5 7.7002 18.3 7.7002 16 7.7002Z" fill="white"/>
+                                <path d="M16 11.7002C13.6 11.7002 11.7 13.6002 11.7 16.0002C11.7 18.4002 13.6 20.3002 16 20.3002C18.4 20.3002 20.3 18.4002 20.3 16.0002C20.3 13.6002 18.4 11.7002 16 11.7002ZM16 18.8002C14.5 18.8002 13.2 17.6002 13.2 16.0002C13.2 14.5002 14.4 13.2002 16 13.2002C17.5 13.2002 18.8 14.4002 18.8 16.0002C18.8 17.5002 17.5 18.8002 16 18.8002Z" fill="white"/>
+                                <path d="M20.4 12.6002C20.9522 12.6002 21.4 12.1525 21.4 11.6002C21.4 11.0479 20.9522 10.6002 20.4 10.6002C19.8477 10.6002 19.4 11.0479 19.4 11.6002C19.4 12.1525 19.8477 12.6002 20.4 12.6002Z" fill="white"/>
+                              </svg>
+                        </a>
+                        <a href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+                                <path d="M27 0H5C2.23858 0 0 2.23858 0 5V27C0 29.7614 2.23858 32 5 32H27C29.7614 32 32 29.7614 32 27V5C32 2.23858 29.7614 0 27 0Z" fill="#1DA1F2"/>
+                                <path d="M24 11C23.4 11.3 22.8 11.4 22.1 11.5C22.8 11.1 23.3 10.5 23.5 9.7C22.9 10.1 22.2 10.3 21.4 10.5C20.8 9.9 19.9 9.5 19 9.5C16.9 9.5 15.3 11.5 15.8 13.5C13.1 13.4 10.7 12.1 9 10.1C8.1 11.6 8.6 13.5 10 14.5C9.5 14.5 9 14.3 8.5 14.1C8.5 15.6 9.6 17 11.1 17.4C10.6 17.5 10.1 17.6 9.6 17.5C10 18.8 11.2 19.8 12.7 19.8C11.5 20.7 9.7 21.2 8 21C9.5 21.9 11.2 22.5 13 22.5C19.1 22.5 22.5 17.4 22.3 12.7C23 12.3 23.6 11.7 24 11Z" fill="white"/>
+                              </svg>
+                        </a>
+                        <a href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+                                <path d="M27 0H5C2.23858 0 0 2.23858 0 5V27C0 29.7614 2.23858 32 5 32H27C29.7614 32 32 29.7614 32 27V5C32 2.23858 29.7614 0 27 0Z" fill="#2867B2"/>
+                                <path d="M11.6 24H8.2V13.3H11.6V24ZM9.9 11.8C8.8 11.8 8 11 8 9.9C8 8.8 8.9 8 9.9 8C11 8 11.8 8.8 11.8 9.9C11.8 11 11 11.8 9.9 11.8ZM24 24H20.6V18.2C20.6 16.5 19.9 16 18.9 16C17.9 16 16.9 16.8 16.9 18.3V24H13.5V13.3H16.7V14.8C17 14.1 18.2 13 19.9 13C21.8 13 23.8 14.1 23.8 17.4V24H24Z" fill="white"/>
+                              </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </footer>
+
+
+    <!-- scripts -->
+    <script src="assets/js/script.js"></script>
+    <!-- bootstrap5 cdn -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -48,7 +48,7 @@ a:hover {
 .blue-btn:hover {
   border: 1px solid #02BCE6;
   background: #ffffff !important;
-  color: #02BCE6;
+  color: #02BCE6 !important;
 }
 
 .white-text {
@@ -389,6 +389,13 @@ footer {
   background: rgba(42, 42, 42, 0.9);
 }
 
+.search-section {
+  height: 100vh;
+}
+.search-section .map-section {
+  height: 100%;
+}
+
 @media (min-width: 1400px) {
   .container {
     max-width: 1440px !important;
@@ -524,10 +531,11 @@ footer {
 }
 @media screen and (max-width: 425px) {
   .hero-banner img {
-    width: 210px;
+    width: 174px;
   }
   .hero-banner .video_consultation_img {
     margin-top: -5rem;
+    width: 210px !important;
   }
   .trusted-companies img {
     width: 88px;
@@ -538,6 +546,7 @@ footer {
 }
 @media screen and (max-width: 320px) {
   .hero-banner .video_consultation_img {
-    margin-top: 0rem;
+    width: 199px !important;
+    margin-top: -4.5rem;
   }
 }/*# sourceMappingURL=style.css.map */

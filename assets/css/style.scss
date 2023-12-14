@@ -58,7 +58,7 @@ a:hover {
     &:hover {
         border: 1px solid $primaryColor;
         background: $white !important;
-        color: $primaryColor;
+        color: $primaryColor !important;
     }
 }
 .white-text {
@@ -378,6 +378,13 @@ footer {
     padding: 42px 15px;
     background: $lightBlack90;
 }
+// Search page
+.search-section {
+    height: 100vh;
+    .map-section {
+        height: 100%;
+    }
+}
 @media (min-width: 1400px) {
     .container {
         max-width: 1440px !important;
@@ -516,10 +523,11 @@ footer {
 @media screen and (max-width:425px) {
     .hero-banner {
         img {
-            width: 210px;
+            width: 174px;
         }
         .video_consultation_img {
             margin-top: -5rem;
+            width: 210px !important;
         }
     }
     .trusted-companies {
@@ -539,7 +547,8 @@ footer {
 @media screen and (max-width:320px) {
     .hero-banner {
         .video_consultation_img {
-            margin-top: 0rem;
+            width: 199px !important;
+            margin-top: -4.5rem;
         }
     }
 }
