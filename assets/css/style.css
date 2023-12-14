@@ -10,6 +10,42 @@ a {
   text-decoration: none !important;
 }
 
+.global-btn {
+  color: #F4F9FF;
+  text-align: center;
+  font-family: "Open Sans", "Helvetica Neue", sans-serif;
+  font-style: normal;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: normal;
+  border-radius: 12px;
+  background: #F2C246;
+  border: none;
+  transition: all 1s ease;
+}
+.global-btn:hover {
+  border: 1px solid #F2C246;
+  background: #ffffff !important;
+  color: #F2C246;
+}
+
+.blue-btn {
+  border-radius: 12px;
+  background: linear-gradient(100deg, rgba(0, 129, 89, 0.5) 2.59%, rgba(2, 188, 230, 0.5) 111.36%);
+  color: #ffffff;
+  font-family: "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  transition: all 0.8s ease;
+}
+.blue-btn:hover {
+  border: 1px solid #02BCE6;
+  background: #ffffff !important;
+  color: #02BCE6;
+}
+
 .white-text {
   color: #ffffff;
 }
@@ -90,19 +126,6 @@ a {
   line-height: normal;
 }
 
-.global-btn {
-  color: #F4F9FF;
-  text-align: center;
-  font-family: "Open Sans", "Helvetica Neue", sans-serif;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: normal;
-  border-radius: 12px;
-  background: #F2C246;
-  border: none;
-}
-
 header {
   background: #F4F9FF;
   padding: 16px 0;
@@ -129,6 +152,23 @@ header .responsive_header {
 }
 header .responsive_header.active {
   right: 0px;
+}
+header .pakdoc-profile-dropdown {
+  width: 244px;
+  padding: 16px;
+  margin-top: 10px !important;
+}
+header .pakdoc-profile-dropdown::before {
+  content: "";
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid #ffffff;
+  display: block;
+  top: -9px; /* Adjust the positioning as needed */
+  position: absolute;
+  right: 30px;
 }
 
 .hero-banner {

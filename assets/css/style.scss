@@ -23,6 +23,40 @@ body {
 a {
     text-decoration: none !important;
 }
+.global-btn {
+    color: $bgColor;
+    text-align: center;
+    font-family: $openSans;
+    font-style: normal;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: normal;
+    border-radius: 12px;
+    background: $accentColor;
+    border: none;
+    transition: all 1s ease;
+    &:hover {
+        border: 1px solid $accentColor;
+        background: $white !important;
+        color: $accentColor;
+    }
+}
+.blue-btn {
+    border-radius: 12px;
+    background: linear-gradient(100deg, rgba(0, 129, 89, 0.50) 2.59%, rgba(2, 188, 230, 0.50) 111.36%);
+    color: $white;
+    font-family: $openSans;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    transition: all 0.8s ease;
+    &:hover {
+        border: 1px solid $primaryColor;
+        background: $white !important;
+        color: $primaryColor;
+    }
+}
 .white-text {
     color: $white;
 }
@@ -89,18 +123,7 @@ a {
     font-weight: 400;
     line-height: normal;
 }
-.global-btn {
-    color: $bgColor;
-    text-align: center;
-    font-family: $openSans;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
-    border-radius: 12px;
-    background: $accentColor;
-    border: none;
-}
+
 // Header
 header {
     background: $bgColor;
@@ -128,6 +151,23 @@ header {
       .responsive_header.active {
         right: 0px;
       }
+      .pakdoc-profile-dropdown {
+        width: 244px;
+        padding: 16px;
+        margin-top: 10px !important;
+      }
+      .pakdoc-profile-dropdown::before {
+        content: "";
+        width: 0;
+        height: 0;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-bottom: 10px solid $white;
+        display: block;
+        top: -9px; /* Adjust the positioning as needed */
+        position: absolute;
+        right: 30px;
+    }
 }
 // Hero banner
 .hero-banner {
