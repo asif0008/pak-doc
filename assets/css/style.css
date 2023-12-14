@@ -8,6 +8,11 @@ body {
 
 a {
   text-decoration: none !important;
+  transition: all 1s ease;
+}
+
+a:hover {
+  color: #F2C246 !important;
 }
 
 .global-btn {
@@ -20,7 +25,7 @@ a {
   line-height: normal;
   border-radius: 12px;
   background: #F2C246;
-  border: none;
+  border: 1px solid #F2C246;
   transition: all 1s ease;
 }
 .global-btn:hover {
@@ -38,7 +43,7 @@ a {
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-  transition: all 0.8s ease;
+  transition: all 1s ease;
 }
 .blue-btn:hover {
   border: 1px solid #02BCE6;
@@ -160,15 +165,14 @@ header .pakdoc-profile-dropdown {
 }
 header .pakdoc-profile-dropdown::before {
   content: "";
-  width: 0;
-  height: 0;
-  border-left: 10px solid transparent;
-  border-right: 10px solid transparent;
-  border-bottom: 10px solid #ffffff;
-  display: block;
-  top: -9px; /* Adjust the positioning as needed */
+  width: 23px;
+  height: 13px;
   position: absolute;
+  top: -9px;
   right: 30px;
+  background-color: white;
+  -webkit-clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+          clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
 }
 
 .hero-banner {
@@ -224,7 +228,7 @@ header .pakdoc-profile-dropdown::before {
 }
 
 .left-right-vector-bg {
-  background: url("/assets/images/left-vector.png") top left no-repeat, url("/assets/images/right-vector.png") bottom right no-repeat, #F4F9FF;
+  background: url("../images/left-vector.png") top left no-repeat, url("../images/right-vector.png") bottom right no-repeat, #F4F9FF;
 }
 
 .top-search {
@@ -277,6 +281,7 @@ header .pakdoc-profile-dropdown::before {
 .qualified-doctors .swiper-scrollbar-drag {
   background: rgba(2, 188, 230, 0.9) !important;
   left: 0% !important;
+  cursor: grab;
 }
 .qualified-doctors .swiper-scrollbar {
   height: 12px !important;
@@ -317,7 +322,7 @@ header .pakdoc-profile-dropdown::before {
 
 .why-we-sec {
   padding: 69px 0 54px;
-  background: url("/assets/images/left-right-vector.png") no-repeat, url("/assets/images/center-bubble-full.png") 90% 72% no-repeat, linear-gradient(100deg, rgba(0, 129, 89, 0.5) 2.59%, rgba(2, 188, 230, 0.5) 111.36%);
+  background: url("../images/left-right-vector.png") no-repeat, url("../images/center-bubble-full.png") 90% 72% no-repeat, linear-gradient(100deg, rgba(0, 129, 89, 0.5) 2.59%, rgba(2, 188, 230, 0.5) 111.36%);
 }
 
 .top-symptoms {
@@ -326,7 +331,7 @@ header .pakdoc-profile-dropdown::before {
 
 .join-doctor {
   padding: 55px 0 70px;
-  background: url("/assets/images/left-right-vector.png") no-repeat, url("/assets/images/become-a-doctor-vector-bubble.png") 90% 72% no-repeat, linear-gradient(100deg, rgba(0, 129, 89, 0.5) 2.59%, rgba(2, 188, 230, 0.5) 111.36%);
+  background: url("../images/left-right-vector.png") no-repeat, url("../images/become-a-doctor-vector-bubble.png") 90% 72% no-repeat, linear-gradient(100deg, rgba(0, 129, 89, 0.5) 2.59%, rgba(2, 188, 230, 0.5) 111.36%);
 }
 
 .trusted-companies {
@@ -335,7 +340,7 @@ header .pakdoc-profile-dropdown::before {
 
 .common-disease-sec {
   padding: 32px 0 58px;
-  background: url("/assets/images/left-right-vector.png") no-repeat, url("/assets/images/common-disease-bubble-full.png") 80% 70% no-repeat, linear-gradient(100deg, rgba(0, 129, 89, 0.5) 2.59%, rgba(2, 188, 230, 0.5) 111.36%);
+  background: url("../images/left-right-vector.png") no-repeat, url("../images/common-disease-bubble-full.png") 80% 70% no-repeat, linear-gradient(100deg, rgba(0, 129, 89, 0.5) 2.59%, rgba(2, 188, 230, 0.5) 111.36%);
 }
 .common-disease-sec .accordion {
   margin-top: 32px;
@@ -398,6 +403,9 @@ footer {
   }
 }
 @media screen and (max-width: 768px) {
+  .hero-banner {
+    padding: 50px 0 16px !important;
+  }
   .hero-banner .book-appointment {
     padding: 24px 16px;
   }
@@ -497,10 +505,21 @@ footer {
   }
 }
 @media screen and (max-width: 425px) {
+  .hero-banner img {
+    width: 210px;
+  }
+  .hero-banner .video_consultation_img {
+    margin-top: -5rem;
+  }
   .trusted-companies img {
     width: 88px;
   }
   .font-40 {
     font-size: 20px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .hero-banner .video_consultation_img {
+    margin-top: 0rem;
   }
 }/*# sourceMappingURL=style.css.map */
