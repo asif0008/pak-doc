@@ -21,7 +21,7 @@
             <div class="PakDoc list-unstyled d-flex flex-row justify-content-between align-items-center">
                 <div><a href="#"><img src="assets/images/header_logo.png" alt="PakDoc-log" class="header-logo"></a>
                 </div>
-                <div class="nav-item dropdown PakDoc-dropdown d-lg-flex d-none justify-content-between">
+                <div class="nav-item dropdown PakDoc-dropdown d-lg-flex d-none justify-content-between" style="gap:32px;">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                         aria-expanded="false">
                         Doctors
@@ -50,7 +50,8 @@
                             <li><a class="glavios-links" href="#">Page</a></li>
                         </ul>
                     </div>
-                    <div class="nav-item dropdown PakDoc-dropdown d-lg-flex d-none">
+                    <!-- if user login -- give class d-flex when you want to show this item -->
+                    <div class="nav-item dropdown PakDoc-dropdown d-none">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                             aria-expanded="false">
                             Appointments
@@ -65,8 +66,10 @@
                             <li><a class="glavios-links" href="#">Page</a></li>
                         </ul>
                     </div>
-                    <div class="nav-item dropdown PakDoc-dropdown d-lg-flex d-none gap-2 ms-4">
-                        <div class="notification">
+                    <!-- if user login -- give d-flex class when you want to show this -->
+                    <div class="nav-item dropdown PakDoc-dropdown gap-2 ms-4 d-none">
+                        <div class="nav-link dropdown-toggle notification" href="#" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
                             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="20" viewBox="0 0 18 20"
                                 fill="none">
                                 <path d="M12 15H17L15.5951 13.5951C15.2141 13.2141 15 12.6973 15 12.1585V9C15 6.38757 13.3304 4.16509 11 
@@ -76,32 +79,125 @@
                                     stroke-linejoin="round" />
                             </svg>
                         </div>
-                        <div class="profile d-flex align-items-center gap-2">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                fill="none">
-                                <path d="M16 7C16 9.20914 14.2091 11 12 11C9.79086 11 8 9.20914 8 7C8 4.79086 9.79086 3 12 3C14.2091 3 16 
-                            4.79086 16 7Z" stroke="#21384D" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round" />
-                                <path d="M12 14C8.13401 14 5 17.134 5 21H19C19 17.134 15.866 14 12 14Z" stroke="#21384D"
-                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                            <div class="nav-item dropdown PakDoc-dropdown d-lg-flex d-none">
-                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                    aria-expanded="false">
-                                    Florida Amy
-                                    <img src="assets/images/Icon/drop-down-icon.png" alt="icon image" height="18px"
-                                        width="19px">
-
-                                </a>
-                                <div class="dropdown-menu pakdoc-profile-dropdown text-center"> 
-                                    <img src="assets/images/header_logo.png" alt="logo" class="img-fluid">
-                                    <h5 class="mt-3 mb-2 font-16">Login</h5>
-                                    <div class="d-flex align-items-center gap-2 justify-content-center">
-                                        <a href="#" class="font-14 global-btn" style="padding: 12px 25px;">Sign In</a>                                
-                                        <a href="#" class="font-14 global-btn" style="padding: 12px 25px;">Sign Up</a>                                
+                        <div class="dropdown-menu pakdoc-notification-menu d-none" data-popper-placement="bottom-start"> 
+                            <h5 class="font-20 fw-bold ps-3">Notifications</h5>
+                            <div class="notification-list d-flex flex-column">
+                                <div class="d-flex align-items-center gap-3 flex-wrap notification-data p-3">
+                                    <img style="width:56px;" src="assets/images/qualified doctors/doctors-proile-pic.png" alt="profile image">
+                                    <div class="d-flex flex-column align-items-start flex-fill">
+                                        <h4 class="font-16 light-black font-weight-600 mb-0">Congratulations !!!</h4>
+                                        <p class="font-14 light-black my-1">You are successfully Sign up</p>
+                                        <p class="font-14 light-black mb-0">1 hour ago</p>
                                     </div>
-                                    <h5 class="font-16 my-2">Or</h5>
-                                    <a href="#" class="blue-btn d-block" style="padding: 12px 20px;">Join as a doctor</a>
+                                </div>
+                                <div class="d-flex align-items-center gap-3 flex-row notification-data p-3">
+                                    <img style="width:56px;" src="assets/images/qualified doctors/doctors-proile-pic.png" alt="profile image">
+                                    <div class="d-flex flex-column align-items-start flex-fill">
+                                        <p class="font-16 light-black mb-1 font-weight-600">Dr Rachal Lee <span class="font-14">is approved your appointment on Monday 09 2023 09:00am</span>
+                                        </p>
+                                        <p class="font-14 light-black mb-0">1 hour ago</p>
+                                    </div>
+                                    <div style="width:12px; height:12px; background-color:#F2C246; border-radius:50%;"></div>
+                                </div>
+                                <div class="d-flex align-items-center gap-3 flex-wrap notification-data p-3">
+                                    <img style="width:56px;" src="assets/images/qualified doctors/doctors-proile-pic.png" alt="profile image">
+                                    <div class="d-flex flex-column align-items-start flex-fill">
+                                        <h4 class="font-16 light-black font-weight-600 mb-0">Congratulations !!!</h4>
+                                        <p class="font-14 light-black my-1">You are successfully Sign up</p>
+                                        <p class="font-14 light-black mb-0">1 hour ago</p>
+                                    </div>
+                                    <span style="width:12px; height:12px; background-color:#F2C246; border-radius:50%;"></span>
+                                </div>
+                                <div class="d-flex align-items-center gap-3 flex-wrap notification-data p-3">
+                                    <img style="width:56px;" src="assets/images/qualified doctors/doctors-proile-pic.png" alt="profile image">
+                                    <div class="d-flex flex-column align-items-start flex-fill">
+                                        <h4 class="font-16 light-black font-weight-600 mb-0">Congratulations !!!</h4>
+                                        <p class="font-14 light-black my-1">You are successfully Sign up</p>
+                                        <p class="font-14 light-black mb-0">1 hour ago</p>
+                                    </div>
+                                    <span style="width:12px; height:12px; background-color:#F2C246; border-radius:50%;"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="profile d-flex align-items-center gap-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            fill="none">
+                            <path d="M16 7C16 9.20914 14.2091 11 12 11C9.79086 11 8 9.20914 8 7C8 4.79086 9.79086 3 12 3C14.2091 3 16 
+                        4.79086 16 7Z" stroke="#21384D" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path d="M12 14C8.13401 14 5 17.134 5 21H19C19 17.134 15.866 14 12 14Z" stroke="#21384D"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                        <div class="nav-item dropdown PakDoc-dropdown d-lg-flex d-none">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Login/Sign up
+                                <img src="assets/images/Icon/drop-down-icon.png" alt="icon image" height="18px"
+                                    width="19px">
+
+                            </a>
+                            <div class="dropdown-menu pakdoc-login-dropdown text-center"> 
+                                <img src="assets/images/header_logo.png" alt="logo" class="img-fluid">
+                                <h5 class="mt-3 mb-2 font-16">Login</h5>
+                                <div class="d-flex align-items-center gap-2 justify-content-center">
+                                    <a href="#" class="font-14 global-btn" style="padding: 12px 25px;">Sign In</a>                                
+                                    <a href="#" class="font-14 global-btn" style="padding: 12px 25px;">Sign Up</a>                                
+                                </div>
+                                <h5 class="font-16 my-2">Or</h5>
+                                <a href="#" class="blue-btn d-block" style="padding: 12px 20px;">Join as a doctor</a>
+                            </div>
+                        </div>
+                    </div>
+                   <!-- if user login -- give class d-flex to show item -->
+                    <div class="profile d-flex align-items-center gap-2 d-none">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            fill="none">
+                            <path d="M16 7C16 9.20914 14.2091 11 12 11C9.79086 11 8 9.20914 8 7C8 4.79086 9.79086 3 12 3C14.2091 3 16 
+                        4.79086 16 7Z" stroke="#21384D" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path d="M12 14C8.13401 14 5 17.134 5 21H19C19 17.134 15.866 14 12 14Z" stroke="#21384D"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                        <div class="nav-item dropdown PakDoc-dropdown d-lg-flex d-none">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Florida Amy
+                                <img src="assets/images/Icon/drop-down-icon.png" alt="icon image" height="18px"
+                                    width="19px">
+
+                            </a>
+                            <div class="dropdown-menu pakdoc-profile-dropdown text-center"> 
+                                <img src="assets/images/header_logo.png" alt="logo" class="img-fluid">
+                                <div class="d-flex align-items-center gap-2 flex-row mt-4">
+                                    <img src="assets/images/nav-profile-img.png" alt="profile image" class="img-fluid" style="width: 80px;">
+                                    <div class="d-flex flex-column align-items-start">
+                                        <h4 class="font-24 light-black fw-bold mb-0" style="font-size: 20px;">Rachel Lee</h4>
+                                        <p class="font-16 light-black-90 my-1">jenny@gmail.com</p>
+                                        <p class="font-16 light-black-90 mb-0">+91 123412349</p>
+                                    </div>
+                                </div>
+                                <div class="mt-4 mb-3" style="width: 100%;height: 1px;background: rgba(112, 133, 131, 0.30);"></div>
+                                <div class="d-flex flex-column gap-3">
+                                    <a class="nav-link d-flex align-items-center gap-2" href="#" role="button" aria-expanded="false">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+                                            <path d="M15.5 17H20.5L19.0951 15.5951C18.7141 15.2141 18.5 14.6973 18.5 14.1585V11C18.5 8.38757 16.8304 6.16509 14.5 5.34142V5C14.5 3.89543 13.6046 3 12.5 3C11.3954 3 10.5 3.89543 10.5 5V5.34142C8.16962 6.16509 6.5 8.38757 6.5 11V14.1585C6.5 14.6973 6.28595 15.2141 5.90493 15.5951L4.5 17H9.5M15.5 17V18C15.5 19.6569 14.1569 21 12.5 21C10.8431 21 9.5 19.6569 9.5 18V17M15.5 17H9.5" stroke="#2A2A2A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                        Notifications
+                                    </a>
+                                    <a class="nav-link d-flex align-items-center gap-2" href="#" role="button" aria-expanded="false">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">
+                                            <path d="M12.5694 7.63892C9.86103 7.63892 7.70825 9.79169 7.70825 12.5C7.70825 15.2084 9.86103 17.3611 12.5694 17.3611C15.2777 17.3611 17.4305 15.2084 17.4305 12.5C17.4305 9.79169 15.2777 7.63892 12.5694 7.63892ZM12.5694 15.9722C10.6249 15.9722 9.09714 14.4445 9.09714 12.5C9.09714 10.5556 10.6249 9.0278 12.5694 9.0278C14.5138 9.0278 16.0416 10.5556 16.0416 12.5C16.0416 14.4445 14.5138 15.9722 12.5694 15.9722Z" fill="#2A2A2A"></path>
+                                            <path d="M22.7778 10.2084L20.8334 9.58336L20.4167 8.54169L21.3889 6.73614C21.5972 6.31947 21.5278 5.76392 21.1806 5.41669L19.5139 3.75003C19.1667 3.4028 18.6111 3.33336 18.1945 3.54169L16.3889 4.51392L15.3472 4.09725L14.7222 2.1528C14.5834 1.73614 14.1667 1.38892 13.6806 1.38892H11.3195C10.8334 1.38892 10.4167 1.73614 10.3472 2.22225L9.72225 4.16669C9.30558 4.23614 8.95836 4.37503 8.61114 4.58336L6.80558 3.61114C6.38892 3.4028 5.83336 3.47225 5.48614 3.81947L3.81947 5.48614C3.47225 5.83336 3.4028 6.38892 3.61114 6.80558L4.51392 8.54169C4.37503 8.88892 4.23614 9.30558 4.09725 9.6528L2.1528 10.2778C1.73614 10.4167 1.38892 10.8334 1.38892 11.3195V13.6806C1.38892 14.1667 1.73614 14.5834 2.22225 14.7222L4.16669 15.3472L4.58336 16.3889L3.61114 18.1945C3.4028 18.6111 3.47225 19.1667 3.81947 19.5139L5.48614 21.1806C5.83336 21.5278 6.38892 21.5972 6.80558 21.3889L8.61114 20.4167L9.6528 20.8334L10.2778 22.8472C10.4167 23.2639 10.8334 23.6111 11.3195 23.6111H13.6806C14.1667 23.6111 14.5834 23.2639 14.7222 22.8472L15.3472 20.8334L16.3889 20.4167L18.1945 21.3889C18.6111 21.5972 19.1667 21.5278 19.5139 21.1806L21.1806 19.5139C21.5278 19.1667 21.5972 18.6111 21.3889 18.1945L20.4167 16.3889L20.8334 15.3472L22.8472 14.7222C23.2639 14.5834 23.6111 14.1667 23.6111 13.6806V11.3195C23.6111 10.8334 23.2639 10.3472 22.7778 10.2084ZM22.2222 13.4722L19.7222 14.2361L19.6528 14.5834L19.0278 16.0417L18.8195 16.3889L20.0695 18.6806L18.6806 20.0695L16.3889 18.8195L16.0417 19.0278C15.5556 19.3056 15.0695 19.5139 14.5834 19.6528L14.2361 19.7222L13.4722 22.2222H11.5278L10.7639 19.7222L10.4167 19.6528L8.95836 19.0278L8.61114 18.8195L6.31947 20.0695L4.93058 18.6806L6.18058 16.3889L5.97225 16.0417C5.69447 15.5556 5.48614 15.0695 5.34725 14.5834L5.2778 14.2361L2.7778 13.4722V11.5278L5.13892 10.8334L5.2778 10.4861C5.41669 9.93058 5.62503 9.44447 5.9028 8.95836L6.11114 8.61114L4.93058 6.31947L6.31947 4.93058L8.54169 6.18058L8.88892 5.97225C9.37503 5.69447 9.86114 5.48614 10.4167 5.34725L10.7639 5.20836L11.5278 2.7778H13.4722L14.2361 5.20836L14.5834 5.34725C15.0695 5.48614 15.5556 5.69447 16.0417 5.97225L16.3889 6.18058L18.6806 4.93058L20.0695 6.31947L18.8195 8.61114L19.0278 8.95836C19.3056 9.44447 19.5139 9.93058 19.6528 10.4167L19.7222 10.7639L22.2222 11.5278V13.4722Z" fill="#2A2A2A"></path>
+                                        </svg>
+                                        Settings
+                                    </a>
+                                    <a class="nav-link d-flex align-items-center gap-2" href="#" role="button" aria-expanded="false">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+                                            <path d="M17.5 16L21.5 12M21.5 12L17.5 8M21.5 12L7.5 12M13.5 16V17C13.5 18.6569 12.1569 20 10.5 20H6.5C4.84315 20 3.5 18.6569 3.5 17V7C3.5 5.34315 4.84315 4 6.5 4H10.5C12.1569 4 13.5 5.34315 13.5 7V8" stroke="#2A2A2A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                        Logout
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -892,25 +988,31 @@
                     <h2 class="font-40 light-black font-weight-600 my-2 text-center text-lg-start">How do we <span class="accent-text"> work</span>?</h2>
                     <p class="font-16 light-black-80">From your first phone call to your final visit, we want you to feel as if you are in the company of good friends.</p>
                     <div class="d-flex flex-column" style="margin:32px 0;gap: 12px;">
-                        <div class="d-flex align-items-center gap-3">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
-                                <path d="M14 6.90572V7.50372C13.9992 8.90539 13.5453 10.2693 12.7061 11.3919C11.8668 12.5145 10.6871 13.3358 9.34298 13.7333C7.99883 14.1307 6.56222 14.083 5.2474 13.5972C3.93259 13.1114 2.81002 12.2137 2.04712 11.0378C1.28422 9.86194 0.921864 8.47096 1.01409 7.07232C1.10632 5.67369 1.64818 4.34233 2.55888 3.27682C3.46958 2.2113 4.70031 1.46872 6.06752 1.15982C7.43473 0.850912 8.86517 0.992239 10.1455 1.56272" stroke="#2A2A2A" stroke-opacity="0.8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                <path d="M13.9999 2.30371L7.49993 8.81021L5.54993 6.86021" stroke="#2A2A2A" stroke-opacity="0.8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
+                        <div class="d-flex align-items-start gap-3">
+                            <div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
+                                    <path d="M14 6.90572V7.50372C13.9992 8.90539 13.5453 10.2693 12.7061 11.3919C11.8668 12.5145 10.6871 13.3358 9.34298 13.7333C7.99883 14.1307 6.56222 14.083 5.2474 13.5972C3.93259 13.1114 2.81002 12.2137 2.04712 11.0378C1.28422 9.86194 0.921864 8.47096 1.01409 7.07232C1.10632 5.67369 1.64818 4.34233 2.55888 3.27682C3.46958 2.2113 4.70031 1.46872 6.06752 1.15982C7.43473 0.850912 8.86517 0.992239 10.1455 1.56272" stroke="#2A2A2A" stroke-opacity="0.8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M13.9999 2.30371L7.49993 8.81021L5.54993 6.86021" stroke="#2A2A2A" stroke-opacity="0.8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
                             <p class="font-16 light-black-80 mb-0">We begin with a face analysis scan, medical history and medical lab tests.</p>
                         </div>
-                        <div class="d-flex align-items-center gap-3">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
-                                <path d="M14 6.90572V7.50372C13.9992 8.90539 13.5453 10.2693 12.7061 11.3919C11.8668 12.5145 10.6871 13.3358 9.34298 13.7333C7.99883 14.1307 6.56222 14.083 5.2474 13.5972C3.93259 13.1114 2.81002 12.2137 2.04712 11.0378C1.28422 9.86194 0.921864 8.47096 1.01409 7.07232C1.10632 5.67369 1.64818 4.34233 2.55888 3.27682C3.46958 2.2113 4.70031 1.46872 6.06752 1.15982C7.43473 0.850912 8.86517 0.992239 10.1455 1.56272" stroke="#2A2A2A" stroke-opacity="0.8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                <path d="M13.9999 2.30371L7.49993 8.81021L5.54993 6.86021" stroke="#2A2A2A" stroke-opacity="0.8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
+                        <div class="d-flex align-items-start gap-3">
+                            <div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
+                                    <path d="M14 6.90572V7.50372C13.9992 8.90539 13.5453 10.2693 12.7061 11.3919C11.8668 12.5145 10.6871 13.3358 9.34298 13.7333C7.99883 14.1307 6.56222 14.083 5.2474 13.5972C3.93259 13.1114 2.81002 12.2137 2.04712 11.0378C1.28422 9.86194 0.921864 8.47096 1.01409 7.07232C1.10632 5.67369 1.64818 4.34233 2.55888 3.27682C3.46958 2.2113 4.70031 1.46872 6.06752 1.15982C7.43473 0.850912 8.86517 0.992239 10.1455 1.56272" stroke="#2A2A2A" stroke-opacity="0.8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M13.9999 2.30371L7.49993 8.81021L5.54993 6.86021" stroke="#2A2A2A" stroke-opacity="0.8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
                             <p class="font-16 light-black-80 mb-0">Consultation before every treatment is important to discuss the underlying cause and best suitable.</p>
                         </div>
-                        <div class="d-flex align-items-center gap-3">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
-                                <path d="M14 6.90572V7.50372C13.9992 8.90539 13.5453 10.2693 12.7061 11.3919C11.8668 12.5145 10.6871 13.3358 9.34298 13.7333C7.99883 14.1307 6.56222 14.083 5.2474 13.5972C3.93259 13.1114 2.81002 12.2137 2.04712 11.0378C1.28422 9.86194 0.921864 8.47096 1.01409 7.07232C1.10632 5.67369 1.64818 4.34233 2.55888 3.27682C3.46958 2.2113 4.70031 1.46872 6.06752 1.15982C7.43473 0.850912 8.86517 0.992239 10.1455 1.56272" stroke="#2A2A2A" stroke-opacity="0.8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                <path d="M13.9999 2.30371L7.49993 8.81021L5.54993 6.86021" stroke="#2A2A2A" stroke-opacity="0.8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
+                        <div class="d-flex align-items-start gap-3">
+                            <div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
+                                    <path d="M14 6.90572V7.50372C13.9992 8.90539 13.5453 10.2693 12.7061 11.3919C11.8668 12.5145 10.6871 13.3358 9.34298 13.7333C7.99883 14.1307 6.56222 14.083 5.2474 13.5972C3.93259 13.1114 2.81002 12.2137 2.04712 11.0378C1.28422 9.86194 0.921864 8.47096 1.01409 7.07232C1.10632 5.67369 1.64818 4.34233 2.55888 3.27682C3.46958 2.2113 4.70031 1.46872 6.06752 1.15982C7.43473 0.850912 8.86517 0.992239 10.1455 1.56272" stroke="#2A2A2A" stroke-opacity="0.8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M13.9999 2.30371L7.49993 8.81021L5.54993 6.86021" stroke="#2A2A2A" stroke-opacity="0.8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
                             <p class="font-16 light-black-80 mb-0">Treatment under the supervision of expert doctors so that you get the guaranteed results.</p>
                         </div>
                     </div>
@@ -1022,25 +1124,31 @@
                     <h2 class="font-40 light-black font-weight-600 my-2 text-center text-lg-start">Let start with<span class="accent-text"> PakDoc</span>!</h2>
                     <p class="font-16 light-black-80">Sign-up to reach millions of patients with PakDoc and server your services as a professional doctor</p>
                     <div class="d-flex flex-column" style="margin:32px 0;gap: 12px;">
-                        <div class="d-flex align-items-center gap-3">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
-                                <path d="M14 6.90572V7.50372C13.9992 8.90539 13.5453 10.2693 12.7061 11.3919C11.8668 12.5145 10.6871 13.3358 9.34298 13.7333C7.99883 14.1307 6.56222 14.083 5.2474 13.5972C3.93259 13.1114 2.81002 12.2137 2.04712 11.0378C1.28422 9.86194 0.921864 8.47096 1.01409 7.07232C1.10632 5.67369 1.64818 4.34233 2.55888 3.27682C3.46958 2.2113 4.70031 1.46872 6.06752 1.15982C7.43473 0.850912 8.86517 0.992239 10.1455 1.56272" stroke="#2A2A2A" stroke-opacity="0.8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                <path d="M13.9999 2.30371L7.49993 8.81021L5.54993 6.86021" stroke="#2A2A2A" stroke-opacity="0.8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
+                        <div class="d-flex align-items-start gap-3">
+                            <div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
+                                    <path d="M14 6.90572V7.50372C13.9992 8.90539 13.5453 10.2693 12.7061 11.3919C11.8668 12.5145 10.6871 13.3358 9.34298 13.7333C7.99883 14.1307 6.56222 14.083 5.2474 13.5972C3.93259 13.1114 2.81002 12.2137 2.04712 11.0378C1.28422 9.86194 0.921864 8.47096 1.01409 7.07232C1.10632 5.67369 1.64818 4.34233 2.55888 3.27682C3.46958 2.2113 4.70031 1.46872 6.06752 1.15982C7.43473 0.850912 8.86517 0.992239 10.1455 1.56272" stroke="#2A2A2A" stroke-opacity="0.8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M13.9999 2.30371L7.49993 8.81021L5.54993 6.86021" stroke="#2A2A2A" stroke-opacity="0.8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
                             <p class="font-16 light-black-80 mb-0">Get more online appointment with PakDoc</p>
                         </div>
-                        <div class="d-flex align-items-center gap-3">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
-                                <path d="M14 6.90572V7.50372C13.9992 8.90539 13.5453 10.2693 12.7061 11.3919C11.8668 12.5145 10.6871 13.3358 9.34298 13.7333C7.99883 14.1307 6.56222 14.083 5.2474 13.5972C3.93259 13.1114 2.81002 12.2137 2.04712 11.0378C1.28422 9.86194 0.921864 8.47096 1.01409 7.07232C1.10632 5.67369 1.64818 4.34233 2.55888 3.27682C3.46958 2.2113 4.70031 1.46872 6.06752 1.15982C7.43473 0.850912 8.86517 0.992239 10.1455 1.56272" stroke="#2A2A2A" stroke-opacity="0.8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                <path d="M13.9999 2.30371L7.49993 8.81021L5.54993 6.86021" stroke="#2A2A2A" stroke-opacity="0.8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
+                        <div class="d-flex align-items-start gap-3">
+                            <div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
+                                    <path d="M14 6.90572V7.50372C13.9992 8.90539 13.5453 10.2693 12.7061 11.3919C11.8668 12.5145 10.6871 13.3358 9.34298 13.7333C7.99883 14.1307 6.56222 14.083 5.2474 13.5972C3.93259 13.1114 2.81002 12.2137 2.04712 11.0378C1.28422 9.86194 0.921864 8.47096 1.01409 7.07232C1.10632 5.67369 1.64818 4.34233 2.55888 3.27682C3.46958 2.2113 4.70031 1.46872 6.06752 1.15982C7.43473 0.850912 8.86517 0.992239 10.1455 1.56272" stroke="#2A2A2A" stroke-opacity="0.8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M13.9999 2.30371L7.49993 8.81021L5.54993 6.86021" stroke="#2A2A2A" stroke-opacity="0.8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
                             <p class="font-16 light-black-80 mb-0">Treated patients from any where in the world by video consultation.</p>
                         </div>
-                        <div class="d-flex align-items-center gap-3">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
-                                <path d="M14 6.90572V7.50372C13.9992 8.90539 13.5453 10.2693 12.7061 11.3919C11.8668 12.5145 10.6871 13.3358 9.34298 13.7333C7.99883 14.1307 6.56222 14.083 5.2474 13.5972C3.93259 13.1114 2.81002 12.2137 2.04712 11.0378C1.28422 9.86194 0.921864 8.47096 1.01409 7.07232C1.10632 5.67369 1.64818 4.34233 2.55888 3.27682C3.46958 2.2113 4.70031 1.46872 6.06752 1.15982C7.43473 0.850912 8.86517 0.992239 10.1455 1.56272" stroke="#2A2A2A" stroke-opacity="0.8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                <path d="M13.9999 2.30371L7.49993 8.81021L5.54993 6.86021" stroke="#2A2A2A" stroke-opacity="0.8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
+                        <div class="d-flex align-items-start gap-3">
+                            <div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
+                                    <path d="M14 6.90572V7.50372C13.9992 8.90539 13.5453 10.2693 12.7061 11.3919C11.8668 12.5145 10.6871 13.3358 9.34298 13.7333C7.99883 14.1307 6.56222 14.083 5.2474 13.5972C3.93259 13.1114 2.81002 12.2137 2.04712 11.0378C1.28422 9.86194 0.921864 8.47096 1.01409 7.07232C1.10632 5.67369 1.64818 4.34233 2.55888 3.27682C3.46958 2.2113 4.70031 1.46872 6.06752 1.15982C7.43473 0.850912 8.86517 0.992239 10.1455 1.56272" stroke="#2A2A2A" stroke-opacity="0.8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M13.9999 2.30371L7.49993 8.81021L5.54993 6.86021" stroke="#2A2A2A" stroke-opacity="0.8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
                             <p class="font-16 light-black-80 mb-0">Manage your daily schedule online by using PakDoc</p>
                         </div>
                     </div>

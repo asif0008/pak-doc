@@ -155,12 +155,19 @@ header {
       .responsive_header.active {
         right: 0px;
       }
-      .pakdoc-profile-dropdown {
+      .pakdoc-login-dropdown {
         width: 244px;
         padding: 16px;
         margin-top: 10px !important;
+        border-radius: 12px !important;
       }
-      .pakdoc-profile-dropdown::before {
+      .pakdoc-profile-dropdown {
+        width: 301px;
+        padding: 16px;
+        margin-top: 10px !important;
+        border-radius: 12px !important;
+      }
+      .pakdoc-profile-dropdown::before, .pakdoc-notification-menu::before, .pakdoc-login-dropdown::before {
         content: "";
         width: 23px;
         height: 13px; 
@@ -169,7 +176,17 @@ header {
         right: 30px;
         background-color: white;
         clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
-
+    }
+    .pakdoc-notification-menu {
+        width: 475px;
+        padding-top: 16px;
+        transform: translate3d(-89%, 39.4px, 0px) !important;
+        inset: 0px auto auto 0px !important;
+        border-radius: 12px !important;
+        .notification-data {
+            border-top: 1px solid rgba(112, 133, 131, 0.30);
+            border-bottom: 1px solid rgba(112, 133, 131, 0.30);
+        }
     }
 }
 // Hero banner
