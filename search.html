@@ -321,7 +321,9 @@
     <div class="container-fluid px-0 search-section">
         <section class="container">
             <div class="search-doctors">
-                <!-- search field -->
+                <!-- Top fixed -->
+                <div class="search-doctors-fixed-top">
+                    <!-- search field -->
                 <div class="d-flex flex-column flex-lg-row align-items-lg-center gap-3">
                     <div class="input-div d-flex flex-column flex-md-row align-items-md-center justify-content-between gap-3 gap-md-5">
                         <div class="d-flex flex-fill align-items-center justify-content-between gap-2">
@@ -384,13 +386,22 @@
                         </div>
                     </div>
                 </div>
+                </div>
                 <!-- Search results doctors list -->
                 <div class="doctors-list-results d-flex flex-column gap-3">
                     <!-- list 1 -->
-                    <div class="d-flex align-items-center justify-content-between">
+                   <div>
+                     <div class="d-flex align-items-center justify-content-between px-3">
                         <!-- doctor detail -->
-                        <div class="d-flex align-items-center gap-3 flex-wrap profile-data">
-                            <img src="assets/images/qualified doctors/doctors-proile-pic.png" alt="profile image">
+                        <div class="d-flex align-items-center gap-3 flex-wrap">
+                            <div class="doctor-profile">
+                                <img src="assets/images/qualified doctors/doctors-proile-pic.png" alt="profile image">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="29" viewBox="0 0 30 29" fill="none">
+                                    <rect x="1" y="0.500046" width="28" height="28" rx="7.5" stroke="#02BCE6"/>
+                                    <path d="M18.2917 11.8334C18.2917 13.3982 17.0231 14.6667 15.4583 14.6667C13.8935 14.6667 12.625 13.3982 12.625 11.8334C12.625 10.2686 13.8935 9.00005 15.4583 9.00005C17.0231 9.00005 18.2917 10.2686 18.2917 11.8334Z" stroke="#02BCE6" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M15.4583 16.7917C12.7199 16.7917 10.5 19.0116 10.5 21.75H20.4167C20.4167 19.0116 18.1967 16.7917 15.4583 16.7917Z" stroke="#02BCE6" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
                             <div class="d-flex flex-column align-items-start">
                                 <h4 class="font-24 light-black font-weight-600 mb-0">Sofia Khan</h4>
                                 <p class="font-16 light-black-90 mb-0">Dermatologist</p>
@@ -416,6 +427,543 @@
                             </div>
                         </div>
                     </div>
+                    <!-- accordion  -->
+                    <div class="accordion doctor-accordion" id="accordionExample">
+                        <!-- Accordion Item 1 -->
+                        <div class="accordion-item">
+                          <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button font-16 font-weight-600" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                              <span id="viewText1" class="w-100 text-center">View Appointments</span>
+                              <span id="hideText1" style="display: none;" class="w-100 text-center">Hide Appointments</span>
+                            </button>
+                          </h2>
+                          <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                            <div class="accordion-body px-3">
+                              <h4 class="font-16 light-black" style="margin-top: 12px;">“ Amazing doctor. Listened to all my symptoms and very attentive. Totally recommend you to please check this.. “</h4>
+                              <div class="d-flex align-items-center gap-2 justify-content-center flex-wrap">
+                                <div class="appointents-date d-flex flex-column align-items-center justify-content-center gap-1">
+                                    <h6 class="number-of-appointments font-weight-600 mb-0">03 appts</h6>
+                                    <p class="font-12 mb-0 white-text mt-1">SUN</p>
+                                    <p class="font-24 font-weight-600 mb-0 white-text">10</p>
+                                </div>
+                                <div class="appointents-date disabled d-flex flex-column align-items-center justify-content-center gap-1">
+                                    <h6 class="number-of-appointments font-weight-600 mb-0">00 appts</h6>
+                                    <p class="font-12 mb-0 white-text mt-1">MON</p>
+                                    <p class="font-24 font-weight-600 mb-0 white-text">14</p>
+                                </div>
+                                <div class="appointents-date d-flex flex-column align-items-center justify-content-center gap-1">
+                                    <h6 class="number-of-appointments font-weight-600 mb-0">07 appts</h6>
+                                    <p class="font-12 mb-0 white-text mt-1">TUE</p>
+                                    <p class="font-24 font-weight-600 mb-0 white-text">10</p>
+                                </div>
+                                <div class="appointents-date disabled d-flex flex-column align-items-center justify-content-center gap-1">
+                                    <h6 class="number-of-appointments font-weight-600 mb-0">00 appts</h6>
+                                    <p class="font-12 mb-0 white-text mt-1">SUN</p>
+                                    <p class="font-24 font-weight-600 mb-0 white-text">10</p>
+                                </div>
+                                <div class="appointents-date d-flex flex-column align-items-center justify-content-center gap-1">
+                                    <h6 class="number-of-appointments font-weight-600 mb-0">03 appts</h6>
+                                    <p class="font-12 mb-0 white-text mt-1">SUN</p>
+                                    <p class="font-24 font-weight-600 mb-0 white-text">10</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                   </div>
+                    <!-- list 2 -->
+                   <div>
+                     <div class="d-flex align-items-center justify-content-between px-3">
+                        <!-- doctor detail -->
+                        <div class="d-flex align-items-center gap-3 flex-wrap">
+                            <div class="doctor-profile">
+                                <img src="assets/images/qualified doctors/doctors-proile-pic.png" alt="profile image">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="29" viewBox="0 0 30 29" fill="none">
+                                    <rect x="1" y="0.500046" width="27.75" height="27.75" rx="7.5" stroke="#F2C246"/>
+                                    <path d="M16.8333 13L20.3744 11.2928C20.8915 11.0434 21.5 11.406 21.5 11.9636V17.0365C21.5 17.5941 20.8915 17.9567 20.3744 17.7073L16.8333 16M9.05556 19H15.2778C16.1369 19 16.8333 18.3285 16.8333 17.5V11.5C16.8333 10.6716 16.1369 10 15.2778 10H9.05556C8.19645 10 7.5 10.6716 7.5 11.5V17.5C7.5 18.3285 8.19645 19 9.05556 19Z" stroke="#F2C246" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <div class="d-flex flex-column align-items-start">
+                                <h4 class="font-24 light-black font-weight-600 mb-0">Sofia Khan</h4>
+                                <p class="font-16 light-black-90 mb-0">Dermatologist</p>
+                                <p class="font-16 light-black-90 mb-0">Experience: 37 years</p>
+                                <p class="font-12 accent-text font-weight-600 mb-0">Available for video-visit</p>
+                            </div>
+                        </div>
+                        <!-- area & reviews -->
+                        <div class="d-flex flex-column gap-3">
+                            <div class="d-flex align-items-center gap-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="17" viewBox="0 0 18 17" fill="none">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M4.79276 3.4426C7.11638 1.11899 10.8837 1.11899 13.2073 3.4426C15.531 5.76622 15.531 9.53356 13.2073 11.8572L9.00005 16.0645L4.79276 11.8572C2.46914 9.53356 2.46914 5.76622 4.79276 3.4426ZM9.00005 9.34989C9.93893 9.34989 10.7 8.58877 10.7 7.64989C10.7 6.71101 9.93893 5.94989 9.00005 5.94989C8.06116 5.94989 7.30005 6.71101 7.30005 7.64989C7.30005 8.58877 8.06116 9.34989 9.00005 9.34989Z" fill="#F2C246"/>
+                                </svg>
+                                <div style="width: 1px; height: 13px;background: #2A2A2A;"></div>
+                                <p class="mb-0 font-12 light-black">0.5 m</p>
+                            </div>
+                            <div class="d-flex align-items-center gap-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="17" viewBox="0 0 18 17" fill="none">
+                                    <path d="M8.1916 3.33793C8.44605 2.55482 9.55395 2.55482 9.8084 3.33793L10.7175 6.13596C10.8313 6.48618 11.1577 6.72329 11.5259 6.72329H14.4679C15.2914 6.72329 15.6337 7.77697 14.9676 8.26096L12.5874 9.99023C12.2895 10.2067 12.1648 10.5903 12.2786 10.9406L13.1878 13.7386C13.4422 14.5217 12.5459 15.1729 11.8798 14.6889L9.49962 12.9596C9.2017 12.7432 8.7983 12.7432 8.50038 12.9596L6.12024 14.6889C5.45408 15.1729 4.55777 14.5217 4.81222 13.7386L5.72136 10.9406C5.83515 10.5903 5.71049 10.2067 5.41258 9.99023L3.03243 8.26096C2.36628 7.77697 2.70863 6.72329 3.53205 6.72329H6.47407C6.84231 6.72329 7.16867 6.48618 7.28247 6.13596L8.1916 3.33793Z" fill="#F2C246"/>
+                                </svg>
+                                <div style="width: 1px; height: 13px;background: #2A2A2A;"></div>
+                                <p class="mb-0 font-12 light-black">4.9 (28 reviews)</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- accordion  -->
+                    <div class="accordion doctor-accordion" id="accordionExample">
+                        <!-- Accordion Item 1 -->
+                        <div class="accordion-item">
+                          <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button font-16 font-weight-600" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                              <span id="viewText1" class="w-100 text-center">View Appointments</span>
+                              <span id="hideText1" style="display: none;" class="w-100 text-center">Hide Appointments</span>
+                            </button>
+                          </h2>
+                          <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                            <div class="accordion-body px-3">
+                              <h4 class="font-16 light-black" style="margin-top: 12px;">“ Amazing doctor. Listened to all my symptoms and very attentive. Totally recommend you to please check this.. “</h4>
+                              <div class="d-flex align-items-center gap-2 justify-content-center flex-wrap">
+                                <div class="appointents-date d-flex flex-column align-items-center justify-content-center gap-1">
+                                    <h6 class="number-of-appointments font-weight-600 mb-0">03 appts</h6>
+                                    <p class="font-12 mb-0 white-text mt-1">SUN</p>
+                                    <p class="font-24 font-weight-600 mb-0 white-text">10</p>
+                                </div>
+                                <div class="appointents-date disabled d-flex flex-column align-items-center justify-content-center gap-1">
+                                    <h6 class="number-of-appointments font-weight-600 mb-0">00 appts</h6>
+                                    <p class="font-12 mb-0 white-text mt-1">MON</p>
+                                    <p class="font-24 font-weight-600 mb-0 white-text">14</p>
+                                </div>
+                                <div class="appointents-date d-flex flex-column align-items-center justify-content-center gap-1">
+                                    <h6 class="number-of-appointments font-weight-600 mb-0">07 appts</h6>
+                                    <p class="font-12 mb-0 white-text mt-1">TUE</p>
+                                    <p class="font-24 font-weight-600 mb-0 white-text">10</p>
+                                </div>
+                                <div class="appointents-date disabled d-flex flex-column align-items-center justify-content-center gap-1">
+                                    <h6 class="number-of-appointments font-weight-600 mb-0">00 appts</h6>
+                                    <p class="font-12 mb-0 white-text mt-1">SUN</p>
+                                    <p class="font-24 font-weight-600 mb-0 white-text">10</p>
+                                </div>
+                                <div class="appointents-date d-flex flex-column align-items-center justify-content-center gap-1">
+                                    <h6 class="number-of-appointments font-weight-600 mb-0">03 appts</h6>
+                                    <p class="font-12 mb-0 white-text mt-1">SUN</p>
+                                    <p class="font-24 font-weight-600 mb-0 white-text">10</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                   </div>
+                    <!-- list 3 -->
+                   <div>
+                     <div class="d-flex align-items-center justify-content-between px-3">
+                        <!-- doctor detail -->
+                        <div class="d-flex align-items-center gap-3 flex-wrap">
+                            <div class="doctor-profile">
+                                <img src="assets/images/qualified doctors/doctors-proile-pic.png" alt="profile image">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="29" viewBox="0 0 30 29" fill="none">
+                                    <rect x="1" y="0.500046" width="27.75" height="27.75" rx="7.5" stroke="#F2C246"/>
+                                    <path d="M16.8333 13L20.3744 11.2928C20.8915 11.0434 21.5 11.406 21.5 11.9636V17.0365C21.5 17.5941 20.8915 17.9567 20.3744 17.7073L16.8333 16M9.05556 19H15.2778C16.1369 19 16.8333 18.3285 16.8333 17.5V11.5C16.8333 10.6716 16.1369 10 15.2778 10H9.05556C8.19645 10 7.5 10.6716 7.5 11.5V17.5C7.5 18.3285 8.19645 19 9.05556 19Z" stroke="#F2C246" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <div class="d-flex flex-column align-items-start">
+                                <h4 class="font-24 light-black font-weight-600 mb-0">Sofia Khan</h4>
+                                <p class="font-16 light-black-90 mb-0">Dermatologist</p>
+                                <p class="font-16 light-black-90 mb-0">Experience: 37 years</p>
+                                <p class="font-12 accent-text font-weight-600 mb-0">Available for video-visit</p>
+                            </div>
+                        </div>
+                        <!-- area & reviews -->
+                        <div class="d-flex flex-column gap-3">
+                            <div class="d-flex align-items-center gap-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="17" viewBox="0 0 18 17" fill="none">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M4.79276 3.4426C7.11638 1.11899 10.8837 1.11899 13.2073 3.4426C15.531 5.76622 15.531 9.53356 13.2073 11.8572L9.00005 16.0645L4.79276 11.8572C2.46914 9.53356 2.46914 5.76622 4.79276 3.4426ZM9.00005 9.34989C9.93893 9.34989 10.7 8.58877 10.7 7.64989C10.7 6.71101 9.93893 5.94989 9.00005 5.94989C8.06116 5.94989 7.30005 6.71101 7.30005 7.64989C7.30005 8.58877 8.06116 9.34989 9.00005 9.34989Z" fill="#F2C246"/>
+                                </svg>
+                                <div style="width: 1px; height: 13px;background: #2A2A2A;"></div>
+                                <p class="mb-0 font-12 light-black">0.5 m</p>
+                            </div>
+                            <div class="d-flex align-items-center gap-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="17" viewBox="0 0 18 17" fill="none">
+                                    <path d="M8.1916 3.33793C8.44605 2.55482 9.55395 2.55482 9.8084 3.33793L10.7175 6.13596C10.8313 6.48618 11.1577 6.72329 11.5259 6.72329H14.4679C15.2914 6.72329 15.6337 7.77697 14.9676 8.26096L12.5874 9.99023C12.2895 10.2067 12.1648 10.5903 12.2786 10.9406L13.1878 13.7386C13.4422 14.5217 12.5459 15.1729 11.8798 14.6889L9.49962 12.9596C9.2017 12.7432 8.7983 12.7432 8.50038 12.9596L6.12024 14.6889C5.45408 15.1729 4.55777 14.5217 4.81222 13.7386L5.72136 10.9406C5.83515 10.5903 5.71049 10.2067 5.41258 9.99023L3.03243 8.26096C2.36628 7.77697 2.70863 6.72329 3.53205 6.72329H6.47407C6.84231 6.72329 7.16867 6.48618 7.28247 6.13596L8.1916 3.33793Z" fill="#F2C246"/>
+                                </svg>
+                                <div style="width: 1px; height: 13px;background: #2A2A2A;"></div>
+                                <p class="mb-0 font-12 light-black">4.9 (28 reviews)</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- accordion  -->
+                    <div class="accordion doctor-accordion" id="accordionExample">
+                        <!-- Accordion Item 1 -->
+                        <div class="accordion-item">
+                          <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button font-16 font-weight-600" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                              <span id="viewText1" class="w-100 text-center">View Appointments</span>
+                              <span id="hideText1" style="display: none;" class="w-100 text-center">Hide Appointments</span>
+                            </button>
+                          </h2>
+                          <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                            <div class="accordion-body px-3">
+                              <h4 class="font-16 light-black" style="margin-top: 12px;">“ Amazing doctor. Listened to all my symptoms and very attentive. Totally recommend you to please check this.. “</h4>
+                              <div class="d-flex align-items-center gap-2 justify-content-center flex-wrap">
+                                <div class="appointents-date d-flex flex-column align-items-center justify-content-center gap-1">
+                                    <h6 class="number-of-appointments font-weight-600 mb-0">03 appts</h6>
+                                    <p class="font-12 mb-0 white-text mt-1">SUN</p>
+                                    <p class="font-24 font-weight-600 mb-0 white-text">10</p>
+                                </div>
+                                <div class="appointents-date disabled d-flex flex-column align-items-center justify-content-center gap-1">
+                                    <h6 class="number-of-appointments font-weight-600 mb-0">00 appts</h6>
+                                    <p class="font-12 mb-0 white-text mt-1">MON</p>
+                                    <p class="font-24 font-weight-600 mb-0 white-text">14</p>
+                                </div>
+                                <div class="appointents-date d-flex flex-column align-items-center justify-content-center gap-1">
+                                    <h6 class="number-of-appointments font-weight-600 mb-0">07 appts</h6>
+                                    <p class="font-12 mb-0 white-text mt-1">TUE</p>
+                                    <p class="font-24 font-weight-600 mb-0 white-text">10</p>
+                                </div>
+                                <div class="appointents-date disabled d-flex flex-column align-items-center justify-content-center gap-1">
+                                    <h6 class="number-of-appointments font-weight-600 mb-0">00 appts</h6>
+                                    <p class="font-12 mb-0 white-text mt-1">SUN</p>
+                                    <p class="font-24 font-weight-600 mb-0 white-text">10</p>
+                                </div>
+                                <div class="appointents-date d-flex flex-column align-items-center justify-content-center gap-1">
+                                    <h6 class="number-of-appointments font-weight-600 mb-0">03 appts</h6>
+                                    <p class="font-12 mb-0 white-text mt-1">SUN</p>
+                                    <p class="font-24 font-weight-600 mb-0 white-text">10</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                   </div>
+                    <!-- list 4 -->
+                   <div>
+                     <div class="d-flex align-items-center justify-content-between px-3">
+                        <!-- doctor detail -->
+                        <div class="d-flex align-items-center gap-3 flex-wrap">
+                            <div class="doctor-profile">
+                                <img src="assets/images/qualified doctors/doctors-proile-pic.png" alt="profile image">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="29" viewBox="0 0 30 29" fill="none">
+                                    <rect x="1" y="0.500046" width="27.75" height="27.75" rx="7.5" stroke="#F2C246"/>
+                                    <path d="M16.8333 13L20.3744 11.2928C20.8915 11.0434 21.5 11.406 21.5 11.9636V17.0365C21.5 17.5941 20.8915 17.9567 20.3744 17.7073L16.8333 16M9.05556 19H15.2778C16.1369 19 16.8333 18.3285 16.8333 17.5V11.5C16.8333 10.6716 16.1369 10 15.2778 10H9.05556C8.19645 10 7.5 10.6716 7.5 11.5V17.5C7.5 18.3285 8.19645 19 9.05556 19Z" stroke="#F2C246" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <div class="d-flex flex-column align-items-start">
+                                <h4 class="font-24 light-black font-weight-600 mb-0">Sofia Khan</h4>
+                                <p class="font-16 light-black-90 mb-0">Dermatologist</p>
+                                <p class="font-16 light-black-90 mb-0">Experience: 37 years</p>
+                                <p class="font-12 accent-text font-weight-600 mb-0">Available for video-visit</p>
+                            </div>
+                        </div>
+                        <!-- area & reviews -->
+                        <div class="d-flex flex-column gap-3">
+                            <div class="d-flex align-items-center gap-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="17" viewBox="0 0 18 17" fill="none">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M4.79276 3.4426C7.11638 1.11899 10.8837 1.11899 13.2073 3.4426C15.531 5.76622 15.531 9.53356 13.2073 11.8572L9.00005 16.0645L4.79276 11.8572C2.46914 9.53356 2.46914 5.76622 4.79276 3.4426ZM9.00005 9.34989C9.93893 9.34989 10.7 8.58877 10.7 7.64989C10.7 6.71101 9.93893 5.94989 9.00005 5.94989C8.06116 5.94989 7.30005 6.71101 7.30005 7.64989C7.30005 8.58877 8.06116 9.34989 9.00005 9.34989Z" fill="#F2C246"/>
+                                </svg>
+                                <div style="width: 1px; height: 13px;background: #2A2A2A;"></div>
+                                <p class="mb-0 font-12 light-black">0.5 m</p>
+                            </div>
+                            <div class="d-flex align-items-center gap-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="17" viewBox="0 0 18 17" fill="none">
+                                    <path d="M8.1916 3.33793C8.44605 2.55482 9.55395 2.55482 9.8084 3.33793L10.7175 6.13596C10.8313 6.48618 11.1577 6.72329 11.5259 6.72329H14.4679C15.2914 6.72329 15.6337 7.77697 14.9676 8.26096L12.5874 9.99023C12.2895 10.2067 12.1648 10.5903 12.2786 10.9406L13.1878 13.7386C13.4422 14.5217 12.5459 15.1729 11.8798 14.6889L9.49962 12.9596C9.2017 12.7432 8.7983 12.7432 8.50038 12.9596L6.12024 14.6889C5.45408 15.1729 4.55777 14.5217 4.81222 13.7386L5.72136 10.9406C5.83515 10.5903 5.71049 10.2067 5.41258 9.99023L3.03243 8.26096C2.36628 7.77697 2.70863 6.72329 3.53205 6.72329H6.47407C6.84231 6.72329 7.16867 6.48618 7.28247 6.13596L8.1916 3.33793Z" fill="#F2C246"/>
+                                </svg>
+                                <div style="width: 1px; height: 13px;background: #2A2A2A;"></div>
+                                <p class="mb-0 font-12 light-black">4.9 (28 reviews)</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- accordion  -->
+                    <div class="accordion doctor-accordion" id="accordionExample">
+                        <!-- Accordion Item 1 -->
+                        <div class="accordion-item">
+                          <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button font-16 font-weight-600" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                              <span id="viewText1" class="w-100 text-center">View Appointments</span>
+                              <span id="hideText1" style="display: none;" class="w-100 text-center">Hide Appointments</span>
+                            </button>
+                          </h2>
+                          <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                            <div class="accordion-body px-3">
+                              <h4 class="font-16 light-black" style="margin-top: 12px;">“ Amazing doctor. Listened to all my symptoms and very attentive. Totally recommend you to please check this.. “</h4>
+                              <div class="d-flex align-items-center gap-2 justify-content-center flex-wrap">
+                                <div class="appointents-date d-flex flex-column align-items-center justify-content-center gap-1">
+                                    <h6 class="number-of-appointments font-weight-600 mb-0">03 appts</h6>
+                                    <p class="font-12 mb-0 white-text mt-1">SUN</p>
+                                    <p class="font-24 font-weight-600 mb-0 white-text">10</p>
+                                </div>
+                                <div class="appointents-date disabled d-flex flex-column align-items-center justify-content-center gap-1">
+                                    <h6 class="number-of-appointments font-weight-600 mb-0">00 appts</h6>
+                                    <p class="font-12 mb-0 white-text mt-1">MON</p>
+                                    <p class="font-24 font-weight-600 mb-0 white-text">14</p>
+                                </div>
+                                <div class="appointents-date d-flex flex-column align-items-center justify-content-center gap-1">
+                                    <h6 class="number-of-appointments font-weight-600 mb-0">07 appts</h6>
+                                    <p class="font-12 mb-0 white-text mt-1">TUE</p>
+                                    <p class="font-24 font-weight-600 mb-0 white-text">10</p>
+                                </div>
+                                <div class="appointents-date disabled d-flex flex-column align-items-center justify-content-center gap-1">
+                                    <h6 class="number-of-appointments font-weight-600 mb-0">00 appts</h6>
+                                    <p class="font-12 mb-0 white-text mt-1">SUN</p>
+                                    <p class="font-24 font-weight-600 mb-0 white-text">10</p>
+                                </div>
+                                <div class="appointents-date d-flex flex-column align-items-center justify-content-center gap-1">
+                                    <h6 class="number-of-appointments font-weight-600 mb-0">03 appts</h6>
+                                    <p class="font-12 mb-0 white-text mt-1">SUN</p>
+                                    <p class="font-24 font-weight-600 mb-0 white-text">10</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                   </div>
+                    <!-- list 5 -->
+                   <div>
+                     <div class="d-flex align-items-center justify-content-between px-3">
+                        <!-- doctor detail -->
+                        <div class="d-flex align-items-center gap-3 flex-wrap">
+                            <div class="doctor-profile">
+                                <img src="assets/images/qualified doctors/doctors-proile-pic.png" alt="profile image">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="29" viewBox="0 0 30 29" fill="none">
+                                    <rect x="1" y="0.500046" width="27.75" height="27.75" rx="7.5" stroke="#F2C246"/>
+                                    <path d="M16.8333 13L20.3744 11.2928C20.8915 11.0434 21.5 11.406 21.5 11.9636V17.0365C21.5 17.5941 20.8915 17.9567 20.3744 17.7073L16.8333 16M9.05556 19H15.2778C16.1369 19 16.8333 18.3285 16.8333 17.5V11.5C16.8333 10.6716 16.1369 10 15.2778 10H9.05556C8.19645 10 7.5 10.6716 7.5 11.5V17.5C7.5 18.3285 8.19645 19 9.05556 19Z" stroke="#F2C246" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <div class="d-flex flex-column align-items-start">
+                                <h4 class="font-24 light-black font-weight-600 mb-0">Sofia Khan</h4>
+                                <p class="font-16 light-black-90 mb-0">Dermatologist</p>
+                                <p class="font-16 light-black-90 mb-0">Experience: 37 years</p>
+                                <p class="font-12 accent-text font-weight-600 mb-0">Available for video-visit</p>
+                            </div>
+                        </div>
+                        <!-- area & reviews -->
+                        <div class="d-flex flex-column gap-3">
+                            <div class="d-flex align-items-center gap-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="17" viewBox="0 0 18 17" fill="none">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M4.79276 3.4426C7.11638 1.11899 10.8837 1.11899 13.2073 3.4426C15.531 5.76622 15.531 9.53356 13.2073 11.8572L9.00005 16.0645L4.79276 11.8572C2.46914 9.53356 2.46914 5.76622 4.79276 3.4426ZM9.00005 9.34989C9.93893 9.34989 10.7 8.58877 10.7 7.64989C10.7 6.71101 9.93893 5.94989 9.00005 5.94989C8.06116 5.94989 7.30005 6.71101 7.30005 7.64989C7.30005 8.58877 8.06116 9.34989 9.00005 9.34989Z" fill="#F2C246"/>
+                                </svg>
+                                <div style="width: 1px; height: 13px;background: #2A2A2A;"></div>
+                                <p class="mb-0 font-12 light-black">0.5 m</p>
+                            </div>
+                            <div class="d-flex align-items-center gap-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="17" viewBox="0 0 18 17" fill="none">
+                                    <path d="M8.1916 3.33793C8.44605 2.55482 9.55395 2.55482 9.8084 3.33793L10.7175 6.13596C10.8313 6.48618 11.1577 6.72329 11.5259 6.72329H14.4679C15.2914 6.72329 15.6337 7.77697 14.9676 8.26096L12.5874 9.99023C12.2895 10.2067 12.1648 10.5903 12.2786 10.9406L13.1878 13.7386C13.4422 14.5217 12.5459 15.1729 11.8798 14.6889L9.49962 12.9596C9.2017 12.7432 8.7983 12.7432 8.50038 12.9596L6.12024 14.6889C5.45408 15.1729 4.55777 14.5217 4.81222 13.7386L5.72136 10.9406C5.83515 10.5903 5.71049 10.2067 5.41258 9.99023L3.03243 8.26096C2.36628 7.77697 2.70863 6.72329 3.53205 6.72329H6.47407C6.84231 6.72329 7.16867 6.48618 7.28247 6.13596L8.1916 3.33793Z" fill="#F2C246"/>
+                                </svg>
+                                <div style="width: 1px; height: 13px;background: #2A2A2A;"></div>
+                                <p class="mb-0 font-12 light-black">4.9 (28 reviews)</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- accordion  -->
+                    <div class="accordion doctor-accordion" id="accordionExample">
+                        <!-- Accordion Item 1 -->
+                        <div class="accordion-item">
+                          <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button font-16 font-weight-600" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                              <span id="viewText1" class="w-100 text-center">View Appointments</span>
+                              <span id="hideText1" style="display: none;" class="w-100 text-center">Hide Appointments</span>
+                            </button>
+                          </h2>
+                          <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                            <div class="accordion-body px-3">
+                              <h4 class="font-16 light-black" style="margin-top: 12px;">“ Amazing doctor. Listened to all my symptoms and very attentive. Totally recommend you to please check this.. “</h4>
+                              <div class="d-flex align-items-center gap-2 justify-content-center flex-wrap">
+                                <div class="appointents-date d-flex flex-column align-items-center justify-content-center gap-1">
+                                    <h6 class="number-of-appointments font-weight-600 mb-0">03 appts</h6>
+                                    <p class="font-12 mb-0 white-text mt-1">SUN</p>
+                                    <p class="font-24 font-weight-600 mb-0 white-text">10</p>
+                                </div>
+                                <div class="appointents-date disabled d-flex flex-column align-items-center justify-content-center gap-1">
+                                    <h6 class="number-of-appointments font-weight-600 mb-0">00 appts</h6>
+                                    <p class="font-12 mb-0 white-text mt-1">MON</p>
+                                    <p class="font-24 font-weight-600 mb-0 white-text">14</p>
+                                </div>
+                                <div class="appointents-date d-flex flex-column align-items-center justify-content-center gap-1">
+                                    <h6 class="number-of-appointments font-weight-600 mb-0">07 appts</h6>
+                                    <p class="font-12 mb-0 white-text mt-1">TUE</p>
+                                    <p class="font-24 font-weight-600 mb-0 white-text">10</p>
+                                </div>
+                                <div class="appointents-date disabled d-flex flex-column align-items-center justify-content-center gap-1">
+                                    <h6 class="number-of-appointments font-weight-600 mb-0">00 appts</h6>
+                                    <p class="font-12 mb-0 white-text mt-1">SUN</p>
+                                    <p class="font-24 font-weight-600 mb-0 white-text">10</p>
+                                </div>
+                                <div class="appointents-date d-flex flex-column align-items-center justify-content-center gap-1">
+                                    <h6 class="number-of-appointments font-weight-600 mb-0">03 appts</h6>
+                                    <p class="font-12 mb-0 white-text mt-1">SUN</p>
+                                    <p class="font-24 font-weight-600 mb-0 white-text">10</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                   </div>
+                    <!-- list 6 -->
+                   <div>
+                     <div class="d-flex align-items-center justify-content-between px-3">
+                        <!-- doctor detail -->
+                        <div class="d-flex align-items-center gap-3 flex-wrap">
+                            <div class="doctor-profile">
+                                <img src="assets/images/qualified doctors/doctors-proile-pic.png" alt="profile image">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="29" viewBox="0 0 30 29" fill="none">
+                                    <rect x="1" y="0.500046" width="27.75" height="27.75" rx="7.5" stroke="#F2C246"/>
+                                    <path d="M16.8333 13L20.3744 11.2928C20.8915 11.0434 21.5 11.406 21.5 11.9636V17.0365C21.5 17.5941 20.8915 17.9567 20.3744 17.7073L16.8333 16M9.05556 19H15.2778C16.1369 19 16.8333 18.3285 16.8333 17.5V11.5C16.8333 10.6716 16.1369 10 15.2778 10H9.05556C8.19645 10 7.5 10.6716 7.5 11.5V17.5C7.5 18.3285 8.19645 19 9.05556 19Z" stroke="#F2C246" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <div class="d-flex flex-column align-items-start">
+                                <h4 class="font-24 light-black font-weight-600 mb-0">Sofia Khan</h4>
+                                <p class="font-16 light-black-90 mb-0">Dermatologist</p>
+                                <p class="font-16 light-black-90 mb-0">Experience: 37 years</p>
+                                <p class="font-12 accent-text font-weight-600 mb-0">Available for video-visit</p>
+                            </div>
+                        </div>
+                        <!-- area & reviews -->
+                        <div class="d-flex flex-column gap-3">
+                            <div class="d-flex align-items-center gap-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="17" viewBox="0 0 18 17" fill="none">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M4.79276 3.4426C7.11638 1.11899 10.8837 1.11899 13.2073 3.4426C15.531 5.76622 15.531 9.53356 13.2073 11.8572L9.00005 16.0645L4.79276 11.8572C2.46914 9.53356 2.46914 5.76622 4.79276 3.4426ZM9.00005 9.34989C9.93893 9.34989 10.7 8.58877 10.7 7.64989C10.7 6.71101 9.93893 5.94989 9.00005 5.94989C8.06116 5.94989 7.30005 6.71101 7.30005 7.64989C7.30005 8.58877 8.06116 9.34989 9.00005 9.34989Z" fill="#F2C246"/>
+                                </svg>
+                                <div style="width: 1px; height: 13px;background: #2A2A2A;"></div>
+                                <p class="mb-0 font-12 light-black">0.5 m</p>
+                            </div>
+                            <div class="d-flex align-items-center gap-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="17" viewBox="0 0 18 17" fill="none">
+                                    <path d="M8.1916 3.33793C8.44605 2.55482 9.55395 2.55482 9.8084 3.33793L10.7175 6.13596C10.8313 6.48618 11.1577 6.72329 11.5259 6.72329H14.4679C15.2914 6.72329 15.6337 7.77697 14.9676 8.26096L12.5874 9.99023C12.2895 10.2067 12.1648 10.5903 12.2786 10.9406L13.1878 13.7386C13.4422 14.5217 12.5459 15.1729 11.8798 14.6889L9.49962 12.9596C9.2017 12.7432 8.7983 12.7432 8.50038 12.9596L6.12024 14.6889C5.45408 15.1729 4.55777 14.5217 4.81222 13.7386L5.72136 10.9406C5.83515 10.5903 5.71049 10.2067 5.41258 9.99023L3.03243 8.26096C2.36628 7.77697 2.70863 6.72329 3.53205 6.72329H6.47407C6.84231 6.72329 7.16867 6.48618 7.28247 6.13596L8.1916 3.33793Z" fill="#F2C246"/>
+                                </svg>
+                                <div style="width: 1px; height: 13px;background: #2A2A2A;"></div>
+                                <p class="mb-0 font-12 light-black">4.9 (28 reviews)</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- accordion  -->
+                    <div class="accordion doctor-accordion" id="accordionExample">
+                        <!-- Accordion Item 1 -->
+                        <div class="accordion-item">
+                          <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button font-16 font-weight-600" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                              <span id="viewText1" class="w-100 text-center">View Appointments</span>
+                              <span id="hideText1" style="display: none;" class="w-100 text-center">Hide Appointments</span>
+                            </button>
+                          </h2>
+                          <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                            <div class="accordion-body px-3">
+                              <h4 class="font-16 light-black" style="margin-top: 12px;">“ Amazing doctor. Listened to all my symptoms and very attentive. Totally recommend you to please check this.. “</h4>
+                              <div class="d-flex align-items-center gap-2 justify-content-center flex-wrap">
+                                <div class="appointents-date d-flex flex-column align-items-center justify-content-center gap-1">
+                                    <h6 class="number-of-appointments font-weight-600 mb-0">03 appts</h6>
+                                    <p class="font-12 mb-0 white-text mt-1">SUN</p>
+                                    <p class="font-24 font-weight-600 mb-0 white-text">10</p>
+                                </div>
+                                <div class="appointents-date disabled d-flex flex-column align-items-center justify-content-center gap-1">
+                                    <h6 class="number-of-appointments font-weight-600 mb-0">00 appts</h6>
+                                    <p class="font-12 mb-0 white-text mt-1">MON</p>
+                                    <p class="font-24 font-weight-600 mb-0 white-text">14</p>
+                                </div>
+                                <div class="appointents-date d-flex flex-column align-items-center justify-content-center gap-1">
+                                    <h6 class="number-of-appointments font-weight-600 mb-0">07 appts</h6>
+                                    <p class="font-12 mb-0 white-text mt-1">TUE</p>
+                                    <p class="font-24 font-weight-600 mb-0 white-text">10</p>
+                                </div>
+                                <div class="appointents-date disabled d-flex flex-column align-items-center justify-content-center gap-1">
+                                    <h6 class="number-of-appointments font-weight-600 mb-0">00 appts</h6>
+                                    <p class="font-12 mb-0 white-text mt-1">SUN</p>
+                                    <p class="font-24 font-weight-600 mb-0 white-text">10</p>
+                                </div>
+                                <div class="appointents-date d-flex flex-column align-items-center justify-content-center gap-1">
+                                    <h6 class="number-of-appointments font-weight-600 mb-0">03 appts</h6>
+                                    <p class="font-12 mb-0 white-text mt-1">SUN</p>
+                                    <p class="font-24 font-weight-600 mb-0 white-text">10</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                   </div>
+                    <!-- list 7 -->
+                   <div>
+                     <div class="d-flex align-items-center justify-content-between px-3">
+                        <!-- doctor detail -->
+                        <div class="d-flex align-items-center gap-3 flex-wrap">
+                            <div class="doctor-profile">
+                                <img src="assets/images/qualified doctors/doctors-proile-pic.png" alt="profile image">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="29" viewBox="0 0 30 29" fill="none">
+                                    <rect x="1" y="0.500046" width="27.75" height="27.75" rx="7.5" stroke="#F2C246"/>
+                                    <path d="M16.8333 13L20.3744 11.2928C20.8915 11.0434 21.5 11.406 21.5 11.9636V17.0365C21.5 17.5941 20.8915 17.9567 20.3744 17.7073L16.8333 16M9.05556 19H15.2778C16.1369 19 16.8333 18.3285 16.8333 17.5V11.5C16.8333 10.6716 16.1369 10 15.2778 10H9.05556C8.19645 10 7.5 10.6716 7.5 11.5V17.5C7.5 18.3285 8.19645 19 9.05556 19Z" stroke="#F2C246" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <div class="d-flex flex-column align-items-start">
+                                <h4 class="font-24 light-black font-weight-600 mb-0">Sofia Khan</h4>
+                                <p class="font-16 light-black-90 mb-0">Dermatologist</p>
+                                <p class="font-16 light-black-90 mb-0">Experience: 37 years</p>
+                                <p class="font-12 accent-text font-weight-600 mb-0">Available for video-visit</p>
+                            </div>
+                        </div>
+                        <!-- area & reviews -->
+                        <div class="d-flex flex-column gap-3">
+                            <div class="d-flex align-items-center gap-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="17" viewBox="0 0 18 17" fill="none">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M4.79276 3.4426C7.11638 1.11899 10.8837 1.11899 13.2073 3.4426C15.531 5.76622 15.531 9.53356 13.2073 11.8572L9.00005 16.0645L4.79276 11.8572C2.46914 9.53356 2.46914 5.76622 4.79276 3.4426ZM9.00005 9.34989C9.93893 9.34989 10.7 8.58877 10.7 7.64989C10.7 6.71101 9.93893 5.94989 9.00005 5.94989C8.06116 5.94989 7.30005 6.71101 7.30005 7.64989C7.30005 8.58877 8.06116 9.34989 9.00005 9.34989Z" fill="#F2C246"/>
+                                </svg>
+                                <div style="width: 1px; height: 13px;background: #2A2A2A;"></div>
+                                <p class="mb-0 font-12 light-black">0.5 m</p>
+                            </div>
+                            <div class="d-flex align-items-center gap-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="17" viewBox="0 0 18 17" fill="none">
+                                    <path d="M8.1916 3.33793C8.44605 2.55482 9.55395 2.55482 9.8084 3.33793L10.7175 6.13596C10.8313 6.48618 11.1577 6.72329 11.5259 6.72329H14.4679C15.2914 6.72329 15.6337 7.77697 14.9676 8.26096L12.5874 9.99023C12.2895 10.2067 12.1648 10.5903 12.2786 10.9406L13.1878 13.7386C13.4422 14.5217 12.5459 15.1729 11.8798 14.6889L9.49962 12.9596C9.2017 12.7432 8.7983 12.7432 8.50038 12.9596L6.12024 14.6889C5.45408 15.1729 4.55777 14.5217 4.81222 13.7386L5.72136 10.9406C5.83515 10.5903 5.71049 10.2067 5.41258 9.99023L3.03243 8.26096C2.36628 7.77697 2.70863 6.72329 3.53205 6.72329H6.47407C6.84231 6.72329 7.16867 6.48618 7.28247 6.13596L8.1916 3.33793Z" fill="#F2C246"/>
+                                </svg>
+                                <div style="width: 1px; height: 13px;background: #2A2A2A;"></div>
+                                <p class="mb-0 font-12 light-black">4.9 (28 reviews)</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- accordion  -->
+                    <div class="accordion doctor-accordion" id="accordionExample">
+                        <!-- Accordion Item 1 -->
+                        <div class="accordion-item">
+                          <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button font-16 font-weight-600" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                              <span id="viewText1" class="w-100 text-center">View Appointments</span>
+                              <span id="hideText1" style="display: none;" class="w-100 text-center">Hide Appointments</span>
+                            </button>
+                          </h2>
+                          <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                            <div class="accordion-body px-3">
+                              <h4 class="font-16 light-black" style="margin-top: 12px;">“ Amazing doctor. Listened to all my symptoms and very attentive. Totally recommend you to please check this.. “</h4>
+                              <div class="d-flex align-items-center gap-2 justify-content-center flex-wrap">
+                                <div class="appointents-date d-flex flex-column align-items-center justify-content-center gap-1">
+                                    <h6 class="number-of-appointments font-weight-600 mb-0">03 appts</h6>
+                                    <p class="font-12 mb-0 white-text mt-1">SUN</p>
+                                    <p class="font-24 font-weight-600 mb-0 white-text">10</p>
+                                </div>
+                                <div class="appointents-date disabled d-flex flex-column align-items-center justify-content-center gap-1">
+                                    <h6 class="number-of-appointments font-weight-600 mb-0">00 appts</h6>
+                                    <p class="font-12 mb-0 white-text mt-1">MON</p>
+                                    <p class="font-24 font-weight-600 mb-0 white-text">14</p>
+                                </div>
+                                <div class="appointents-date d-flex flex-column align-items-center justify-content-center gap-1">
+                                    <h6 class="number-of-appointments font-weight-600 mb-0">07 appts</h6>
+                                    <p class="font-12 mb-0 white-text mt-1">TUE</p>
+                                    <p class="font-24 font-weight-600 mb-0 white-text">10</p>
+                                </div>
+                                <div class="appointents-date disabled d-flex flex-column align-items-center justify-content-center gap-1">
+                                    <h6 class="number-of-appointments font-weight-600 mb-0">00 appts</h6>
+                                    <p class="font-12 mb-0 white-text mt-1">SUN</p>
+                                    <p class="font-24 font-weight-600 mb-0 white-text">10</p>
+                                </div>
+                                <div class="appointents-date d-flex flex-column align-items-center justify-content-center gap-1">
+                                    <h6 class="number-of-appointments font-weight-600 mb-0">03 appts</h6>
+                                    <p class="font-12 mb-0 white-text mt-1">SUN</p>
+                                    <p class="font-24 font-weight-600 mb-0 white-text">10</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                   </div>
                 </div>
             </div>
         </section>

@@ -93,3 +93,17 @@ centerInsufficientSlides:true,
 loop: false,
 grabCursor: true,
   });
+
+  // Search Page Accordion item js
+  function handleAccordionEvents(collapseId, viewTextId, hideTextId) {
+    document.getElementById(collapseId).addEventListener('show.bs.collapse', function() {
+      document.getElementById(viewTextId).style.display = 'none';
+      document.getElementById(hideTextId).style.display = 'inline';
+    });
+    document.getElementById(collapseId).addEventListener('hide.bs.collapse', function() {
+      document.getElementById(viewTextId).style.display = 'inline';
+      document.getElementById(hideTextId).style.display = 'none';
+    });
+  }
+  handleAccordionEvents('collapseOne', 'viewText1', 'hideText1');
+  handleAccordionEvents('collapseTwo', 'viewText2', 'hideText2');
