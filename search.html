@@ -319,9 +319,106 @@
     </header>
     <!-- Search section -->
     <div class="container-fluid px-0 search-section">
-        <div class="map-section">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7058331.617240072!2d63.70590540354574!3d30.252729021529433!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38db52d2f8fd751f%3A0x46b7a1f7e614925c!2sPakistan!5e0!3m2!1sen!2s!4v1702557128033!5m2!1sen!2s" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
+        <section class="container">
+            <div class="search-doctors">
+                <!-- search field -->
+                <div class="d-flex flex-column flex-lg-row align-items-lg-center gap-3">
+                    <div class="input-div d-flex flex-column flex-md-row align-items-md-center justify-content-between gap-3 gap-md-5">
+                        <div class="d-flex flex-fill align-items-center justify-content-between gap-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M21 21L15 15M17 10C17 13.866 13.866 17 10 17C6.13401 17 3 13.866 3 10C3 6.13401 6.13401 3 10 3C13.866 3 17 6.13401 17 10Z" stroke="#708583" stroke-opacity="0.4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <input type="search" class="form-control" placeholder="Search Doctors" id="search">
+                        </div>
+                        <span style="background: rgba(112, 133, 131, 0.30);;width:100%;height:1px;" class="d-block d-md-none"></span>
+                        <div class="d-flex align-items-center justify-content-between gap-2">
+                            <span style="background: rgba(112, 133, 131, 0.30);;width:1px;height:24px;" class="d-none d-md-block me-2"></span>
+                            <input type="text" class="form-control" placeholder="Lahore" id="searcLocation">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17" fill="none">
+                                <path d="M13.4584 6.375L8.50008 11.3333L3.54175 6.375" stroke="#708583" stroke-opacity="0.4" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <button class="global-btn" style="padding:13px 30px;">Search</button>
+                </div>
+                <!-- search buttons -->
+                <div class="d-flex align-items-center justify-content-center mt-2 pt-1" style="gap:1.8rem; margin-left:11px">
+                    <div class="dropdown dropdown-btn-1">
+                        <button class="button dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                            <div class="button-icon text-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+                                    <path d="M10.2999 9.71653C9.83884 10.1776 8.95328 11.0631 8.21554 11.8009C7.5441 12.4723 6.4561 12.4724 5.78466 11.801C5.0607 11.077 4.19012 10.2064 3.70021 9.71653C1.87776 7.89408 1.87776 4.93931 3.70021 3.11687C5.52266 1.29442 8.47743 1.29442 10.2999 3.11687C12.1223 4.93931 12.1223 7.89408 10.2999 9.71653Z" stroke="#008159" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M8.75004 6.4167C8.75004 7.3832 7.96654 8.1667 7.00004 8.1667C6.03354 8.1667 5.25004 7.3832 5.25004 6.4167C5.25004 5.4502 6.03354 4.6667 7.00004 4.6667C7.96654 4.6667 8.75004 5.4502 8.75004 6.4167Z" stroke="#008159" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            Specialist
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="15" viewBox="0 0 14 15" fill="none">
+                                <path d="M11.0833 5.75L6.99996 9.83333L2.91663 5.75" stroke="#2A2A2A" stroke-opacity="0.6" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                            <h4 class="font-18 light-black">Select Specialty</h4>
+                            <div style="margin:11px 0;width: 100%;height: 1px;background: rgba(112, 133, 131, 0.30);"></div>
+                            <input type="text" id="searchSpeciality" class="form-control" placeholder="Search">
+                            <div class="specialty-list">
+                                <div class="font-16 d-flex justify-content-between">Laser Hair Removal <input type="checkbox"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Divider -->
+                <div style="width: 100%; height: 1px; background: rgba(112, 133, 131, 0.30);margin: 12px 0;"></div>
+                <!-- Search Results -->
+                <!-- Search results Top -->
+                <div class="d-flex align-items-center justify-content-between">
+                    <h2 class="font-20 light-black mb-0">52 Doctors available</h2>
+                    <div class="d-flex align-items-center gap-2">
+                        <span class="font-16 light-black">April 10 to April 23</span>
+                        <div class="arrows-icons d-flex align-items-center justify-content-between gap-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="17" viewBox="0 0 18 17" fill="none">
+                                <path d="M11.125 13.4583L6.16667 8.49993L11.125 3.5416" stroke="#2A2A2A" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="17" viewBox="0 0 18 17" fill="none">
+                                <path d="M6.875 3.54186L11.8333 8.50019L6.875 13.4585" stroke="#2A2A2A" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <!-- Search results doctors list -->
+                <div class="doctors-list-results d-flex flex-column gap-3">
+                    <!-- list 1 -->
+                    <div class="d-flex align-items-center justify-content-between">
+                        <!-- doctor detail -->
+                        <div class="d-flex align-items-center gap-3 flex-wrap profile-data">
+                            <img src="assets/images/qualified doctors/doctors-proile-pic.png" alt="profile image">
+                            <div class="d-flex flex-column align-items-start">
+                                <h4 class="font-24 light-black font-weight-600 mb-0">Sofia Khan</h4>
+                                <p class="font-16 light-black-90 mb-0">Dermatologist</p>
+                                <p class="font-16 light-black-90 mb-0">Experience: 37 years</p>
+                                <p class="font-12 primary-color font-weight-600 mb-0">Available for in-person</p>
+                            </div>
+                        </div>
+                        <!-- area & reviews -->
+                        <div class="d-flex flex-column gap-3">
+                            <div class="d-flex align-items-center gap-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="17" viewBox="0 0 18 17" fill="none">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M4.79276 3.4426C7.11638 1.11899 10.8837 1.11899 13.2073 3.4426C15.531 5.76622 15.531 9.53356 13.2073 11.8572L9.00005 16.0645L4.79276 11.8572C2.46914 9.53356 2.46914 5.76622 4.79276 3.4426ZM9.00005 9.34989C9.93893 9.34989 10.7 8.58877 10.7 7.64989C10.7 6.71101 9.93893 5.94989 9.00005 5.94989C8.06116 5.94989 7.30005 6.71101 7.30005 7.64989C7.30005 8.58877 8.06116 9.34989 9.00005 9.34989Z" fill="#F2C246"/>
+                                </svg>
+                                <div style="width: 1px; height: 13px;background: #2A2A2A;"></div>
+                                <p class="mb-0 font-12 light-black">0.5 m</p>
+                            </div>
+                            <div class="d-flex align-items-center gap-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="17" viewBox="0 0 18 17" fill="none">
+                                    <path d="M8.1916 3.33793C8.44605 2.55482 9.55395 2.55482 9.8084 3.33793L10.7175 6.13596C10.8313 6.48618 11.1577 6.72329 11.5259 6.72329H14.4679C15.2914 6.72329 15.6337 7.77697 14.9676 8.26096L12.5874 9.99023C12.2895 10.2067 12.1648 10.5903 12.2786 10.9406L13.1878 13.7386C13.4422 14.5217 12.5459 15.1729 11.8798 14.6889L9.49962 12.9596C9.2017 12.7432 8.7983 12.7432 8.50038 12.9596L6.12024 14.6889C5.45408 15.1729 4.55777 14.5217 4.81222 13.7386L5.72136 10.9406C5.83515 10.5903 5.71049 10.2067 5.41258 9.99023L3.03243 8.26096C2.36628 7.77697 2.70863 6.72329 3.53205 6.72329H6.47407C6.84231 6.72329 7.16867 6.48618 7.28247 6.13596L8.1916 3.33793Z" fill="#F2C246"/>
+                                </svg>
+                                <div style="width: 1px; height: 13px;background: #2A2A2A;"></div>
+                                <p class="mb-0 font-12 light-black">4.9 (28 reviews)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
 
     <!-- footer section -->

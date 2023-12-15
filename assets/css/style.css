@@ -55,6 +55,10 @@ a:hover {
   color: #ffffff;
 }
 
+.primary-color {
+  color: #02BCE6;
+}
+
 .accent-text {
   color: #F2C246;
 }
@@ -64,7 +68,7 @@ a:hover {
 }
 
 .light-black {
-  color: #333;
+  color: #2A2A2A;
 }
 
 .light-black-70 {
@@ -114,6 +118,14 @@ a:hover {
   letter-spacing: 0.1px;
 }
 
+.font-18 {
+  font-family: "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
 .font-16 {
   font-family: "Open Sans", "Helvetica Neue", sans-serif;
   font-size: 16px;
@@ -126,6 +138,14 @@ a:hover {
 .font-14 {
   font-family: "Open Sans", "Helvetica Neue", sans-serif;
   font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.font-12 {
+  font-family: "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 12px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -211,7 +231,7 @@ header .pakdoc-notification-menu .notification-data {
 }
 .hero-banner .book-appointment .form-control {
   padding: 0 !important;
-  color: #333 !important;
+  color: #2A2A2A !important;
   background-color: transparent !important;
   border: none !important;
 }
@@ -381,7 +401,7 @@ header .pakdoc-notification-menu .notification-data {
 }
 .common-disease-sec .accordion .accordion-item .accordion-button:not(.collapsed) {
   box-shadow: unset !important;
-  color: #333;
+  color: #2A2A2A;
 }
 
 footer {
@@ -391,9 +411,120 @@ footer {
 
 .search-section {
   height: 100vh;
+  background: url("../images/map-svg.svg") center/cover no-repeat;
+  position: relative;
 }
-.search-section .map-section {
-  height: 100%;
+.search-section .search-doctors {
+  width: 621px;
+  position: absolute;
+  top: 20px;
+  right: 74px;
+  border-radius: 16px;
+  background: var(--White-White, #FFF);
+  padding: 20px;
+  box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.08);
+  overflow-y: scroll;
+  height: 90vh;
+}
+.search-section .search-doctors::-webkit-scrollbar {
+  width: 0 !important;
+}
+.search-section .search-doctors .input-div {
+  padding: 12px 16px;
+  border-radius: 8px;
+  border: 1px solid rgba(33, 56, 77, 0.3);
+  background: #F4F9FF;
+  flex: 1;
+  width: 100%;
+}
+.search-section .search-doctors .input-div .form-control {
+  padding: 0 !important;
+  color: #2A2A2A !important;
+  background-color: transparent !important;
+  border: none !important;
+}
+.search-section .search-doctors .input-div .form-control::-moz-placeholder {
+  color: rgba(42, 42, 42, 0.5);
+  font-family: "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.08px;
+}
+.search-section .search-doctors .input-div .form-control::placeholder {
+  color: rgba(42, 42, 42, 0.5);
+  font-family: "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.08px;
+}
+.search-section .search-doctors .input-div .form-control:focus {
+  box-shadow: none !important;
+}
+.search-section .search-doctors .input-div #searcLocation {
+  width: 53px;
+}
+.search-section .search-doctors .button {
+  background-color: #ffffff;
+  background: url("../images/btn-border-svg.svg") center/contain no-repeat;
+  border: none;
+  padding-left: 22px;
+  width: 117px;
+  height: 47px;
+  position: relative;
+}
+.search-section .search-doctors .button::after {
+  display: none !important;
+}
+.search-section .search-doctors .button .button-icon {
+  border-radius: 6px;
+  border: 1px solid rgba(0, 129, 89, 0.5);
+  background: #ffffff;
+  box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.08);
+  width: 31px;
+  height: 31px;
+  position: absolute;
+  top: 17.5%;
+  left: -15%;
+}
+.search-section .search-doctors .dropdown-btn-1 .dropdown-menu {
+  padding: 16px;
+  border-radius: 16px;
+  background: #ffffff;
+  box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.08);
+  width: 334px;
+}
+.search-section .search-doctors .dropdown-btn-1 .dropdown-menu input {
+  padding: 12px 16px !important;
+  border-radius: 8px !important;
+  background: #F4F9FF !important;
+}
+.search-section .search-doctors .dropdown-btn-1 .dropdown-menu .specialty-list {
+  margin-top: 12px;
+}
+.search-section .search-doctors .dropdown-btn-1 .dropdown-menu .specialty-list div {
+  border-radius: 12px;
+  padding: 10px 16px;
+  border: 1px solid #008159;
+  opacity: 0.6;
+  background: #ffffff;
+  color: #008159;
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+.search-section .search-doctors .dropdown-btn-1 .dropdown-menu .specialty-list div:hover {
+  background: linear-gradient(100deg, rgba(0, 129, 89, 0.5) 2.59%, rgba(2, 188, 230, 0.5) 111.36%);
+  color: #ffffff;
+  font-weight: 600;
+}
+.search-section .doctors-list-results {
+  margin-top: 12px;
+}
+.search-section .doctors-list-results > div {
+  padding: 16px;
 }
 
 @media (min-width: 1400px) {
