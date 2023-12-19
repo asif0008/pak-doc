@@ -80,6 +80,19 @@ var swiper = new Swiper(".topSearchedSwiper", {
       clickable: true,
     },
   });
+//   Swiper buttonSwiper
+var swiper = new Swiper(".buttonSwiper", {
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+   }, 
+slidesPerView: 'auto',
+freeMode: false,
+slidesPerGroup: 1,
+centerInsufficientSlides:true,
+loop: false,
+grabCursor: true,
+  });
 //   Swiper js TEstimonials
 var swiper = new Swiper(".testimonialsSwiper", {
   navigation: {
@@ -107,3 +120,51 @@ grabCursor: true,
   }
   handleAccordionEvents('collapseOne', 'viewText1', 'hideText1');
   handleAccordionEvents('collapseTwo', 'viewText2', 'hideText2');
+
+  // Range slider js
+  var slider = document.getElementById('range-slider');
+  var startInput = document.getElementById('start-input');
+  var endInput = document.getElementById('end-input');
+
+  noUiSlider.create(slider, {
+    start: [0, 50000],
+    connect: true,
+    range: {
+      'min': 0,
+      'max': 50000
+    }
+  });
+
+  slider.noUiSlider.on('update', function (values, handle) {
+    // Update input values when slider values change
+    if (handle === 0) {
+      startInput.value = values[0];
+    }
+    if (handle === 1) {
+      endInput.value = values[1];
+    }
+  });
+
+  // Handle input changes
+  startInput.addEventListener('change', function () {
+    slider.noUiSlider.set([this.value, null]);
+  });
+
+  endInput.addEventListener('change', function () {
+    slider.noUiSlider.set([null, this.value]);
+  });
+  
+
+  // Search page buttons js
+  document.querySelectorAll('.searchSectionButtons').forEach((button) => {
+    button.addEventListener('click', (e) => {
+      e.preventDefault();
+
+      const nextElement = e.target.nextElementSibling;
+      if (nextElement.style.display === 'none' || nextElement.style.display === '') {
+        nextElement.style.display = 'block';
+      }else {
+        nextElement.style.display = 'none';
+      }
+    })
+  })

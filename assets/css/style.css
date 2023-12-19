@@ -71,6 +71,10 @@ a:hover {
   color: #2A2A2A;
 }
 
+.light-black-50 {
+  color: rgba(42, 42, 42, 0.5);
+}
+
 .light-black-70 {
   color: rgba(42, 42, 42, 0.7);
 }
@@ -431,7 +435,7 @@ footer {
   background: var(--White-White, #FFF);
   box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.08);
   overflow-y: scroll;
-  height: 90vh;
+  height: 95vh;
 }
 .search-section .search-doctors::-webkit-scrollbar {
   width: 0 !important;
@@ -481,6 +485,9 @@ footer {
 .search-section .search-doctors .input-div #searcLocation {
   width: 53px;
 }
+.search-section .search-doctors .search-buttons {
+  margin-left: 1rem;
+}
 .search-section .search-doctors .button {
   background-color: #ffffff;
   background: url("../images/btn-border-svg.svg") center/contain no-repeat;
@@ -510,14 +517,66 @@ footer {
   background: #ffffff;
   box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.08);
   width: 334px;
+  margin-top: 4px !important;
 }
 .search-section .search-doctors .dropdown-btn-1 .dropdown-menu input {
   padding: 12px 16px !important;
   border-radius: 8px !important;
   background: #F4F9FF !important;
 }
+.search-section .search-doctors .dropdown-btn-1 .dropdown-menu .label-checkbox {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  font-size: 20px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+.search-section .search-doctors .dropdown-btn-1 .dropdown-menu .label-checkbox input {
+  display: none;
+}
+.search-section .search-doctors .dropdown-btn-1 .dropdown-menu .label-checkbox .checkmark {
+  position: relative;
+  top: 2px;
+  left: 0;
+  height: 18px;
+  width: 18px;
+  background-color: transparent;
+  border-radius: 0.25em;
+  transition: all 0.25s;
+  display: block;
+}
+.search-section .search-doctors .dropdown-btn-1 .dropdown-menu .label-checkbox input:checked ~ .checkmark {
+  background-color: #02BCE6;
+}
+.search-section .search-doctors .dropdown-btn-1 .dropdown-menu .label-checkbox .checkmark:after {
+  content: "";
+  position: absolute;
+  transform: rotate(0deg);
+  border: 0.1em solid white;
+  left: 0;
+  top: 0;
+  width: 18px;
+  height: 18px;
+  border-radius: 0.25em;
+  transition: all 0.25s, border-width 0.1s;
+}
+.search-section .search-doctors .dropdown-btn-1 .dropdown-menu .label-checkbox input:checked ~ .checkmark:after {
+  left: 7px;
+  top: 3px;
+  width: 0.25em;
+  height: 0.5em;
+  border-color: rgba(255, 255, 255, 0) white white rgba(255, 255, 255, 0);
+  border-width: 0 0.15em 0.15em 0;
+  border-radius: 0em;
+  transform: rotate(45deg);
+}
 .search-section .search-doctors .dropdown-btn-1 .dropdown-menu .specialty-list {
   margin-top: 12px;
+  height: 300px;
+  overflow-y: scroll;
 }
 .search-section .search-doctors .dropdown-btn-1 .dropdown-menu .specialty-list div {
   border-radius: 12px;
@@ -533,6 +592,44 @@ footer {
   background: linear-gradient(100deg, rgba(0, 129, 89, 0.5) 2.59%, rgba(2, 188, 230, 0.5) 111.36%);
   color: #ffffff;
   font-weight: 600;
+}
+.search-section .search-doctors .dropdown-btn-1 .dropdown-menu .specialty-list::-webkit-scrollbar {
+  width: 0;
+}
+.search-section .search-doctors .dropdown-btn-1 .dropdown-menu .range-section input {
+  width: 100%;
+  border-radius: 12px !important;
+  border: 1px solid #008159 !important;
+  padding: 10px 16px;
+  color: #008159;
+  background: #ffffff !important;
+}
+.search-section .search-doctors .dropdown-btn-1 .dropdown-menu .range-section input:focus {
+  outline: none;
+}
+.search-section .search-doctors .dropdown-btn-1 .dropdown-menu .range-section .noUi-target {
+  background: rgba(0, 129, 89, 0.3) !important;
+  height: 3px !important;
+  box-shadow: unset !important;
+  border: unset !important;
+  width: 95% !important;
+}
+.search-section .search-doctors .dropdown-btn-1 .dropdown-menu .range-section .noUi-horizontal .noUi-handle {
+  width: 20px !important;
+  height: 20px !important;
+  background: #008159 !important;
+  top: -8px !important;
+  cursor: pointer;
+}
+.search-section .search-doctors .dropdown-btn-1 .dropdown-menu .range-section .noUi-handle {
+  border-radius: 50% !important;
+  box-shadow: unset !important;
+}
+.search-section .search-doctors .dropdown-btn-1 .dropdown-menu .range-section .noUi-handle:after, .search-section .search-doctors .dropdown-btn-1 .dropdown-menu .range-section .noUi-handle:before {
+  display: none !important;
+}
+.search-section .search-doctors .price-range-menu {
+  margin-left: -13rem;
 }
 .search-section .doctors-list-results {
   margin-top: 12px;
@@ -600,6 +697,86 @@ footer {
   bottom: 5%;
   right: 3%;
   fill: #fff;
+}
+
+#filterModal .modal-dialog {
+  margin-top: 6rem !important;
+}
+#filterModal .modal-dialog .modal-content {
+  padding: 16px !important;
+}
+#filterModal .modal-dialog .modal-content .modal-header {
+  border-bottom: unset !important;
+  padding: 0 !important;
+}
+#filterModal .modal-dialog .modal-content .modal-header .btn-close {
+  font-size: 14px !important;
+}
+#filterModal .modal-dialog .modal-content .modal-body {
+  padding: 0;
+}
+#filterModal .modal-dialog .modal-content .modal-body .btns {
+  border-radius: 12px;
+  padding: 10px 16px;
+  border: 1px solid #008159;
+  opacity: 0.6;
+  background: #ffffff;
+  color: #008159;
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+#filterModal .modal-dialog .modal-content .modal-body .btns:hover {
+  background: linear-gradient(100deg, rgba(0, 129, 89, 0.5) 2.59%, rgba(2, 188, 230, 0.5) 111.36%);
+  color: #ffffff;
+}
+#filterModal .modal-dialog .modal-content .modal-body .btns .label-checkbox {
+  display: none;
+  position: relative;
+  cursor: pointer;
+  font-size: 20px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+#filterModal .modal-dialog .modal-content .modal-body .btns .label-checkbox input {
+  display: none;
+}
+#filterModal .modal-dialog .modal-content .modal-body .btns .label-checkbox .checkmark {
+  position: relative;
+  top: 2px;
+  left: 0;
+  height: 18px;
+  width: 18px;
+  background-color: transparent;
+  border-radius: 0.25em;
+  transition: all 0.25s;
+  display: block;
+}
+#filterModal .modal-dialog .modal-content .modal-body .btns .label-checkbox input:checked ~ .checkmark {
+  background-color: #02BCE6;
+}
+#filterModal .modal-dialog .modal-content .modal-body .btns .label-checkbox .checkmark:after {
+  content: "";
+  position: absolute;
+  transform: rotate(0deg);
+  border: 0.1em solid white;
+  left: 0;
+  top: 0;
+  width: 18px;
+  height: 18px;
+  border-radius: 0.25em;
+  transition: all 0.25s, border-width 0.1s;
+}
+#filterModal .modal-dialog .modal-content .modal-body .btns .label-checkbox input:checked ~ .checkmark:after {
+  left: 7px;
+  top: 3px;
+  width: 0.25em;
+  height: 0.5em;
+  border-color: rgba(255, 255, 255, 0) white white rgba(255, 255, 255, 0);
+  border-width: 0 0.15em 0.15em 0;
+  border-radius: 0em;
+  transform: rotate(45deg);
 }
 
 @media (min-width: 1400px) {
@@ -714,12 +891,61 @@ footer {
   .trusted-companies {
     padding: 24px 0 32px !important;
   }
+  .search-section .search-doctors {
+    width: unset !important;
+    position: unset !important;
+  }
+  .search-section .search-doctors .dropdown-menu {
+    width: 300px !important;
+  }
+  .search-section .search-doctors .buttonSwiper .swiper-slide {
+    width: 150px !important;
+  }
+  .search-section .search-doctors .doctor-accordion .accordion-button::after {
+    left: 75% !important;
+  }
+  .search-section .search-doctors .doctor-accordion .accordion-body > div {
+    overflow-x: scroll;
+  }
+  .search-section .search-doctors .doctor-accordion .accordion-body > div::-webkit-scrollbar {
+    width: 0;
+  }
+  .search-section .search-doctors .doctor-accordion .appointents-date {
+    padding: 7px 7px 9px 7px !important;
+  }
+  .search-section .search-doctors .doctor-accordion .appointents-date .number-of-appointments {
+    width: 75px;
+  }
+  .search-section .search-doctors .search-buttons {
+    margin-left: 1rem;
+    gap: 12px;
+  }
+  .search-section .search-doctors .search-doctors-fixed-top {
+    position: unset !important;
+  }
+  .input-div-mobile {
+    padding: 0 !important;
+  }
+  .input-div-mobile button {
+    border-radius: 5px;
+  }
+  .input-div-mobile input::-moz-placeholder {
+    font-size: 14px !important;
+  }
+  .input-div-mobile input::placeholder {
+    font-size: 14px !important;
+  }
+}
+@media screen and (min-width: 576px) {
+  .modal-dialog {
+    max-width: 675px !important;
+  }
 }
 @media screen and (max-width: 576px) {
   .font-40 {
     font-size: 28px;
   }
-  .font-24 {
+  .font-24, .font-18 {
     font-size: 14px;
   }
   .font-20 {
@@ -733,6 +959,9 @@ footer {
   }
   .global-btn {
     font-size: 12px;
+  }
+  .distance-menu {
+    margin-left: -11.5rem !important;
   }
 }
 @media screen and (max-width: 425px) {
@@ -748,6 +977,9 @@ footer {
   }
   .font-40 {
     font-size: 20px;
+  }
+  .price-range-menu {
+    margin-left: unset !important;
   }
 }
 @media screen and (max-width: 320px) {

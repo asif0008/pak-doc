@@ -6,6 +6,7 @@ $secondaryColor: #008159;
 $accentColor: #F2C246;
 $darkBlue: #21384D;
 $lightBlack: #2A2A2A;
+$lightBlack50: rgba(42, 42, 42, 0.50);
 $lightBlack70: rgba(42, 42, 42, 0.70);
 $lightBlack80: rgba(42, 42, 42, 0.80);
 $lightBlack90: rgba(42, 42, 42, 0.90);
@@ -75,6 +76,9 @@ a:hover {
 }
 .light-black {
     color: $lightBlack;
+}
+.light-black-50 {
+    color: $lightBlack50;
 }
 .light-black-70 {
     color: $lightBlack70;
@@ -417,7 +421,7 @@ footer {
         // padding: 20px;
         box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.08);
         overflow-y: scroll;
-        height: 90vh;
+        height: 95vh;
         &::-webkit-scrollbar {
             width: 0 !important;
         }
@@ -457,6 +461,9 @@ footer {
                 width: 53px;
             }
         }
+        .search-buttons {
+            margin-left: 1rem;
+        }
         .button {
             background-color: $white;
             background: url("../images/btn-border-svg.svg") center/contain no-repeat;
@@ -486,13 +493,63 @@ footer {
             background: $white;
             box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.08);
             width: 334px;
+            margin-top: 4px !important;
             input {
                 padding: 12px 16px !important;
                 border-radius: 8px !important; 
                 background: $bgColor !important;
             }
+            .label-checkbox {
+                display: block;
+                position: relative;
+                cursor: pointer;
+                font-size: 20px;
+                user-select: none;
+                -webkit-tap-highlight-color: transparent;
+                input {
+                    display: none;
+                  }
+                .checkmark {
+                position: relative;
+                top: 2px;
+                left: 0;
+                height: 18px;
+                width: 18px;
+                background-color: transparent;
+                border-radius: 0.25em;
+                transition: all 0.25s;
+                display: block;
+                }
+                input:checked ~ .checkmark {
+                background-color: $primaryColor;
+                }
+                .checkmark:after {
+                content: "";
+                position: absolute;
+                transform: rotate(0deg);
+                border: 0.1em solid white;
+                left: 0;
+                top: 0;
+                width: 18px;
+                height: 18px;
+                border-radius: 0.25em;
+                transition: all 0.25s, border-width 0.1s;
+                }
+                input:checked ~ .checkmark:after {
+                left: 7px;
+                top: 3px;
+                width: 0.25em;
+                height: 0.5em;
+                border-color: #fff0 white white #fff0;
+                border-width: 0 0.15em 0.15em 0;
+                border-radius: 0em;
+                transform: rotate(45deg);
+                }
+            }
             .specialty-list {
                 margin-top: 12px;
+                height: 300px;
+                overflow-y: scroll;
                 div {
                     border-radius: 12px;
                     padding: 10px 16px;
@@ -508,8 +565,49 @@ footer {
                         font-weight: 600;
                     }
                 }
+                &::-webkit-scrollbar {
+                    width: 0;
+                }
             }
-            
+            .range-section {
+                input {
+                    width: 100%;
+                    border-radius: 12px !important;
+                    border: 1px solid $secondaryColor !important;
+                    padding: 10px 16px;
+                    color: $secondaryColor;
+                    background: $white !important;
+                }
+                input:focus {
+                    outline: none;
+                }
+                .noUi-target {
+                    background: rgba(0, 129, 89, 0.30) !important;
+                        height: 3px !important;
+                        box-shadow: unset !important;
+                        border: unset !important;
+                        width: 95% !important;
+                    .noUi-connects {
+                    }
+                }
+                .noUi-horizontal .noUi-handle {
+                    width: 20px !important;
+                    height: 20px !important;
+                    background: $secondaryColor !important;
+                    top: -8px !important;
+                    cursor: pointer;
+                }
+                .noUi-handle {
+                    border-radius: 50% !important;
+                    box-shadow: unset !important;
+                }
+                .noUi-handle:after, .noUi-handle:before {
+                    display: none !important;
+                }
+            }
+        }
+        .price-range-menu {
+            margin-left: -13rem;
         }
     }
     .doctors-list-results {
@@ -578,6 +676,87 @@ footer {
                 right: 3%;
                 fill: #fff;
             }      
+        }
+    }
+}
+#filterModal .modal-dialog {
+    margin-top: 6rem !important;
+    .modal-content {
+        padding: 16px !important;
+        .modal-header {
+            border-bottom: unset !important;
+            padding: 0 !important;
+            .btn-close {
+                font-size: 14px !important;
+            }
+        }
+        .modal-body {
+            padding: 0;
+            .btns {
+                border-radius: 12px;
+                padding: 10px 16px;
+                border: 1px solid #008159;
+                opacity: 0.6;
+                background: #ffffff;
+                color: #008159;
+                transition: all 0.5s ease;
+                cursor: pointer;
+                &:hover {
+                    background: linear-gradient(100deg, rgba(0, 129, 89, 0.5) 2.59%, rgba(2, 188, 230, 0.5) 111.36%);
+                    color: #ffffff;
+                    // font-weight: 600;
+                }
+                &:hover .label-checkbox {
+                    // display: block;
+                }
+                .label-checkbox {
+                    display: none;
+                    position: relative;
+                    cursor: pointer;
+                    font-size: 20px;
+                    user-select: none;
+                    -webkit-tap-highlight-color: transparent;
+                    input {
+                        display: none;
+                        }
+                    .checkmark {
+                    position: relative;
+                    top: 2px;
+                    left: 0;
+                    height: 18px;
+                    width: 18px;
+                    background-color: transparent;
+                    border-radius: 0.25em;
+                    transition: all 0.25s;
+                    display: block;
+                    }
+                    input:checked ~ .checkmark {
+                    background-color: $primaryColor;
+                    }
+                    .checkmark:after {
+                    content: "";
+                    position: absolute;
+                    transform: rotate(0deg);
+                    border: 0.1em solid white;
+                    left: 0;
+                    top: 0;
+                    width: 18px;
+                    height: 18px;
+                    border-radius: 0.25em;
+                    transition: all 0.25s, border-width 0.1s;
+                    }
+                    input:checked ~ .checkmark:after {
+                    left: 7px;
+                    top: 3px;
+                    width: 0.25em;
+                    height: 0.5em;
+                    border-color: #fff0 white white #fff0;
+                    border-width: 0 0.15em 0.15em 0;
+                    border-radius: 0em;
+                    transform: rotate(45deg);
+                    }
+                }
+            }
         }
     }
 }
@@ -695,12 +874,64 @@ footer {
     .trusted-companies {
         padding: 24px 0 32px !important;
     }
+    .search-section {
+        .search-doctors {
+            width: unset !important;
+            position: unset !important;
+            .dropdown-menu {
+                width: 300px !important;
+            }
+            .buttonSwiper {
+                .swiper-slide {
+                    width: 150px !important;
+                }
+            }
+            .doctor-accordion {
+                .accordion-button::after {
+                    left: 75% !important;
+                }
+                .accordion-body > div {
+                    overflow-x: scroll;
+                    &::-webkit-scrollbar {
+                        width: 0;
+                    }
+                }
+                .appointents-date {
+                    padding: 7px 7px 9px 7px !important;
+                    .number-of-appointments {
+                        width: 75px;
+                    }
+                }
+            }
+            .search-buttons {
+                margin-left: 1rem;
+                gap: 12px;
+            }
+            .search-doctors-fixed-top {
+                position: unset !important;
+            }
+        }
+    }
+    .input-div-mobile {
+        padding: 0 !important;
+        button {
+            border-radius: 5px;
+        }
+        input::placeholder {
+            font-size: 14px !important;
+        }
+    }
+}
+@media screen and (min-width: 576px) {
+    .modal-dialog {
+        max-width: 675px !important;
+    }
 }
 @media screen and (max-width:576px) {
     .font-40 {
         font-size: 28px;
     }
-    .font-24 {
+    .font-24, .font-18 {
         font-size: 14px;
     }
     .font-20 {
@@ -714,6 +945,9 @@ footer {
     }
     .global-btn {
         font-size: 12px;
+    }
+    .distance-menu {
+        margin-left: -11.5rem !important;
     }
 }
 @media screen and (max-width:425px) {
@@ -738,6 +972,9 @@ footer {
     }
     .font-40 {
         font-size: 20px;
+    }
+    .price-range-menu {
+        margin-left: unset !important;
     }
 }
 @media screen and (max-width:320px) {

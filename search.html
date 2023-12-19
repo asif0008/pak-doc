@@ -12,6 +12,9 @@
     <!-- Swiper cdn -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- Noui slider -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/14.6.3/nouislider.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/14.6.3/nouislider.min.js"></script>
 </head>
 
 <body>
@@ -319,12 +322,12 @@
     </header>
     <!-- Search section -->
     <div class="container-fluid px-0 search-section">
-        <section class="container">
+        <section class="container pt-4 pt-md-0">
             <div class="search-doctors">
                 <!-- Top fixed -->
                 <div class="search-doctors-fixed-top">
                     <!-- search field -->
-                <div class="d-flex flex-column flex-lg-row align-items-lg-center gap-3">
+                <div class="d-flex flex-column flex-lg-row align-items-lg-center gap-3 d-none d-md-flex">
                     <div class="input-div d-flex flex-column flex-md-row align-items-md-center justify-content-between gap-3 gap-md-5">
                         <div class="d-flex flex-fill align-items-center justify-content-between gap-2">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -343,10 +346,33 @@
                     </div>
                     <button class="global-btn" style="padding:13px 30px;">Search</button>
                 </div>
+                <!-- search field for mobile -->
+                <div class="d-flex flex-column flex-lg-row align-items-lg-center gap-3 d-flex d-md-none">
+                    <div class="input-div input-div-mobile d-flex align-items-md-center justify-content-between gap-2 gap-md-5">
+                        <div class="d-flex flex-fill align-items-center justify-content-between gap-2 ps-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M21 21L15 15M17 10C17 13.866 13.866 17 10 17C6.13401 17 3 13.866 3 10C3 6.13401 6.13401 3 10 3C13.866 3 17 6.13401 17 10Z" stroke="#708583" stroke-opacity="0.4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                            <input type="search" class="form-control" placeholder="Search Doctors" id="search">
+                        </div>
+                        
+                        <div class="d-flex align-items-center justify-content-between gap-2">
+                            <span style="background: rgba(112, 133, 131, 0.30);;width:1px;height:24px;" class="me-2"></span>
+                            <input type="text" class="form-control" placeholder="Lahore" id="searcLocation">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17" fill="none">
+                                <path d="M13.4584 6.375L8.50008 11.3333L3.54175 6.375" stroke="#708583" stroke-opacity="0.4" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                        </div>
+                        <button class="global-btn" style="padding:14px;"><svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17" fill="none">
+                        <path d="M14.1471 14.875L10.1051 10.625M11.4524 7.08333C11.4524 9.82175 9.34114 12.0417 6.73672 12.0417C4.1323 12.0417 2.021 9.82175 2.021 7.08333C2.021 4.34492 4.1323 2.125 6.73672 2.125C9.34114 2.125 11.4524 4.34492 11.4524 7.08333Z" stroke="white" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg></button>
+                    </div>
+                    
+                </div>
                 <!-- search buttons -->
-                <div class="d-flex align-items-center justify-content-center mt-2 pt-1" style="gap:1.8rem; margin-left:11px">
-                    <div class="dropdown dropdown-btn-1">
-                        <button class="button dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                <div class="d-flex flex-wrap align-items-center justify-content-between mt-2 pt-1 search-buttons">
+                    <div class="dropdown dropdown-btn-1" data-bs-auto-close="false">
+                        <button class="button searchSectionButtons" type="button">
                             <div class="button-icon text-center">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
                                     <path d="M10.2999 9.71653C9.83884 10.1776 8.95328 11.0631 8.21554 11.8009C7.5441 12.4723 6.4561 12.4724 5.78466 11.801C5.0607 11.077 4.19012 10.2064 3.70021 9.71653C1.87776 7.89408 1.87776 4.93931 3.70021 3.11687C5.52266 1.29442 8.47743 1.29442 10.2999 3.11687C12.1223 4.93931 12.1223 7.89408 10.2999 9.71653Z" stroke="#008159" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
@@ -358,14 +384,199 @@
                                 <path d="M11.0833 5.75L6.99996 9.83333L2.91663 5.75" stroke="#2A2A2A" stroke-opacity="0.6" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
                         </button>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                        <div class="dropdown-menu">
+                            <!-- top search section -->
                             <h4 class="font-18 light-black">Select Specialty</h4>
                             <div style="margin:11px 0;width: 100%;height: 1px;background: rgba(112, 133, 131, 0.30);"></div>
                             <input type="text" id="searchSpeciality" class="form-control" placeholder="Search">
+                            <!-- searched List -->
                             <div class="specialty-list">
-                                <div class="font-16 d-flex justify-content-between">Laser Hair Removal <input type="checkbox"></div>
+                                <div class="font-16 d-flex justify-content-between">
+                                    Laser Hair Removal 
+                                    <label class="label-checkbox">
+                                        <input type="checkbox">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                                <div class="font-16 d-flex justify-content-between mt-2">
+                                    Dermal fillers 
+                                    <label class="label-checkbox">
+                                        <input type="checkbox">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                                <div class="font-16 d-flex justify-content-between mt-2">
+                                    PDO threads 
+                                    <label class="label-checkbox">
+                                        <input type="checkbox">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                                <div class="font-16 d-flex justify-content-between mt-2">
+                                    Fat reduction treatments 
+                                    <label class="label-checkbox">
+                                        <input type="checkbox">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                                <div class="font-16 d-flex justify-content-between mt-2">
+                                    Fat reduction treatments 
+                                    <label class="label-checkbox">
+                                        <input type="checkbox">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                                <div class="font-16 d-flex justify-content-between mt-2">
+                                    Dermal fillers 
+                                    <label class="label-checkbox">
+                                        <input type="checkbox">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                                <div class="font-16 d-flex justify-content-between mt-2">
+                                    Dermal fillers 
+                                    <label class="label-checkbox">
+                                        <input type="checkbox">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <!-- clear filters -->
+                            <div class="d-flex align-items-center justify-content-between mt-2">
+                                <div class="font-14 light-black-50 font-weight-600">Clear Filters</div>
+                                <button class="global-btn" style="padding: 12px 16px;">Apply Filters</button>
                             </div>
                         </div>
+                    </div>
+                    <div class="dropdown dropdown-btn-1" data-bs-auto-close="false">
+                        <button class="button searchSectionButtons" type="button">
+                            <div class="button-icon text-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+                                    <path d="M10.2999 9.71653C9.83884 10.1776 8.95328 11.0631 8.21554 11.8009C7.5441 12.4723 6.4561 12.4724 5.78466 11.801C5.0607 11.077 4.19012 10.2064 3.70021 9.71653C1.87776 7.89408 1.87776 4.93931 3.70021 3.11687C5.52266 1.29442 8.47743 1.29442 10.2999 3.11687C12.1223 4.93931 12.1223 7.89408 10.2999 9.71653Z" stroke="#008159" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M8.75004 6.4167C8.75004 7.3832 7.96654 8.1667 7.00004 8.1667C6.03354 8.1667 5.25004 7.3832 5.25004 6.4167C5.25004 5.4502 6.03354 4.6667 7.00004 4.6667C7.96654 4.6667 8.75004 5.4502 8.75004 6.4167Z" stroke="#008159" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            Distance
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="15" viewBox="0 0 14 15" fill="none">
+                                <path d="M11.0833 5.75L6.99996 9.83333L2.91663 5.75" stroke="#2A2A2A" stroke-opacity="0.6" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                        <div class="dropdown-menu distance-menu">
+                            <!-- top search section -->
+                            <h4 class="font-18 light-black">Distance from your location</h4>
+                            <div style="margin:11px 0;width: 100%;height: 1px;background: rgba(112, 133, 131, 0.30);"></div>
+                            <!-- searched List -->
+                            <div class="specialty-list">
+                                <div class="font-16 d-flex justify-content-between">
+                                    0.5 mile (13) 
+                                    <label class="label-checkbox">
+                                        <input type="checkbox">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                                <div class="font-16 d-flex justify-content-between mt-2">
+                                    1 mile (31) 
+                                    <label class="label-checkbox">
+                                        <input type="checkbox">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                                <div class="font-16 d-flex justify-content-between mt-2">
+                                    5 mile (31) 
+                                    <label class="label-checkbox">
+                                        <input type="checkbox">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                                <div class="font-16 d-flex justify-content-between mt-2">
+                                    10 mile (123) 
+                                    <label class="label-checkbox">
+                                        <input type="checkbox">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                                <div class="font-16 d-flex justify-content-between mt-2">
+                                    20 mile (243) 
+                                    <label class="label-checkbox">
+                                        <input type="checkbox">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                                <div class="font-16 d-flex justify-content-between mt-2">
+                                    25 mile (343) 
+                                    <label class="label-checkbox">
+                                        <input type="checkbox">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                                <div class="font-16 d-flex justify-content-between mt-2">
+                                    50 mile (543) 
+                                    <label class="label-checkbox">
+                                        <input type="checkbox">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                                <div class="font-16 d-flex justify-content-between mt-2">
+                                    100 mile (1543)
+                                    <label class="label-checkbox">
+                                        <input type="checkbox">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <!-- clear filters -->
+                            <div class="d-flex align-items-center justify-content-between mt-2">
+                                <div class="font-14 light-black-50 font-weight-600">Clear Filters</div>
+                                <button class="global-btn" style="padding: 12px 16px;">Apply Filters</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dropdown dropdown-btn-1" data-bs-auto-close="false">
+                        <button class="button searchSectionButtons" type="button">
+                            <div class="button-icon text-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+                                    <path d="M10.2999 9.71653C9.83884 10.1776 8.95328 11.0631 8.21554 11.8009C7.5441 12.4723 6.4561 12.4724 5.78466 11.801C5.0607 11.077 4.19012 10.2064 3.70021 9.71653C1.87776 7.89408 1.87776 4.93931 3.70021 3.11687C5.52266 1.29442 8.47743 1.29442 10.2999 3.11687C12.1223 4.93931 12.1223 7.89408 10.2999 9.71653Z" stroke="#008159" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M8.75004 6.4167C8.75004 7.3832 7.96654 8.1667 7.00004 8.1667C6.03354 8.1667 5.25004 7.3832 5.25004 6.4167C5.25004 5.4502 6.03354 4.6667 7.00004 4.6667C7.96654 4.6667 8.75004 5.4502 8.75004 6.4167Z" stroke="#008159" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            Price
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="15" viewBox="0 0 14 15" fill="none">
+                                <path d="M11.0833 5.75L6.99996 9.83333L2.91663 5.75" stroke="#2A2A2A" stroke-opacity="0.6" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                        <div class="dropdown-menu price-range-menu">
+                            <!-- top search section -->
+                            <h4 class="font-18 light-black">Select Price Range</h4>
+                            <div style="margin:11px 0;width: 100%;height: 1px;background: rgba(112, 133, 131, 0.30);"></div>
+                            <!-- Range -->
+                            <div class="range-section mt-4">
+                                <div id="range-slider"></div>
+                                <div class="d-flex align-items-center justify-content-between mt-4 gap-3">
+                                        <input class="font-16" type="text" id="start-input">
+                                        <span class="font-12 font-urbanist">to</span>
+                                        <input class="font-16" type="text" id="end-input">
+                                </div>
+                            </div>
+                            <!-- clear filters -->
+                            <div class="d-flex align-items-center justify-content-between mt-3">
+                                <div class="font-14 light-black-50 font-weight-600">Clear Filters</div>
+                                <button class="global-btn" style="padding: 12px 16px;">Apply Filters</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dropdown dropdown-btn-1" data-bs-auto-close="false">
+                        <button class="button" type="button" data-bs-toggle="modal" data-bs-target="#filterModal">
+                            <div class="button-icon text-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+                                    <path d="M10.2999 9.7165C9.83884 10.1775 8.95328 11.0631 8.21554 11.8008C7.5441 12.4723 6.4561 12.4724 5.78466 11.801C5.0607 11.077 4.19012 10.2064 3.70021 9.7165C1.87776 7.89405 1.87776 4.93928 3.70021 3.11684C5.52266 1.29439 8.47743 1.29439 10.2999 3.11684C12.1223 4.93928 12.1223 7.89405 10.2999 9.7165Z" stroke="#008159" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M8.75004 6.41667C8.75004 7.38317 7.96654 8.16667 7.00004 8.16667C6.03354 8.16667 5.25004 7.38317 5.25004 6.41667C5.25004 5.45017 6.03354 4.66667 7.00004 4.66667C7.96654 4.66667 8.75004 5.45017 8.75004 6.41667Z" stroke="#008159" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            More
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="15" viewBox="0 0 14 15" fill="none">
+                                <path d="M6.99992 2.83344V12.1668M11.6666 7.5001L2.33325 7.5001" stroke="#2A2A2A" stroke-opacity="0.6" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
                     </div>
                 </div>
                 <!-- Divider -->
@@ -376,7 +587,7 @@
                     <h2 class="font-20 light-black mb-0">52 Doctors available</h2>
                     <div class="d-flex align-items-center gap-2">
                         <span class="font-16 light-black">April 10 to April 23</span>
-                        <div class="arrows-icons d-flex align-items-center justify-content-between gap-3">
+                        <div class="arrows-icons d-flex align-items-center justify-content-between gap-1 gap-md-3">
                             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="17" viewBox="0 0 18 17" fill="none">
                                 <path d="M11.125 13.4583L6.16667 8.49993L11.125 3.5416" stroke="#2A2A2A" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
@@ -391,7 +602,7 @@
                 <div class="doctors-list-results d-flex flex-column gap-3">
                     <!-- list 1 -->
                    <div>
-                     <div class="d-flex align-items-center justify-content-between px-3">
+                     <div class="d-flex align-items-center justify-content-between px-3 flex-wrap gap-3">
                         <!-- doctor detail -->
                         <div class="d-flex align-items-center gap-3 flex-wrap">
                             <div class="doctor-profile">
@@ -440,7 +651,7 @@
                           <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                             <div class="accordion-body px-3">
                               <h4 class="font-16 light-black" style="margin-top: 12px;">“ Amazing doctor. Listened to all my symptoms and very attentive. Totally recommend you to please check this.. “</h4>
-                              <div class="d-flex align-items-center gap-2 justify-content-center flex-wrap">
+                              <div class="d-flex align-items-center gap-2 justify-content-start justify-content-md-center flex-md-wrap">
                                 <div class="appointents-date d-flex flex-column align-items-center justify-content-center gap-1">
                                     <h6 class="number-of-appointments font-weight-600 mb-0">03 appts</h6>
                                     <p class="font-12 mb-0 white-text mt-1">SUN</p>
@@ -474,7 +685,7 @@
                    </div>
                     <!-- list 2 -->
                    <div>
-                     <div class="d-flex align-items-center justify-content-between px-3">
+                     <div class="d-flex align-items-center justify-content-between px-3 flex-wrap gap-3">
                         <!-- doctor detail -->
                         <div class="d-flex align-items-center gap-3 flex-wrap">
                             <div class="doctor-profile">
@@ -522,7 +733,7 @@
                           <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                             <div class="accordion-body px-3">
                               <h4 class="font-16 light-black" style="margin-top: 12px;">“ Amazing doctor. Listened to all my symptoms and very attentive. Totally recommend you to please check this.. “</h4>
-                              <div class="d-flex align-items-center gap-2 justify-content-center flex-wrap">
+                              <div class="d-flex align-items-center gap-2 justify-content-start justify-content-md-center flex-md-wrap">
                                 <div class="appointents-date d-flex flex-column align-items-center justify-content-center gap-1">
                                     <h6 class="number-of-appointments font-weight-600 mb-0">03 appts</h6>
                                     <p class="font-12 mb-0 white-text mt-1">SUN</p>
@@ -556,7 +767,7 @@
                    </div>
                     <!-- list 3 -->
                    <div>
-                     <div class="d-flex align-items-center justify-content-between px-3">
+                     <div class="d-flex align-items-center justify-content-between px-3 flex-wrap gap-3">
                         <!-- doctor detail -->
                         <div class="d-flex align-items-center gap-3 flex-wrap">
                             <div class="doctor-profile">
@@ -604,7 +815,7 @@
                           <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                             <div class="accordion-body px-3">
                               <h4 class="font-16 light-black" style="margin-top: 12px;">“ Amazing doctor. Listened to all my symptoms and very attentive. Totally recommend you to please check this.. “</h4>
-                              <div class="d-flex align-items-center gap-2 justify-content-center flex-wrap">
+                              <div class="d-flex align-items-center gap-2 justify-content-start justify-content-md-center flex-md-wrap">
                                 <div class="appointents-date d-flex flex-column align-items-center justify-content-center gap-1">
                                     <h6 class="number-of-appointments font-weight-600 mb-0">03 appts</h6>
                                     <p class="font-12 mb-0 white-text mt-1">SUN</p>
@@ -638,7 +849,7 @@
                    </div>
                     <!-- list 4 -->
                    <div>
-                     <div class="d-flex align-items-center justify-content-between px-3">
+                     <div class="d-flex align-items-center justify-content-between px-3 flex-wrap gap-3">
                         <!-- doctor detail -->
                         <div class="d-flex align-items-center gap-3 flex-wrap">
                             <div class="doctor-profile">
@@ -686,7 +897,7 @@
                           <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                             <div class="accordion-body px-3">
                               <h4 class="font-16 light-black" style="margin-top: 12px;">“ Amazing doctor. Listened to all my symptoms and very attentive. Totally recommend you to please check this.. “</h4>
-                              <div class="d-flex align-items-center gap-2 justify-content-center flex-wrap">
+                              <div class="d-flex align-items-center gap-2 justify-content-start justify-content-md-center flex-md-wrap">
                                 <div class="appointents-date d-flex flex-column align-items-center justify-content-center gap-1">
                                     <h6 class="number-of-appointments font-weight-600 mb-0">03 appts</h6>
                                     <p class="font-12 mb-0 white-text mt-1">SUN</p>
@@ -720,7 +931,7 @@
                    </div>
                     <!-- list 5 -->
                    <div>
-                     <div class="d-flex align-items-center justify-content-between px-3">
+                     <div class="d-flex align-items-center justify-content-between px-3 flex-wrap gap-3">
                         <!-- doctor detail -->
                         <div class="d-flex align-items-center gap-3 flex-wrap">
                             <div class="doctor-profile">
@@ -768,7 +979,7 @@
                           <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                             <div class="accordion-body px-3">
                               <h4 class="font-16 light-black" style="margin-top: 12px;">“ Amazing doctor. Listened to all my symptoms and very attentive. Totally recommend you to please check this.. “</h4>
-                              <div class="d-flex align-items-center gap-2 justify-content-center flex-wrap">
+                              <div class="d-flex align-items-center gap-2 justify-content-start justify-content-md-center flex-md-wrap">
                                 <div class="appointents-date d-flex flex-column align-items-center justify-content-center gap-1">
                                     <h6 class="number-of-appointments font-weight-600 mb-0">03 appts</h6>
                                     <p class="font-12 mb-0 white-text mt-1">SUN</p>
@@ -802,7 +1013,7 @@
                    </div>
                     <!-- list 6 -->
                    <div>
-                     <div class="d-flex align-items-center justify-content-between px-3">
+                     <div class="d-flex align-items-center justify-content-between px-3 flex-wrap gap-3">
                         <!-- doctor detail -->
                         <div class="d-flex align-items-center gap-3 flex-wrap">
                             <div class="doctor-profile">
@@ -850,7 +1061,7 @@
                           <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                             <div class="accordion-body px-3">
                               <h4 class="font-16 light-black" style="margin-top: 12px;">“ Amazing doctor. Listened to all my symptoms and very attentive. Totally recommend you to please check this.. “</h4>
-                              <div class="d-flex align-items-center gap-2 justify-content-center flex-wrap">
+                              <div class="d-flex align-items-center gap-2 justify-content-start justify-content-md-center flex-md-wrap">
                                 <div class="appointents-date d-flex flex-column align-items-center justify-content-center gap-1">
                                     <h6 class="number-of-appointments font-weight-600 mb-0">03 appts</h6>
                                     <p class="font-12 mb-0 white-text mt-1">SUN</p>
@@ -884,7 +1095,7 @@
                    </div>
                     <!-- list 7 -->
                    <div>
-                     <div class="d-flex align-items-center justify-content-between px-3">
+                     <div class="d-flex align-items-center justify-content-between px-3 flex-wrap gap-3">
                         <!-- doctor detail -->
                         <div class="d-flex align-items-center gap-3 flex-wrap">
                             <div class="doctor-profile">
@@ -932,7 +1143,7 @@
                           <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                             <div class="accordion-body px-3">
                               <h4 class="font-16 light-black" style="margin-top: 12px;">“ Amazing doctor. Listened to all my symptoms and very attentive. Totally recommend you to please check this.. “</h4>
-                              <div class="d-flex align-items-center gap-2 justify-content-center flex-wrap">
+                              <div class="d-flex align-items-center gap-2 justify-content-start justify-content-md-center flex-md-wrap">
                                 <div class="appointents-date d-flex flex-column align-items-center justify-content-center gap-1">
                                     <h6 class="number-of-appointments font-weight-600 mb-0">03 appts</h6>
                                     <p class="font-12 mb-0 white-text mt-1">SUN</p>
@@ -967,6 +1178,194 @@
                 </div>
             </div>
         </section>
+    </div>
+    <!-- Filters Modal -->
+    <div class="modal fade" id="filterModal" tabindex="-1" aria-labelledby="filterModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title font-24 light-black font-weight-600" id="filterModalLabel">Filters By Doctors</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div style="margin:11px 0;width: 100%;height: 1px;background: rgba(112, 133, 131, 0.30);"></div>
+            <div class="modal-body">
+                <div>
+                    <h4 class="font-18 light-black">Appointment Type</h4>
+                    <div class="d-flex flex-wrap align-items-center gap-2">
+                        <div class="font-16 d-flex justify-content-between gap-2 btns">
+                            All Appointments
+                            <label class="label-checkbox">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+                        <div class="font-16 d-flex justify-content-between gap-2 btns">
+                            Video visit
+                            <label class="label-checkbox">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+                        <div class="font-16 d-flex justify-content-between gap-2 btns">
+                            In-Person
+                            <label class="label-checkbox">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div style="margin-top: 20px;">
+                    <h4 class="font-18 light-black">Gender</h4>
+                    <div class="d-flex flex-wrap align-items-center gap-2">
+                        <div class="font-16 d-flex justify-content-between gap-2 btns">
+                            Female (302)
+                            <label class="label-checkbox">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+                        <div class="font-16 d-flex justify-content-between gap-2 btns">
+                            Male (202)
+                            <label class="label-checkbox">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+                        <div class="font-16 d-flex justify-content-between gap-2 btns">
+                            Other
+                            <label class="label-checkbox">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div style="margin-top: 20px;">
+                    <h4 class="font-18 light-black">Hospitals</h4>
+                    <div class="d-flex flex-wrap align-items-center gap-2">
+                        <div class="font-16 d-flex justify-content-between gap-2 btns">
+                            Bellevue Hospital Center (2)
+                            <label class="label-checkbox">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+                        <div class="font-16 d-flex justify-content-between gap-2 btns">
+                            Beth Israel Medical Center - Petrie Division (1)
+                            <label class="label-checkbox">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+                        <div class="font-16 d-flex justify-content-between gap-2 btns">
+                            Beth Israel Medical Group (4)
+                            <label class="label-checkbox">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+                        <div class="font-16 d-flex justify-content-between gap-2 btns">
+                            Christ Hospital (2)
+                            <label class="label-checkbox">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+                        <div class="font-16 d-flex justify-content-between gap-2 btns">
+                            Elmhurst Hospital Center (1)
+                            <label class="label-checkbox">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+                        <div class="font-16 d-flex justify-content-between gap-2 btns">
+                            Flushing Hospital Medical Center (2)
+                            <label class="label-checkbox">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+                        <div class="font-16 d-flex justify-content-between gap-2 btns">
+                            Gouverneur Hospital (1)
+                            <label class="label-checkbox">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+                        <div class="font-16 d-flex justify-content-between gap-2 btns">
+                            Holy Name Hospital (1)
+                            <label class="label-checkbox">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+                        <div class="font-16 d-flex justify-content-between gap-2 btns">
+                            Hackensack University Medical Center (3)
+                            <label class="label-checkbox">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+                        <div class="font-16 d-flex justify-content-between gap-2 btns">
+                            Holy Name Medical Center (2)
+                            <label class="label-checkbox">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+                        <div class="font-16 d-flex justify-content-between gap-2 btns">
+                            Jamaica Hospital Medical Center (2)
+                            <label class="label-checkbox">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+                        <div class="font-16 d-flex justify-content-between gap-2 btns">
+                            Lenox Hill Hospital (2)
+                            <label class="label-checkbox">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+                        <div class="font-16 d-flex justify-content-between gap-2 btns">
+                            Montefiore Medical Center - Moses Division Hospital (1)
+                            <label class="label-checkbox">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+                        <div class="font-16 d-flex justify-content-between gap-2 btns">
+                            Mount Sinai Beth Israel (10)
+                            <label class="label-checkbox">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+                        <div class="font-16 d-flex justify-content-between gap-2 btns">
+                            Mount Sinai Morningside (2)
+                            <label class="label-checkbox">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+                        <div class="font-16 d-flex justify-content-between gap-2 btns">
+                            Show more
+                            <label class="label-checkbox">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <!-- clear filters -->
+                <div class="d-flex align-items-center justify-content-between mt-3">
+                    <div class="font-14 light-black-50 font-weight-600">Clear Filters</div>
+                    <button class="global-btn" style="padding: 12px 16px;">Apply Filters</button>
+                </div>
+            </div>
+        </div>
+        </div>
     </div>
 
     <!-- footer section -->
@@ -1094,7 +1493,8 @@
     <!-- bootstrap5 cdn -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
-        crossorigin="anonymous"></script>
+        crossorigin="anonymous">
+    </script>
 </body>
 
 </html>
