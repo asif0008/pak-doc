@@ -118,8 +118,14 @@ grabCursor: true,
       document.getElementById(hideTextId).style.display = 'none';
     });
   }
+  
   handleAccordionEvents('collapseOne', 'viewText1', 'hideText1');
-  handleAccordionEvents('collapseTwo', 'viewText2', 'hideText2');
+  handleAccordionEvents('collapseTwo', 'viewText2', 'hideText2');  
+  handleAccordionEvents('collapseThree', 'viewText3', 'hideText3');  
+  handleAccordionEvents('collapseFour', 'viewText4', 'hideText4');  
+  handleAccordionEvents('collapseFive', 'viewText5', 'hideText5');  
+  handleAccordionEvents('collapseSix', 'viewText6', 'hideText6');  
+  handleAccordionEvents('collapseSeven', 'viewText7', 'hideText7');  
 
   // Range slider js
   var slider = document.getElementById('range-slider');
@@ -155,16 +161,107 @@ grabCursor: true,
   });
   
 
-  // Search page buttons js
-  document.querySelectorAll('.searchSectionButtons').forEach((button) => {
-    button.addEventListener('click', (e) => {
-      e.preventDefault();
 
-      const nextElement = e.target.nextElementSibling;
-      if (nextElement.style.display === 'none' || nextElement.style.display === '') {
-        nextElement.style.display = 'block';
-      }else {
-        nextElement.style.display = 'none';
+// Search buttons js
+// Function to update button value based on selected checkboxes
+function updateButtonValue(button, dropdownMenu) {
+  const selectedValue = dropdownMenu.querySelector('input[type="checkbox"]:checked + label');
+  if (selectedValue) {
+    button.textContent = selectedValue.textContent.trim();
+  }
+}
+
+// Add event listeners to "Apply Filters" buttons
+document.querySelectorAll('.dropdown-menu button.global-btn').forEach((button) => {
+  button.addEventListener('click', (e) => {
+    e.stopPropagation(); // Stop event propagation
+    const dropdownMenu = e.target.closest('.dropdown-menu');
+    if (dropdownMenu) {
+      const dropdown = dropdownMenu.closest('.dropdown');
+      const associatedButton = dropdown.querySelector('.searchSectionButtons');
+      if (associatedButton) {
+        updateButtonValue(associatedButton, dropdownMenu);
+        dropdownMenu.style.display = 'none'; // Close the dropdown
       }
-    })
-  })
+    }
+  });
+});
+
+// Add event listeners to checkboxes to update button value on checkbox selection
+document.querySelectorAll('.dropdown-menu input[type="checkbox"]').forEach((checkbox) => {
+  checkbox.addEventListener('change', (e) => {
+    e.stopPropagation();
+    const dropdownMenu = e.target.closest('.dropdown-menu');
+    if (dropdownMenu) {
+      const dropdown = dropdownMenu.closest('.dropdown');
+      const associatedButton = dropdown.querySelector('.searchSectionButtons');
+      if (associatedButton) {
+        updateButtonValue(associatedButton, dropdownMenu);
+      }
+    }
+  });
+});
+
+// Add event listeners to buttons to toggle dropdown visibility
+document.querySelectorAll('.searchSectionButtons').forEach((button) => {
+  button.addEventListener('click', (e) => {
+    e.preventDefault();
+    e.stopPropagation(); // Stop event propagation
+    const nextElement = e.target.nextElementSibling;
+    if (nextElement) {
+      nextElement.style.display = nextElement.style.display === 'none' || nextElement.style.display === '' ? 'block' : 'none';
+    } else {
+      console.error('nextElement is null or not found');
+    }    
+  });
+});
+
+
+
+
+// Close dropdown when clicking outside of it
+document.addEventListener('click', (e) => {
+  if (!e.target.closest('.dropdown')) {
+    document.querySelectorAll('.dropdown-menu').forEach((menu) => {
+      menu.style.display = 'none';
+    });
+  }
+});
+
+// Add logic to allow only one checkbox to be selected at a time
+document.querySelectorAll('.dropdown-menu input[type="checkbox"]').forEach((checkbox) => {
+  checkbox.addEventListener('change', (e) => {
+    if (e.target.checked) {
+      const siblingCheckboxes = e.target.closest('.dropdown-menu').querySelectorAll('input[type="checkbox"]');
+      siblingCheckboxes.forEach((siblingCheckbox) => {
+        if (siblingCheckbox !== e.target) {
+          siblingCheckbox.checked = false;
+        }
+      });
+    }
+  });
+});
+
+// Custom dropdown menujs
+document.querySelector('.custom-dropdown').addEventListener('click', (e) => {
+  e.stopPropagation(); 
+  const dropdownMenu = document.querySelector('.custom-dropmenu');
+  const svgIcon = document.querySelector('.dropdown-svg');
+
+  if(dropdownMenu.style.display === 'none' || dropdownMenu.style.display === '') {
+    dropdownMenu.style.display = 'block';
+    svgIcon.style.transform = 'unset';
+  }else {
+    dropdownMenu.style.display = 'none';
+    svgIcon.style.transform = 'rotateX(180deg)';
+  }
+});
+
+document.querySelector('#availableDatesModal').addEventListener('click', () => {
+  const dropdownMenu = document.querySelector('.custom-dropmenu');
+  const svgIcon = document.querySelector('.dropdown-svg');
+  if(dropdownMenu.style.display === 'block') {
+    dropdownMenu.style.display = 'none';
+    svgIcon.style.transform = 'rotateX(180deg)';
+  }
+})
