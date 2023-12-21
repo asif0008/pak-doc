@@ -295,9 +295,9 @@ document.querySelector('#availableDatesModal').addEventListener('click', () => {
 let displayedDoctors = [];
 let currentIndex = 0;
 const doctorsPerPage = 5;
-const totalDoctors = document.querySelectorAll('.doctors-list-results > div.doctor').length;
 
-console.log(`Total Doctors: ${totalDoctors}`);
+// This will be populated later once the DOM is fully loaded
+let totalDoctors = 0;
 
 function showNextDoctors() {
   const endIndex = currentIndex + doctorsPerPage;
@@ -314,19 +314,24 @@ function showNextDoctors() {
   console.log(`Current Index: ${currentIndex}`);
 }
 
-const searchDoctors = document.querySelector('.search-doctors');
+document.addEventListener('DOMContentLoaded', () => {
+  totalDoctors = document.querySelectorAll('.doctors-list-results > div.doctor').length;
+  console.log(`Total Doctors: ${totalDoctors}`);
 
-searchDoctors.addEventListener('scroll', () => {
-  console.log('Scroll event triggered');
-  
-  if (searchDoctors.scrollTop + searchDoctors.clientHeight >= searchDoctors.scrollHeight) {
-    console.log('Reached bottom of .search-doctors');
-    showLoader();
-  }
+  const searchDoctors = document.querySelector('.search-doctors');
+
+  searchDoctors.addEventListener('scroll', () => {
+    console.log('Scroll event triggered');
+    
+    if (searchDoctors.scrollTop + searchDoctors.clientHeight >= searchDoctors.scrollHeight) {
+      console.log('Reached bottom of .search-doctors');
+      showLoader();
+    }
+  });
+
+  // Initial load
+  showNextDoctors();
 });
-
-// Initial load
-showNextDoctors();
 
 function showLoader() {
   const loader = document.querySelector('.loader');
@@ -339,6 +344,7 @@ function showLoader() {
     showNextDoctors();
   }, 2000);
 }
+
 
 
 
