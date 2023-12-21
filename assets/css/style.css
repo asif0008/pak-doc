@@ -427,7 +427,7 @@ footer {
 }
 
 .search-section {
-  height: 100vh;
+  height: 105vh;
   background: url("../images/map-svg.svg") center/cover no-repeat;
   position: relative;
 }
@@ -440,7 +440,7 @@ footer {
   background: var(--White-White, #FFF);
   box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.08);
   overflow-y: scroll;
-  height: 95vh;
+  height: 100vh;
 }
 .search-section .search-doctors::-webkit-scrollbar-thumb {
   background: #02BCE6;
@@ -640,6 +640,23 @@ footer {
   margin-top: 12px;
   padding: 0 20px 20px 20px;
 }
+.search-section .doctors-list-results .loader {
+  width: 50px;
+  --b: 8px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  padding: 1px;
+  background: conic-gradient(rgba(0, 0, 0, 0) 50%, #02BCE6) content-box;
+  -webkit-mask: repeating-conic-gradient(rgba(0, 0, 0, 0) 0deg, #000 1deg 20deg, rgba(0, 0, 0, 0) 21deg 36deg), radial-gradient(farthest-side, rgba(0, 0, 0, 0) calc(100% - var(--b) - 1px), #000 calc(100% - var(--b)));
+  -webkit-mask-composite: destination-in;
+  mask-composite: intersect;
+  animation: l4 1s infinite steps(10);
+}
+@keyframes l4 {
+  to {
+    transform: rotate(1turn);
+  }
+}
 .search-section .doctors-list-results > div {
   padding-top: 16px;
   box-shadow: 0px 8px 7px 0px rgba(0, 0, 0, 0.08);
@@ -660,6 +677,12 @@ footer {
   background-image: url("../images/accordion-down-icon.svg") !important;
   position: absolute;
   left: 65%;
+}
+.search-section .doctors-list-results > div .doctor-accordion .accordion-button[aria-expanded=false]::after {
+  transform: rotate(0deg) !important;
+}
+.search-section .doctors-list-results > div .doctor-accordion .accordion-button[aria-expanded=true]::after {
+  transform: rotate(-180deg) !important;
 }
 .search-section .doctors-list-results > div .doctor-accordion .accordion-item:first-of-type .accordion-button {
   border-top-left-radius: unset !important;
@@ -710,6 +733,7 @@ footer {
 }
 #filterModal .modal-dialog .modal-content {
   padding: 16px !important;
+  border-radius: 12px;
 }
 #filterModal .modal-dialog .modal-content .modal-header {
   border-bottom: unset !important;
@@ -787,6 +811,7 @@ footer {
 
 #availableDatesModal .modal-content {
   padding: 16px !important;
+  border-radius: 12px;
 }
 #availableDatesModal .modal-content .modal-header {
   border-bottom: 1px solid rgba(112, 133, 131, 0.3);
@@ -816,16 +841,20 @@ footer {
   border: 1px solid #02BCE6;
   padding: 8px;
 }
+#availableDatesModal .modal-content .modal-body .visit-type-btn .video-price-tag {
+  border-radius: 5px;
+  border: 2px solid #F2C246;
+  padding: 8px;
+}
 #availableDatesModal .modal-content .modal-body .visit-type-btn:hover {
   background: linear-gradient(180deg, rgba(0, 129, 89, 0.5) 0%, rgba(2, 188, 230, 0.5) 100%);
 }
 #availableDatesModal .modal-content .modal-body .visit-type-btn:hover span {
   color: #ffffff;
 }
-#availableDatesModal .modal-content .modal-body .visit-type-btn:hover .price-tag {
+#availableDatesModal .modal-content .modal-body .visit-type-btn:hover .price-tag, #availableDatesModal .modal-content .modal-body .visit-type-btn:hover .video-price-tag {
   background: #ffffff;
   color: #2A2A2A;
-  border-color: #F2C246;
 }
 #availableDatesModal .modal-content .modal-body .visit-type-btn:hover > span > svg > path {
   stroke: #ffffff;

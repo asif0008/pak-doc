@@ -165,16 +165,30 @@ grabCursor: true,
 // Search buttons js
 // Function to update button value based on selected checkboxes
 function updateButtonValue(button, dropdownMenu) {
-  const selectedValue = dropdownMenu.querySelector('input[type="checkbox"]:checked + label');
-  if (selectedValue) {
-    button.textContent = selectedValue.textContent.trim();
+  const checkedCheckbox = dropdownMenu.querySelector('input[type="checkbox"]:checked');
+  if (checkedCheckbox) {
+    const checkboxId = checkedCheckbox.id;
+    console.log('Checkbox ID:', checkboxId); // Debugging log
+    
+    const labelElement = dropdownMenu.querySelector(`label[for="${checkboxId}"]`);
+    if (labelElement) {
+      const selectedValue = labelElement.textContent.trim();
+      console.log('Selected Value:', selectedValue); // Debugging log
+      button.textContent = selectedValue;
+    } else {
+      console.error('Label element not found for checkbox with ID:', checkboxId); // Debugging log
+    }
+  } else {
+    console.error('No checkbox is checked'); // Debugging log
   }
 }
+
+
 
 // Add event listeners to "Apply Filters" buttons
 document.querySelectorAll('.dropdown-menu button.global-btn').forEach((button) => {
   button.addEventListener('click', (e) => {
-    e.stopPropagation(); // Stop event propagation
+    console.log('Apply Filters Button Clicked'); // Debugging log
     const dropdownMenu = e.target.closest('.dropdown-menu');
     if (dropdownMenu) {
       const dropdown = dropdownMenu.closest('.dropdown');
@@ -182,6 +196,7 @@ document.querySelectorAll('.dropdown-menu button.global-btn').forEach((button) =
       if (associatedButton) {
         updateButtonValue(associatedButton, dropdownMenu);
         dropdownMenu.style.display = 'none'; // Close the dropdown
+        console.log('Dropdown Menu Hidden'); // Debugging log
       }
     }
   });
@@ -190,7 +205,7 @@ document.querySelectorAll('.dropdown-menu button.global-btn').forEach((button) =
 // Add event listeners to checkboxes to update button value on checkbox selection
 document.querySelectorAll('.dropdown-menu input[type="checkbox"]').forEach((checkbox) => {
   checkbox.addEventListener('change', (e) => {
-    e.stopPropagation();
+    console.log('Checkbox Changed'); // Debugging log
     const dropdownMenu = e.target.closest('.dropdown-menu');
     if (dropdownMenu) {
       const dropdown = dropdownMenu.closest('.dropdown');
@@ -205,28 +220,36 @@ document.querySelectorAll('.dropdown-menu input[type="checkbox"]').forEach((chec
 // Add event listeners to buttons to toggle dropdown visibility
 document.querySelectorAll('.searchSectionButtons').forEach((button) => {
   button.addEventListener('click', (e) => {
+    console.log('Search Section Button Clicked'); // Debugging log
     e.preventDefault();
-    e.stopPropagation(); // Stop event propagation
     const nextElement = e.target.nextElementSibling;
     if (nextElement) {
       nextElement.style.display = nextElement.style.display === 'none' || nextElement.style.display === '' ? 'block' : 'none';
     } else {
       console.error('nextElement is null or not found');
-    }    
+    }
   });
 });
 
-
-
-
 // Close dropdown when clicking outside of it
 document.addEventListener('click', (e) => {
-  if (!e.target.closest('.dropdown')) {
+  const targetDropdown = e.target.closest('.dropdown');
+  if (!targetDropdown) {
+    // Hide all dropdown menus if clicked outside any dropdown
     document.querySelectorAll('.dropdown-menu').forEach((menu) => {
       menu.style.display = 'none';
     });
+  } else {
+    // Hide other dropdown menus if a different dropdown button is clicked
+    const allDropdownMenus = document.querySelectorAll('.dropdown-menu');
+    allDropdownMenus.forEach((menu) => {
+      if (!menu.parentElement.contains(targetDropdown)) {
+        menu.style.display = 'none';
+      }
+    });
   }
 });
+
 
 // Add logic to allow only one checkbox to be selected at a time
 document.querySelectorAll('.dropdown-menu input[type="checkbox"]').forEach((checkbox) => {
@@ -265,3 +288,62 @@ document.querySelector('#availableDatesModal').addEventListener('click', () => {
     svgIcon.style.transform = 'rotateX(180deg)';
   }
 })
+
+
+// doctors list fetching js
+
+let displayedDoctors = [];
+let currentIndex = 0;
+const doctorsPerPage = 5;
+const totalDoctors = document.querySelectorAll('.doctors-list-results > div.doctor').length;
+
+console.log(`Total Doctors: ${totalDoctors}`);
+
+function showNextDoctors() {
+  const endIndex = currentIndex + doctorsPerPage;
+  
+  const allDoctors = document.querySelectorAll('.doctors-list-results > div.doctor');
+  
+  for (let i = currentIndex; i < endIndex && i < allDoctors.length; i++) {
+    const doctor = allDoctors[i];
+    displayedDoctors.push(doctor);
+    doctor.style.display = 'block';
+  }
+
+  currentIndex = endIndex;
+  console.log(`Current Index: ${currentIndex}`);
+}
+
+const searchDoctors = document.querySelector('.search-doctors');
+
+searchDoctors.addEventListener('scroll', () => {
+  console.log('Scroll event triggered');
+  
+  if (searchDoctors.scrollTop + searchDoctors.clientHeight >= searchDoctors.scrollHeight) {
+    console.log('Reached bottom of .search-doctors');
+    showLoader();
+  }
+});
+
+// Initial load
+showNextDoctors();
+
+function showLoader() {
+  const loader = document.querySelector('.loader');
+  console.log('Loader element:', loader);
+  
+  loader.style.display = 'block';
+  setTimeout(() => {
+    loader.style.display = 'none';
+    console.log('Loader deactivated');
+    showNextDoctors();
+  }, 2000);
+}
+
+
+
+
+
+
+
+
