@@ -291,52 +291,57 @@ document.querySelector('#availableDatesModal').addEventListener('click', () => {
 
 
 // doctors list fetching js
-
-let displayedDoctors = [];
 let currentIndex = 0;
-const doctorsPerPage = 5;
-
-// This will be populated later once the DOM is fully loaded
-let totalDoctors = 0;
+let displayedDoctors = []; // Array to keep track of currently displayed doctors
+let noMoreDoctorsDisplayed = false; // Flag to check if the "No more doctors available" message is displayed
 
 function showNextDoctors() {
-  const endIndex = currentIndex + doctorsPerPage;
-  
   const allDoctors = document.querySelectorAll('.doctors-list-results > div.doctor');
-  
-  for (let i = currentIndex; i < endIndex && i < allDoctors.length; i++) {
-    const doctor = allDoctors[i];
-    displayedDoctors.push(doctor);
-    doctor.style.display = 'block';
-  }
+  const totalDoctors = allDoctors.length;
 
-  currentIndex = endIndex;
-  console.log(`Current Index: ${currentIndex}`);
-}
+  // Initially, show only 5 doctors
+  const endIndex = Math.min(currentIndex + 5, totalDoctors);
 
-document.addEventListener('DOMContentLoaded', () => {
-  totalDoctors = document.querySelectorAll('.doctors-list-results > div.doctor').length;
-  console.log(`Total Doctors: ${totalDoctors}`);
-
-  const searchDoctors = document.querySelector('.search-doctors');
-
-  searchDoctors.addEventListener('scroll', () => {
-    console.log('Scroll event triggered');
-    
-    if (searchDoctors.scrollTop + searchDoctors.clientHeight >= searchDoctors.scrollHeight) {
-      console.log('Reached bottom of .search-doctors');
-      showLoader();
+  allDoctors.forEach((doctor, index) => {
+    if (index >= currentIndex && index < endIndex) {
+      doctor.style.display = 'block';
+      displayedDoctors.push(doctor); // Add the doctor to the displayedDoctors array
+    } else if (!displayedDoctors.includes(doctor)) {
+      doctor.style.display = 'none';
     }
   });
 
-  // Initial load
-  showNextDoctors();
+  currentIndex = endIndex;
+  console.log(`Current Index: ${currentIndex}`);
+
+  // Show message if no more doctors available
+  if (currentIndex >= totalDoctors && !noMoreDoctorsDisplayed) {
+    const noMoreDoctorsMessage = document.createElement('div');
+    noMoreDoctorsMessage.textContent = 'No more doctors available';
+    noMoreDoctorsMessage.style.textAlign = 'center';
+    noMoreDoctorsMessage.style.padding = '0 0 20px 0';
+    document.querySelector('.doctors-list-results').appendChild(noMoreDoctorsMessage);
+    noMoreDoctorsDisplayed = true; // Set the flag to true
+  }
+}
+
+const doctorsListResults = document.querySelector('.doctors-list-results');
+
+doctorsListResults.addEventListener('scroll', () => {
+  console.log('Scroll event triggered');
+  if (!noMoreDoctorsDisplayed && doctorsListResults.scrollTop + doctorsListResults.clientHeight >= doctorsListResults.scrollHeight) {
+    console.log('Reached bottom of .doctors-list-results');
+    showLoader();
+  }
 });
+
+// Initial load
+showNextDoctors();
 
 function showLoader() {
   const loader = document.querySelector('.loader');
   console.log('Loader element:', loader);
-  
+
   loader.style.display = 'block';
   setTimeout(() => {
     loader.style.display = 'none';
@@ -344,6 +349,17 @@ function showLoader() {
     showNextDoctors();
   }, 2000);
 }
+
+
+
+
+
+
+
+
+
+
+
 
 
 
