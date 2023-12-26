@@ -350,6 +350,18 @@ function showLoader() {
   }, 2000);
 }
 
+// Sign in page checkbox js
+function toggleDoctorCheckbox() {
+  const checkbox = document.getElementById('accountDoctorCheckbox');
+  checkbox.checked = !checkbox.checked;
+}
+
+function togglePatientCheckbox() {
+  const checkbox = document.getElementById('accountPatientCheckbox');
+  checkbox.checked = !checkbox.checked;
+}
+
+
 
 
 
