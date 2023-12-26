@@ -352,14 +352,27 @@ function showLoader() {
 
 // Sign in page checkbox js
 function toggleDoctorCheckbox() {
-  const checkbox = document.getElementById('accountDoctorCheckbox');
-  checkbox.checked = !checkbox.checked;
+  const doctorCheckbox = document.getElementById('accountDoctorCheckbox');
+  const patientCheckbox = document.getElementById('accountPatientCheckbox');
+  
+  doctorCheckbox.checked = !doctorCheckbox.checked;
+  
+  if (doctorCheckbox.checked) {
+    patientCheckbox.checked = false;
+  }
 }
 
 function togglePatientCheckbox() {
-  const checkbox = document.getElementById('accountPatientCheckbox');
-  checkbox.checked = !checkbox.checked;
+  const patientCheckbox = document.getElementById('accountPatientCheckbox');
+  const doctorCheckbox = document.getElementById('accountDoctorCheckbox');
+  
+  patientCheckbox.checked = !patientCheckbox.checked;
+  
+  if (patientCheckbox.checked) {
+    doctorCheckbox.checked = false;
+  }
 }
+
 
 
 

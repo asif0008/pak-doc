@@ -21,6 +21,17 @@ body {
     box-sizing: border-box;
     position: relative;
 }
+button {
+    border: none;
+    background: transparent;
+}
+input {
+    border: none;
+    background: transparent;
+    &:focus {
+        outline: none;
+    }
+}
 // body::-webkit-scrollbar {
 //     width: 5px;
 // }
@@ -1139,10 +1150,109 @@ footer {
                 border-radius: 16px;
                 background: url(../images/sign-in-left-vector.png) top left no-repeat, url(../images/sign-in-center-vector.png) center center no-repeat,url(../images/sign-in-right-vector.png) bottom right no-repeat ,linear-gradient(100deg, rgba(0, 129, 89, 0.50) 2.59%, rgba(2, 188, 230, 0.50) 111.36%);
             }
+            .forgot-pwd-content {
+                .phone-section, .phone-btn {
+                    display: none;
+                }
+                .email-section, .email-btn {
+                    display: block;
+                }
+                .email-field, .phone-input {
+                    border-radius: 12px;
+                    border: 1px solid rgba(112, 133, 131, 0.30);
+                    background: $white;
+                    padding: 11px 16px;
+                    #email, #phone {
+                        border: none;
+                        background: transparent;
+                        &:focus {
+                            outline: none;
+                        }
+                        &::placeholder {
+                            color: $lightBlack50 !important;
+                            font-family: $openSans !important;
+                            font-size: 16px !important;
+                            font-style: normal !important;
+                            font-weight: 400 !important;
+                            line-height: normal !important;
+                        }
+                    }
+                    .phone-list {
+                        padding: 8px 12px;
+                        border-radius: 8px;
+                        background: rgba(0, 153, 153, 0.10);
+                    }
+                    #phone {
+                        padding: 8px 0;
+                    }
+                }
+                .reset-via-phone {
+                    cursor: pointer;
+                }
+                .change-password {
+                    .password-div {
+                        padding: 13px 16px;
+                        border-radius: 12px;
+                        border: 1px solid rgba(112, 133, 131, 0.30);
+                        background: $white;
+                    }
+                    .eye-icons {
+                        cursor: pointer;
+                    }
+                }
+            }
         }
     }
 }
-
+#forgotEmailModal, #forgotPhoneModal {
+    .modal-dialog {
+        top: 7% !important;
+    }
+    .modal-content {
+        padding: 24px 16px;
+        border-radius: 16px;
+        .modal-header {
+            padding: 0 0 12px 0;
+            border-bottom: 1px solid rgba(112, 133, 131, 0.30) !important;
+            margin-bottom: 12px;
+        }
+        .modal-body {
+            padding: 0;
+            h4 {
+                margin: 12px 0 !important;
+            }
+            .opt-code {
+                gap: 10px;
+                margin: 12px 0;
+                .opt-input {
+                    width: 100%;
+                    padding: 16px;
+                    border: 0;
+                    border-bottom: 1px solid $lightBlack50;
+                    &:focus {
+                        outline: none;
+                    }
+                    &::-webkit-outer-spin-button, &::-webkit-inner-spin-button {
+                        -webkit-appearance: none;
+                        appearance: none;
+                    }
+                    &::placeholder {
+                        color: $lightBlack50;
+                        font-family: $openSans;
+                        font-size: 20px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: normal;
+                        letter-spacing: 0.1px;
+                    }
+                }
+            }
+            .global-btn {
+                margin-top: 12px;
+            }
+        }
+    }
+}
 @media (min-width: 1400px) {
     .container {
         max-width: 1440px !important;
