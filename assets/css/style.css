@@ -18,6 +18,26 @@ input {
 input:focus {
   outline: none;
 }
+input::-moz-placeholder {
+  color: rgba(42, 42, 42, 0.5);
+  font-family: "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+input::placeholder {
+  color: rgba(42, 42, 42, 0.5);
+  font-family: "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+input[type=date]::-webkit-calendar-picker-indicator {
+  display: none;
+}
 
 a {
   text-decoration: none !important;
@@ -965,16 +985,16 @@ footer {
 .login-screens {
   background: #F8F9FA;
 }
-.login-screens .sign-in-container, .login-screens .forgot-pwd-container {
+.login-screens .sign-in-container, .login-screens .forgot-pwd-container, .login-screens .sign-up-container {
   position: relative;
   padding: 40px 0 131px;
 }
-.login-screens .sign-in-container .back-arrow, .login-screens .forgot-pwd-container .back-arrow {
+.login-screens .sign-in-container .back-arrow, .login-screens .forgot-pwd-container .back-arrow, .login-screens .sign-up-container .back-arrow {
   position: absolute;
   top: 38px;
   left: 0;
 }
-.login-screens .sign-in-container .sign-in-sec, .login-screens .forgot-pwd-container .sign-in-sec {
+.login-screens .sign-in-container .sign-in-sec, .login-screens .forgot-pwd-container .sign-in-sec, .login-screens .sign-up-container .sign-in-sec {
   padding: 24px;
   border-radius: 16px;
   background: #ffffff;
@@ -982,22 +1002,23 @@ footer {
   max-width: 840px;
   width: 100%;
 }
-.login-screens .sign-in-container .sign-in-sec .sign-in-sec-img, .login-screens .forgot-pwd-container .sign-in-sec .sign-in-sec-img {
+.login-screens .sign-in-container .sign-in-sec .sign-in-sec-img, .login-screens .forgot-pwd-container .sign-in-sec .sign-in-sec-img, .login-screens .sign-up-container .sign-in-sec .sign-in-sec-img {
   border-radius: 16px;
   background: url(../images/sign-in-left-vector.png) top left no-repeat, url(../images/sign-in-center-vector.png) center center no-repeat, url(../images/sign-in-right-vector.png) bottom right no-repeat, linear-gradient(100deg, rgba(0, 129, 89, 0.5) 2.59%, rgba(2, 188, 230, 0.5) 111.36%);
 }
-.login-screens .sign-in-container .sign-in-sec .sign-in-sec-img img, .login-screens .forgot-pwd-container .sign-in-sec .sign-in-sec-img img {
+.login-screens .sign-in-container .sign-in-sec .sign-in-sec-img img, .login-screens .forgot-pwd-container .sign-in-sec .sign-in-sec-img img, .login-screens .sign-up-container .sign-in-sec .sign-in-sec-img img {
   width: 313px;
 }
-.login-screens .sign-in-container .sign-in-sec .sign-in-sec-content .account-type, .login-screens .forgot-pwd-container .sign-in-sec .sign-in-sec-content .account-type {
+.login-screens .sign-in-container .sign-in-sec .sign-in-sec-content .account-type, .login-screens .forgot-pwd-container .sign-in-sec .sign-in-sec-content .account-type, .login-screens .sign-up-container .sign-in-sec .sign-in-sec-content .account-type {
   border-radius: 16px;
   background: #ffffff;
   box-shadow: -4px 4px 10px 0px rgba(0, 0, 0, 0.06);
   padding: 8px 16px;
   gap: 12px;
+  width: 100%;
   cursor: pointer;
 }
-.login-screens .sign-in-container .sign-in-sec .sign-in-sec-content .account-type .checkbox, .login-screens .forgot-pwd-container .sign-in-sec .sign-in-sec-content .account-type .checkbox {
+.login-screens .sign-in-container .sign-in-sec .sign-in-sec-content .account-type .checkbox, .login-screens .forgot-pwd-container .sign-in-sec .sign-in-sec-content .account-type .checkbox, .login-screens .sign-up-container .sign-in-sec .sign-in-sec-content .account-type .checkbox {
   display: block;
   position: relative;
   cursor: pointer;
@@ -1006,14 +1027,14 @@ footer {
      -moz-user-select: none;
           user-select: none;
 }
-.login-screens .sign-in-container .sign-in-sec .sign-in-sec-content .account-type .checkbox input, .login-screens .forgot-pwd-container .sign-in-sec .sign-in-sec-content .account-type .checkbox input {
+.login-screens .sign-in-container .sign-in-sec .sign-in-sec-content .account-type .checkbox input, .login-screens .forgot-pwd-container .sign-in-sec .sign-in-sec-content .account-type .checkbox input, .login-screens .sign-up-container .sign-in-sec .sign-in-sec-content .account-type .checkbox input {
   position: absolute;
   opacity: 0;
   cursor: pointer;
   height: 0;
   width: 0;
 }
-.login-screens .sign-in-container .sign-in-sec .sign-in-sec-content .account-type .checkbox .checkmark, .login-screens .forgot-pwd-container .sign-in-sec .sign-in-sec-content .account-type .checkbox .checkmark {
+.login-screens .sign-in-container .sign-in-sec .sign-in-sec-content .account-type .checkbox .checkmark, .login-screens .forgot-pwd-container .sign-in-sec .sign-in-sec-content .account-type .checkbox .checkmark, .login-screens .sign-up-container .sign-in-sec .sign-in-sec-content .account-type .checkbox .checkmark {
   position: relative;
   top: 0;
   left: 0;
@@ -1023,20 +1044,20 @@ footer {
   border-radius: 50%;
   transition: 300ms;
 }
-.login-screens .sign-in-container .sign-in-sec .sign-in-sec-content .account-type .checkbox input:checked ~ .checkmark, .login-screens .forgot-pwd-container .sign-in-sec .sign-in-sec-content .account-type .checkbox input:checked ~ .checkmark {
+.login-screens .sign-in-container .sign-in-sec .sign-in-sec-content .account-type .checkbox input:checked ~ .checkmark, .login-screens .forgot-pwd-container .sign-in-sec .sign-in-sec-content .account-type .checkbox input:checked ~ .checkmark, .login-screens .sign-up-container .sign-in-sec .sign-in-sec-content .account-type .checkbox input:checked ~ .checkmark {
   background: linear-gradient(180deg, rgba(0, 129, 89, 0.5) 0%, rgba(2, 188, 230, 0.5) 100%);
   border-radius: 50%;
   animation: pulse 500ms ease-in-out;
 }
-.login-screens .sign-in-container .sign-in-sec .sign-in-sec-content .account-type .checkmark:after, .login-screens .forgot-pwd-container .sign-in-sec .sign-in-sec-content .account-type .checkmark:after {
+.login-screens .sign-in-container .sign-in-sec .sign-in-sec-content .account-type .checkmark:after, .login-screens .forgot-pwd-container .sign-in-sec .sign-in-sec-content .account-type .checkmark:after, .login-screens .sign-up-container .sign-in-sec .sign-in-sec-content .account-type .checkmark:after {
   content: "";
   position: absolute;
   display: none;
 }
-.login-screens .sign-in-container .sign-in-sec .sign-in-sec-content .account-type .checkbox input:checked ~ .checkmark:after, .login-screens .forgot-pwd-container .sign-in-sec .sign-in-sec-content .account-type .checkbox input:checked ~ .checkmark:after {
+.login-screens .sign-in-container .sign-in-sec .sign-in-sec-content .account-type .checkbox input:checked ~ .checkmark:after, .login-screens .forgot-pwd-container .sign-in-sec .sign-in-sec-content .account-type .checkbox input:checked ~ .checkmark:after, .login-screens .sign-up-container .sign-in-sec .sign-in-sec-content .account-type .checkbox input:checked ~ .checkmark:after {
   display: block;
 }
-.login-screens .sign-in-container .sign-in-sec .sign-in-sec-content .account-type .checkbox .checkmark:after, .login-screens .forgot-pwd-container .sign-in-sec .sign-in-sec-content .account-type .checkbox .checkmark:after {
+.login-screens .sign-in-container .sign-in-sec .sign-in-sec-content .account-type .checkbox .checkmark:after, .login-screens .forgot-pwd-container .sign-in-sec .sign-in-sec-content .account-type .checkbox .checkmark:after, .login-screens .sign-up-container .sign-in-sec .sign-in-sec-content .account-type .checkbox .checkmark:after {
   left: 41%;
   top: 23%;
   width: 6px;
@@ -1061,69 +1082,70 @@ footer {
     rotate: 0;
   }
 }
-.login-screens .sign-in-container .sign-in-sec .sign-in-sec-content .phone-input, .login-screens .forgot-pwd-container .sign-in-sec .sign-in-sec-content .phone-input {
+.login-screens .sign-in-container .sign-in-sec .sign-in-sec-content .phone-input, .login-screens .forgot-pwd-container .sign-in-sec .sign-in-sec-content .phone-input, .login-screens .sign-up-container .sign-in-sec .sign-in-sec-content .phone-input {
   border-radius: 13px;
   border: 1px solid rgba(112, 133, 131, 0.3);
   background: #ffffff;
   width: 100%;
   padding: 5px;
 }
-.login-screens .sign-in-container .sign-in-sec .sign-in-sec-content .phone-input .phone-list, .login-screens .forgot-pwd-container .sign-in-sec .sign-in-sec-content .phone-input .phone-list {
+.login-screens .sign-in-container .sign-in-sec .sign-in-sec-content .phone-input .phone-list, .login-screens .forgot-pwd-container .sign-in-sec .sign-in-sec-content .phone-input .phone-list, .login-screens .sign-up-container .sign-in-sec .sign-in-sec-content .phone-input .phone-list {
   color: rgba(42, 42, 42, 0.5);
   border-radius: 12px;
   border: 1px solid rgba(112, 133, 131, 0.3);
   background: rgba(0, 153, 153, 0.1);
-  padding: 8px 12px;
+  padding: 12px 12px;
   cursor: pointer;
 }
-.login-screens .sign-in-container .sign-in-sec .sign-in-sec-content .phone-input input, .login-screens .forgot-pwd-container .sign-in-sec .sign-in-sec-content .phone-input input {
+.login-screens .sign-in-container .sign-in-sec .sign-in-sec-content .phone-input input, .login-screens .forgot-pwd-container .sign-in-sec .sign-in-sec-content .phone-input input, .login-screens .sign-up-container .sign-in-sec .sign-in-sec-content .phone-input input {
   border: none;
   background: transparent;
+  padding: 9px 0;
 }
-.login-screens .sign-in-container .sign-in-sec .sign-in-sec-content .phone-input input:focus, .login-screens .forgot-pwd-container .sign-in-sec .sign-in-sec-content .phone-input input:focus {
+.login-screens .sign-in-container .sign-in-sec .sign-in-sec-content .phone-input input:focus, .login-screens .forgot-pwd-container .sign-in-sec .sign-in-sec-content .phone-input input:focus, .login-screens .sign-up-container .sign-in-sec .sign-in-sec-content .phone-input input:focus {
   outline: none;
 }
-.login-screens .sign-in-container .sign-in-sec .sign-in-sec-content .phone-input input::-moz-placeholder, .login-screens .forgot-pwd-container .sign-in-sec .sign-in-sec-content .phone-input input::-moz-placeholder {
+.login-screens .sign-in-container .sign-in-sec .sign-in-sec-content .phone-input input::-moz-placeholder, .login-screens .forgot-pwd-container .sign-in-sec .sign-in-sec-content .phone-input input::-moz-placeholder, .login-screens .sign-up-container .sign-in-sec .sign-in-sec-content .phone-input input::-moz-placeholder {
   color: rgba(42, 42, 42, 0.5) !important;
   font-size: 16px !important;
   font-style: normal !important;
   font-weight: 400 !important;
   line-height: normal !important;
 }
-.login-screens .sign-in-container .sign-in-sec .sign-in-sec-content .phone-input input::placeholder, .login-screens .forgot-pwd-container .sign-in-sec .sign-in-sec-content .phone-input input::placeholder {
+.login-screens .sign-in-container .sign-in-sec .sign-in-sec-content .phone-input input::placeholder, .login-screens .forgot-pwd-container .sign-in-sec .sign-in-sec-content .phone-input input::placeholder, .login-screens .sign-up-container .sign-in-sec .sign-in-sec-content .phone-input input::placeholder {
   color: rgba(42, 42, 42, 0.5) !important;
   font-size: 16px !important;
   font-style: normal !important;
   font-weight: 400 !important;
   line-height: normal !important;
 }
-.login-screens .sign-in-container .sign-in-sec .sign-in-sec-content .mobile-access, .login-screens .forgot-pwd-container .sign-in-sec .sign-in-sec-content .mobile-access {
+.login-screens .sign-in-container .sign-in-sec .sign-in-sec-content .mobile-access, .login-screens .forgot-pwd-container .sign-in-sec .sign-in-sec-content .mobile-access, .login-screens .sign-up-container .sign-in-sec .sign-in-sec-content .mobile-access {
   cursor: pointer;
 }
-.login-screens .sign-in-container .sign-in-sec .sign-in-sec-content .password-section, .login-screens .forgot-pwd-container .sign-in-sec .sign-in-sec-content .password-section {
+.login-screens .sign-in-container .sign-in-sec .sign-in-sec-content .password-section, .login-screens .forgot-pwd-container .sign-in-sec .sign-in-sec-content .password-section, .login-screens .sign-up-container .sign-in-sec .sign-in-sec-content .password-section {
   margin-top: 12px;
   display: none;
 }
-.login-screens .sign-in-container .sign-in-sec .sign-in-sec-content .password-section .password-div, .login-screens .forgot-pwd-container .sign-in-sec .sign-in-sec-content .password-section .password-div {
+.login-screens .sign-in-container .sign-in-sec .sign-in-sec-content .password-section .password-div, .login-screens .forgot-pwd-container .sign-in-sec .sign-in-sec-content .password-section .password-div, .login-screens .sign-up-container .sign-in-sec .sign-in-sec-content .password-section .password-div {
   border-radius: 12px;
   border: 1px solid rgba(112, 133, 131, 0.3);
   background: #ffffff;
   padding: 13px 16px;
 }
-.login-screens .sign-in-container .sign-in-sec .sign-in-sec-content .password-section .password-div input, .login-screens .forgot-pwd-container .sign-in-sec .sign-in-sec-content .password-section .password-div input {
+.login-screens .sign-in-container .sign-in-sec .sign-in-sec-content .password-section .password-div input, .login-screens .forgot-pwd-container .sign-in-sec .sign-in-sec-content .password-section .password-div input, .login-screens .sign-up-container .sign-in-sec .sign-in-sec-content .password-section .password-div input {
   border: none;
   background: transparent;
 }
-.login-screens .sign-in-container .sign-in-sec .sign-in-sec-content .password-section .password-div input:focus, .login-screens .forgot-pwd-container .sign-in-sec .sign-in-sec-content .password-section .password-div input:focus {
+.login-screens .sign-in-container .sign-in-sec .sign-in-sec-content .password-section .password-div input:focus, .login-screens .forgot-pwd-container .sign-in-sec .sign-in-sec-content .password-section .password-div input:focus, .login-screens .sign-up-container .sign-in-sec .sign-in-sec-content .password-section .password-div input:focus {
   outline: none;
 }
-.login-screens .sign-in-container .sign-in-sec .sign-in-sec-content .password-section .password-div .eye-icons, .login-screens .forgot-pwd-container .sign-in-sec .sign-in-sec-content .password-section .password-div .eye-icons {
+.login-screens .sign-in-container .sign-in-sec .sign-in-sec-content .password-section .password-div .eye-icons, .login-screens .forgot-pwd-container .sign-in-sec .sign-in-sec-content .password-section .password-div .eye-icons, .login-screens .sign-up-container .sign-in-sec .sign-in-sec-content .password-section .password-div .eye-icons {
   cursor: pointer;
 }
-.login-screens .sign-in-container .sign-in-sec .sign-in-sec-content .password-section .password-div .eye-icons .eye-close, .login-screens .forgot-pwd-container .sign-in-sec .sign-in-sec-content .password-section .password-div .eye-icons .eye-close {
+.login-screens .sign-in-container .sign-in-sec .sign-in-sec-content .password-section .password-div .eye-icons .eye-close, .login-screens .forgot-pwd-container .sign-in-sec .sign-in-sec-content .password-section .password-div .eye-icons .eye-close, .login-screens .sign-up-container .sign-in-sec .sign-in-sec-content .password-section .password-div .eye-icons .eye-close {
   display: block;
 }
-.login-screens .sign-in-container .sign-in-sec .sign-in-sec-content .password-section .remember-password .checkbox-container, .login-screens .forgot-pwd-container .sign-in-sec .sign-in-sec-content .password-section .remember-password .checkbox-container {
+.login-screens .sign-in-container .sign-in-sec .sign-in-sec-content .password-section .remember-password .checkbox-container, .login-screens .forgot-pwd-container .sign-in-sec .sign-in-sec-content .password-section .remember-password .checkbox-container, .login-screens .sign-up-container .sign-in-sec .sign-in-sec-content .password-section .remember-password .checkbox-container {
   display: inline-block;
   position: relative;
   padding-left: 20px;
@@ -1134,14 +1156,14 @@ footer {
      -moz-user-select: none;
           user-select: none;
 }
-.login-screens .sign-in-container .sign-in-sec .sign-in-sec-content .password-section .remember-password .checkbox-container .custom-checkbox, .login-screens .forgot-pwd-container .sign-in-sec .sign-in-sec-content .password-section .remember-password .checkbox-container .custom-checkbox {
+.login-screens .sign-in-container .sign-in-sec .sign-in-sec-content .password-section .remember-password .checkbox-container .custom-checkbox, .login-screens .forgot-pwd-container .sign-in-sec .sign-in-sec-content .password-section .remember-password .checkbox-container .custom-checkbox, .login-screens .sign-up-container .sign-in-sec .sign-in-sec-content .password-section .remember-password .checkbox-container .custom-checkbox {
   position: absolute;
   opacity: 0;
   cursor: pointer;
   height: 0;
   width: 0;
 }
-.login-screens .sign-in-container .sign-in-sec .sign-in-sec-content .password-section .remember-password .checkbox-container .checkmark, .login-screens .forgot-pwd-container .sign-in-sec .sign-in-sec-content .password-section .remember-password .checkbox-container .checkmark {
+.login-screens .sign-in-container .sign-in-sec .sign-in-sec-content .password-section .remember-password .checkbox-container .checkmark, .login-screens .forgot-pwd-container .sign-in-sec .sign-in-sec-content .password-section .remember-password .checkbox-container .checkmark, .login-screens .sign-up-container .sign-in-sec .sign-in-sec-content .password-section .remember-password .checkbox-container .checkmark {
   position: absolute;
   top: 0;
   left: 0;
@@ -1152,7 +1174,7 @@ footer {
   transition: background-color 0.3s;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
-.login-screens .sign-in-container .sign-in-sec .sign-in-sec-content .password-section .remember-password .checkbox-container .checkmark:after, .login-screens .forgot-pwd-container .sign-in-sec .sign-in-sec-content .password-section .remember-password .checkbox-container .checkmark:after {
+.login-screens .sign-in-container .sign-in-sec .sign-in-sec-content .password-section .remember-password .checkbox-container .checkmark:after, .login-screens .forgot-pwd-container .sign-in-sec .sign-in-sec-content .password-section .remember-password .checkbox-container .checkmark:after, .login-screens .sign-up-container .sign-in-sec .sign-in-sec-content .password-section .remember-password .checkbox-container .checkmark:after {
   content: "";
   position: absolute;
   display: none;
@@ -1164,37 +1186,37 @@ footer {
   border-width: 0 3px 3px 0;
   transform: rotate(45deg);
 }
-.login-screens .sign-in-container .sign-in-sec .sign-in-sec-content .password-section .remember-password .checkbox-container .custom-checkbox:checked ~ .checkmark, .login-screens .forgot-pwd-container .sign-in-sec .sign-in-sec-content .password-section .remember-password .checkbox-container .custom-checkbox:checked ~ .checkmark {
+.login-screens .sign-in-container .sign-in-sec .sign-in-sec-content .password-section .remember-password .checkbox-container .custom-checkbox:checked ~ .checkmark, .login-screens .forgot-pwd-container .sign-in-sec .sign-in-sec-content .password-section .remember-password .checkbox-container .custom-checkbox:checked ~ .checkmark, .login-screens .sign-up-container .sign-in-sec .sign-in-sec-content .password-section .remember-password .checkbox-container .custom-checkbox:checked ~ .checkmark {
   background-color: #008159;
   box-shadow: 0 3px 7px rgba(33, 150, 243, 0.3);
 }
-.login-screens .sign-in-container .sign-in-sec .sign-in-sec-content .password-section .remember-password .checkbox-container .custom-checkbox:checked ~ .checkmark:after, .login-screens .forgot-pwd-container .sign-in-sec .sign-in-sec-content .password-section .remember-password .checkbox-container .custom-checkbox:checked ~ .checkmark:after {
+.login-screens .sign-in-container .sign-in-sec .sign-in-sec-content .password-section .remember-password .checkbox-container .custom-checkbox:checked ~ .checkmark:after, .login-screens .forgot-pwd-container .sign-in-sec .sign-in-sec-content .password-section .remember-password .checkbox-container .custom-checkbox:checked ~ .checkmark:after, .login-screens .sign-up-container .sign-in-sec .sign-in-sec-content .password-section .remember-password .checkbox-container .custom-checkbox:checked ~ .checkmark:after {
   display: block;
 }
-.login-screens .sign-in-container .sign-in-sec .forgot-pwd-img, .login-screens .forgot-pwd-container .sign-in-sec .forgot-pwd-img {
+.login-screens .sign-in-container .sign-in-sec .forgot-pwd-img, .login-screens .forgot-pwd-container .sign-in-sec .forgot-pwd-img, .login-screens .sign-up-container .sign-in-sec .forgot-pwd-img {
   border-radius: 16px;
   background: url(../images/sign-in-left-vector.png) top left no-repeat, url(../images/sign-in-center-vector.png) center center no-repeat, url(../images/sign-in-right-vector.png) bottom right no-repeat, linear-gradient(100deg, rgba(0, 129, 89, 0.5) 2.59%, rgba(2, 188, 230, 0.5) 111.36%);
 }
-.login-screens .sign-in-container .sign-in-sec .forgot-pwd-content .phone-section, .login-screens .sign-in-container .sign-in-sec .forgot-pwd-content .phone-btn, .login-screens .forgot-pwd-container .sign-in-sec .forgot-pwd-content .phone-section, .login-screens .forgot-pwd-container .sign-in-sec .forgot-pwd-content .phone-btn {
+.login-screens .sign-in-container .sign-in-sec .forgot-pwd-content .phone-section, .login-screens .sign-in-container .sign-in-sec .forgot-pwd-content .phone-btn, .login-screens .forgot-pwd-container .sign-in-sec .forgot-pwd-content .phone-section, .login-screens .forgot-pwd-container .sign-in-sec .forgot-pwd-content .phone-btn, .login-screens .sign-up-container .sign-in-sec .forgot-pwd-content .phone-section, .login-screens .sign-up-container .sign-in-sec .forgot-pwd-content .phone-btn {
   display: none;
 }
-.login-screens .sign-in-container .sign-in-sec .forgot-pwd-content .email-section, .login-screens .sign-in-container .sign-in-sec .forgot-pwd-content .email-btn, .login-screens .forgot-pwd-container .sign-in-sec .forgot-pwd-content .email-section, .login-screens .forgot-pwd-container .sign-in-sec .forgot-pwd-content .email-btn {
+.login-screens .sign-in-container .sign-in-sec .forgot-pwd-content .email-section, .login-screens .sign-in-container .sign-in-sec .forgot-pwd-content .email-btn, .login-screens .forgot-pwd-container .sign-in-sec .forgot-pwd-content .email-section, .login-screens .forgot-pwd-container .sign-in-sec .forgot-pwd-content .email-btn, .login-screens .sign-up-container .sign-in-sec .forgot-pwd-content .email-section, .login-screens .sign-up-container .sign-in-sec .forgot-pwd-content .email-btn {
   display: block;
 }
-.login-screens .sign-in-container .sign-in-sec .forgot-pwd-content .email-field, .login-screens .sign-in-container .sign-in-sec .forgot-pwd-content .phone-input, .login-screens .forgot-pwd-container .sign-in-sec .forgot-pwd-content .email-field, .login-screens .forgot-pwd-container .sign-in-sec .forgot-pwd-content .phone-input {
+.login-screens .sign-in-container .sign-in-sec .forgot-pwd-content .email-field, .login-screens .sign-in-container .sign-in-sec .forgot-pwd-content .phone-input, .login-screens .forgot-pwd-container .sign-in-sec .forgot-pwd-content .email-field, .login-screens .forgot-pwd-container .sign-in-sec .forgot-pwd-content .phone-input, .login-screens .sign-up-container .sign-in-sec .forgot-pwd-content .email-field, .login-screens .sign-up-container .sign-in-sec .forgot-pwd-content .phone-input {
   border-radius: 12px;
   border: 1px solid rgba(112, 133, 131, 0.3);
   background: #ffffff;
   padding: 11px 16px;
 }
-.login-screens .sign-in-container .sign-in-sec .forgot-pwd-content .email-field #email, .login-screens .sign-in-container .sign-in-sec .forgot-pwd-content .email-field #phone, .login-screens .sign-in-container .sign-in-sec .forgot-pwd-content .phone-input #email, .login-screens .sign-in-container .sign-in-sec .forgot-pwd-content .phone-input #phone, .login-screens .forgot-pwd-container .sign-in-sec .forgot-pwd-content .email-field #email, .login-screens .forgot-pwd-container .sign-in-sec .forgot-pwd-content .email-field #phone, .login-screens .forgot-pwd-container .sign-in-sec .forgot-pwd-content .phone-input #email, .login-screens .forgot-pwd-container .sign-in-sec .forgot-pwd-content .phone-input #phone {
+.login-screens .sign-in-container .sign-in-sec .forgot-pwd-content .email-field #email, .login-screens .sign-in-container .sign-in-sec .forgot-pwd-content .email-field #phone, .login-screens .sign-in-container .sign-in-sec .forgot-pwd-content .phone-input #email, .login-screens .sign-in-container .sign-in-sec .forgot-pwd-content .phone-input #phone, .login-screens .forgot-pwd-container .sign-in-sec .forgot-pwd-content .email-field #email, .login-screens .forgot-pwd-container .sign-in-sec .forgot-pwd-content .email-field #phone, .login-screens .forgot-pwd-container .sign-in-sec .forgot-pwd-content .phone-input #email, .login-screens .forgot-pwd-container .sign-in-sec .forgot-pwd-content .phone-input #phone, .login-screens .sign-up-container .sign-in-sec .forgot-pwd-content .email-field #email, .login-screens .sign-up-container .sign-in-sec .forgot-pwd-content .email-field #phone, .login-screens .sign-up-container .sign-in-sec .forgot-pwd-content .phone-input #email, .login-screens .sign-up-container .sign-in-sec .forgot-pwd-content .phone-input #phone {
   border: none;
   background: transparent;
 }
-.login-screens .sign-in-container .sign-in-sec .forgot-pwd-content .email-field #email:focus, .login-screens .sign-in-container .sign-in-sec .forgot-pwd-content .email-field #phone:focus, .login-screens .sign-in-container .sign-in-sec .forgot-pwd-content .phone-input #email:focus, .login-screens .sign-in-container .sign-in-sec .forgot-pwd-content .phone-input #phone:focus, .login-screens .forgot-pwd-container .sign-in-sec .forgot-pwd-content .email-field #email:focus, .login-screens .forgot-pwd-container .sign-in-sec .forgot-pwd-content .email-field #phone:focus, .login-screens .forgot-pwd-container .sign-in-sec .forgot-pwd-content .phone-input #email:focus, .login-screens .forgot-pwd-container .sign-in-sec .forgot-pwd-content .phone-input #phone:focus {
+.login-screens .sign-in-container .sign-in-sec .forgot-pwd-content .email-field #email:focus, .login-screens .sign-in-container .sign-in-sec .forgot-pwd-content .email-field #phone:focus, .login-screens .sign-in-container .sign-in-sec .forgot-pwd-content .phone-input #email:focus, .login-screens .sign-in-container .sign-in-sec .forgot-pwd-content .phone-input #phone:focus, .login-screens .forgot-pwd-container .sign-in-sec .forgot-pwd-content .email-field #email:focus, .login-screens .forgot-pwd-container .sign-in-sec .forgot-pwd-content .email-field #phone:focus, .login-screens .forgot-pwd-container .sign-in-sec .forgot-pwd-content .phone-input #email:focus, .login-screens .forgot-pwd-container .sign-in-sec .forgot-pwd-content .phone-input #phone:focus, .login-screens .sign-up-container .sign-in-sec .forgot-pwd-content .email-field #email:focus, .login-screens .sign-up-container .sign-in-sec .forgot-pwd-content .email-field #phone:focus, .login-screens .sign-up-container .sign-in-sec .forgot-pwd-content .phone-input #email:focus, .login-screens .sign-up-container .sign-in-sec .forgot-pwd-content .phone-input #phone:focus {
   outline: none;
 }
-.login-screens .sign-in-container .sign-in-sec .forgot-pwd-content .email-field #email::-moz-placeholder, .login-screens .sign-in-container .sign-in-sec .forgot-pwd-content .email-field #phone::-moz-placeholder, .login-screens .sign-in-container .sign-in-sec .forgot-pwd-content .phone-input #email::-moz-placeholder, .login-screens .sign-in-container .sign-in-sec .forgot-pwd-content .phone-input #phone::-moz-placeholder, .login-screens .forgot-pwd-container .sign-in-sec .forgot-pwd-content .email-field #email::-moz-placeholder, .login-screens .forgot-pwd-container .sign-in-sec .forgot-pwd-content .email-field #phone::-moz-placeholder, .login-screens .forgot-pwd-container .sign-in-sec .forgot-pwd-content .phone-input #email::-moz-placeholder, .login-screens .forgot-pwd-container .sign-in-sec .forgot-pwd-content .phone-input #phone::-moz-placeholder {
+.login-screens .sign-in-container .sign-in-sec .forgot-pwd-content .email-field #email::-moz-placeholder, .login-screens .sign-in-container .sign-in-sec .forgot-pwd-content .email-field #phone::-moz-placeholder, .login-screens .sign-in-container .sign-in-sec .forgot-pwd-content .phone-input #email::-moz-placeholder, .login-screens .sign-in-container .sign-in-sec .forgot-pwd-content .phone-input #phone::-moz-placeholder, .login-screens .forgot-pwd-container .sign-in-sec .forgot-pwd-content .email-field #email::-moz-placeholder, .login-screens .forgot-pwd-container .sign-in-sec .forgot-pwd-content .email-field #phone::-moz-placeholder, .login-screens .forgot-pwd-container .sign-in-sec .forgot-pwd-content .phone-input #email::-moz-placeholder, .login-screens .forgot-pwd-container .sign-in-sec .forgot-pwd-content .phone-input #phone::-moz-placeholder, .login-screens .sign-up-container .sign-in-sec .forgot-pwd-content .email-field #email::-moz-placeholder, .login-screens .sign-up-container .sign-in-sec .forgot-pwd-content .email-field #phone::-moz-placeholder, .login-screens .sign-up-container .sign-in-sec .forgot-pwd-content .phone-input #email::-moz-placeholder, .login-screens .sign-up-container .sign-in-sec .forgot-pwd-content .phone-input #phone::-moz-placeholder {
   color: rgba(42, 42, 42, 0.5) !important;
   font-family: "Open Sans", "Helvetica Neue", sans-serif !important;
   font-size: 16px !important;
@@ -1202,7 +1224,7 @@ footer {
   font-weight: 400 !important;
   line-height: normal !important;
 }
-.login-screens .sign-in-container .sign-in-sec .forgot-pwd-content .email-field #email::placeholder, .login-screens .sign-in-container .sign-in-sec .forgot-pwd-content .email-field #phone::placeholder, .login-screens .sign-in-container .sign-in-sec .forgot-pwd-content .phone-input #email::placeholder, .login-screens .sign-in-container .sign-in-sec .forgot-pwd-content .phone-input #phone::placeholder, .login-screens .forgot-pwd-container .sign-in-sec .forgot-pwd-content .email-field #email::placeholder, .login-screens .forgot-pwd-container .sign-in-sec .forgot-pwd-content .email-field #phone::placeholder, .login-screens .forgot-pwd-container .sign-in-sec .forgot-pwd-content .phone-input #email::placeholder, .login-screens .forgot-pwd-container .sign-in-sec .forgot-pwd-content .phone-input #phone::placeholder {
+.login-screens .sign-in-container .sign-in-sec .forgot-pwd-content .email-field #email::placeholder, .login-screens .sign-in-container .sign-in-sec .forgot-pwd-content .email-field #phone::placeholder, .login-screens .sign-in-container .sign-in-sec .forgot-pwd-content .phone-input #email::placeholder, .login-screens .sign-in-container .sign-in-sec .forgot-pwd-content .phone-input #phone::placeholder, .login-screens .forgot-pwd-container .sign-in-sec .forgot-pwd-content .email-field #email::placeholder, .login-screens .forgot-pwd-container .sign-in-sec .forgot-pwd-content .email-field #phone::placeholder, .login-screens .forgot-pwd-container .sign-in-sec .forgot-pwd-content .phone-input #email::placeholder, .login-screens .forgot-pwd-container .sign-in-sec .forgot-pwd-content .phone-input #phone::placeholder, .login-screens .sign-up-container .sign-in-sec .forgot-pwd-content .email-field #email::placeholder, .login-screens .sign-up-container .sign-in-sec .forgot-pwd-content .email-field #phone::placeholder, .login-screens .sign-up-container .sign-in-sec .forgot-pwd-content .phone-input #email::placeholder, .login-screens .sign-up-container .sign-in-sec .forgot-pwd-content .phone-input #phone::placeholder {
   color: rgba(42, 42, 42, 0.5) !important;
   font-family: "Open Sans", "Helvetica Neue", sans-serif !important;
   font-size: 16px !important;
@@ -1210,63 +1232,162 @@ footer {
   font-weight: 400 !important;
   line-height: normal !important;
 }
-.login-screens .sign-in-container .sign-in-sec .forgot-pwd-content .email-field .phone-list, .login-screens .sign-in-container .sign-in-sec .forgot-pwd-content .phone-input .phone-list, .login-screens .forgot-pwd-container .sign-in-sec .forgot-pwd-content .email-field .phone-list, .login-screens .forgot-pwd-container .sign-in-sec .forgot-pwd-content .phone-input .phone-list {
-  padding: 8px 12px;
+.login-screens .sign-in-container .sign-in-sec .forgot-pwd-content .email-field .phone-list, .login-screens .sign-in-container .sign-in-sec .forgot-pwd-content .phone-input .phone-list, .login-screens .forgot-pwd-container .sign-in-sec .forgot-pwd-content .email-field .phone-list, .login-screens .forgot-pwd-container .sign-in-sec .forgot-pwd-content .phone-input .phone-list, .login-screens .sign-up-container .sign-in-sec .forgot-pwd-content .email-field .phone-list, .login-screens .sign-up-container .sign-in-sec .forgot-pwd-content .phone-input .phone-list {
+  padding: 12px 12px;
   border-radius: 8px;
   background: rgba(0, 153, 153, 0.1);
 }
-.login-screens .sign-in-container .sign-in-sec .forgot-pwd-content .email-field #phone, .login-screens .sign-in-container .sign-in-sec .forgot-pwd-content .phone-input #phone, .login-screens .forgot-pwd-container .sign-in-sec .forgot-pwd-content .email-field #phone, .login-screens .forgot-pwd-container .sign-in-sec .forgot-pwd-content .phone-input #phone {
+.login-screens .sign-in-container .sign-in-sec .forgot-pwd-content .email-field #phone, .login-screens .sign-in-container .sign-in-sec .forgot-pwd-content .phone-input #phone, .login-screens .forgot-pwd-container .sign-in-sec .forgot-pwd-content .email-field #phone, .login-screens .forgot-pwd-container .sign-in-sec .forgot-pwd-content .phone-input #phone, .login-screens .sign-up-container .sign-in-sec .forgot-pwd-content .email-field #phone, .login-screens .sign-up-container .sign-in-sec .forgot-pwd-content .phone-input #phone {
   padding: 8px 0;
 }
-.login-screens .sign-in-container .sign-in-sec .forgot-pwd-content .reset-via-phone, .login-screens .forgot-pwd-container .sign-in-sec .forgot-pwd-content .reset-via-phone {
+.login-screens .sign-in-container .sign-in-sec .forgot-pwd-content .reset-via-phone, .login-screens .forgot-pwd-container .sign-in-sec .forgot-pwd-content .reset-via-phone, .login-screens .sign-up-container .sign-in-sec .forgot-pwd-content .reset-via-phone {
   cursor: pointer;
 }
-.login-screens .sign-in-container .sign-in-sec .forgot-pwd-content .change-password .password-div, .login-screens .forgot-pwd-container .sign-in-sec .forgot-pwd-content .change-password .password-div {
+.login-screens .sign-in-container .sign-in-sec .forgot-pwd-content .change-password .password-div, .login-screens .forgot-pwd-container .sign-in-sec .forgot-pwd-content .change-password .password-div, .login-screens .sign-up-container .sign-in-sec .forgot-pwd-content .change-password .password-div {
   padding: 13px 16px;
   border-radius: 12px;
   border: 1px solid rgba(112, 133, 131, 0.3);
   background: #ffffff;
 }
-.login-screens .sign-in-container .sign-in-sec .forgot-pwd-content .change-password .eye-icons, .login-screens .forgot-pwd-container .sign-in-sec .forgot-pwd-content .change-password .eye-icons {
+.login-screens .sign-in-container .sign-in-sec .forgot-pwd-content .change-password .eye-icons, .login-screens .forgot-pwd-container .sign-in-sec .forgot-pwd-content .change-password .eye-icons, .login-screens .sign-up-container .sign-in-sec .forgot-pwd-content .change-password .eye-icons {
   cursor: pointer;
 }
+.login-screens .sign-in-container .sign-in-sec .sign-up-sec-content .name-div, .login-screens .forgot-pwd-container .sign-in-sec .sign-up-sec-content .name-div, .login-screens .sign-up-container .sign-in-sec .sign-up-sec-content .name-div {
+  padding: 13px 16px;
+  border-radius: 12px;
+  border: 1px solid rgba(112, 133, 131, 0.3);
+  background: #ffffff;
+  margin-bottom: 12px;
+}
+.login-screens .sign-in-container .sign-in-sec .sign-up-sec-content .name-div #name, .login-screens .forgot-pwd-container .sign-in-sec .sign-up-sec-content .name-div #name, .login-screens .sign-up-container .sign-in-sec .sign-up-sec-content .name-div #name {
+  width: 100%;
+}
+.login-screens .sign-in-container .sign-in-sec .sign-up-sec-content .name-div #date, .login-screens .forgot-pwd-container .sign-in-sec .sign-up-sec-content .name-div #date, .login-screens .sign-up-container .sign-in-sec .sign-up-sec-content .name-div #date {
+  text-transform: uppercase;
+}
+.login-screens .sign-in-container .sign-in-sec .sign-up-sec-content .phone-input, .login-screens .forgot-pwd-container .sign-in-sec .sign-up-sec-content .phone-input, .login-screens .sign-up-container .sign-in-sec .sign-up-sec-content .phone-input {
+  padding: 5px 16px 5px 5px;
+  border-radius: 12px;
+  border: 1px solid rgba(112, 133, 131, 0.3);
+  background: #ffffff;
+  width: 100%;
+}
+.login-screens .sign-in-container .sign-in-sec .sign-up-sec-content .phone-input #phone, .login-screens .forgot-pwd-container .sign-in-sec .sign-up-sec-content .phone-input #phone, .login-screens .sign-up-container .sign-in-sec .sign-up-sec-content .phone-input #phone {
+  width: 100%;
+  padding: 8px 5;
+}
+.login-screens .sign-in-container .sign-in-sec .sign-up-sec-content .phone-input .phone-list, .login-screens .forgot-pwd-container .sign-in-sec .sign-up-sec-content .phone-input .phone-list, .login-screens .sign-up-container .sign-in-sec .sign-up-sec-content .phone-input .phone-list {
+  border-radius: 8px;
+  background: rgba(0, 153, 153, 0.1);
+  padding: 8px 12px;
+}
+.login-screens .sign-in-container .sign-in-sec .sign-up-sec-content .gender-sec, .login-screens .forgot-pwd-container .sign-in-sec .sign-up-sec-content .gender-sec, .login-screens .sign-up-container .sign-in-sec .sign-up-sec-content .gender-sec {
+  margin-top: 21px;
+}
+.login-screens .sign-in-container .sign-in-sec .sign-up-sec-content .gender-sec .gender-list, .login-screens .forgot-pwd-container .sign-in-sec .sign-up-sec-content .gender-sec .gender-list, .login-screens .sign-up-container .sign-in-sec .sign-up-sec-content .gender-sec .gender-list {
+  gap: 10px;
+}
+.login-screens .sign-in-container .sign-in-sec .sign-up-sec-content .gender-sec .gender-list .list-item, .login-screens .forgot-pwd-container .sign-in-sec .sign-up-sec-content .gender-sec .gender-list .list-item, .login-screens .sign-up-container .sign-in-sec .sign-up-sec-content .gender-sec .gender-list .list-item {
+  border-radius: 12px;
+  border: 1px solid #008159;
+  padding: 10px 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.login-screens .sign-in-container .sign-in-sec .sign-up-sec-content .gender-sec .gender-list .list-item .check-svg, .login-screens .forgot-pwd-container .sign-in-sec .sign-up-sec-content .gender-sec .gender-list .list-item .check-svg, .login-screens .sign-up-container .sign-in-sec .sign-up-sec-content .gender-sec .gender-list .list-item .check-svg {
+  display: none;
+}
+.login-screens .sign-in-container .sign-in-sec .sign-up-sec-content .gender-sec .gender-list .list-item:hover, .login-screens .forgot-pwd-container .sign-in-sec .sign-up-sec-content .gender-sec .gender-list .list-item:hover, .login-screens .sign-up-container .sign-in-sec .sign-up-sec-content .gender-sec .gender-list .list-item:hover {
+  background: linear-gradient(100deg, rgba(0, 129, 89, 0.5) 2.59%, rgba(2, 188, 230, 0.5) 111.36%);
+  color: #ffffff;
+  border: none;
+}
+.login-screens .sign-in-container .sign-in-sec .sign-up-sec-content .checkbox-container input, .login-screens .forgot-pwd-container .sign-in-sec .sign-up-sec-content .checkbox-container input, .login-screens .sign-up-container .sign-in-sec .sign-up-sec-content .checkbox-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.login-screens .sign-in-container .sign-in-sec .sign-up-sec-content .checkbox-container, .login-screens .forgot-pwd-container .sign-in-sec .sign-up-sec-content .checkbox-container, .login-screens .sign-up-container .sign-in-sec .sign-up-sec-content .checkbox-container {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  font-size: 1.5rem;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.login-screens .sign-in-container .sign-in-sec .sign-up-sec-content .checkmark, .login-screens .forgot-pwd-container .sign-in-sec .sign-up-sec-content .checkmark, .login-screens .sign-up-container .sign-in-sec .sign-up-sec-content .checkmark {
+  --clr: #0B6E4F;
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: #ccc;
+  border-radius: 5px;
+  transition: 300ms;
+}
+.login-screens .sign-in-container .sign-in-sec .sign-up-sec-content .checkbox-container input:checked ~ .checkmark, .login-screens .forgot-pwd-container .sign-in-sec .sign-up-sec-content .checkbox-container input:checked ~ .checkmark, .login-screens .sign-up-container .sign-in-sec .sign-up-sec-content .checkbox-container input:checked ~ .checkmark {
+  background-color: var(--clr);
+  border-radius: 5px;
+  animation: pulse 500ms ease-in-out;
+}
+.login-screens .sign-in-container .sign-in-sec .sign-up-sec-content .checkmark:after, .login-screens .forgot-pwd-container .sign-in-sec .sign-up-sec-content .checkmark:after, .login-screens .sign-up-container .sign-in-sec .sign-up-sec-content .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+.login-screens .sign-in-container .sign-in-sec .sign-up-sec-content .checkbox-container input:checked ~ .checkmark:after, .login-screens .forgot-pwd-container .sign-in-sec .sign-up-sec-content .checkbox-container input:checked ~ .checkmark:after, .login-screens .sign-up-container .sign-in-sec .sign-up-sec-content .checkbox-container input:checked ~ .checkmark:after {
+  display: block;
+}
+.login-screens .sign-in-container .sign-in-sec .sign-up-sec-content .checkbox-container .checkmark:after, .login-screens .forgot-pwd-container .sign-in-sec .sign-up-sec-content .checkbox-container .checkmark:after, .login-screens .sign-up-container .sign-in-sec .sign-up-sec-content .checkbox-container .checkmark:after {
+  left: 36%;
+  top: 9%;
+  width: 6px;
+  height: 13px;
+  border: solid #E0E0E2;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}
 
-#forgotEmailModal .modal-dialog, #forgotPhoneModal .modal-dialog {
+#forgotEmailModal .modal-dialog, #forgotPhoneModal .modal-dialog, #confirmPhoneModal .modal-dialog {
   top: 7% !important;
 }
-#forgotEmailModal .modal-content, #forgotPhoneModal .modal-content {
+#forgotEmailModal .modal-content, #forgotPhoneModal .modal-content, #confirmPhoneModal .modal-content {
   padding: 24px 16px;
   border-radius: 16px;
 }
-#forgotEmailModal .modal-content .modal-header, #forgotPhoneModal .modal-content .modal-header {
+#forgotEmailModal .modal-content .modal-header, #forgotPhoneModal .modal-content .modal-header, #confirmPhoneModal .modal-content .modal-header {
   padding: 0 0 12px 0;
   border-bottom: 1px solid rgba(112, 133, 131, 0.3) !important;
   margin-bottom: 12px;
 }
-#forgotEmailModal .modal-content .modal-body, #forgotPhoneModal .modal-content .modal-body {
+#forgotEmailModal .modal-content .modal-body, #forgotPhoneModal .modal-content .modal-body, #confirmPhoneModal .modal-content .modal-body {
   padding: 0;
 }
-#forgotEmailModal .modal-content .modal-body h4, #forgotPhoneModal .modal-content .modal-body h4 {
+#forgotEmailModal .modal-content .modal-body h4, #forgotPhoneModal .modal-content .modal-body h4, #confirmPhoneModal .modal-content .modal-body h4 {
   margin: 12px 0 !important;
 }
-#forgotEmailModal .modal-content .modal-body .opt-code, #forgotPhoneModal .modal-content .modal-body .opt-code {
+#forgotEmailModal .modal-content .modal-body .opt-code, #forgotPhoneModal .modal-content .modal-body .opt-code, #confirmPhoneModal .modal-content .modal-body .opt-code {
   gap: 10px;
   margin: 12px 0;
 }
-#forgotEmailModal .modal-content .modal-body .opt-code .opt-input, #forgotPhoneModal .modal-content .modal-body .opt-code .opt-input {
+#forgotEmailModal .modal-content .modal-body .opt-code .opt-input, #forgotPhoneModal .modal-content .modal-body .opt-code .opt-input, #confirmPhoneModal .modal-content .modal-body .opt-code .opt-input {
   width: 100%;
   padding: 16px;
   border: 0;
   border-bottom: 1px solid rgba(42, 42, 42, 0.5);
 }
-#forgotEmailModal .modal-content .modal-body .opt-code .opt-input:focus, #forgotPhoneModal .modal-content .modal-body .opt-code .opt-input:focus {
+#forgotEmailModal .modal-content .modal-body .opt-code .opt-input:focus, #forgotPhoneModal .modal-content .modal-body .opt-code .opt-input:focus, #confirmPhoneModal .modal-content .modal-body .opt-code .opt-input:focus {
   outline: none;
 }
-#forgotEmailModal .modal-content .modal-body .opt-code .opt-input::-webkit-outer-spin-button, #forgotEmailModal .modal-content .modal-body .opt-code .opt-input::-webkit-inner-spin-button, #forgotPhoneModal .modal-content .modal-body .opt-code .opt-input::-webkit-outer-spin-button, #forgotPhoneModal .modal-content .modal-body .opt-code .opt-input::-webkit-inner-spin-button {
+#forgotEmailModal .modal-content .modal-body .opt-code .opt-input::-webkit-outer-spin-button, #forgotEmailModal .modal-content .modal-body .opt-code .opt-input::-webkit-inner-spin-button, #forgotPhoneModal .modal-content .modal-body .opt-code .opt-input::-webkit-outer-spin-button, #forgotPhoneModal .modal-content .modal-body .opt-code .opt-input::-webkit-inner-spin-button, #confirmPhoneModal .modal-content .modal-body .opt-code .opt-input::-webkit-outer-spin-button, #confirmPhoneModal .modal-content .modal-body .opt-code .opt-input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   appearance: none;
 }
-#forgotEmailModal .modal-content .modal-body .opt-code .opt-input::-moz-placeholder, #forgotPhoneModal .modal-content .modal-body .opt-code .opt-input::-moz-placeholder {
+#forgotEmailModal .modal-content .modal-body .opt-code .opt-input::-moz-placeholder, #forgotPhoneModal .modal-content .modal-body .opt-code .opt-input::-moz-placeholder, #confirmPhoneModal .modal-content .modal-body .opt-code .opt-input::-moz-placeholder {
   color: rgba(42, 42, 42, 0.5);
   font-family: "Open Sans", "Helvetica Neue", sans-serif;
   font-size: 20px;
@@ -1275,7 +1396,7 @@ footer {
   line-height: normal;
   letter-spacing: 0.1px;
 }
-#forgotEmailModal .modal-content .modal-body .opt-code .opt-input::placeholder, #forgotPhoneModal .modal-content .modal-body .opt-code .opt-input::placeholder {
+#forgotEmailModal .modal-content .modal-body .opt-code .opt-input::placeholder, #forgotPhoneModal .modal-content .modal-body .opt-code .opt-input::placeholder, #confirmPhoneModal .modal-content .modal-body .opt-code .opt-input::placeholder {
   color: rgba(42, 42, 42, 0.5);
   font-family: "Open Sans", "Helvetica Neue", sans-serif;
   font-size: 20px;
@@ -1284,7 +1405,7 @@ footer {
   line-height: normal;
   letter-spacing: 0.1px;
 }
-#forgotEmailModal .modal-content .modal-body .global-btn, #forgotPhoneModal .modal-content .modal-body .global-btn {
+#forgotEmailModal .modal-content .modal-body .global-btn, #forgotPhoneModal .modal-content .modal-body .global-btn, #confirmPhoneModal .modal-content .modal-body .global-btn {
   margin-top: 12px;
 }
 
