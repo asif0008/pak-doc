@@ -379,7 +379,7 @@
                                     <span class="w-100 font-16 light-black">April, 10 2023 11:20 am</span>
                                 </div>
                             </label>
-                            <div class="d-flex align-items-center gap-3 mt-3">
+                            <div class="d-flex align-items-center gap-1 gap-md-3 mt-3">
                                 <label class="checkbox-container">
                                     <input checked="checked" type="checkbox">
                                     <div class="checkmark"></div>
@@ -570,18 +570,29 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                <h5 class="modal-title light-black font-24 font-weight-600" id="subPatientModalLabel">PIN Verification</h5>
+                <h5 class="modal-title light-black font-24 font-weight-600" id="subPatientModalLabel">Sub patient Form</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <h3 class="font-18 light-black font-weight-600 mb-0">Verify your phone number</h3>
-                    <h4 class="font-16 light-black mb-0">A PIN code has been send to <span class="font-weight-600" id="addedPhoneNumber"> +92 322 7874 375</span></h4>
-                    <button type="button" class="font-16 font-weight-600 accent-text mb-0" data-bs-dismiss="modal">Change Number?</button>
-                    <div class="opt-code d-flex align-items-center">
-                        <input class="opt-input text-center" type="number" min="0" max="9" maxlength="1" placeholder="0">
-                        <input class="opt-input text-center" type="number" min="0" max="9" maxlength="1" placeholder="0">
-                        <input class="opt-input text-center" type="number" min="0" max="9" maxlength="1" placeholder="0">
-                        <input class="opt-input text-center" type="number" min="0" max="9" maxlength="1" placeholder="0">
+                    <label for="name" class="mt-3 font-16 light-black text-start d-block">Name</label>
+                    <div class="mt-2 d-flex align-items-center name-div" style="gap: 12px;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="18" viewBox="0 0 17 18" fill="none">
+                            <path d="M11.3337 5.45821C11.3337 7.02302 10.0651 8.29154 8.50033 8.29154C6.93552 8.29154 5.66699 7.02302 5.66699 5.45821C5.66699 3.8934 6.93552 2.62488 8.50033 2.62488C10.0651 2.62488 11.3337 3.8934 11.3337 5.45821Z" stroke="#2A2A2A" stroke-opacity="0.5" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M8.50033 10.4165C5.76191 10.4165 3.54199 12.6365 3.54199 15.3749H13.4587C13.4587 12.6365 11.2387 10.4165 8.50033 10.4165Z" stroke="#2A2A2A" stroke-opacity="0.5" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <input type="text" name="name" id="name" placeholder="Enter Your Name">
+                    </div>
+                    <label for="date" class="font-16 light-black text-start d-block">Date of Birth</label>
+                    <div class="mt-2 d-flex align-items-center name-div justify-content-between" style="gap: 12px;">
+                        <div class="d-flex align-items-center gap-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="17" height="18" viewBox="0 0 17 18" fill="none">
+                                <path d="M5.66667 5.45821V2.62488M11.3333 5.45821V2.62488M4.95833 8.29154H12.0417M3.54167 15.3749H13.4583C14.2407 15.3749 14.875 14.7406 14.875 13.9582V5.45821C14.875 4.67581 14.2407 4.04154 13.4583 4.04154H3.54167C2.75926 4.04154 2.125 4.67581 2.125 5.45821V13.9582C2.125 14.7406 2.75926 15.3749 3.54167 15.3749Z" stroke="#2A2A2A" stroke-opacity="0.5" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <input class="font-16 light-black-50" type="date" name="date" id="date" placeholder="DD/MM/YYYY">
+                        </div>
+                        <svg id="date-picker" xmlns="http://www.w3.org/2000/svg" width="17" height="18" viewBox="0 0 17 18" fill="none">
+                            <path d="M13.4587 6.875L8.50033 11.8333L3.54199 6.875" stroke="#2A2A2A" stroke-opacity="0.5" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
                     </div>
                     <div class="gender-sec">
                         <p class="mb-2 font-16 light-black text-start">Gender</p>
@@ -606,9 +617,25 @@
                             </div>
                         </div>
                     </div>
-                    <button type="button" data-bs-dismiss="modal" class="font-18 white-text font-weight-600 global-btn w-100 mb-3" style="padding: 12px 25px;">Verify</button>
-                    <a href="#" class="font-16 light-black text-center d-block">Didn’t receive a PIN?</a>
-                    <a href="#" class="font-16 accent-text font-weight-600 text-center d-block mt-2">Resend verification code in 0:03</a>
+                    <!-- Are you parent or legal guardian of this patient? section -->
+                    <div class="gender-sec">
+                        <p class="mb-2 font-16 light-black text-start">Are you parent or legal guardian of this patient?</p>
+                        <div class="parent-list gender-list mt-2 d-flex align-items-center">
+                            <div class="list-item d-flex align-items-center gap-2">
+                                Yes
+                                <svg class="check-svg" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17" fill="none">
+                                    <path d="M3.54199 9.2085L6.37533 12.0418L13.4587 4.9585" stroke="white" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <div class="list-item d-flex align-items-center gap-2">
+                                No
+                                <svg class="check-svg" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17" fill="none">
+                                    <path d="M3.54199 9.2085L6.37533 12.0418L13.4587 4.9585" stroke="white" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="button" data-bs-dismiss="modal" class="font-18 white-text font-weight-600 global-btn w-100 mb-3" style="padding: 12px 25px;">Add Sub Patient</button>
                 </div>
             </div>
         </div>

@@ -974,9 +974,13 @@ footer {
 // Login screens
 .login-screens {
     background: #F8F9FA;
+    padding: 0 16px !important;
     .sign-in-container, .forgot-pwd-container, .sign-up-container {
         position: relative;
         padding: 40px 0 131px;
+        input {
+            width: 100%;
+        }
         .back-arrow {
             position: absolute;
             top: 38px;
@@ -1099,13 +1103,13 @@ footer {
                         border-radius: 12px;
                         border: 1px solid rgba(112, 133, 131, 0.30);
                         background: rgba(0, 153, 153, 0.10);
-                        padding: 12px 12px;
+                        padding: 10px 12px;
                         cursor: pointer;
                     }
                     input {
                         border: none;
                         background: transparent;
-                        padding: 9px 0;
+                        padding: 8px 0;
                         &:focus {
                             outline: none;
                         }
@@ -1209,7 +1213,7 @@ footer {
                     border-radius: 12px;
                     border: 1px solid rgba(112, 133, 131, 0.30);
                     background: $white;
-                    padding: 11px 16px;
+                    padding: 13px 16px;
                     #email, #phone {
                         border: none;
                         background: transparent;
@@ -1261,6 +1265,7 @@ footer {
                     }
                     #date {
                         text-transform: uppercase;
+                        padding: 2px 0;
                     }
                 }
                 .phone-input {
@@ -1271,12 +1276,12 @@ footer {
                     width: 100%;
                     #phone {
                         width: 100%;
-                        padding: 8px 5;
+                        padding: 8px 5px;
                     }
                     .phone-list {
                         border-radius: 8px;
                         background: rgba(0, 153, 153, 0.10);
-                        padding: 8px 12px;
+                        padding: 10px 12px;
                     }
                 }
                 .gender-sec {
@@ -1420,7 +1425,7 @@ footer {
         }
     }
 }
-#forgotEmailModal, #forgotPhoneModal, #confirmPhoneModal {
+#forgotEmailModal, #forgotPhoneModal, #confirmPhoneModal, #subPatientModal {
     .modal-dialog {
         top: 7% !important;
     }
@@ -1465,6 +1470,33 @@ footer {
             }
             .global-btn {
                 margin-top: 12px;
+            }
+            .name-div {
+                padding: 13px 16px;
+                border-radius: 12px;
+                border: 1px solid rgba(112, 133, 131, 0.30);
+                background: $white;
+                margin-bottom: 12px;
+                #name {
+                    width: 100%;
+                }
+                #date {
+                    text-transform: uppercase;
+                    padding: 2px 0;
+                }
+            }
+            .gender-list {
+                gap: 10px;
+                margin-bottom: 12px;
+                .list-item {
+                    padding: 10px 16px;
+                    border-radius: 12px;
+                    cursor: pointer;
+                    border: 1px solid $secondaryColor;
+                    .check-svg {
+                        display: none;
+                    }
+                }
             }
         }
     }
@@ -1652,6 +1684,11 @@ footer {
             max-width: 800px !important;
         }
     }
+    #subPatientModal {
+        .modal-dialog {
+            max-width: 412px !important;
+        }
+    }
 }
 @media screen and (max-width:576px) {
     .font-40 {
@@ -1666,6 +1703,9 @@ footer {
     .font-16 {
         font-size: 12px;
     }
+    .font-14 {
+        font-size: 12px;
+    }
     .left-right-vector-bg {
         background: $bgColor !important;
     }
@@ -1674,6 +1714,32 @@ footer {
     }
     .distance-menu {
         margin-left: -11.5rem !important;
+    }
+    input, #phone {
+        font-size: 12px !important;
+        &::placeholder {
+            font-size: 12px !important;
+        }
+    }
+    .sign-in-sec-content {
+        .checkbox-container {
+            margin-bottom: 20px !important;
+        }
+    }
+    .checkmark {
+        width: 18px !important;
+        height: 18px !important;
+        &::after {
+            left: 7px !important;
+            top: 2px !important;
+            width: 5px !important;
+            height: 12px !important;
+        }
+    }
+    .gender-list {
+        .list-item {
+            padding: 6px 12px !important;
+        }
     }
 }
 @media screen and (max-width:425px) {

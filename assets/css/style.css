@@ -999,10 +999,14 @@ footer {
 
 .login-screens {
   background: #F8F9FA;
+  padding: 0 16px !important;
 }
 .login-screens .sign-in-container, .login-screens .forgot-pwd-container, .login-screens .sign-up-container {
   position: relative;
   padding: 40px 0 131px;
+}
+.login-screens .sign-in-container input, .login-screens .forgot-pwd-container input, .login-screens .sign-up-container input {
+  width: 100%;
 }
 .login-screens .sign-in-container .back-arrow, .login-screens .forgot-pwd-container .back-arrow, .login-screens .sign-up-container .back-arrow {
   position: absolute;
@@ -1126,13 +1130,13 @@ footer {
   border-radius: 12px;
   border: 1px solid rgba(112, 133, 131, 0.3);
   background: rgba(0, 153, 153, 0.1);
-  padding: 12px 12px;
+  padding: 10px 12px;
   cursor: pointer;
 }
 .login-screens .sign-in-container .sign-in-sec .sign-in-sec-content .phone-input input, .login-screens .forgot-pwd-container .sign-in-sec .sign-in-sec-content .phone-input input, .login-screens .sign-up-container .sign-in-sec .sign-in-sec-content .phone-input input {
   border: none;
   background: transparent;
-  padding: 9px 0;
+  padding: 8px 0;
 }
 .login-screens .sign-in-container .sign-in-sec .sign-in-sec-content .phone-input input:focus, .login-screens .forgot-pwd-container .sign-in-sec .sign-in-sec-content .phone-input input:focus, .login-screens .sign-up-container .sign-in-sec .sign-in-sec-content .phone-input input:focus {
   outline: none;
@@ -1239,7 +1243,7 @@ footer {
   border-radius: 12px;
   border: 1px solid rgba(112, 133, 131, 0.3);
   background: #ffffff;
-  padding: 11px 16px;
+  padding: 13px 16px;
 }
 .login-screens .sign-in-container .sign-in-sec .forgot-pwd-content .email-field #email, .login-screens .sign-in-container .sign-in-sec .forgot-pwd-content .email-field #phone, .login-screens .sign-in-container .sign-in-sec .forgot-pwd-content .phone-input #email, .login-screens .sign-in-container .sign-in-sec .forgot-pwd-content .phone-input #phone, .login-screens .forgot-pwd-container .sign-in-sec .forgot-pwd-content .email-field #email, .login-screens .forgot-pwd-container .sign-in-sec .forgot-pwd-content .email-field #phone, .login-screens .forgot-pwd-container .sign-in-sec .forgot-pwd-content .phone-input #email, .login-screens .forgot-pwd-container .sign-in-sec .forgot-pwd-content .phone-input #phone, .login-screens .sign-up-container .sign-in-sec .forgot-pwd-content .email-field #email, .login-screens .sign-up-container .sign-in-sec .forgot-pwd-content .email-field #phone, .login-screens .sign-up-container .sign-in-sec .forgot-pwd-content .phone-input #email, .login-screens .sign-up-container .sign-in-sec .forgot-pwd-content .phone-input #phone {
   border: none;
@@ -1296,6 +1300,7 @@ footer {
 }
 .login-screens .sign-in-container .sign-in-sec .sign-up-sec-content .name-div #date, .login-screens .forgot-pwd-container .sign-in-sec .sign-up-sec-content .name-div #date, .login-screens .sign-up-container .sign-in-sec .sign-up-sec-content .name-div #date {
   text-transform: uppercase;
+  padding: 2px 0;
 }
 .login-screens .sign-in-container .sign-in-sec .sign-up-sec-content .phone-input, .login-screens .forgot-pwd-container .sign-in-sec .sign-up-sec-content .phone-input, .login-screens .sign-up-container .sign-in-sec .sign-up-sec-content .phone-input {
   padding: 5px 16px 5px 5px;
@@ -1306,12 +1311,12 @@ footer {
 }
 .login-screens .sign-in-container .sign-in-sec .sign-up-sec-content .phone-input #phone, .login-screens .forgot-pwd-container .sign-in-sec .sign-up-sec-content .phone-input #phone, .login-screens .sign-up-container .sign-in-sec .sign-up-sec-content .phone-input #phone {
   width: 100%;
-  padding: 8px 5;
+  padding: 8px 5px;
 }
 .login-screens .sign-in-container .sign-in-sec .sign-up-sec-content .phone-input .phone-list, .login-screens .forgot-pwd-container .sign-in-sec .sign-up-sec-content .phone-input .phone-list, .login-screens .sign-up-container .sign-in-sec .sign-up-sec-content .phone-input .phone-list {
   border-radius: 8px;
   background: rgba(0, 153, 153, 0.1);
-  padding: 8px 12px;
+  padding: 10px 12px;
 }
 .login-screens .sign-in-container .sign-in-sec .sign-up-sec-content .gender-sec, .login-screens .forgot-pwd-container .sign-in-sec .sign-up-sec-content .gender-sec, .login-screens .sign-up-container .sign-in-sec .sign-up-sec-content .gender-sec {
   margin-top: 21px;
@@ -1453,42 +1458,42 @@ footer {
   transform: rotate(45deg);
 }
 
-#forgotEmailModal .modal-dialog, #forgotPhoneModal .modal-dialog, #confirmPhoneModal .modal-dialog {
+#forgotEmailModal .modal-dialog, #forgotPhoneModal .modal-dialog, #confirmPhoneModal .modal-dialog, #subPatientModal .modal-dialog {
   top: 7% !important;
 }
-#forgotEmailModal .modal-content, #forgotPhoneModal .modal-content, #confirmPhoneModal .modal-content {
+#forgotEmailModal .modal-content, #forgotPhoneModal .modal-content, #confirmPhoneModal .modal-content, #subPatientModal .modal-content {
   padding: 24px 16px;
   border-radius: 16px;
 }
-#forgotEmailModal .modal-content .modal-header, #forgotPhoneModal .modal-content .modal-header, #confirmPhoneModal .modal-content .modal-header {
+#forgotEmailModal .modal-content .modal-header, #forgotPhoneModal .modal-content .modal-header, #confirmPhoneModal .modal-content .modal-header, #subPatientModal .modal-content .modal-header {
   padding: 0 0 12px 0;
   border-bottom: 1px solid rgba(112, 133, 131, 0.3) !important;
   margin-bottom: 12px;
 }
-#forgotEmailModal .modal-content .modal-body, #forgotPhoneModal .modal-content .modal-body, #confirmPhoneModal .modal-content .modal-body {
+#forgotEmailModal .modal-content .modal-body, #forgotPhoneModal .modal-content .modal-body, #confirmPhoneModal .modal-content .modal-body, #subPatientModal .modal-content .modal-body {
   padding: 0;
 }
-#forgotEmailModal .modal-content .modal-body h4, #forgotPhoneModal .modal-content .modal-body h4, #confirmPhoneModal .modal-content .modal-body h4 {
+#forgotEmailModal .modal-content .modal-body h4, #forgotPhoneModal .modal-content .modal-body h4, #confirmPhoneModal .modal-content .modal-body h4, #subPatientModal .modal-content .modal-body h4 {
   margin: 12px 0 !important;
 }
-#forgotEmailModal .modal-content .modal-body .opt-code, #forgotPhoneModal .modal-content .modal-body .opt-code, #confirmPhoneModal .modal-content .modal-body .opt-code {
+#forgotEmailModal .modal-content .modal-body .opt-code, #forgotPhoneModal .modal-content .modal-body .opt-code, #confirmPhoneModal .modal-content .modal-body .opt-code, #subPatientModal .modal-content .modal-body .opt-code {
   gap: 10px;
   margin: 12px 0;
 }
-#forgotEmailModal .modal-content .modal-body .opt-code .opt-input, #forgotPhoneModal .modal-content .modal-body .opt-code .opt-input, #confirmPhoneModal .modal-content .modal-body .opt-code .opt-input {
+#forgotEmailModal .modal-content .modal-body .opt-code .opt-input, #forgotPhoneModal .modal-content .modal-body .opt-code .opt-input, #confirmPhoneModal .modal-content .modal-body .opt-code .opt-input, #subPatientModal .modal-content .modal-body .opt-code .opt-input {
   width: 100%;
   padding: 16px;
   border: 0;
   border-bottom: 1px solid rgba(42, 42, 42, 0.5);
 }
-#forgotEmailModal .modal-content .modal-body .opt-code .opt-input:focus, #forgotPhoneModal .modal-content .modal-body .opt-code .opt-input:focus, #confirmPhoneModal .modal-content .modal-body .opt-code .opt-input:focus {
+#forgotEmailModal .modal-content .modal-body .opt-code .opt-input:focus, #forgotPhoneModal .modal-content .modal-body .opt-code .opt-input:focus, #confirmPhoneModal .modal-content .modal-body .opt-code .opt-input:focus, #subPatientModal .modal-content .modal-body .opt-code .opt-input:focus {
   outline: none;
 }
-#forgotEmailModal .modal-content .modal-body .opt-code .opt-input::-webkit-outer-spin-button, #forgotEmailModal .modal-content .modal-body .opt-code .opt-input::-webkit-inner-spin-button, #forgotPhoneModal .modal-content .modal-body .opt-code .opt-input::-webkit-outer-spin-button, #forgotPhoneModal .modal-content .modal-body .opt-code .opt-input::-webkit-inner-spin-button, #confirmPhoneModal .modal-content .modal-body .opt-code .opt-input::-webkit-outer-spin-button, #confirmPhoneModal .modal-content .modal-body .opt-code .opt-input::-webkit-inner-spin-button {
+#forgotEmailModal .modal-content .modal-body .opt-code .opt-input::-webkit-outer-spin-button, #forgotEmailModal .modal-content .modal-body .opt-code .opt-input::-webkit-inner-spin-button, #forgotPhoneModal .modal-content .modal-body .opt-code .opt-input::-webkit-outer-spin-button, #forgotPhoneModal .modal-content .modal-body .opt-code .opt-input::-webkit-inner-spin-button, #confirmPhoneModal .modal-content .modal-body .opt-code .opt-input::-webkit-outer-spin-button, #confirmPhoneModal .modal-content .modal-body .opt-code .opt-input::-webkit-inner-spin-button, #subPatientModal .modal-content .modal-body .opt-code .opt-input::-webkit-outer-spin-button, #subPatientModal .modal-content .modal-body .opt-code .opt-input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   appearance: none;
 }
-#forgotEmailModal .modal-content .modal-body .opt-code .opt-input::-moz-placeholder, #forgotPhoneModal .modal-content .modal-body .opt-code .opt-input::-moz-placeholder, #confirmPhoneModal .modal-content .modal-body .opt-code .opt-input::-moz-placeholder {
+#forgotEmailModal .modal-content .modal-body .opt-code .opt-input::-moz-placeholder, #forgotPhoneModal .modal-content .modal-body .opt-code .opt-input::-moz-placeholder, #confirmPhoneModal .modal-content .modal-body .opt-code .opt-input::-moz-placeholder, #subPatientModal .modal-content .modal-body .opt-code .opt-input::-moz-placeholder {
   color: rgba(42, 42, 42, 0.5);
   font-family: "Open Sans", "Helvetica Neue", sans-serif;
   font-size: 20px;
@@ -1497,7 +1502,7 @@ footer {
   line-height: normal;
   letter-spacing: 0.1px;
 }
-#forgotEmailModal .modal-content .modal-body .opt-code .opt-input::placeholder, #forgotPhoneModal .modal-content .modal-body .opt-code .opt-input::placeholder, #confirmPhoneModal .modal-content .modal-body .opt-code .opt-input::placeholder {
+#forgotEmailModal .modal-content .modal-body .opt-code .opt-input::placeholder, #forgotPhoneModal .modal-content .modal-body .opt-code .opt-input::placeholder, #confirmPhoneModal .modal-content .modal-body .opt-code .opt-input::placeholder, #subPatientModal .modal-content .modal-body .opt-code .opt-input::placeholder {
   color: rgba(42, 42, 42, 0.5);
   font-family: "Open Sans", "Helvetica Neue", sans-serif;
   font-size: 20px;
@@ -1506,8 +1511,35 @@ footer {
   line-height: normal;
   letter-spacing: 0.1px;
 }
-#forgotEmailModal .modal-content .modal-body .global-btn, #forgotPhoneModal .modal-content .modal-body .global-btn, #confirmPhoneModal .modal-content .modal-body .global-btn {
+#forgotEmailModal .modal-content .modal-body .global-btn, #forgotPhoneModal .modal-content .modal-body .global-btn, #confirmPhoneModal .modal-content .modal-body .global-btn, #subPatientModal .modal-content .modal-body .global-btn {
   margin-top: 12px;
+}
+#forgotEmailModal .modal-content .modal-body .name-div, #forgotPhoneModal .modal-content .modal-body .name-div, #confirmPhoneModal .modal-content .modal-body .name-div, #subPatientModal .modal-content .modal-body .name-div {
+  padding: 13px 16px;
+  border-radius: 12px;
+  border: 1px solid rgba(112, 133, 131, 0.3);
+  background: #ffffff;
+  margin-bottom: 12px;
+}
+#forgotEmailModal .modal-content .modal-body .name-div #name, #forgotPhoneModal .modal-content .modal-body .name-div #name, #confirmPhoneModal .modal-content .modal-body .name-div #name, #subPatientModal .modal-content .modal-body .name-div #name {
+  width: 100%;
+}
+#forgotEmailModal .modal-content .modal-body .name-div #date, #forgotPhoneModal .modal-content .modal-body .name-div #date, #confirmPhoneModal .modal-content .modal-body .name-div #date, #subPatientModal .modal-content .modal-body .name-div #date {
+  text-transform: uppercase;
+  padding: 2px 0;
+}
+#forgotEmailModal .modal-content .modal-body .gender-list, #forgotPhoneModal .modal-content .modal-body .gender-list, #confirmPhoneModal .modal-content .modal-body .gender-list, #subPatientModal .modal-content .modal-body .gender-list {
+  gap: 10px;
+  margin-bottom: 12px;
+}
+#forgotEmailModal .modal-content .modal-body .gender-list .list-item, #forgotPhoneModal .modal-content .modal-body .gender-list .list-item, #confirmPhoneModal .modal-content .modal-body .gender-list .list-item, #subPatientModal .modal-content .modal-body .gender-list .list-item {
+  padding: 10px 16px;
+  border-radius: 12px;
+  cursor: pointer;
+  border: 1px solid #008159;
+}
+#forgotEmailModal .modal-content .modal-body .gender-list .list-item .check-svg, #forgotPhoneModal .modal-content .modal-body .gender-list .list-item .check-svg, #confirmPhoneModal .modal-content .modal-body .gender-list .list-item .check-svg, #subPatientModal .modal-content .modal-body .gender-list .list-item .check-svg {
+  display: none;
 }
 
 @media (min-width: 1400px) {
@@ -1681,6 +1713,9 @@ footer {
   #availableDatesModal .modal-dialog {
     max-width: 800px !important;
   }
+  #subPatientModal .modal-dialog {
+    max-width: 412px !important;
+  }
 }
 @media screen and (max-width: 576px) {
   .font-40 {
@@ -1695,6 +1730,9 @@ footer {
   .font-16 {
     font-size: 12px;
   }
+  .font-14 {
+    font-size: 12px;
+  }
   .left-right-vector-bg {
     background: #F4F9FF !important;
   }
@@ -1703,6 +1741,31 @@ footer {
   }
   .distance-menu {
     margin-left: -11.5rem !important;
+  }
+  input, #phone {
+    font-size: 12px !important;
+  }
+  input::-moz-placeholder, #phone::-moz-placeholder {
+    font-size: 12px !important;
+  }
+  input::placeholder, #phone::placeholder {
+    font-size: 12px !important;
+  }
+  .sign-in-sec-content .checkbox-container {
+    margin-bottom: 20px !important;
+  }
+  .checkmark {
+    width: 18px !important;
+    height: 18px !important;
+  }
+  .checkmark::after {
+    left: 7px !important;
+    top: 2px !important;
+    width: 5px !important;
+    height: 12px !important;
+  }
+  .gender-list .list-item {
+    padding: 6px 12px !important;
   }
 }
 @media screen and (max-width: 425px) {
