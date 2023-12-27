@@ -435,6 +435,14 @@ footer {
     padding: 42px 15px;
     background: $lightBlack90;
 }
+.profile-img {
+    img {
+        width: 110px;
+        max-width: 100%;
+        height: 110px;
+        object-fit: cover;
+    }
+}
 // Search page
 .search-section {
     height: 105vh;
@@ -646,6 +654,16 @@ footer {
         }
         &::-webkit-scrollbar-thumb {
             background: $primaryColor;
+        }
+        .doctor {
+            .doctor-profile {
+                img {
+                    width: 110px;
+                    max-width: 100%;
+                    height: 110px;
+                    object-fit: cover;
+                }
+            }
         }
         .loader {
             width: 50px;
@@ -963,6 +981,23 @@ footer {
             position: absolute;
             top: 38px;
             left: 0;
+        }
+        .doctor-sec {
+            padding: 24px;
+            border-radius: 16px;
+            background: $white;
+            box-shadow: -4px 4px 10px 0px rgba(0, 0, 0, 0.06);
+            max-width: 330px;
+            width: 100%;
+            .fee-btn {
+                padding: 8px;
+                border-radius: 5px;
+                border: 1px solid $primaryColor;
+                background: $white;
+            }
+            svg {
+                width: 18px;
+            }
         }
         .sign-in-sec {
             padding: 24px;
@@ -1313,6 +1348,75 @@ footer {
                     transform: rotate(45deg);
                   }
             }
+            .book-appointment-sec-content {
+                .appointment-list {
+                    gap: 10px;
+                    .list, .someone-tab {
+                        padding: 10px 16px;
+                        border-radius: 12px;
+                        border: 1px solid $secondaryColor;
+                        color: $secondaryColor;
+                        cursor: pointer;
+                        .list-svg {
+                            display: none;
+                        }
+                    }
+                }
+                .input-div {
+                    padding: 13px 16px;
+                    border-radius: 12px;
+                    border: 1px solid rgba(112, 133, 131, 0.30);
+                    background: $white;
+                    margin-bottom: 12px;
+                }
+                .checkbox-container input {
+                    position: absolute;
+                    opacity: 0;
+                    cursor: pointer;
+                    height: 0;
+                    width: 0;
+                  }
+                  .checkbox-container {
+                    display: block;
+                    position: relative;
+                    cursor: pointer;
+                    font-size: 1.5rem;
+                    user-select: none;
+                  }
+                  .checkmark {
+                    --clr: #0B6E4F;
+                    position: relative;
+                    top: 0;
+                    left: 0;
+                    height: 20px;
+                    width: 20px;
+                    background-color: #ccc;
+                    border-radius: 5px;
+                    transition: 300ms;
+                  }
+                  .checkbox-container input:checked ~ .checkmark {
+                    background-color: var(--clr);
+                    border-radius: 5px;
+                    animation: pulse 500ms ease-in-out;
+                  }
+                  .checkmark:after {
+                    content: "";
+                    position: absolute;
+                    display: none;
+                  }
+                  .checkbox-container input:checked ~ .checkmark:after {
+                    display: block;
+                  }
+                  .checkbox-container .checkmark:after {
+                    left: 36%;
+                    top: 9%;
+                    width: 6px;
+                    height: 13px;
+                    border: solid #E0E0E2;
+                    border-width: 0 3px 3px 0;
+                    transform: rotate(45deg);
+                  }
+            }
         }
     }
 }
@@ -1404,6 +1508,11 @@ footer {
     .custom-dropmenu {
         width: 98% !important;
         bottom: 23% !important;
+    }
+    .login-screens {
+        .doctor-sec {
+            max-width: 100% !important;
+        }
     }
 }
 @media screen and (max-width:768px) {
@@ -1530,6 +1639,7 @@ footer {
             font-size: 14px !important;
         }
     }
+
 }
 @media screen and (min-width: 576px) {
     #filterModal {

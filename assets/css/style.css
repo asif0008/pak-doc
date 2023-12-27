@@ -459,6 +459,14 @@ footer {
   background: rgba(42, 42, 42, 0.9);
 }
 
+.profile-img img {
+  width: 110px;
+  max-width: 100%;
+  height: 110px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 .search-section {
   height: 105vh;
   background: url("../images/map-svg.svg") center/cover no-repeat;
@@ -677,6 +685,13 @@ footer {
 }
 .search-section .doctors-list-results::-webkit-scrollbar-thumb {
   background: #02BCE6;
+}
+.search-section .doctors-list-results .doctor .doctor-profile img {
+  width: 110px;
+  max-width: 100%;
+  height: 110px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .search-section .doctors-list-results .loader {
   width: 50px;
@@ -993,6 +1008,23 @@ footer {
   position: absolute;
   top: 38px;
   left: 0;
+}
+.login-screens .sign-in-container .doctor-sec, .login-screens .forgot-pwd-container .doctor-sec, .login-screens .sign-up-container .doctor-sec {
+  padding: 24px;
+  border-radius: 16px;
+  background: #ffffff;
+  box-shadow: -4px 4px 10px 0px rgba(0, 0, 0, 0.06);
+  max-width: 330px;
+  width: 100%;
+}
+.login-screens .sign-in-container .doctor-sec .fee-btn, .login-screens .forgot-pwd-container .doctor-sec .fee-btn, .login-screens .sign-up-container .doctor-sec .fee-btn {
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #02BCE6;
+  background: #ffffff;
+}
+.login-screens .sign-in-container .doctor-sec svg, .login-screens .forgot-pwd-container .doctor-sec svg, .login-screens .sign-up-container .doctor-sec svg {
+  width: 18px;
 }
 .login-screens .sign-in-container .sign-in-sec, .login-screens .forgot-pwd-container .sign-in-sec, .login-screens .sign-up-container .sign-in-sec {
   padding: 24px;
@@ -1351,6 +1383,75 @@ footer {
   border-width: 0 3px 3px 0;
   transform: rotate(45deg);
 }
+.login-screens .sign-in-container .sign-in-sec .book-appointment-sec-content .appointment-list, .login-screens .forgot-pwd-container .sign-in-sec .book-appointment-sec-content .appointment-list, .login-screens .sign-up-container .sign-in-sec .book-appointment-sec-content .appointment-list {
+  gap: 10px;
+}
+.login-screens .sign-in-container .sign-in-sec .book-appointment-sec-content .appointment-list .list, .login-screens .sign-in-container .sign-in-sec .book-appointment-sec-content .appointment-list .someone-tab, .login-screens .forgot-pwd-container .sign-in-sec .book-appointment-sec-content .appointment-list .list, .login-screens .forgot-pwd-container .sign-in-sec .book-appointment-sec-content .appointment-list .someone-tab, .login-screens .sign-up-container .sign-in-sec .book-appointment-sec-content .appointment-list .list, .login-screens .sign-up-container .sign-in-sec .book-appointment-sec-content .appointment-list .someone-tab {
+  padding: 10px 16px;
+  border-radius: 12px;
+  border: 1px solid #008159;
+  color: #008159;
+  cursor: pointer;
+}
+.login-screens .sign-in-container .sign-in-sec .book-appointment-sec-content .appointment-list .list .list-svg, .login-screens .sign-in-container .sign-in-sec .book-appointment-sec-content .appointment-list .someone-tab .list-svg, .login-screens .forgot-pwd-container .sign-in-sec .book-appointment-sec-content .appointment-list .list .list-svg, .login-screens .forgot-pwd-container .sign-in-sec .book-appointment-sec-content .appointment-list .someone-tab .list-svg, .login-screens .sign-up-container .sign-in-sec .book-appointment-sec-content .appointment-list .list .list-svg, .login-screens .sign-up-container .sign-in-sec .book-appointment-sec-content .appointment-list .someone-tab .list-svg {
+  display: none;
+}
+.login-screens .sign-in-container .sign-in-sec .book-appointment-sec-content .input-div, .login-screens .forgot-pwd-container .sign-in-sec .book-appointment-sec-content .input-div, .login-screens .sign-up-container .sign-in-sec .book-appointment-sec-content .input-div {
+  padding: 13px 16px;
+  border-radius: 12px;
+  border: 1px solid rgba(112, 133, 131, 0.3);
+  background: #ffffff;
+  margin-bottom: 12px;
+}
+.login-screens .sign-in-container .sign-in-sec .book-appointment-sec-content .checkbox-container input, .login-screens .forgot-pwd-container .sign-in-sec .book-appointment-sec-content .checkbox-container input, .login-screens .sign-up-container .sign-in-sec .book-appointment-sec-content .checkbox-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.login-screens .sign-in-container .sign-in-sec .book-appointment-sec-content .checkbox-container, .login-screens .forgot-pwd-container .sign-in-sec .book-appointment-sec-content .checkbox-container, .login-screens .sign-up-container .sign-in-sec .book-appointment-sec-content .checkbox-container {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  font-size: 1.5rem;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.login-screens .sign-in-container .sign-in-sec .book-appointment-sec-content .checkmark, .login-screens .forgot-pwd-container .sign-in-sec .book-appointment-sec-content .checkmark, .login-screens .sign-up-container .sign-in-sec .book-appointment-sec-content .checkmark {
+  --clr: #0B6E4F;
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: #ccc;
+  border-radius: 5px;
+  transition: 300ms;
+}
+.login-screens .sign-in-container .sign-in-sec .book-appointment-sec-content .checkbox-container input:checked ~ .checkmark, .login-screens .forgot-pwd-container .sign-in-sec .book-appointment-sec-content .checkbox-container input:checked ~ .checkmark, .login-screens .sign-up-container .sign-in-sec .book-appointment-sec-content .checkbox-container input:checked ~ .checkmark {
+  background-color: var(--clr);
+  border-radius: 5px;
+  animation: pulse 500ms ease-in-out;
+}
+.login-screens .sign-in-container .sign-in-sec .book-appointment-sec-content .checkmark:after, .login-screens .forgot-pwd-container .sign-in-sec .book-appointment-sec-content .checkmark:after, .login-screens .sign-up-container .sign-in-sec .book-appointment-sec-content .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+.login-screens .sign-in-container .sign-in-sec .book-appointment-sec-content .checkbox-container input:checked ~ .checkmark:after, .login-screens .forgot-pwd-container .sign-in-sec .book-appointment-sec-content .checkbox-container input:checked ~ .checkmark:after, .login-screens .sign-up-container .sign-in-sec .book-appointment-sec-content .checkbox-container input:checked ~ .checkmark:after {
+  display: block;
+}
+.login-screens .sign-in-container .sign-in-sec .book-appointment-sec-content .checkbox-container .checkmark:after, .login-screens .forgot-pwd-container .sign-in-sec .book-appointment-sec-content .checkbox-container .checkmark:after, .login-screens .sign-up-container .sign-in-sec .book-appointment-sec-content .checkbox-container .checkmark:after {
+  left: 36%;
+  top: 9%;
+  width: 6px;
+  height: 13px;
+  border: solid #E0E0E2;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}
 
 #forgotEmailModal .modal-dialog, #forgotPhoneModal .modal-dialog, #confirmPhoneModal .modal-dialog {
   top: 7% !important;
@@ -1442,6 +1543,9 @@ footer {
   .custom-dropmenu {
     width: 98% !important;
     bottom: 23% !important;
+  }
+  .login-screens .doctor-sec {
+    max-width: 100% !important;
   }
 }
 @media screen and (max-width: 768px) {
