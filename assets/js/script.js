@@ -391,6 +391,3 @@ function togglePatientCheckbox() {
 
 
 
-
-
-

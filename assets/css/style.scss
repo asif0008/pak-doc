@@ -7,6 +7,7 @@ $accentColor: #F2C246;
 $darkBlue: #21384D;
 $lightBlack: #2A2A2A;
 $lightBlack50: rgba(42, 42, 42, 0.50);
+$lightBlack60: rgba(42, 42, 42, 0.60);
 $lightBlack70: rgba(42, 42, 42, 0.70);
 $lightBlack80: rgba(42, 42, 42, 0.80);
 $lightBlack90: rgba(42, 42, 42, 0.90);
@@ -248,11 +249,11 @@ header {
 // Hero banner
 .hero-banner {
     padding: 89px 0 42px !important;
-    background: url("/assets/images/left-right-vector.png") no-repeat, url("/assets/images/center-bubble.png") top right no-repeat, linear-gradient(100deg, rgba(0, 129, 89, 0.50) 2.59%, rgba(2, 188, 230, 0.50) 111.36%);
+    background: url("../images/left-right-vector.png") no-repeat, url("../images/center-bubble.png") top right no-repeat, linear-gradient(100deg, rgba(0, 129, 89, 0.50) 2.59%, rgba(2, 188, 230, 0.50) 111.36%);
     .book-appointment {
         border-radius: 16px;
         background: rgba(255, 255, 255, 0.60);  
-        padding: 24px 180px;
+        padding: 24px 220px;
         .input-div {
             padding: 12px 32px;
             border-radius: 12px;
@@ -435,7 +436,7 @@ footer {
     padding: 42px 15px;
     background: $lightBlack90;
 }
-.profile-img {
+.profile-img, .profile-data {
     img {
         width: 110px;
         max-width: 100%;
@@ -1501,6 +1502,162 @@ footer {
         }
     }
 }
+// Book status 
+.booking-status-banner {
+    padding: 52px 0 !important;
+    background: url("../images/sign-in-left-vector.png") top left no-repeat, url("../images/booking-status-center-vector.png") top right no-repeat, url("../images/sign-in-right-vector.png") bottom right no-repeat, linear-gradient(100deg, rgba(0, 129, 89, 0.50) 2.59%, rgba(2, 188, 230, 0.50) 111.36%);
+    .book-appointment {
+        border-radius: 16px;
+        background: rgba(255, 255, 255, 0.60);  
+        padding: 24px 220px;
+        .input-div {
+            padding: 12px 32px;
+            border-radius: 12px;
+            background: #FFF;
+            flex: 1;
+            width: 100%;
+        }
+        .form-control {
+            padding: 0 !important;
+            color: $lightBlack !important;
+            background-color: transparent !important;
+            border: none !important;
+        }
+        .form-control::placeholder {
+            color: rgba(42, 42, 42, 0.50);
+            font-family: $openSans;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            letter-spacing: 0.08px;
+        }
+        .form-control:focus {
+            box-shadow: none !important;
+        }
+        #searcLocation {
+            width: 70px;
+        }
+    }
+}
+.booking-status-container {
+    padding: 24px 220px;
+    margin: 32px 0;
+    border-radius: 16px;
+    background:  $white;
+    box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.08);
+    background: url("../images/booking-container-left.png") top left no-repeat, url("../images/booking-container-center.png") center right no-repeat, url("../images/booking-container-right.png") bottom right no-repeat, #fff;
+    .nav-pills {
+        width: max-content;
+        padding: 6px;
+        border-radius: 12px;
+        background: linear-gradient(180deg, rgba(0, 129, 89, 0.05) 0%, rgba(2, 188, 230, 0.05) 100%);
+        .nav-link {
+            padding: 14px 69px;
+            border-radius: 12px !important;
+            color: $lightBlack60 !important;
+        }
+        .nav-link.active {
+            background: var(--Gradiant, linear-gradient(180deg, rgba(0, 129, 89, 0.50) 0%, rgba(2, 188, 230, 0.50) 100%)) !important;
+            color: $white !important;
+        }
+    }
+    .tab-content {
+        .appointment-container {
+            border-radius: 16px;
+            border: 0.2px solid rgba(112, 133, 131, 0.30);
+            background: $white;
+            box-shadow: -4px 4px 10px 0px rgba(0, 0, 0, 0.06);
+            padding: 12px;
+            .doctor-details {
+                border-radius: 12px;
+                background: rgba(242, 194, 70, 0.10);
+                padding: 16px;
+                box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.08);
+                .vertical-dashed-line {
+                    color: rgba(0, 129, 89, 0.40);
+                    transform: rotate(90deg);
+                    margin: 32px 0;
+                }
+                .appt-fee-status-pending {
+                    position: relative;
+                    .edit-btn {
+                        cursor: pointer;
+                    }
+                    .res-drop-down {
+                        position: absolute;
+                        top: 38px;
+                        right: -28px;
+                        display: none;
+                        width: 245px;
+                        .reschedule-detail {
+                            padding: 12px;
+                            border-radius: 12px;
+                            background: $white;
+                            border: 1px solid #D9D9D9;
+                            max-width: 245px;
+                            width: 100%;
+                            position: relative;
+                            &::before {
+                                content: "";
+                                width: 23px;
+                                height: 13px;
+                                position: absolute;
+                                top: -9px;
+                                right: 30px;
+                                background-color: white;
+                                -webkit-clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+                                clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+                            }
+                            .cancel-btn  {
+                                padding: 14px;
+                                border-radius: 12px;
+                                border: 1px solid $secondaryColor;
+                                background: $white;
+                                &:hover {
+                                    background-color: $secondaryColor;
+                                    color: $white;
+                                }
+                            }
+                        }
+                    
+                    }
+                    .pending {
+                        .pending-dot {
+                            width: 12px;
+                            height: 12px;
+                            background: $accentColor;
+                            border-radius: 50%;
+                        }
+                    }
+                    .fee-btn {
+                        border-radius: 6px;
+                        border: 1px solid $primaryColor;
+                        background: $white;
+                        padding: 8px 40px;
+                        margin: 5px 0;
+                    }
+                }
+            }
+            .appointment-details {
+                padding: 16px;
+                border-radius: 12px;
+                border: 1px solid rgba(112, 133, 131, 0.30);
+                background: $white;
+                .vertical-dashed-line {
+                    color: rgba(0, 129, 89, 0.40);
+                    transform: rotate(90deg);
+                }
+                .global-btn:disabled {
+                    opacity: 0.3;
+                }
+                .patient-detail {
+                    min-width: 243px;
+                }
+            }
+        }
+    }
+}
 @media (min-width: 1400px) {
     .container {
         max-width: 1440px !important;
@@ -1513,17 +1670,23 @@ footer {
     }
 }
 @media screen and (max-width:1220px) {
-    .hero-banner {
+    .hero-banner, .booking-status-banner {
         .book-appointment {
             padding: 30px;
         }
     }
+    .booking-status-container {
+        padding: 30px;
+    }
 }
 @media screen and (max-width:991px) {
-    .hero-banner {
+    .hero-banner, .booking-status-banner {
         .book-appointment {
             padding: 24px;
         }
+    }
+    .booking-status-container {
+        padding: 24px;
     }
     .testimonials {
         .review-section {
@@ -1548,7 +1711,7 @@ footer {
     }
 }
 @media screen and (max-width:768px) {
-    .hero-banner {
+    .hero-banner, .booking-status-banner {
         padding: 50px 0 16px !important;
         .book-appointment {
             padding: 24px 16px;
@@ -1563,6 +1726,9 @@ footer {
                 font-weight: 600;
             }
         }
+    }
+    .booking-status-container {
+        padding: 24px 16px;
     }
     .top-search {
         padding: 24px 0 !important;
