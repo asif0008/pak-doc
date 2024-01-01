@@ -1619,17 +1619,12 @@ footer {
   background: #ffffff;
   box-shadow: -4px 4px 10px 0px rgba(0, 0, 0, 0.06);
   padding: 12px;
+  margin-bottom: 18px;
 }
 .booking-status-container .tab-content .appointment-container .doctor-details {
   border-radius: 12px;
-  background: rgba(242, 194, 70, 0.1);
   padding: 16px;
   box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.08);
-}
-.booking-status-container .tab-content .appointment-container .doctor-details .vertical-dashed-line {
-  color: rgba(0, 129, 89, 0.4);
-  transform: rotate(90deg);
-  margin: 32px 0;
 }
 .booking-status-container .tab-content .appointment-container .doctor-details .appt-fee-status-pending {
   position: relative;
@@ -1674,10 +1669,9 @@ footer {
   background-color: #008159;
   color: #ffffff;
 }
-.booking-status-container .tab-content .appointment-container .doctor-details .appt-fee-status-pending .pending .pending-dot {
+.booking-status-container .tab-content .appointment-container .doctor-details .appt-fee-status-pending .pending .dot {
   width: 12px;
   height: 12px;
-  background: #F2C246;
   border-radius: 50%;
 }
 .booking-status-container .tab-content .appointment-container .doctor-details .appt-fee-status-pending .fee-btn {
@@ -1687,15 +1681,38 @@ footer {
   padding: 8px 40px;
   margin: 5px 0;
 }
+.booking-status-container .tab-content .appointment-container .doctor-details.pending {
+  background: rgba(242, 194, 70, 0.1);
+}
+.booking-status-container .tab-content .appointment-container .doctor-details.pending .dot {
+  background: #F2C246;
+}
+.booking-status-container .tab-content .appointment-container .doctor-details.pending .status, .booking-status-container .tab-content .appointment-container .doctor-details.pending .status-para {
+  color: #F2C246;
+}
+.booking-status-container .tab-content .appointment-container .doctor-details.active {
+  background: rgba(0, 153, 153, 0.1);
+}
+.booking-status-container .tab-content .appointment-container .doctor-details.active .dot {
+  background: #008159;
+}
+.booking-status-container .tab-content .appointment-container .doctor-details.active .status, .booking-status-container .tab-content .appointment-container .doctor-details.active .status-para {
+  color: #1DB45A;
+}
+.booking-status-container .tab-content .appointment-container .doctor-details.decline {
+  background: rgba(255, 59, 59, 0.1);
+}
+.booking-status-container .tab-content .appointment-container .doctor-details.decline .dot {
+  background: #FF3B3B;
+}
+.booking-status-container .tab-content .appointment-container .doctor-details.decline .status, .booking-status-container .tab-content .appointment-container .doctor-details.decline .status-para {
+  color: #FF3B3B;
+}
 .booking-status-container .tab-content .appointment-container .appointment-details {
   padding: 16px;
   border-radius: 12px;
   border: 1px solid rgba(112, 133, 131, 0.3);
   background: #ffffff;
-}
-.booking-status-container .tab-content .appointment-container .appointment-details .vertical-dashed-line {
-  color: rgba(0, 129, 89, 0.4);
-  transform: rotate(90deg);
 }
 .booking-status-container .tab-content .appointment-container .appointment-details .global-btn:disabled {
   opacity: 0.3;

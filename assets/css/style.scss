@@ -1569,16 +1569,11 @@ footer {
             background: $white;
             box-shadow: -4px 4px 10px 0px rgba(0, 0, 0, 0.06);
             padding: 12px;
+            margin-bottom: 18px;
             .doctor-details {
                 border-radius: 12px;
-                background: rgba(242, 194, 70, 0.10);
                 padding: 16px;
                 box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.08);
-                .vertical-dashed-line {
-                    color: rgba(0, 129, 89, 0.40);
-                    transform: rotate(90deg);
-                    margin: 32px 0;
-                }
                 .appt-fee-status-pending {
                     position: relative;
                     .edit-btn {
@@ -1623,10 +1618,9 @@ footer {
                     
                     }
                     .pending {
-                        .pending-dot {
+                        .dot {
                             width: 12px;
                             height: 12px;
-                            background: $accentColor;
                             border-radius: 50%;
                         }
                     }
@@ -1639,15 +1633,38 @@ footer {
                     }
                 }
             }
+            .doctor-details.pending {
+                background: rgba(242, 194, 70, 0.10);
+                .dot {
+                    background: $accentColor;
+                }
+                .status, .status-para {
+                    color: $accentColor;
+                }
+            }
+            .doctor-details.active {
+                background: rgba(0, 153, 153, 0.10);
+                .dot {
+                    background: $secondaryColor;
+                }
+                .status, .status-para {
+                    color: #1DB45A;
+                }
+            }
+            .doctor-details.decline {
+                background: rgba(255, 59, 59, 0.10);
+                .dot {
+                    background: #FF3B3B;
+                }
+                .status, .status-para {
+                    color: #FF3B3B;
+                }
+            }
             .appointment-details {
                 padding: 16px;
                 border-radius: 12px;
                 border: 1px solid rgba(112, 133, 131, 0.30);
                 background: $white;
-                .vertical-dashed-line {
-                    color: rgba(0, 129, 89, 0.40);
-                    transform: rotate(90deg);
-                }
                 .global-btn:disabled {
                     opacity: 0.3;
                 }
